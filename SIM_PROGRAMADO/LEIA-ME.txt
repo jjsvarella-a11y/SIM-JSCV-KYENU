@@ -1,13 +1,17 @@
-SIM — PROJETO PROGRAMADO (PBIP)
+SIM — REPORTING IMPLEMENTADO / v2
 
-Abra SIM_Control_JSCV_Kyenu.pbip no Power BI Desktop atualizado. Use este PBIP, não o PBIX antigo. O modelo está preservado, com as medidas coladas separadas. Executive Overview contém filtros, quatro cartões, estado de dados, tendências e comparação homóloga. A página técnica passou a 00 - MODEL TEST.
+1. Extraia TODO o ZIP para uma pasta curta, por exemplo C:\SIM_V2. Não abra o PBIP dentro do ZIP.
+2. Abra SIM_Control_JSCV_Kyenu.pbip, junto das pastas .Report e .SemanticModel, no Power BI Desktop atualizado.
+3. Atualize os dados. As consultas contabilísticas mantêm o caminho Windows original. Se a pasta mudou, ajuste a origem da consulta RAW_ACCOUNTING_FILES pela interface Power Query.
+4. Selecione JSCV, 2026 e 2026-03. Revenue deve ser 2.412.322 CVE. Os filtros corporativos são sincronizados entre as páginas de gestão. Ao escolher somente o ano, o mês de referência padrão é o último mês contabilístico disponível nesse ano.
+5. Consulte POWERBI_MANUAL_ACTIONS.md para os passos restantes e VALIDATION_RESULTS.json / VALIDACAO.txt para evidência e limites.
 
-Escolha UMA empresa e um ano/período. A seleção conjunta não apresenta soma como consolidado. Receita existente foi preservada. EBITDA/EBIT são provisórios: receitas + outros rendimentos menos custos 61/62/63/68; EBIT deduz 64. Valores de custo usam o saldo original positivo observado na amostra; confirme sinais para todos os períodos antes de uso em decisões. Ausência de qualquer componente deixa EBITDA em branco, sem substituição por zero.
+Páginas: 00 MODEL TEST (oculta em leitura), 01 EXECUTIVE OVERVIEW, 02 FINANCIAL PERFORMANCE, 03 BALANCE & LIQUIDITY, 04 PROJECT PERFORMANCE, 05 COMMERCIAL & COLLECTIONS, 06 KPI INFORMATION.
 
-A pasta contabilística continua usando o caminho Windows original de Folder.Files. Se necessário, altere apenas esse caminho em RAW_ACCOUNTING_FILES no Power Query para sua pasta 01_ACCOUNTING. Não inclua cópias/backup de Excel dentro da pasta de ingestão.
+O modelo contabilístico e a medida Revenue foram preservados. Custos usam débito menos crédito; isso preserva o estorno identificado em maio de 2024. O balanço usa débito/crédito acumulados no fim do período e não soma snapshots mensais. Resultado antes de imposto não é resultado líquido: o líquido exige fonte de imposto aprovada.
 
-No Desktop: abrir, conferir erros DAX, Atualizar, selecionar JSCV e março/2026 e verificar Revenue = 2.412.322 CVE; conferir KYENU março/2026 sem receita. Verificar renderização dos cartões/gráficos, períodos homólogos e sinais. Não foi executado Desktop neste Linux: verificações aqui são estáticas e sobre dados armazenados. Caches locais foram excluídos do pacote, portanto poderá ser necessário atualizar antes de visualizar valores.
+A pasta SOURCE_TEMPLATES contém apenas cabeçalhos, não dados financeiros. SIM_OperationalRoot fica vazio por padrão: as fontes opcionais ficam vazias e o relatório mostra lacunas. Quando houver fontes operacionais verificadas, copiar a estrutura dos CSV para uma pasta de dados, integrar os arquivos reais e configurar o parâmetro SIM_OperationalRoot. Nunca transformar ausência de dados em zero ou importar os valores do handover como fatos verificados.
 
-Não implementado: resultado líquido sem validação fiscal, KPIs de balanço sem confirmação de saldos/sinais, consolidação intercompany, budget, forecast, metas e periodicidade avançada/customizada. Não há dados fabricados para esses itens. Não representa dashboard completo de todos os HUBs.
+Para consolidação, cada componente exige dados das duas empresas e eliminações assinadas APPROVED para cada mês/snapshot. Os rácios são calculados depois das eliminações. Sem reconciliação, as células ficam em branco com PENDING RECONCILIATION.
 
-Alterações: seis medidas de grupo separadas; medidas operacionais provisórias e homólogas adicionadas; Executive Overview com 14 visuais; página técnica renomeada. Nenhuma relação, fonte, ID existente ou mapeamento contabilístico alterado. Revenue original intacto.
+A estrutura TMDL foi lida com a biblioteca oficial Microsoft.AnalysisServices. Os arquivos PBIR e o tema passaram nos schemas publicados. DAX/PQ e renderização NÃO foram executados no Power BI Desktop desta máquina Linux. Este pacote implementa o reporting; não é uma certificação de funcionamento no Desktop nem de todas as fontes de negócio.

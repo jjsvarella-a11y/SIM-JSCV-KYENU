@@ -1,0 +1,71 @@
+table 'Fact_SalesContracts'
+	lineageTag: 05df7b0a-ce18-5ec1-8d76-26f9ac3ab87a
+
+	column 'Contract ID'
+		dataType: string
+		lineageTag: 00b1fa85-b3ab-5242-845f-681af3e94a20
+		summarizeBy: none
+		sourceColumn: Contract ID
+		isKey
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 36e13c02-a6cf-53a0-96a2-08e98740e5ec
+		summarizeBy: none
+		sourceColumn: Company ID
+
+	column 'Project ID'
+		dataType: string
+		lineageTag: e69c11b6-012c-58f6-9118-e7ec34fdc5d3
+		summarizeBy: none
+		sourceColumn: Project ID
+
+	column 'Client ID'
+		dataType: string
+		lineageTag: a0b340e0-6d0f-5e32-9918-0686a556dcca
+		summarizeBy: none
+		sourceColumn: Client ID
+
+	column 'Unit ID'
+		dataType: string
+		lineageTag: 31572e67-3d36-5899-84e7-a5c14ba3e7e2
+		summarizeBy: none
+		sourceColumn: Unit ID
+
+	column 'Contract Date'
+		dataType: dateTime
+		lineageTag: c5ce47d4-1dcc-5b25-a809-e26395cc67f8
+		summarizeBy: none
+		sourceColumn: Contract Date
+		formatString: yyyy-MM-dd
+
+	column 'Contract Value'
+		dataType: double
+		lineageTag: ff733953-8ac8-544d-a017-0036787a1a95
+		summarizeBy: none
+		sourceColumn: Contract Value
+
+	column 'Currency'
+		dataType: string
+		lineageTag: 48c142a1-d846-5e34-a438-fd22604cad9f
+		summarizeBy: none
+		sourceColumn: Currency
+
+	column 'Status'
+		dataType: string
+		lineageTag: 9373ef52-9466-5afc-aa8f-6573eac760f2
+		summarizeBy: none
+		sourceColumn: Status
+
+	partition 'Fact_SalesContracts' = m
+		mode: import
+		source =
+				let
+				    Input = (SIM_LoadCSV("Contracts.csv", {{"Contract ID", type text}, {"Company ID", type text}, {"Project ID", type text}, {"Client ID", type text}, {"Unit ID", type text}, {"Contract Date", type date}, {"Contract Value", type number}, {"Currency", type text}, {"Status", type text}}, {"Contract ID"})),
+				    ProjectCheck = Table.NestedJoin(Input, {"Project ID"}, Dim_Project, {"Project ID"}, "_Project", JoinKind.LeftOuter),
+				    CurrencyCheck = Table.ExpandTableColumn(ProjectCheck, "_Project", {"Currency"}, {"_ExpectedCurrency"}),
+				    Valid = if Table.RowCount(Table.SelectRows(CurrencyCheck, each [_ExpectedCurrency] = null or [Currency] = null or [Currency] <> [_ExpectedCurrency])) > 0 then error Error.Record("ProjectCurrencyMismatch", "Fact_SalesContracts", null) else Table.RemoveColumns(CurrencyCheck,{"_ExpectedCurrency"}),
+				    ClientCheck = Table.NestedJoin(Valid,{"Client ID"},Dim_Client,{"Client ID"},"_Client",JoinKind.LeftOuter),
+				    UnitCheck = Table.NestedJoin(ClientCheck,{"Unit ID"},Dim_Unit,{"Unit ID"},"_Unit",JoinKind.LeftOuter),
+				    KeyCheck = if Table.RowCount(Table.SelectRows(UnitCheck, each Table.RowCount([_Client]) <> 1 or Table.RowCount([_Unit]) <> 1 or [_Unit]{0}[Project ID] <> [Project ID])) > 0 then error Error.Record("ContractMasterMismatch", "Client, unit and project must match master data", null) else Table.RemoveColumns(UnitCheck,{"_Client","_Unit"})
+				in KeyCheck

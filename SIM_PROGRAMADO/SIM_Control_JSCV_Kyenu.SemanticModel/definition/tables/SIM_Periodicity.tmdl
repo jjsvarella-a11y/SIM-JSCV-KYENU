@@ -1,0 +1,18 @@
+table 'SIM_Periodicity'
+	lineageTag: 6a2572cb-a8eb-546c-87f3-9c89af63c8d2
+
+	column 'Periodicity'
+		dataType: string
+		lineageTag: aac1b236-3180-5d2e-8660-ed0ca21194ed
+		summarizeBy: none
+		sourceColumn: Periodicity
+
+	partition 'SIM_Periodicity' = m
+		mode: import
+		source =
+				#table(type table [#"Periodicity" = text], {
+				{"Monthly"},
+				{"Quarterly"},
+				{"YTD"},
+				{"Annual"}
+				})

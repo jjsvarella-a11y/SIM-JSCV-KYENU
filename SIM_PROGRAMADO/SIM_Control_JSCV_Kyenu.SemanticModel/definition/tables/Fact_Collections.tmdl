@@ -1,0 +1,87 @@
+table 'Fact_Collections'
+	lineageTag: 0a32d48b-9152-5c82-90e9-1b8a74a1e68e
+
+	column 'Collection ID'
+		dataType: string
+		lineageTag: 048fa539-6e32-5d4c-a4dd-172d894d6c70
+		summarizeBy: none
+		sourceColumn: Collection ID
+		isKey
+
+	column 'Contract ID'
+		dataType: string
+		lineageTag: ec76abd9-f74a-5e2a-9698-be468dddf599
+		summarizeBy: none
+		sourceColumn: Contract ID
+
+	column 'Plan ID'
+		dataType: string
+		lineageTag: 5ae111df-d565-5f69-a715-47f5d4af8466
+		summarizeBy: none
+		sourceColumn: Plan ID
+
+	column 'Actual Collection Date'
+		dataType: dateTime
+		lineageTag: 43e34865-6f32-504b-a301-8ff2c9902996
+		summarizeBy: none
+		sourceColumn: Actual Collection Date
+		formatString: yyyy-MM-dd
+
+	column 'Amount'
+		dataType: double
+		lineageTag: b69fc02a-0f70-5105-8a88-1cea44c2133e
+		summarizeBy: none
+		sourceColumn: Amount
+
+	column 'Currency'
+		dataType: string
+		lineageTag: e0225145-3bff-547c-acac-848800e259f1
+		summarizeBy: none
+		sourceColumn: Currency
+
+	column 'Status'
+		dataType: string
+		lineageTag: 154bc221-c5ab-5a27-8885-5b2fd7dd36eb
+		summarizeBy: none
+		sourceColumn: Status
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 3153000c-a9df-581e-a16e-22b5d089235e
+		summarizeBy: none
+		sourceColumn: Company ID
+
+	column 'Project ID'
+		dataType: string
+		lineageTag: cfb04f1f-4c5c-5132-b6c2-a11068a508e3
+		summarizeBy: none
+		sourceColumn: Project ID
+
+	column 'Client ID'
+		dataType: string
+		lineageTag: 4b5121b3-8fa2-592d-8f18-0f65d5089914
+		summarizeBy: none
+		sourceColumn: Client ID
+
+	column 'Unit ID'
+		dataType: string
+		lineageTag: 7261ebb1-4dbf-5619-8278-735af2c1da39
+		summarizeBy: none
+		sourceColumn: Unit ID
+
+	partition 'Fact_Collections' = m
+		mode: import
+		source =
+				let
+				    Input = (let
+				    Raw = SIM_LoadCSV("Collections.csv", {{"Collection ID", type text}, {"Contract ID", type text}, {"Plan ID", type text}, {"Actual Collection Date", type date}, {"Amount", type number}, {"Currency", type text}, {"Status", type text}}, {"Collection ID"}),
+				    Joined = Table.NestedJoin(Raw, {"Contract ID"}, Fact_SalesContracts, {"Contract ID"}, "Contract", JoinKind.LeftOuter),
+				    Expanded = Table.ExpandTableColumn(Joined,"Contract",{"Company ID","Project ID","Client ID","Unit ID"}),
+				    Valid = if Table.RowCount(Table.SelectRows(Expanded, each [Company ID] = null or [Project ID] = null)) > 0 then error Error.Record("ContractNotFound", "Contract metadata required", null) else Expanded
+				in Valid),
+				    ProjectCheck = Table.NestedJoin(Input, {"Project ID"}, Dim_Project, {"Project ID"}, "_Project", JoinKind.LeftOuter),
+				    CurrencyCheck = Table.ExpandTableColumn(ProjectCheck, "_Project", {"Currency"}, {"_ExpectedCurrency"}),
+				    Valid = if Table.RowCount(Table.SelectRows(CurrencyCheck, each [_ExpectedCurrency] = null or [Currency] = null or [Currency] <> [_ExpectedCurrency])) > 0 then error Error.Record("ProjectCurrencyMismatch", "Fact_Collections", null) else Table.RemoveColumns(CurrencyCheck,{"_ExpectedCurrency"}),
+				    PlanCheck = Table.NestedJoin(Valid,{"Plan ID"},Fact_PaymentPlan,{"Plan ID"},"_Plan",JoinKind.LeftOuter),
+				    KeyCheck = if Table.RowCount(Table.SelectRows(PlanCheck, each Table.RowCount([_Plan]) <> 1 or [_Plan]{0}[Contract ID] <> [Contract ID])) > 0 then error Error.Record("CollectionPlanMismatch", "Plan and contract must match", null) else Table.RemoveColumns(PlanCheck,{"_Plan"})
+				in KeyCheck

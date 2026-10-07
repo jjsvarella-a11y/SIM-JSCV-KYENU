@@ -1,0 +1,38 @@
+table 'Fact_IncomeTax'
+	lineageTag: 2260085d-1918-54ef-b0b8-92333bef4238
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 7523b9ec-bc72-5b63-8acf-7d20f43b89ab
+		summarizeBy: none
+		sourceColumn: Company ID
+
+	column 'Period Date'
+		dataType: dateTime
+		lineageTag: 38cd24dd-84e9-5f87-b870-8b7df0b7c1ff
+		summarizeBy: none
+		sourceColumn: Period Date
+		formatString: yyyy-MM-dd
+
+	column 'Tax Expense'
+		dataType: double
+		lineageTag: 40ff55cd-a7df-5975-bf9b-0b9d29e80f0b
+		summarizeBy: none
+		sourceColumn: Tax Expense
+
+	column 'Approved'
+		dataType: boolean
+		lineageTag: 9244e7f7-a928-5875-a29c-b6f48cf93664
+		summarizeBy: none
+		sourceColumn: Approved
+
+	column 'Source'
+		dataType: string
+		lineageTag: efeee5c7-8303-5f03-93fe-2fc04dca78b5
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition 'Fact_IncomeTax' = m
+		mode: import
+		source =
+				SIM_LoadCSV("IncomeTax.csv", {{"Company ID", type text}, {"Period Date", type date}, {"Tax Expense", type number}, {"Approved", type logical}, {"Source", type text}}, {"Company ID", "Period Date"})

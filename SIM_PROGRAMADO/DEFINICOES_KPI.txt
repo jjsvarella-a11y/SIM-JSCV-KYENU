@@ -1,59 +1,473 @@
-measure 'Direct Costs' =
-CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+Revenue
+Unidade: CVE
+Definição: Receita contabilística validada; nível 2
+Fórmula: SUM Balance Period, group Revenue
+Fonte: Accounting BG
 
-measure 'FSE' =
-CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+Direct Costs
+Unidade: CVE
+Definição: Custos diretos com sinal normal de débito; estornos preservados
+Fórmula: SUM Debit Period - SUM Credit Period, account 61
+Fonte: Accounting BG
 
-measure 'Payroll' =
-CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+Gross Profit
+Unidade: CVE
+Definição: Receita menos custos diretos
+Fórmula: Revenue - Direct Costs
+Fonte: Accounting BG
 
-measure 'Other Operating Costs' =
-CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+Gross Margin
+Unidade: %
+Definição: Margem bruta sobre receita
+Fórmula: Gross Profit / Revenue
+Fonte: Accounting BG
 
-measure 'Other Income' =
-CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+FSE
+Unidade: CVE
+Definição: Fornecimentos e serviços externos
+Fórmula: Debit Period - Credit Period, account 62
+Fonte: Accounting BG
 
-measure 'D&A' =
-CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+Payroll
+Unidade: CVE
+Definição: Custos de pessoal
+Fórmula: Debit Period - Credit Period, account 63
+Fonte: Accounting BG
 
-measure 'EBITDA' =
-CVE; receitas e outros rendimentos menos custos 61/62/63/68. Provisório: validar convenção de sinais com contabilidade. BLANK se faltar qualquer componente; maior é melhor.
+Other Operating Costs
+Unidade: CVE
+Definição: Outros custos operacionais
+Fórmula: Debit Period - Credit Period, account 68
+Fonte: Accounting BG
 
-measure 'EBITDA Margin' =
-EBITDA / Revenue; sem dados ou receita zero resulta BLANK; maior é melhor.
+Other Operating Income
+Unidade: CVE
+Definição: Outros rendimentos operacionais
+Fórmula: Credit Period - Debit Period, account 78
+Fonte: Accounting BG
 
-measure 'EBIT' =
-CVE; EBITDA menos depreciação/amortização; provisório, confirmar sinais; ausências preservadas.
+EBITDA
+Unidade: CVE
+Definição: Resultado antes de depreciação, financiamento e impostos
+Fórmula: Revenue + Other Operating Income - Direct Costs - FSE - Payroll - Other Operating Costs
+Fonte: Accounting BG
 
-measure 'Revenue Executive' =
-Revenue validado, exibido apenas com uma empresa; não apresenta soma como consolidado.
+EBITDA Margin
+Unidade: %
+Definição: Margem EBITDA
+Fórmula: EBITDA / Revenue
+Fonte: Accounting BG
 
-measure 'EBITDA Executive' =
-Uma empresa por vez. Resultado provisório até validação contabilística de sinais e mapeamentos.
+D&A
+Unidade: CVE
+Definição: Depreciação e amortização
+Fórmula: Debit Period - Credit Period, account 64
+Fonte: Accounting BG
 
-measure 'EBITDA Margin Executive' =
-Uma empresa por vez. Resultado provisório até validação contabilística de sinais e mapeamentos.
+EBIT
+Unidade: CVE
+Definição: Resultado operacional
+Fórmula: EBITDA - D&A
+Fonte: Accounting BG
 
-measure 'EBIT Executive' =
-Uma empresa por vez. Resultado provisório até validação contabilística de sinais e mapeamentos.
+EBIT Margin
+Unidade: %
+Definição: Margem EBIT
+Fórmula: EBIT / Revenue
+Fonte: Accounting BG
 
-measure 'Revenue Prior Year' =
-CVE; período homólogo do ano anterior usando Dim_Date; não representa budget nem forecast.
+Finance Costs
+Unidade: CVE
+Definição: Custos financeiros
+Fórmula: Debit Period - Credit Period, account 69
+Fonte: Accounting BG
 
-measure 'Revenue Variance' =
-Atual menos homólogo; BLANK quando uma das bases está ausente.
+Finance Income
+Unidade: CVE
+Definição: Rendimentos financeiros
+Fórmula: Credit Period - Debit Period, account 79
+Fonte: Accounting BG
 
-measure 'Revenue Variance %' =
-Variação / homólogo; base zero ou ausente resulta BLANK.
+Net Finance
+Unidade: CVE
+Definição: Resultado financeiro
+Fórmula: Finance Income - Finance Costs
+Fonte: Accounting BG
 
-measure 'EBITDA Prior Year' =
-CVE; período homólogo do ano anterior usando Dim_Date; não representa budget nem forecast.
+Result Before Tax
+Unidade: CVE
+Definição: Resultado anterior a imposto; não é resultado líquido
+Fórmula: EBIT + Net Finance
+Fonte: Accounting BG
 
-measure 'EBITDA Variance' =
-Atual menos homólogo; BLANK quando uma das bases está ausente.
+Net Result
+Unidade: CVE
+Definição: Resultado líquido apenas com imposto aprovado em todos os meses
+Fórmula: Result Before Tax - Income Tax
+Fonte: Accounting BG
 
-measure 'EBITDA Variance %' =
-Variação / homólogo; base zero ou ausente resulta BLANK.
+Net Margin
+Unidade: %
+Definição: Margem líquida
+Fórmula: Net Result / Revenue
+Fonte: Accounting BG
 
-measure 'Management Status' =
-Explicita ausência de dados e requisitos de reconciliação; não classifica desempenho sem metas.
+Cash
+Unidade: CVE
+Definição: Caixa e equivalentes na data de referência
+Fórmula: Debit YTD - Credit YTD, accounts 11/12/13
+Fonte: Accounting BG
+
+Accounts Receivable
+Unidade: CVE
+Definição: Saldo de clientes
+Fórmula: Debit YTD - Credit YTD, account 21
+Fonte: Accounting BG
+
+Accounts Payable
+Unidade: CVE
+Definição: Saldo de fornecedores
+Fórmula: Credit YTD - Debit YTD, account 22
+Fonte: Accounting BG
+
+Inventory / WIP
+Unidade: CVE
+Definição: Inventário e trabalhos em curso
+Fórmula: Debit YTD - Credit YTD, accounts 35/36
+Fonte: Accounting BG
+
+Current Assets
+Unidade: CVE
+Definição: Ativo corrente; bloqueado enquanto classificação estiver incompleta
+Fórmula: Mapped Current Assets + approved current-asset classifications
+Fonte: Accounting BG
+
+Current Liabilities
+Unidade: CVE
+Definição: Passivo corrente; exige classificação de maturidades
+Fórmula: Payables + approved current-liability classifications
+Fonte: Accounting BG
+
+Working Capital
+Unidade: CVE
+Definição: Fundo de maneio
+Fórmula: Current Assets - Current Liabilities
+Fonte: Accounting BG
+
+Debt
+Unidade: CVE
+Definição: Financiamento contabilístico total
+Fórmula: Credit YTD - Debit YTD, account 23
+Fonte: Accounting BG
+
+Net Debt
+Unidade: CVE
+Definição: Dívida menos caixa
+Fórmula: Debt - Cash
+Fonte: Accounting BG
+
+Equity
+Unidade: CVE
+Definição: Capital próprio contabilístico
+Fórmula: Credit YTD - Debit YTD, accounts 51/56/58/59
+Fonte: Accounting BG
+
+Current Ratio
+Unidade: x
+Definição: Liquidez geral
+Fórmula: Current Assets / Current Liabilities
+Fonte: Accounting BG
+
+Quick Ratio
+Unidade: x
+Definição: Liquidez reduzida
+Fórmula: (Current Assets - Inventory) / Current Liabilities
+Fonte: Accounting BG
+
+Immediate Liquidity
+Unidade: x
+Definição: Liquidez imediata
+Fórmula: Cash / Current Liabilities
+Fonte: Accounting BG
+
+DSO
+Unidade: days
+Definição: Prazo de recebimento aproximado; sem IVA/prazos por fatura
+Fórmula: Receivables / Revenue * selected days
+Fonte: Accounting BG
+
+DPO
+Unidade: days
+Definição: Prazo de pagamento aproximado; custos diretos como proxy de compras
+Fórmula: Payables / Direct Costs * selected days
+Fonte: Accounting BG
+
+GDV
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: sum project GDV
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Initial Investment
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: source Initial Investment
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Current Investment
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: source Current Investment
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Investment Variance
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: Current Investment - Initial Investment
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Project Profit
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: GDV - Current Investment
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Development Margin
+Unidade: %
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: Project Profit / GDV
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Profit on Cost
+Unidade: %
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: Project Profit / Current Investment
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+ROI
+Unidade: %
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: Project Profit / Current Investment
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+IRR
+Unidade: %
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: XIRR dated equity cash flows
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+NPV
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: dated cash flows discounted at sourced rate
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Financing
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: source Financing
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Project Equity
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: source Project Equity
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+LTC
+Unidade: %
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: Financing / Current Investment
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+LTV
+Unidade: %
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: Financing / GDV
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Funding Coverage
+Unidade: %
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: available cash + expected receipts + finance + equity / requirements
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Funding Gap
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: max(0, requirements - available resources), latest period
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Peak Funding Gap
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: MAX Funding Gap over sourced projection dates
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Physical Progress
+Unidade: %
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: source Physical Progress
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Financial Progress
+Unidade: %
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: Actual Cost / Current Investment
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Actual Cost
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: source Actual Cost
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Committed Cost
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: source Committed Cost
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Cost to Complete
+Unidade: currency
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: Current Investment - Actual Cost
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+CPI
+Unidade: x
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: Earned Value / Actual Cost
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+SPI
+Unidade: x
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: Earned Value / Planned Value
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Forecast Completion
+Unidade: date
+Definição: Fonte de projeto necessária; não usar referências do handover como dados
+Fórmula: source Forecast Completion date
+Fonte: ProjectMetrics / ProjectCashFlow / ProjectAssumptions
+
+Contracted Sales
+Unidade: currency
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: approved/non-cancelled contracts through reference date
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Collections
+Unidade: currency
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: actual dated receipts only
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Commercial Receivables
+Unidade: currency
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: Contracted Sales - Collections
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Remaining GDV
+Unidade: currency
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: GDV - Contracted Sales
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Overdue Receivables
+Unidade: currency
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: past-due payment plans minus actual plan receipts
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Collection Rate
+Unidade: %
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: Collections / Contracted Sales
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+% Sold
+Unidade: %
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: Contracted Sales / GDV
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Units Sold
+Unidade: units
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: distinct units in active contracts
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Units Reserved
+Unidade: units
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: unit master status Reserved
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Units Available
+Unidade: units
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: unit master status Available
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Average Selling Price
+Unidade: currency
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: Contracted Sales / Units Sold
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Average Price m2
+Unidade: currency
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: Contracted Sales / area of distinct sold units
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Sales Velocity
+Unidade: contracts/month
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: distinct contracts in selected period / selected months
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Expected Collections
+Unidade: currency
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: future forecast-dated plan residuals; not actual cash
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+DSCR
+Unidade: x
+Definição: Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões
+Fórmula: cash available for debt service / debt service; source required
+Fonte: Contracts / PaymentPlan / Collections / UnitMaster
+
+Earned Value
+Unidade: currency
+Definição: Valor adquirido/planeado de fonte de projeto
+Fórmula: source Earned Value
+Fonte: ProjectMetrics
+
+Planned Value
+Unidade: currency
+Definição: Valor adquirido/planeado de fonte de projeto
+Fórmula: source Planned Value
+Fonte: ProjectMetrics
+
+Cash Available for Debt Service
+Unidade: currency
+Definição: Fonte de fluxo de caixa / serviço de dívida necessária
+Fórmula: source Cash Available for Debt Service
+Fonte: ProjectMetrics
+
+Debt Service
+Unidade: currency
+Definição: Fonte de fluxo de caixa / serviço de dívida necessária
+Fórmula: source Debt Service
+Fonte: ProjectMetrics
+
+Income Tax
+Unidade: CVE
+Definição: Imposto aprovado em fonte; não presumir zero
+Fórmula: approved tax source monthly
+Fonte: IncomeTax

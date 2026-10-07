@@ -49,3 +49,33 @@ ref table _Measures
 
 ref cultureInfo pt-PT
 
+
+ref table 'SIM_Entity'
+ref table 'SIM_Periodicity'
+ref table 'SIM_Comparison'
+ref table 'SIM_ComparisonYear'
+ref table 'SIM_Phase'
+ref table 'SIM_ReferencePeriod'
+ref table 'SIM_CustomStart'
+ref table 'SIM_CustomEnd'
+ref table 'Dim_Project'
+ref table 'Dim_Client'
+ref table 'Dim_Unit'
+ref table 'Fact_SalesContracts'
+ref table 'Fact_PaymentPlan'
+ref table 'Fact_Collections'
+ref table 'Fact_ProjectMetrics'
+ref table 'Fact_ProjectCashFlow'
+ref table 'SIM_ProjectAssumptions'
+ref table 'Fact_BalanceBreakdown'
+ref table 'Fact_IncomeTax'
+ref table 'Fact_KPIPlans'
+ref table 'SIM_SourceCoverage'
+ref table 'Fact_Intercompany'
+ref table 'Dim_Contract'
+ref table 'SIM_Version'
+ref table 'SIM_Refresh'
+ref table 'SIM_KPI'
+
+ref expression SIM_OperationalRoot
+ref expression SIM_LoadCSV

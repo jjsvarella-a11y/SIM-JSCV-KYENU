@@ -130,3 +130,98 @@ relationship 65103bc5-2614-eb08-d621-4a2541e8b6af
 	fromColumn: Fact_Accounting.'Period Date'
 	toColumn: Dim_Date.Date
 
+
+relationship 9190556c-9582-5119-91d0-4a470742b3ab
+	fromColumn: 'Fact_SalesContracts'.'Company ID'
+	toColumn: 'Dim_Company'.'Company ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 9ff91d6b-c6ea-50bb-9dfc-de0fd63c63c8
+	fromColumn: 'Fact_SalesContracts'.'Project ID'
+	toColumn: 'Dim_Project'.'Project ID'
+	crossFilteringBehavior: oneDirection
+
+relationship f6467b4c-46f2-5de3-a8e0-54df657901f6
+	fromColumn: 'Fact_PaymentPlan'.'Company ID'
+	toColumn: 'Dim_Company'.'Company ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 2e03be1e-3f0a-51ce-9f7f-81a3100392e5
+	fromColumn: 'Fact_PaymentPlan'.'Project ID'
+	toColumn: 'Dim_Project'.'Project ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 0be9fdc3-4784-5bcb-8263-3f43793c3cdc
+	fromColumn: 'Fact_Collections'.'Company ID'
+	toColumn: 'Dim_Company'.'Company ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 016963db-7bf7-54d5-8804-dbfd1c208eba
+	fromColumn: 'Fact_Collections'.'Project ID'
+	toColumn: 'Dim_Project'.'Project ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 636a273c-41f0-599a-ba30-a7ebac4f4aa1
+	fromColumn: 'Fact_ProjectMetrics'.'Company ID'
+	toColumn: 'Dim_Company'.'Company ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 17381231-2901-5724-8887-98f521a3b5d6
+	fromColumn: 'Fact_ProjectMetrics'.'Project ID'
+	toColumn: 'Dim_Project'.'Project ID'
+	crossFilteringBehavior: oneDirection
+
+relationship e8825f26-1d00-5005-bb5f-41ea1ff0bbc7
+	fromColumn: 'Fact_ProjectCashFlow'.'Company ID'
+	toColumn: 'Dim_Company'.'Company ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 3500b5ff-6349-5aef-bbc9-ba1528f09c85
+	fromColumn: 'Fact_ProjectCashFlow'.'Project ID'
+	toColumn: 'Dim_Project'.'Project ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 6066b40c-da56-548a-8dfa-763ac57d8df2
+	fromColumn: 'Fact_SalesContracts'.'Client ID'
+	toColumn: 'Dim_Client'.'Client ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 0d75e09c-b004-5407-9a6e-4766c9de163d
+	fromColumn: 'Fact_SalesContracts'.'Unit ID'
+	toColumn: 'Dim_Unit'.'Unit ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 5a3ec3b5-69c4-53cd-ade9-0d25fdf33ac8
+	fromColumn: 'Fact_SalesContracts'.'Contract ID'
+	toColumn: 'Dim_Contract'.'Contract ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 493ae1d3-c47b-5570-9dea-251a94cfabdd
+	fromColumn: 'Fact_PaymentPlan'.'Client ID'
+	toColumn: 'Dim_Client'.'Client ID'
+	crossFilteringBehavior: oneDirection
+
+relationship c0bb0c5a-98d3-516f-8ce2-534f647ab3fb
+	fromColumn: 'Fact_PaymentPlan'.'Unit ID'
+	toColumn: 'Dim_Unit'.'Unit ID'
+	crossFilteringBehavior: oneDirection
+
+relationship aa0bf276-25fa-5e33-95ea-212a0e9e8690
+	fromColumn: 'Fact_PaymentPlan'.'Contract ID'
+	toColumn: 'Dim_Contract'.'Contract ID'
+	crossFilteringBehavior: oneDirection
+
+relationship 6658006d-1dbf-5a01-827c-878e188eea42
+	fromColumn: 'Fact_Collections'.'Client ID'
+	toColumn: 'Dim_Client'.'Client ID'
+	crossFilteringBehavior: oneDirection
+
+relationship a02ded8d-b1e9-5099-b6a5-c6f981d5d805
+	fromColumn: 'Fact_Collections'.'Unit ID'
+	toColumn: 'Dim_Unit'.'Unit ID'
+	crossFilteringBehavior: oneDirection
+
+relationship cb669d60-5d36-5bfa-87ee-29ba5e8cc983
+	fromColumn: 'Fact_Collections'.'Contract ID'
+	toColumn: 'Dim_Contract'.'Contract ID'
+	crossFilteringBehavior: oneDirection

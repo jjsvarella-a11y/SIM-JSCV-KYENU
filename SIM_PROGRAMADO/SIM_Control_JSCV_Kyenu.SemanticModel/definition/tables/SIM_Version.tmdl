@@ -1,0 +1,13 @@
+table 'SIM_Version'
+	lineageTag: 0113a0f4-b08a-567c-9e9f-af240f6df841
+
+	column 'Version'
+		dataType: string
+		lineageTag: 124d097d-f973-5f91-abdd-690b13c3c7b5
+		summarizeBy: none
+		sourceColumn: Version
+
+	partition 'SIM_Version' = m
+		mode: import
+		source =
+				Table.Distinct(Table.SelectColumns(Fact_KPIPlans, {"Version"}))

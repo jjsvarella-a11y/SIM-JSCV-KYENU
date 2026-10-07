@@ -1,0 +1,21 @@
+table 'SIM_ComparisonYear'
+	lineageTag: b65fd05f-60e5-5e58-80ac-7129fcd6efb0
+
+	column 'Year'
+		dataType: int64
+		lineageTag: ee2f1cc5-dd8c-5a6c-b592-52d0bd652e46
+		summarizeBy: none
+		sourceColumn: Year
+
+	partition 'SIM_ComparisonYear' = m
+		mode: import
+		source =
+				#table(type table [#"Year" = Int64.Type], {
+				{2024},
+				{2025},
+				{2026},
+				{2027},
+				{2028},
+				{2029},
+				{2030}
+				})

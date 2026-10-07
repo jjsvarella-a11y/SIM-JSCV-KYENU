@@ -1,0 +1,21 @@
+table 'SIM_Comparison'
+	lineageTag: 22bfd1a4-6008-5158-b70a-fa3b60718b87
+
+	column 'Comparison'
+		dataType: string
+		lineageTag: 50224d32-06c3-5784-bb5e-b0368ca10764
+		summarizeBy: none
+		sourceColumn: Comparison
+
+	partition 'SIM_Comparison' = m
+		mode: import
+		source =
+				#table(type table [#"Comparison" = text], {
+				{"Homologous Period"},
+				{"Previous Period"},
+				{"Same Period of Selected Year"},
+				{"Custom"},
+				{"Budget"},
+				{"Target"},
+				{"Forecast"}
+				})

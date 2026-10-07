@@ -1,0 +1,55 @@
+table 'Fact_BalanceBreakdown'
+	lineageTag: 2d38b8d5-b6cf-5e36-82a9-917de5d7f3c4
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 77b819fd-8807-5fd3-96cf-d255bb8f7b5d
+		summarizeBy: none
+		sourceColumn: Company ID
+
+	column 'Period Date'
+		dataType: dateTime
+		lineageTag: 40bc27a6-6c11-5d5d-8f90-3eb0348cb667
+		summarizeBy: none
+		sourceColumn: Period Date
+
+	column 'Account ID'
+		dataType: string
+		lineageTag: aaec71f3-2e18-5ade-bd6c-f30d10acbff2
+		summarizeBy: none
+		sourceColumn: Account ID
+
+	column 'Balance Class'
+		dataType: string
+		lineageTag: 239d06ad-c8d2-5958-a424-aa02b9e99556
+		summarizeBy: none
+		sourceColumn: Balance Class
+
+	column 'Value'
+		dataType: double
+		lineageTag: ffae3824-e49b-5d32-b3d6-89b88cd0ea18
+		summarizeBy: none
+		sourceColumn: Value
+
+	column 'Currency'
+		dataType: string
+		lineageTag: 17326958-53d9-547a-bd1c-e0e86d4f5c76
+		summarizeBy: none
+		sourceColumn: Currency
+
+	column 'Approved'
+		dataType: boolean
+		lineageTag: 38e7571c-6d29-59f3-a79a-f9e02a99fd4d
+		summarizeBy: none
+		sourceColumn: Approved
+
+	column 'Source'
+		dataType: string
+		lineageTag: 50cf9a3a-ce1e-58b6-9b23-c1803f8a2d46
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition 'Fact_BalanceBreakdown' = m
+		mode: import
+		source =
+				SIM_LoadCSV("BalanceBreakdown.csv", {{"Company ID", type text}, {"Period Date", type date}, {"Account ID", type text}, {"Balance Class", type text}, {"Value", type number}, {"Currency", type text}, {"Approved", type logical}, {"Source", type text}}, {"Company ID","Period Date","Account ID","Balance Class"})

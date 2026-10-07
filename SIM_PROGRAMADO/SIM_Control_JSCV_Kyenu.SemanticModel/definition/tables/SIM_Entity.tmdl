@@ -1,0 +1,23 @@
+table 'SIM_Entity'
+	lineageTag: 1368ba41-414f-5650-81ff-debdca694891
+
+	column 'Entity Key'
+		dataType: string
+		lineageTag: 914b33ab-103d-5c97-ae81-fe3814370b60
+		summarizeBy: none
+		sourceColumn: Entity Key
+
+	column 'Entity'
+		dataType: string
+		lineageTag: 59be753b-ccc1-50fc-853b-f84b3e002e5a
+		summarizeBy: none
+		sourceColumn: Entity
+
+	partition 'SIM_Entity' = m
+		mode: import
+		source =
+				#table(type table [#"Entity Key" = text, #"Entity" = text], {
+				{"JSCV", "JSCV"},
+				{"KYENU", "KYENU"},
+				{"CON", "JSCV & KYENU — CONSOLIDATED"}
+				})

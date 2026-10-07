@@ -1,0 +1,14 @@
+table 'SIM_Refresh'
+	lineageTag: a5a7a9c9-2499-5f2f-91de-8331311ff749
+
+	column 'Last Refresh UTC'
+		dataType: dateTime
+		lineageTag: 624a721b-71a9-5b9f-9990-e6e7ef2508e8
+		summarizeBy: none
+		sourceColumn: Last Refresh UTC
+		formatString: yyyy-MM-dd HH:mm
+
+	partition 'SIM_Refresh' = m
+		mode: import
+		source =
+				#table(type table [#"Last Refresh UTC" = datetime], {{DateTimeZone.RemoveZone(DateTimeZone.UtcNow())}})

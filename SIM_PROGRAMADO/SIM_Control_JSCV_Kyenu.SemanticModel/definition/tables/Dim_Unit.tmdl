@@ -1,0 +1,49 @@
+table 'Dim_Unit'
+	lineageTag: 4dc9b4fb-1e1e-5dd5-97d7-92f55881dd13
+
+	column 'Unit ID'
+		dataType: string
+		lineageTag: 561126c4-fe17-52f7-a6c7-7f9b895c985a
+		summarizeBy: none
+		sourceColumn: Unit ID
+		isKey
+
+	column 'Project ID'
+		dataType: string
+		lineageTag: ae34563f-d3f1-57f4-b4d3-f1ae38e1881f
+		summarizeBy: none
+		sourceColumn: Project ID
+
+	column 'Currency'
+		dataType: string
+		lineageTag: 88ed9997-ca7f-5db6-9df1-4190646560d1
+		summarizeBy: none
+		sourceColumn: Currency
+
+	column 'List Price'
+		dataType: double
+		lineageTag: 4a1e5bea-e274-54e5-871b-011da7e89d4a
+		summarizeBy: none
+		sourceColumn: List Price
+
+	column 'Area m2'
+		dataType: double
+		lineageTag: a6e0451f-7bbc-54e3-96db-5cb647e76da3
+		summarizeBy: none
+		sourceColumn: Area m2
+
+	column 'Status'
+		dataType: string
+		lineageTag: 85bad30e-3866-564f-9831-f31f579feabe
+		summarizeBy: none
+		sourceColumn: Status
+
+	partition 'Dim_Unit' = m
+		mode: import
+		source =
+				let
+				    Input = (SIM_LoadCSV("UnitMaster.csv", {{"Unit ID", type text}, {"Project ID", type text}, {"Currency", type text}, {"List Price", type number}, {"Area m2", type number}, {"Status", type text}}, {"Unit ID"})),
+				    ProjectCheck = Table.NestedJoin(Input, {"Project ID"}, Dim_Project, {"Project ID"}, "_Project", JoinKind.LeftOuter),
+				    CurrencyCheck = Table.ExpandTableColumn(ProjectCheck, "_Project", {"Currency"}, {"_ExpectedCurrency"}),
+				    Valid = if Table.RowCount(Table.SelectRows(CurrencyCheck, each [_ExpectedCurrency] = null or [Currency] = null or [Currency] <> [_ExpectedCurrency])) > 0 then error Error.Record("ProjectCurrencyMismatch", "Dim_Unit", null) else Table.RemoveColumns(CurrencyCheck,{"_ExpectedCurrency"})
+				in Valid

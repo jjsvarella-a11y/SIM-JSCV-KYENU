@@ -1,0 +1,18 @@
+table 'SIM_Phase'
+	lineageTag: 8f3714ba-792a-5a55-870b-412d434262e9
+
+	column 'Phase'
+		dataType: string
+		lineageTag: af96852b-b717-5080-b623-ccf54ae649bc
+		summarizeBy: none
+		sourceColumn: Phase
+
+	partition 'SIM_Phase' = m
+		mode: import
+		source =
+				#table(type table [#"Phase" = text], {
+				{"INITIAL"},
+				{"BASELINE"},
+				{"CURRENT"},
+				{"FORECAST"}
+				})

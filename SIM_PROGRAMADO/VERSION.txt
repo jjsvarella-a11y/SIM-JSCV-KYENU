@@ -1,0 +1,1 @@
+SIM Control reporting v2 — implemented in PBIP; Desktop runtime validation pending.

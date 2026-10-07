@@ -1,0 +1,31 @@
+table 'SIM_ProjectAssumptions'
+	lineageTag: a9125ef5-c157-5b98-8cb3-b0293cf4ef91
+
+	column 'Project ID'
+		dataType: string
+		lineageTag: 9c885b87-f1a8-5de6-b994-6b045c92c087
+		summarizeBy: none
+		sourceColumn: Project ID
+
+	column 'Phase'
+		dataType: string
+		lineageTag: 5ac6975f-6250-598a-9735-bcaf56f5ffd6
+		summarizeBy: none
+		sourceColumn: Phase
+
+	column 'Discount Rate'
+		dataType: double
+		lineageTag: 3e5d0319-2559-588f-a2f9-b16e5c55de30
+		summarizeBy: none
+		sourceColumn: Discount Rate
+
+	column 'Source'
+		dataType: string
+		lineageTag: 6b9c4c1e-4728-5f3a-87ae-7456d5d48960
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition 'SIM_ProjectAssumptions' = m
+		mode: import
+		source =
+				SIM_LoadCSV("ProjectAssumptions.csv", {{"Project ID", type text}, {"Phase", type text}, {"Discount Rate", type number}, {"Source", type text}}, {"Project ID", "Phase"})

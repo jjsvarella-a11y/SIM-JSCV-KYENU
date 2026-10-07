@@ -1,0 +1,86 @@
+table 'Fact_ProjectCashFlow'
+	lineageTag: af9c41df-6a9a-5236-bf83-8e77edba3c79
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 351049d9-905a-5d27-abad-3c25d82729b0
+		summarizeBy: none
+		sourceColumn: Company ID
+
+	column 'Project ID'
+		dataType: string
+		lineageTag: 218b06ad-8a4d-5953-b285-cb167a96dbd5
+		summarizeBy: none
+		sourceColumn: Project ID
+
+	column 'Date'
+		dataType: dateTime
+		lineageTag: 7b36485c-13cb-5013-9ead-c6d73c504f56
+		summarizeBy: none
+		sourceColumn: Date
+		formatString: yyyy-MM-dd
+
+	column 'Phase'
+		dataType: string
+		lineageTag: 27a9b53e-fea9-5d4b-88e8-cd3a90f4b330
+		summarizeBy: none
+		sourceColumn: Phase
+
+	column 'Currency'
+		dataType: string
+		lineageTag: 6eabf8cc-1a36-5513-8a99-f502a0c9f8b8
+		summarizeBy: none
+		sourceColumn: Currency
+
+	column 'Cash Requirement'
+		dataType: double
+		lineageTag: ccedddaf-5c22-5a1a-bf45-21a3a6c354ae
+		summarizeBy: none
+		sourceColumn: Cash Requirement
+
+	column 'Project Cash Available'
+		dataType: double
+		lineageTag: 94e45735-6d44-55f0-bec3-c190d59b20b8
+		summarizeBy: none
+		sourceColumn: Project Cash Available
+
+	column 'Expected Collections'
+		dataType: double
+		lineageTag: 949c7d3e-333d-5b8d-87eb-3ece08ca81df
+		summarizeBy: none
+		sourceColumn: Expected Collections
+
+	column 'Available Financing'
+		dataType: double
+		lineageTag: 050a010d-f4aa-5f3c-a275-d95b2082a3c1
+		summarizeBy: none
+		sourceColumn: Available Financing
+
+	column 'Available Equity'
+		dataType: double
+		lineageTag: c90fc175-69c7-5a34-a8d0-bb0fab643808
+		summarizeBy: none
+		sourceColumn: Available Equity
+
+	column 'Equity Cash Flow'
+		dataType: double
+		lineageTag: 79db1336-97cd-5768-83d1-edef1ebc44e7
+		summarizeBy: none
+		sourceColumn: Equity Cash Flow
+
+	column 'Snapshot Date'
+		dataType: dateTime
+		lineageTag: e510c77f-6018-59aa-9dee-6a8acbe552a8
+		summarizeBy: none
+		sourceColumn: Snapshot Date
+		formatString: yyyy-MM-dd
+
+	partition 'Fact_ProjectCashFlow' = m
+		mode: import
+		source =
+				let
+				    Input = (SIM_LoadCSV("ProjectCashFlow.csv", {{"Company ID", type text}, {"Project ID", type text}, {"Date", type date}, {"Phase", type text}, {"Currency", type text}, {"Cash Requirement", type number}, {"Project Cash Available", type number}, {"Expected Collections", type number}, {"Available Financing", type number}, {"Available Equity", type number}, {"Equity Cash Flow", type number}, {"Snapshot Date", type date}}, {"Company ID", "Project ID", "Date", "Phase", "Snapshot Date"})),
+				    ProjectCheck = Table.NestedJoin(Input, {"Project ID"}, Dim_Project, {"Project ID"}, "_Project", JoinKind.LeftOuter),
+				    CurrencyCheck = Table.ExpandTableColumn(ProjectCheck, "_Project", {"Currency"}, {"_ExpectedCurrency"}),
+				    Valid = if Table.RowCount(Table.SelectRows(CurrencyCheck, each [_ExpectedCurrency] = null or [Currency] = null or [Currency] <> [_ExpectedCurrency])) > 0 then error Error.Record("ProjectCurrencyMismatch", "Fact_ProjectCashFlow", null) else Table.RemoveColumns(CurrencyCheck,{"_ExpectedCurrency"})
+				in Valid

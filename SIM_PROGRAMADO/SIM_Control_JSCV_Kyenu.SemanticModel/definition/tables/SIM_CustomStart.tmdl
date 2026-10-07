@@ -1,0 +1,26 @@
+table 'SIM_CustomStart'
+	lineageTag: 5609b7ee-6e65-50cb-ac8e-9c16b9b2e266
+
+	column 'Reference Date'
+		dataType: dateTime
+		lineageTag: 33052f18-346a-5455-a2d9-267f4b71b708
+		summarizeBy: none
+		sourceColumn: Reference Date
+		formatString: yyyy-MM-dd
+
+	column 'Year'
+		dataType: int64
+		lineageTag: c85acd82-9c81-5c0f-a61a-59ba1062538e
+		summarizeBy: none
+		sourceColumn: Year
+
+	column 'Period'
+		dataType: string
+		lineageTag: 0e9d1755-9d01-5848-a44b-b04af641a98f
+		summarizeBy: none
+		sourceColumn: Period
+
+	partition 'SIM_CustomStart' = m
+		mode: import
+		source =
+				SIM_ReferencePeriod

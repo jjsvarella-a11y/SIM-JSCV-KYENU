@@ -1,0 +1,92 @@
+table 'Fact_KPIPlans'
+	lineageTag: d34ec2bd-a2b7-52cd-a0dd-5f8f53519ee7
+
+	column 'Entity Key'
+		dataType: string
+		lineageTag: d45bec3b-9017-5602-bded-6e5890e6c5bb
+		summarizeBy: none
+		sourceColumn: Entity Key
+
+	column 'Project ID'
+		dataType: string
+		lineageTag: 014deb82-e570-5e7f-8be6-500d31201635
+		summarizeBy: none
+		sourceColumn: Project ID
+
+	column 'Period Date'
+		dataType: dateTime
+		lineageTag: 7cf614cc-4113-5e1b-9cc2-6d5444ac489b
+		summarizeBy: none
+		sourceColumn: Period Date
+		formatString: yyyy-MM-dd
+
+	column 'Periodicity'
+		dataType: string
+		lineageTag: a618ce26-5e7a-5d2a-b7fb-d089b5dd578f
+		summarizeBy: none
+		sourceColumn: Periodicity
+
+	column 'KPI ID'
+		dataType: string
+		lineageTag: 4bfcc6a9-b21a-52a0-8941-0482b9d7c139
+		summarizeBy: none
+		sourceColumn: KPI ID
+
+	column 'Kind'
+		dataType: string
+		lineageTag: ca7c1102-0106-5eda-9669-5155beaf5625
+		summarizeBy: none
+		sourceColumn: Kind
+
+	column 'Version'
+		dataType: string
+		lineageTag: 86a7bb52-586c-5974-a3ba-9944c78e4ace
+		summarizeBy: none
+		sourceColumn: Version
+
+	column 'Value'
+		dataType: double
+		lineageTag: 2c04a3d2-4a50-5027-b9f0-bd882e1be990
+		summarizeBy: none
+		sourceColumn: Value
+
+	column 'Limit'
+		dataType: double
+		lineageTag: a783d5b2-f334-5992-8729-3dfde6d821de
+		summarizeBy: none
+		sourceColumn: Limit
+
+	column 'Excellent'
+		dataType: double
+		lineageTag: d7272528-8641-5141-a644-fd5a532a0ec9
+		summarizeBy: none
+		sourceColumn: Excellent
+
+	column 'Unit'
+		dataType: string
+		lineageTag: 0634a754-87d4-5db6-8869-3e0a9ad94ff9
+		summarizeBy: none
+		sourceColumn: Unit
+
+	column 'Approved'
+		dataType: boolean
+		lineageTag: 3bc09665-67d5-5590-be1c-43479b6d0b8a
+		summarizeBy: none
+		sourceColumn: Approved
+
+	column 'Source'
+		dataType: string
+		lineageTag: 7fd78fd9-1cb9-5b80-8e1e-fdcc5aed7ab3
+		summarizeBy: none
+		sourceColumn: Source
+
+	column 'Desired Direction'
+		dataType: string
+		lineageTag: b07eea03-a13a-5823-a7d3-f3978ea6526f
+		summarizeBy: none
+		sourceColumn: Desired Direction
+
+	partition 'Fact_KPIPlans' = m
+		mode: import
+		source =
+				SIM_LoadCSV("KPIPlans.csv", {{"Entity Key", type text}, {"Project ID", type text}, {"Period Date", type date}, {"Periodicity", type text}, {"KPI ID", type text}, {"Kind", type text}, {"Version", type text}, {"Value", type number}, {"Limit", type number}, {"Excellent", type number}, {"Unit", type text}, {"Approved", type logical}, {"Source", type text}, {"Desired Direction", type text}}, {"Entity Key", "Project ID", "Period Date", "Periodicity", "KPI ID", "Kind", "Version"})

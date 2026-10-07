@@ -1,0 +1,295 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "29dd319c75ab56d983fb",
+  "position": {
+    "x": 28,
+    "y": 975,
+    "z": 18000,
+    "width": 1850,
+    "height": 350,
+    "tabOrder": 18000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KPIPlans"
+                    }
+                  },
+                  "Property": "KPI ID"
+                }
+              },
+              "queryRef": "Fact_KPIPlans.KPI ID",
+              "nativeQueryRef": "KPI ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KPIPlans"
+                    }
+                  },
+                  "Property": "Kind"
+                }
+              },
+              "queryRef": "Fact_KPIPlans.Kind",
+              "nativeQueryRef": "Kind"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KPIPlans"
+                    }
+                  },
+                  "Property": "Version"
+                }
+              },
+              "queryRef": "Fact_KPIPlans.Version",
+              "nativeQueryRef": "Version"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KPIPlans"
+                    }
+                  },
+                  "Property": "Periodicity"
+                }
+              },
+              "queryRef": "Fact_KPIPlans.Periodicity",
+              "nativeQueryRef": "Periodicity"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KPIPlans"
+                    }
+                  },
+                  "Property": "Period Date"
+                }
+              },
+              "queryRef": "Fact_KPIPlans.Period Date",
+              "nativeQueryRef": "Period Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KPIPlans"
+                    }
+                  },
+                  "Property": "Limit"
+                }
+              },
+              "queryRef": "Fact_KPIPlans.Limit",
+              "nativeQueryRef": "Limit"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KPIPlans"
+                    }
+                  },
+                  "Property": "Value"
+                }
+              },
+              "queryRef": "Fact_KPIPlans.Value",
+              "nativeQueryRef": "Value"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KPIPlans"
+                    }
+                  },
+                  "Property": "Excellent"
+                }
+              },
+              "queryRef": "Fact_KPIPlans.Excellent",
+              "nativeQueryRef": "Excellent"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KPIPlans"
+                    }
+                  },
+                  "Property": "Approved"
+                }
+              },
+              "queryRef": "Fact_KPIPlans.Approved",
+              "nativeQueryRef": "Approved"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KPIPlans"
+                    }
+                  },
+                  "Property": "Source"
+                }
+              },
+              "queryRef": "Fact_KPIPlans.Source",
+              "nativeQueryRef": "Source"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Approved limits / targets / excellent bands — no invented thresholds'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#222222'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "324d83e2e10152d9acb0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Plan Row Visible"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "s",
+              "Entity": "_Measures",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "s"
+                        }
+                      },
+                      "Property": "Plan Row Visible"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
+}

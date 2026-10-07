@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "tables": 59,
+  "measures": 152,
+  "relationships": 47,
+  "visuals": 219,
+  "regression": {
+    "JSCV 2026-03 Revenue": 2412322,
+    "Gross Profit signed": -286595,
+    "EBITDA signed": -9394583,
+    "EBIT signed": -10776775,
+    "Result Before Tax signed": -11284329,
+    "Cash cumulative": 108015908,
+    "Debt cumulative": 183191518,
+    "Net Debt cumulative": 75175610,
+    "2024-05 Direct Costs signed": -296524
+  },
+  "checks": [
+    "Named DAX table/column/measure references resolve",
+    "No circular measure references",
+    "Original tables/ingestion and Revenue preserved",
+    "No fact-to-fact relationships",
+    "Independent XLSX signed financial arithmetic",
+    "KYENU missing revenue preserved",
+    "New visual bounds and references",
+    "Shared slicer sync groups",
+    "Empty operational templates"
+  ],
+  "limitations": [
+    "No DAX engine execution",
+    "No Power Query execution",
+    "No Desktop rendering",
+    "XLSX/engine formulas validate accounting definitions independently, not runtime DAX"
+  ]
+}

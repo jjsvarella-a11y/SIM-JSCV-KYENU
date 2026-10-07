@@ -1,0 +1,14 @@
+table 'Dim_Contract'
+	lineageTag: 4f0dcd72-5360-569a-9431-181937c4ebd1
+
+	column 'Contract ID'
+		dataType: string
+		lineageTag: 76e6f78e-1360-55ba-945d-846527733e83
+		summarizeBy: none
+		sourceColumn: Contract ID
+		isKey
+
+	partition 'Dim_Contract' = m
+		mode: import
+		source =
+				Table.Distinct(Table.SelectColumns(Fact_SalesContracts, {"Contract ID"}))

@@ -1,0 +1,61 @@
+table 'Fact_ProjectMetrics'
+	lineageTag: 4707f27b-6511-5ae8-811c-18af68f8f695
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: f88e9532-6a6d-5b6d-b183-018566a7010c
+		summarizeBy: none
+		sourceColumn: Company ID
+
+	column 'Project ID'
+		dataType: string
+		lineageTag: 8cf50107-054c-5ac7-806f-72ff5c3afe09
+		summarizeBy: none
+		sourceColumn: Project ID
+
+	column 'Reference Date'
+		dataType: dateTime
+		lineageTag: 1d08e3e6-e401-595c-a161-2696b1d943af
+		summarizeBy: none
+		sourceColumn: Reference Date
+		formatString: yyyy-MM-dd
+
+	column 'Phase'
+		dataType: string
+		lineageTag: 8a8af256-1c7c-5e7b-b371-c49e73ae14a0
+		summarizeBy: none
+		sourceColumn: Phase
+
+	column 'KPI ID'
+		dataType: string
+		lineageTag: ef7aee13-18d2-518d-81ce-1ea0397ec7ae
+		summarizeBy: none
+		sourceColumn: KPI ID
+
+	column 'Value'
+		dataType: double
+		lineageTag: a3402eaf-552f-54a7-a7ff-3eea2248238c
+		summarizeBy: none
+		sourceColumn: Value
+
+	column 'Currency'
+		dataType: string
+		lineageTag: a169d575-b9fc-5e34-893d-28f2ff72e823
+		summarizeBy: none
+		sourceColumn: Currency
+
+	column 'Source'
+		dataType: string
+		lineageTag: 3fdec360-1684-5aeb-a6ab-9d8fe5a8fc08
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition 'Fact_ProjectMetrics' = m
+		mode: import
+		source =
+				let
+				    Input = (SIM_LoadCSV("ProjectMetrics.csv", {{"Company ID", type text}, {"Project ID", type text}, {"Reference Date", type date}, {"Phase", type text}, {"KPI ID", type text}, {"Value", type number}, {"Currency", type text}, {"Source", type text}}, {"Company ID", "Project ID", "Reference Date", "Phase", "KPI ID"})),
+				    ProjectCheck = Table.NestedJoin(Input, {"Project ID"}, Dim_Project, {"Project ID"}, "_Project", JoinKind.LeftOuter),
+				    CurrencyCheck = Table.ExpandTableColumn(ProjectCheck, "_Project", {"Currency"}, {"_ExpectedCurrency"}),
+				    Valid = if Table.RowCount(Table.SelectRows(CurrencyCheck, each [_ExpectedCurrency] = null or [Currency] = null or [Currency] <> [_ExpectedCurrency])) > 0 then error Error.Record("ProjectCurrencyMismatch", "Fact_ProjectMetrics", null) else Table.RemoveColumns(CurrencyCheck,{"_ExpectedCurrency"})
+				in Valid

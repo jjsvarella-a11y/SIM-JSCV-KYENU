@@ -1,0 +1,896 @@
+{
+  "Direct Costs": {
+    "expr": "VAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), 'Dim_Account'[Management Group] = \"Direct / Production Costs\", 'Dim_Account'[Account Level] = 2)\nVAR v_RequiredMonths = COUNTROWS(SUMMARIZE('Dim_Date', 'Dim_Date'[Period ID]))\nVAR v_AvailableMonths = CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), 'Dim_Account'[Management Group] = \"Direct / Production Costs\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit Period]) || ISBLANK('Fact_Accounting'[Credit Period]))), 'Dim_Account'[Management Group] = \"Direct / Production Costs\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_AvailableMonths = v_RequiredMonths && v_MissingAmounts = 0, CALCULATE(SUM('Fact_Accounting'[Debit Period]) - SUM('Fact_Accounting'[Credit Period]), 'Dim_Account'[Management Group] = \"Direct / Production Costs\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Normal debit or credit side; reversals preserved. Missing records return BLANK.",
+    "folder": "SIM / KPI Engine"
+  },
+  "FSE": {
+    "expr": "VAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), 'Dim_Account'[Management Group] = \"FSE\", 'Dim_Account'[Account Level] = 2)\nVAR v_RequiredMonths = COUNTROWS(SUMMARIZE('Dim_Date', 'Dim_Date'[Period ID]))\nVAR v_AvailableMonths = CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), 'Dim_Account'[Management Group] = \"FSE\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit Period]) || ISBLANK('Fact_Accounting'[Credit Period]))), 'Dim_Account'[Management Group] = \"FSE\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_AvailableMonths = v_RequiredMonths && v_MissingAmounts = 0, CALCULATE(SUM('Fact_Accounting'[Debit Period]) - SUM('Fact_Accounting'[Credit Period]), 'Dim_Account'[Management Group] = \"FSE\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Normal debit or credit side; reversals preserved. Missing records return BLANK.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Payroll": {
+    "expr": "VAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), 'Dim_Account'[Management Group] = \"Payroll\", 'Dim_Account'[Account Level] = 2)\nVAR v_RequiredMonths = COUNTROWS(SUMMARIZE('Dim_Date', 'Dim_Date'[Period ID]))\nVAR v_AvailableMonths = CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), 'Dim_Account'[Management Group] = \"Payroll\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit Period]) || ISBLANK('Fact_Accounting'[Credit Period]))), 'Dim_Account'[Management Group] = \"Payroll\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_AvailableMonths = v_RequiredMonths && v_MissingAmounts = 0, CALCULATE(SUM('Fact_Accounting'[Debit Period]) - SUM('Fact_Accounting'[Credit Period]), 'Dim_Account'[Management Group] = \"Payroll\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Normal debit or credit side; reversals preserved. Missing records return BLANK.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Other Operating Costs": {
+    "expr": "VAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), 'Dim_Account'[Management Group] = \"Other Operating Costs\", 'Dim_Account'[Account Level] = 2)\nVAR v_RequiredMonths = COUNTROWS(SUMMARIZE('Dim_Date', 'Dim_Date'[Period ID]))\nVAR v_AvailableMonths = CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), 'Dim_Account'[Management Group] = \"Other Operating Costs\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit Period]) || ISBLANK('Fact_Accounting'[Credit Period]))), 'Dim_Account'[Management Group] = \"Other Operating Costs\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_AvailableMonths = v_RequiredMonths && v_MissingAmounts = 0, CALCULATE(SUM('Fact_Accounting'[Debit Period]) - SUM('Fact_Accounting'[Credit Period]), 'Dim_Account'[Management Group] = \"Other Operating Costs\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Normal debit or credit side; reversals preserved. Missing records return BLANK.",
+    "folder": "SIM / KPI Engine"
+  },
+  "D&A": {
+    "expr": "VAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), 'Dim_Account'[Management Group] = \"D&A\", 'Dim_Account'[Account Level] = 2)\nVAR v_RequiredMonths = COUNTROWS(SUMMARIZE('Dim_Date', 'Dim_Date'[Period ID]))\nVAR v_AvailableMonths = CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), 'Dim_Account'[Management Group] = \"D&A\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit Period]) || ISBLANK('Fact_Accounting'[Credit Period]))), 'Dim_Account'[Management Group] = \"D&A\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_AvailableMonths = v_RequiredMonths && v_MissingAmounts = 0, CALCULATE(SUM('Fact_Accounting'[Debit Period]) - SUM('Fact_Accounting'[Credit Period]), 'Dim_Account'[Management Group] = \"D&A\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Normal debit or credit side; reversals preserved. Missing records return BLANK.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Finance Costs": {
+    "expr": "VAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), 'Dim_Account'[Management Group] = \"Finance Costs\", 'Dim_Account'[Account Level] = 2)\nVAR v_RequiredMonths = COUNTROWS(SUMMARIZE('Dim_Date', 'Dim_Date'[Period ID]))\nVAR v_AvailableMonths = CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), 'Dim_Account'[Management Group] = \"Finance Costs\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit Period]) || ISBLANK('Fact_Accounting'[Credit Period]))), 'Dim_Account'[Management Group] = \"Finance Costs\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_AvailableMonths = v_RequiredMonths && v_MissingAmounts = 0, CALCULATE(SUM('Fact_Accounting'[Debit Period]) - SUM('Fact_Accounting'[Credit Period]), 'Dim_Account'[Management Group] = \"Finance Costs\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Normal debit or credit side; reversals preserved. Missing records return BLANK.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Other Operating Income": {
+    "expr": "VAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), 'Dim_Account'[Management Group] = \"Other Income\", 'Dim_Account'[Account Level] = 2)\nVAR v_RequiredMonths = COUNTROWS(SUMMARIZE('Dim_Date', 'Dim_Date'[Period ID]))\nVAR v_AvailableMonths = CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), 'Dim_Account'[Management Group] = \"Other Income\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit Period]) || ISBLANK('Fact_Accounting'[Credit Period]))), 'Dim_Account'[Management Group] = \"Other Income\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_AvailableMonths = v_RequiredMonths && v_MissingAmounts = 0, CALCULATE(SUM('Fact_Accounting'[Credit Period]) - SUM('Fact_Accounting'[Debit Period]), 'Dim_Account'[Management Group] = \"Other Income\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Normal debit or credit side; reversals preserved. Missing records return BLANK.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Finance Income": {
+    "expr": "VAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), 'Dim_Account'[Management Group] = \"Finance Income\", 'Dim_Account'[Account Level] = 2)\nVAR v_RequiredMonths = COUNTROWS(SUMMARIZE('Dim_Date', 'Dim_Date'[Period ID]))\nVAR v_AvailableMonths = CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), 'Dim_Account'[Management Group] = \"Finance Income\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit Period]) || ISBLANK('Fact_Accounting'[Credit Period]))), 'Dim_Account'[Management Group] = \"Finance Income\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_AvailableMonths = v_RequiredMonths && v_MissingAmounts = 0, CALCULATE(SUM('Fact_Accounting'[Credit Period]) - SUM('Fact_Accounting'[Debit Period]), 'Dim_Account'[Management Group] = \"Finance Income\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Normal debit or credit side; reversals preserved. Missing records return BLANK.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Other Income": {
+    "expr": "[Other Operating Income]",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Gross Profit": {
+    "expr": "IF(NOT ISBLANK([Revenue]) && NOT ISBLANK([Direct Costs]), [Revenue] - [Direct Costs])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Gross Margin": {
+    "expr": "DIVIDE([Gross Profit], [Revenue])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "EBITDA": {
+    "expr": "IF(NOT ISBLANK([Revenue]) && NOT ISBLANK([Other Operating Income]) && NOT ISBLANK([Direct Costs]) && NOT ISBLANK([FSE]) && NOT ISBLANK([Payroll]) && NOT ISBLANK([Other Operating Costs]), [Revenue] + [Other Operating Income] - [Direct Costs] - [FSE] - [Payroll] - [Other Operating Costs])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "EBITDA Margin": {
+    "expr": "DIVIDE([EBITDA], [Revenue])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "EBIT": {
+    "expr": "IF(NOT ISBLANK([EBITDA]) && NOT ISBLANK([D&A]), [EBITDA] - [D&A])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "EBIT Margin": {
+    "expr": "DIVIDE([EBIT], [Revenue])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Net Finance": {
+    "expr": "IF(NOT ISBLANK([Finance Income]) && NOT ISBLANK([Finance Costs]), [Finance Income] - [Finance Costs])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Result Before Tax": {
+    "expr": "IF(NOT ISBLANK([EBIT]) && NOT ISBLANK([Net Finance]), [EBIT] + [Net Finance])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Income Tax": {
+    "expr": "VAR v_StartDate = MIN('Dim_Date'[Date])\nVAR v_EndDate = MAX('Dim_Date'[Date])\nVAR v_Companies = VALUES('Dim_Company'[Company ID])\nVAR v_TaxRows = FILTER('Fact_IncomeTax', 'Fact_IncomeTax'[Period Date] >= v_StartDate && 'Fact_IncomeTax'[Period Date] <= v_EndDate && 'Fact_IncomeTax'[Company ID] IN v_Companies && 'Fact_IncomeTax'[Approved] = TRUE())\nVAR v_MonthsRequired = COUNTROWS(SUMMARIZE('Dim_Date', 'Dim_Date'[Period ID]))\nRETURN IF(COUNTROWS(FILTER(v_TaxRows, NOT ISBLANK('Fact_IncomeTax'[Tax Expense]))) = v_MonthsRequired * COUNTROWS(v_Companies), SUMX(v_TaxRows, 'Fact_IncomeTax'[Tax Expense]))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Net Result": {
+    "expr": "IF(NOT ISBLANK([Result Before Tax]) && NOT ISBLANK([Income Tax]), [Result Before Tax] - [Income Tax])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Net Margin": {
+    "expr": "DIVIDE([Net Result], [Revenue])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Cash": {
+    "expr": "VAR v_AsOf = EOMONTH(MAX('Dim_Date'[Date]), 0)\nVAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Cash & Cash Equivalents\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit YTD]) || ISBLANK('Fact_Accounting'[Credit YTD]))), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Cash & Cash Equivalents\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_MissingAmounts = 0, CALCULATE(1 * (SUM('Fact_Accounting'[Debit YTD]) - SUM('Fact_Accounting'[Credit YTD])), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Cash & Cash Equivalents\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "End-of-period signed cumulative balance; never sums monthly snapshots.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Accounts Receivable": {
+    "expr": "VAR v_AsOf = EOMONTH(MAX('Dim_Date'[Date]), 0)\nVAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Accounts Receivable\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit YTD]) || ISBLANK('Fact_Accounting'[Credit YTD]))), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Accounts Receivable\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_MissingAmounts = 0, CALCULATE(1 * (SUM('Fact_Accounting'[Debit YTD]) - SUM('Fact_Accounting'[Credit YTD])), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Accounts Receivable\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "End-of-period signed cumulative balance; never sums monthly snapshots.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Accounts Payable": {
+    "expr": "VAR v_AsOf = EOMONTH(MAX('Dim_Date'[Date]), 0)\nVAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Accounts Payable\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit YTD]) || ISBLANK('Fact_Accounting'[Credit YTD]))), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Accounts Payable\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_MissingAmounts = 0, CALCULATE(-1 * (SUM('Fact_Accounting'[Debit YTD]) - SUM('Fact_Accounting'[Credit YTD])), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Accounts Payable\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "End-of-period signed cumulative balance; never sums monthly snapshots.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Inventory / WIP": {
+    "expr": "VAR v_AsOf = EOMONTH(MAX('Dim_Date'[Date]), 0)\nVAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Inventory / WIP\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit YTD]) || ISBLANK('Fact_Accounting'[Credit YTD]))), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Inventory / WIP\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_MissingAmounts = 0, CALCULATE(1 * (SUM('Fact_Accounting'[Debit YTD]) - SUM('Fact_Accounting'[Credit YTD])), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Inventory / WIP\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "End-of-period signed cumulative balance; never sums monthly snapshots.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Debt": {
+    "expr": "VAR v_AsOf = EOMONTH(MAX('Dim_Date'[Date]), 0)\nVAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Financing / Debt\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit YTD]) || ISBLANK('Fact_Accounting'[Credit YTD]))), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Financing / Debt\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_MissingAmounts = 0, CALCULATE(-1 * (SUM('Fact_Accounting'[Debit YTD]) - SUM('Fact_Accounting'[Credit YTD])), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Financing / Debt\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "End-of-period signed cumulative balance; never sums monthly snapshots.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Equity": {
+    "expr": "VAR v_AsOf = EOMONTH(MAX('Dim_Date'[Date]), 0)\nVAR v_Records = CALCULATE(COUNTROWS('Fact_Accounting'), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Equity\", 'Dim_Account'[Account Level] = 2)\nVAR v_MissingAmounts = CALCULATE(COUNTROWS(FILTER('Fact_Accounting', ISBLANK('Fact_Accounting'[Debit YTD]) || ISBLANK('Fact_Accounting'[Credit YTD]))), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Equity\", 'Dim_Account'[Account Level] = 2)\nRETURN IF(v_Records > 0 && v_MissingAmounts = 0, CALCULATE(-1 * (SUM('Fact_Accounting'[Debit YTD]) - SUM('Fact_Accounting'[Credit YTD])), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Management Group] = \"Equity\", 'Dim_Account'[Account Level] = 2))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "End-of-period signed cumulative balance; never sums monthly snapshots.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Balance Mapping Pending": {
+    "expr": "VAR v_AsOf = EOMONTH(MAX('Dim_Date'[Date]), 0)\nVAR v_Company = SELECTEDVALUE('Dim_Company'[Company ID])\nVAR v_Currency = SELECTEDVALUE('Dim_Company'[Currency])\nVAR v_RequiredIDs = CALCULATETABLE(VALUES('Fact_Accounting'[Account ID]), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Account Level] = 2, 'Dim_Account'[Balance Class] IN {\"Requires Detail\", \"Debt\"})\nRETURN SUMX(v_RequiredIDs,\n VAR v_Id = 'Fact_Accounting'[Account ID]\n VAR v_Net = CALCULATE(SUM('Fact_Accounting'[Debit YTD]) - SUM('Fact_Accounting'[Credit YTD]), REMOVEFILTERS('Dim_Date'), REMOVEFILTERS('Dim_Account'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Fact_Accounting'[Account ID] = v_Id)\n VAR v_Parts = FILTER('Fact_BalanceBreakdown', 'Fact_BalanceBreakdown'[Company ID] = v_Company && 'Fact_BalanceBreakdown'[Period Date] = v_AsOf && 'Fact_BalanceBreakdown'[Account ID] = v_Id && 'Fact_BalanceBreakdown'[Approved] = TRUE())\n VAR v_Invalid = COUNTROWS(FILTER(v_Parts, ISBLANK('Fact_BalanceBreakdown'[Value]) || 'Fact_BalanceBreakdown'[Currency] <> v_Currency || NOT ('Fact_BalanceBreakdown'[Balance Class] IN {\"Current Asset\",\"Non-Current Asset\",\"Current Liability\",\"Non-Current Liability\",\"Equity\"})))\n VAR v_SignedParts = SUMX(v_Parts, IF('Fact_BalanceBreakdown'[Balance Class] IN {\"Current Asset\",\"Non-Current Asset\"},1,-1) * 'Fact_BalanceBreakdown'[Value])\n RETURN IF(COUNTROWS(v_Parts) = 0 || v_Invalid > 0 || ISBLANK(v_Net) || ABS(v_Net - v_SignedParts) > 0.01, 1, 0))",
+    "fmt": "0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Current Assets": {
+    "expr": "VAR v_AsOf = EOMONTH(MAX('Dim_Date'[Date]), 0)\nVAR v_Company = SELECTEDVALUE('Dim_Company'[Company ID])\nVAR v_Eligible = CALCULATETABLE(VALUES('Fact_Accounting'[Account ID]), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Account Level] = 2, 'Dim_Account'[Balance Class] IN {\"Requires Detail\", \"Debt\"})\nVAR v_Extra = FILTER('Fact_BalanceBreakdown', 'Fact_BalanceBreakdown'[Company ID] = v_Company && 'Fact_BalanceBreakdown'[Period Date] = v_AsOf && 'Fact_BalanceBreakdown'[Balance Class] = \"Current Asset\" && 'Fact_BalanceBreakdown'[Account ID] IN v_Eligible && 'Fact_BalanceBreakdown'[Approved] = TRUE())\nRETURN IF([Balance Mapping Pending] = 0 && NOT ISBLANK([Cash]) && NOT ISBLANK([Accounts Receivable]) && NOT ISBLANK([Inventory / WIP]), [Cash] + [Accounts Receivable] + [Inventory / WIP] + IF(COUNTROWS(v_Extra) = 0, 0, SUMX(v_Extra,'Fact_BalanceBreakdown'[Value])))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Approved split balances of account groups 23–28 must reconcile to the signed BG balance to 0.01 CVE. Empty current-class subset adds zero only after full reconciliation.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Current Liabilities": {
+    "expr": "VAR v_AsOf = EOMONTH(MAX('Dim_Date'[Date]), 0)\nVAR v_Company = SELECTEDVALUE('Dim_Company'[Company ID])\nVAR v_Eligible = CALCULATETABLE(VALUES('Fact_Accounting'[Account ID]), REMOVEFILTERS('Dim_Date'), 'Fact_Accounting'[Period Date] = v_AsOf, 'Dim_Account'[Account Level] = 2, 'Dim_Account'[Balance Class] IN {\"Requires Detail\", \"Debt\"})\nVAR v_Extra = FILTER('Fact_BalanceBreakdown', 'Fact_BalanceBreakdown'[Company ID] = v_Company && 'Fact_BalanceBreakdown'[Period Date] = v_AsOf && 'Fact_BalanceBreakdown'[Balance Class] = \"Current Liability\" && 'Fact_BalanceBreakdown'[Account ID] IN v_Eligible && 'Fact_BalanceBreakdown'[Approved] = TRUE())\nRETURN IF([Balance Mapping Pending] = 0 && NOT ISBLANK([Accounts Payable]), [Accounts Payable] + IF(COUNTROWS(v_Extra) = 0, 0, SUMX(v_Extra,'Fact_BalanceBreakdown'[Value])))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Approved split balances of account groups 23–28 must reconcile to the signed BG balance to 0.01 CVE. Empty current-class subset adds zero only after full reconciliation.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Working Capital": {
+    "expr": "IF(NOT ISBLANK([Current Assets]) && NOT ISBLANK([Current Liabilities]), [Current Assets] - [Current Liabilities])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Net Debt": {
+    "expr": "IF(NOT ISBLANK([Debt]) && NOT ISBLANK([Cash]), [Debt] - [Cash])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Current Ratio": {
+    "expr": "DIVIDE([Current Assets], [Current Liabilities])",
+    "fmt": "0.00\"x\"",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Quick Ratio": {
+    "expr": "IF(NOT ISBLANK([Current Assets]) && NOT ISBLANK([Inventory / WIP]), DIVIDE([Current Assets] - [Inventory / WIP], [Current Liabilities]))",
+    "fmt": "0.00\"x\"",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Immediate Liquidity": {
+    "expr": "DIVIDE([Cash], [Current Liabilities])",
+    "fmt": "0.00\"x\"",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "DSO": {
+    "expr": "DIVIDE([Accounts Receivable], [Revenue]) * COUNTROWS(VALUES('Dim_Date'[Date]))",
+    "fmt": "0.0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Receivables Days": {
+    "expr": "[DSO]",
+    "fmt": "0.0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "DPO": {
+    "expr": "DIVIDE([Accounts Payable], [Direct Costs]) * COUNTROWS(VALUES('Dim_Date'[Date]))",
+    "fmt": "0.0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Payables Days": {
+    "expr": "[DPO]",
+    "fmt": "0.0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Project Metric Raw": {
+    "expr": "VAR v_Id = SELECTEDVALUE('SIM_KPI'[KPI ID])\nVAR v_Phase = SELECTEDVALUE('SIM_Phase'[Phase], \"CURRENT\")\nVAR v_RefDate = MAX('Dim_Date'[Date])\nVAR v_SnapshotDate = CALCULATE(MAX('Fact_ProjectMetrics'[Reference Date]), 'Fact_ProjectMetrics'[Phase] = v_Phase, 'Fact_ProjectMetrics'[Reference Date] <= v_RefDate)\nVAR v_RowsAtDate = CALCULATETABLE('Fact_ProjectMetrics', 'Fact_ProjectMetrics'[KPI ID] = v_Id, 'Fact_ProjectMetrics'[Phase] = v_Phase, 'Fact_ProjectMetrics'[Reference Date] = v_SnapshotDate)\nRETURN IF(HASONEVALUE('Dim_Project'[Project ID]) && COUNTROWS(v_RowsAtDate) = 1, SUMX(v_RowsAtDate, 'Fact_ProjectMetrics'[Value]))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "GDV": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"GDV\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Initial Investment": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Initial Investment\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Current Investment": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Current Investment\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Financing": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Financing\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Project Equity": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Project Equity\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Physical Progress": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Physical Progress\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Actual Cost": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Actual Cost\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Committed Cost": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Committed Cost\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Earned Value": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Earned Value\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Planned Value": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Planned Value\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Investment Variance": {
+    "expr": "IF(NOT ISBLANK([Current Investment]) && NOT ISBLANK([Initial Investment]), [Current Investment] - [Initial Investment])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Project Profit": {
+    "expr": "IF(NOT ISBLANK([GDV]) && NOT ISBLANK([Current Investment]), [GDV] - [Current Investment])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Development Margin": {
+    "expr": "DIVIDE([Project Profit], [GDV])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Profit on Cost": {
+    "expr": "DIVIDE([Project Profit], [Current Investment])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "ROI": {
+    "expr": "[Profit on Cost]",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "LTC": {
+    "expr": "DIVIDE([Financing], [Current Investment])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "LTV": {
+    "expr": "DIVIDE([Financing], [GDV])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Financial Progress": {
+    "expr": "DIVIDE([Actual Cost], [Current Investment])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Cost to Complete": {
+    "expr": "IF(NOT ISBLANK([Current Investment]) && NOT ISBLANK([Actual Cost]), [Current Investment] - [Actual Cost])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "CPI": {
+    "expr": "DIVIDE([Earned Value], [Actual Cost])",
+    "fmt": "0.00\"x\"",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "SPI": {
+    "expr": "DIVIDE([Earned Value], [Planned Value])",
+    "fmt": "0.00\"x\"",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Forecast Completion": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Forecast Completion\")",
+    "fmt": "yyyy-MM-dd",
+    "desc": "Date stored as Excel serial number in ProjectMetrics.Value; preserve date format.",
+    "folder": "SIM / KPI Engine"
+  },
+  "IRR": {
+    "expr": "VAR v_Phase = SELECTEDVALUE('SIM_Phase'[Phase], \"CURRENT\")\nVAR v_Reference = MAX('Dim_Date'[Date])\nVAR v_Snapshot = CALCULATE(MAX('Fact_ProjectCashFlow'[Snapshot Date]), 'Fact_ProjectCashFlow'[Phase] = v_Phase, 'Fact_ProjectCashFlow'[Snapshot Date] <= v_Reference)\nVAR v_Flows = FILTER('Fact_ProjectCashFlow', 'Fact_ProjectCashFlow'[Phase] = v_Phase && NOT ISBLANK('Fact_ProjectCashFlow'[Equity Cash Flow]))\nRETURN IF(HASONEVALUE('Dim_Project'[Project ID]) && COUNTROWS(FILTER(v_Flows, 'Fact_ProjectCashFlow'[Equity Cash Flow] < 0)) > 0 && COUNTROWS(FILTER(v_Flows, 'Fact_ProjectCashFlow'[Equity Cash Flow] > 0)) > 0, XIRR(v_Flows, 'Fact_ProjectCashFlow'[Equity Cash Flow], 'Fact_ProjectCashFlow'[Date], 0.1, BLANK()))",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "NPV": {
+    "expr": "VAR v_Phase = SELECTEDVALUE('SIM_Phase'[Phase], \"CURRENT\")\nVAR v_Reference = MAX('Dim_Date'[Date])\nVAR v_Snapshot = CALCULATE(MAX('Fact_ProjectCashFlow'[Snapshot Date]), 'Fact_ProjectCashFlow'[Phase] = v_Phase, 'Fact_ProjectCashFlow'[Snapshot Date] <= v_Reference)\nVAR v_Project = SELECTEDVALUE('Dim_Project'[Project ID])\nVAR v_Rate = CALCULATE(SELECTEDVALUE('SIM_ProjectAssumptions'[Discount Rate]), 'SIM_ProjectAssumptions'[Project ID] = v_Project, 'SIM_ProjectAssumptions'[Phase] = v_Phase)\nVAR v_Flows = FILTER('Fact_ProjectCashFlow', 'Fact_ProjectCashFlow'[Phase] = v_Phase && NOT ISBLANK('Fact_ProjectCashFlow'[Equity Cash Flow]))\nVAR v_FirstDate = MINX(v_Flows, 'Fact_ProjectCashFlow'[Date])\nRETURN IF(NOT ISBLANK(v_Rate) && v_Rate > -1 && COUNTROWS(v_Flows) > 0 && HASONEVALUE('Dim_Project'[Project ID]), SUMX(v_Flows, 'Fact_ProjectCashFlow'[Equity Cash Flow] / POWER(1 + v_Rate, DIVIDE(DATEDIFF(v_FirstDate, 'Fact_ProjectCashFlow'[Date], DAY), 365))))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Funding Gap": {
+    "expr": "VAR v_Phase = SELECTEDVALUE('SIM_Phase'[Phase], \"CURRENT\")\nVAR v_Reference = MAX('Dim_Date'[Date])\nVAR v_Snapshot = CALCULATE(MAX('Fact_ProjectCashFlow'[Snapshot Date]), 'Fact_ProjectCashFlow'[Phase] = v_Phase, 'Fact_ProjectCashFlow'[Snapshot Date] <= v_Reference)\nVAR v_LastDate = CALCULATE(MAX('Fact_ProjectCashFlow'[Date]), 'Fact_ProjectCashFlow'[Phase] = v_Phase)\nVAR v_RowAtDate = FILTER('Fact_ProjectCashFlow', 'Fact_ProjectCashFlow'[Phase] = v_Phase && 'Fact_ProjectCashFlow'[Date] = v_LastDate)\nRETURN IF(HASONEVALUE('Dim_Project'[Project ID]) && COUNTROWS(v_RowAtDate) = 1 && COUNTROWS(FILTER(v_RowAtDate, ISBLANK('Fact_ProjectCashFlow'[Cash Requirement]) || ISBLANK('Fact_ProjectCashFlow'[Project Cash Available]) || ISBLANK('Fact_ProjectCashFlow'[Expected Collections]) || ISBLANK('Fact_ProjectCashFlow'[Available Financing]) || ISBLANK('Fact_ProjectCashFlow'[Available Equity]))) = 0,\n MAX(0, SUMX(v_RowAtDate, 'Fact_ProjectCashFlow'[Cash Requirement] - 'Fact_ProjectCashFlow'[Project Cash Available] - 'Fact_ProjectCashFlow'[Expected Collections] - 'Fact_ProjectCashFlow'[Available Financing] - 'Fact_ProjectCashFlow'[Available Equity])))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Peak Funding Gap": {
+    "expr": "VAR v_Phase = SELECTEDVALUE('SIM_Phase'[Phase], \"CURRENT\")\nVAR v_Reference = MAX('Dim_Date'[Date])\nVAR v_Snapshot = CALCULATE(MAX('Fact_ProjectCashFlow'[Snapshot Date]), 'Fact_ProjectCashFlow'[Phase] = v_Phase, 'Fact_ProjectCashFlow'[Snapshot Date] <= v_Reference)\nVAR v_Flows = FILTER('Fact_ProjectCashFlow', 'Fact_ProjectCashFlow'[Phase] = v_Phase)\nVAR v_Incomplete = COUNTROWS(FILTER(v_Flows, ISBLANK('Fact_ProjectCashFlow'[Cash Requirement]) || ISBLANK('Fact_ProjectCashFlow'[Project Cash Available]) || ISBLANK('Fact_ProjectCashFlow'[Expected Collections]) || ISBLANK('Fact_ProjectCashFlow'[Available Financing]) || ISBLANK('Fact_ProjectCashFlow'[Available Equity])))\nRETURN IF(HASONEVALUE('Dim_Project'[Project ID]) && COUNTROWS(v_Flows) > 0 && v_Incomplete = 0, MAXX(v_Flows, MAX(0, 'Fact_ProjectCashFlow'[Cash Requirement] - 'Fact_ProjectCashFlow'[Project Cash Available] - 'Fact_ProjectCashFlow'[Expected Collections] - 'Fact_ProjectCashFlow'[Available Financing] - 'Fact_ProjectCashFlow'[Available Equity])))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Funding Coverage": {
+    "expr": "VAR v_Phase = SELECTEDVALUE('SIM_Phase'[Phase], \"CURRENT\")\nVAR v_Reference = MAX('Dim_Date'[Date])\nVAR v_Snapshot = CALCULATE(MAX('Fact_ProjectCashFlow'[Snapshot Date]), 'Fact_ProjectCashFlow'[Phase] = v_Phase, 'Fact_ProjectCashFlow'[Snapshot Date] <= v_Reference)\nVAR v_LastDate = CALCULATE(MAX('Fact_ProjectCashFlow'[Date]), 'Fact_ProjectCashFlow'[Phase] = v_Phase)\nVAR v_RowsAtDate = FILTER('Fact_ProjectCashFlow', 'Fact_ProjectCashFlow'[Phase] = v_Phase && 'Fact_ProjectCashFlow'[Date] = v_LastDate)\nRETURN IF(NOT ISBLANK([Funding Gap]), DIVIDE(SUMX(v_RowsAtDate, 'Fact_ProjectCashFlow'[Project Cash Available] + 'Fact_ProjectCashFlow'[Expected Collections] + 'Fact_ProjectCashFlow'[Available Financing] + 'Fact_ProjectCashFlow'[Available Equity]), SUMX(v_RowsAtDate, 'Fact_ProjectCashFlow'[Cash Requirement])))",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Contracted Sales": {
+    "expr": "VAR v_EndDate = MAX('Dim_Date'[Date])\nRETURN CALCULATE(SUM('Fact_SalesContracts'[Contract Value]), 'Fact_SalesContracts'[Contract Date] <= v_EndDate, 'Fact_SalesContracts'[Status] <> \"Cancelled\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Collections": {
+    "expr": "IF([Collection Feed Complete], VAR v_ActualReceipts = (VAR v_EndDate = MAX('Dim_Date'[Date])\nRETURN CALCULATE(SUM('Fact_Collections'[Amount]), 'Fact_Collections'[Actual Collection Date] <> BLANK(), 'Fact_Collections'[Actual Collection Date] <= v_EndDate, 'Fact_Collections'[Status] = \"Paid\")) RETURN IF(ISBLANK(v_ActualReceipts), 0, v_ActualReceipts))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Commercial Receivables": {
+    "expr": "IF(NOT ISBLANK([Contracted Sales]) && NOT ISBLANK([Collections]), [Contracted Sales] - [Collections])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Remaining GDV": {
+    "expr": "IF(NOT ISBLANK([GDV]) && NOT ISBLANK([Contracted Sales]), [GDV] - [Contracted Sales])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Collection Rate": {
+    "expr": "DIVIDE([Collections], [Contracted Sales])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "% Sold": {
+    "expr": "DIVIDE([Contracted Sales], [GDV])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Overdue Receivables": {
+    "expr": "IF([Collection Feed Complete], VAR v_EndDate = MAX('Dim_Date'[Date])\nVAR v_Plans = FILTER('Fact_PaymentPlan', 'Fact_PaymentPlan'[Due Date] < v_EndDate && 'Fact_PaymentPlan'[Status] <> \"Cancelled\")\nRETURN IF(COUNTROWS(v_Plans) > 0, SUMX(v_Plans, VAR v_Plan = 'Fact_PaymentPlan'[Plan ID]\n VAR v_Due = 'Fact_PaymentPlan'[Expected Amount]\n VAR v_Paid = CALCULATE(SUM('Fact_Collections'[Amount]), TREATAS({v_Plan}, 'Fact_Collections'[Plan ID]), 'Fact_Collections'[Actual Collection Date] <> BLANK(), 'Fact_Collections'[Actual Collection Date] <= v_EndDate, 'Fact_Collections'[Status] = \"Paid\")\n RETURN IF(NOT ISBLANK(v_Due), MAX(0, v_Due - IF(ISBLANK(v_Paid), 0, v_Paid))))))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "No receipt against a known scheduled installment is outstanding, not missing expected amount; missing feed flagged separately.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Expected Collections": {
+    "expr": "IF([Collection Feed Complete], VAR v_EndDate = MAX('Dim_Date'[Date])\nVAR v_Plans = FILTER('Fact_PaymentPlan', 'Fact_PaymentPlan'[Forecast Collection Date] > v_EndDate && 'Fact_PaymentPlan'[Status] <> \"Cancelled\")\nRETURN IF(COUNTROWS(v_Plans) > 0, SUMX(v_Plans, VAR v_Plan = 'Fact_PaymentPlan'[Plan ID]\n VAR v_Due = 'Fact_PaymentPlan'[Expected Amount]\n VAR v_Paid = CALCULATE(SUM('Fact_Collections'[Amount]), TREATAS({v_Plan}, 'Fact_Collections'[Plan ID]), 'Fact_Collections'[Actual Collection Date] <> BLANK(), 'Fact_Collections'[Actual Collection Date] <= v_EndDate, 'Fact_Collections'[Status] = \"Paid\")\n RETURN IF(NOT ISBLANK(v_Due), MAX(0, v_Due - IF(ISBLANK(v_Paid), 0, v_Paid))))))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Units Sold": {
+    "expr": "VAR v_EndDate = MAX('Dim_Date'[Date])\nRETURN CALCULATE(DISTINCTCOUNT('Fact_SalesContracts'[Unit ID]), 'Fact_SalesContracts'[Contract Date] <= v_EndDate, 'Fact_SalesContracts'[Status] <> \"Cancelled\")",
+    "fmt": "0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Units Reserved": {
+    "expr": "VAR v_Projects = VALUES('Dim_Project'[Project ID])\nVAR v_RowsInProject = FILTER('Dim_Unit', 'Dim_Unit'[Project ID] IN v_Projects)\nRETURN IF(HASONEVALUE('Dim_Project'[Project ID]) && COUNTROWS(v_RowsInProject) > 0, COUNTROWS(FILTER(v_RowsInProject, 'Dim_Unit'[Status] = \"Reserved\")))",
+    "fmt": "0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Units Available": {
+    "expr": "VAR v_Projects = VALUES('Dim_Project'[Project ID])\nVAR v_RowsInProject = FILTER('Dim_Unit', 'Dim_Unit'[Project ID] IN v_Projects)\nRETURN IF(HASONEVALUE('Dim_Project'[Project ID]) && COUNTROWS(v_RowsInProject) > 0, COUNTROWS(FILTER(v_RowsInProject, 'Dim_Unit'[Status] = \"Available\")))",
+    "fmt": "0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Average Selling Price": {
+    "expr": "DIVIDE([Contracted Sales], [Units Sold])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Average Price m2": {
+    "expr": "VAR v_EndDate = MAX('Dim_Date'[Date])\nVAR v_Units = CALCULATETABLE(VALUES('Fact_SalesContracts'[Unit ID]), 'Fact_SalesContracts'[Contract Date] <= v_EndDate, 'Fact_SalesContracts'[Status] <> \"Cancelled\")\nVAR v_Area = CALCULATE(SUM('Dim_Unit'[Area m2]), TREATAS(v_Units, 'Dim_Unit'[Unit ID]))\nRETURN DIVIDE([Contracted Sales], v_Area)",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Sales Velocity": {
+    "expr": "VAR v_StartDate = MIN('Dim_Date'[Date])\nVAR v_EndDate = MAX('Dim_Date'[Date])\nVAR v_Sales = CALCULATE(DISTINCTCOUNT('Fact_SalesContracts'[Contract ID]), 'Fact_SalesContracts'[Contract Date] >= v_StartDate, 'Fact_SalesContracts'[Contract Date] <= v_EndDate, 'Fact_SalesContracts'[Status] <> \"Cancelled\")\nRETURN DIVIDE(v_Sales, COUNTROWS(SUMMARIZE('Dim_Date', 'Dim_Date'[Period ID])))",
+    "fmt": "0.0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "DSCR": {
+    "expr": "DIVIDE([Cash Available for Debt Service], [Debt Service])",
+    "fmt": "0.00\"x\"",
+    "desc": "Requires sourced cash available for debt service and amortization/interest schedule; cannot infer from trial balance.",
+    "folder": "SIM / KPI Engine"
+  },
+  "Selected Entity": {
+    "expr": "IF(NOT ISFILTERED('SIM_Entity'), \"JSCV\", SELECTEDVALUE('SIM_Entity'[Entity Key]))",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Selected Periodicity": {
+    "expr": "SELECTEDVALUE('SIM_Periodicity'[Periodicity], \"Monthly\")",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Reference Date": {
+    "expr": "VAR v_Company = [Selected Entity]\nVAR v_AllowedDates = VALUES('SIM_ReferencePeriod'[Reference Date])\nVAR v_CompanyDate = CALCULATE(MAX('Fact_Accounting'[Period Date]), REMOVEFILTERS('Dim_Date'), TREATAS({v_Company}, 'Dim_Company'[Company ID]), TREATAS(v_AllowedDates,'Fact_Accounting'[Period Date]))\nVAR v_GroupDate = CALCULATE(MAX('Fact_Accounting'[Period Date]), REMOVEFILTERS('Dim_Date'), TREATAS(v_AllowedDates,'Fact_Accounting'[Period Date]))\nRETURN IF(ISFILTERED('SIM_ReferencePeriod'[Period]) || ISFILTERED('SIM_ReferencePeriod'[Reference Date]), MAX('SIM_ReferencePeriod'[Reference Date]), IF(v_Company = \"CON\", v_GroupDate, v_CompanyDate))",
+    "fmt": "yyyy-MM-dd",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Context End": {
+    "expr": "VAR v_RefDate = [Reference Date]\nVAR v_OnTrend = ISINSCOPE('Dim_Date'[Year Month])\nVAR v_AxisDate = EOMONTH(MAX('Dim_Date'[Date]), 0)\nRETURN IF(v_OnTrend, IF(v_AxisDate <= v_RefDate && YEAR(v_AxisDate) = YEAR(v_RefDate), v_AxisDate), IF([Selected Periodicity] = \"Annual\", DATE(YEAR(v_RefDate),12,31), v_RefDate))",
+    "fmt": "yyyy-MM-dd",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Context Start": {
+    "expr": "VAR v_EndDate = [Context End]\nVAR v_Period = [Selected Periodicity]\nRETURN IF(NOT ISBLANK(v_EndDate), SWITCH(v_Period, \"Monthly\", DATE(YEAR(v_EndDate), MONTH(v_EndDate), 1), \"Quarterly\", DATE(YEAR(v_EndDate), 1 + 3 * INT((MONTH(v_EndDate)-1)/3), 1), \"YTD\", DATE(YEAR(v_EndDate),1,1), \"Annual\", DATE(YEAR(v_EndDate),1,1)))",
+    "fmt": "yyyy-MM-dd",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Comparison End": {
+    "expr": "VAR v_RefDate = [Context End]\nVAR v_Mode = SELECTEDVALUE('SIM_Comparison'[Comparison], \"Homologous Period\")\nVAR v_Period = [Selected Periodicity]\nVAR v_YearChoice = SELECTEDVALUE('SIM_ComparisonYear'[Year])\nRETURN IF(NOT ISBLANK(v_RefDate), SWITCH(v_Mode,\n \"Homologous Period\", EOMONTH(v_RefDate,-12),\n \"Previous Period\", IF(v_Period <> \"YTD\", EOMONTH(v_RefDate, SWITCH(v_Period,\"Monthly\",-1,\"Quarterly\",-3,\"Annual\",-12))),\n \"Same Period of Selected Year\", IF(NOT ISBLANK(v_YearChoice), EOMONTH(DATE(v_YearChoice,MONTH(v_RefDate),1),0)),\n \"Custom\", SELECTEDVALUE('SIM_CustomEnd'[Reference Date])))",
+    "fmt": "yyyy-MM-dd",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Comparison Start": {
+    "expr": "VAR v_EndDate = [Comparison End]\nVAR v_Period = [Selected Periodicity]\nVAR v_Mode = SELECTEDVALUE('SIM_Comparison'[Comparison], \"Homologous Period\")\nVAR v_CustomStart = SELECTEDVALUE('SIM_CustomStart'[Reference Date])\nRETURN IF(NOT ISBLANK(v_EndDate), IF(v_Mode = \"Custom\", IF(NOT ISBLANK(v_CustomStart) && v_CustomStart <= v_EndDate, DATE(YEAR(v_CustomStart),MONTH(v_CustomStart),1)), SWITCH(v_Period,\"Monthly\",DATE(YEAR(v_EndDate),MONTH(v_EndDate),1),\"Quarterly\",DATE(YEAR(v_EndDate),1 + 3 * INT((MONTH(v_EndDate)-1)/3),1),\"YTD\",DATE(YEAR(v_EndDate),1,1),\"Annual\",DATE(YEAR(v_EndDate),1,1))))",
+    "fmt": "yyyy-MM-dd",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Base": {
+    "expr": "SWITCH(SELECTEDVALUE('SIM_KPI'[KPI ID]),\n \"Revenue\", [Revenue],\n \"Direct Costs\", [Direct Costs],\n \"Gross Profit\", [Gross Profit],\n \"Gross Margin\", [Gross Margin],\n \"FSE\", [FSE],\n \"Payroll\", [Payroll],\n \"Other Operating Costs\", [Other Operating Costs],\n \"Other Operating Income\", [Other Operating Income],\n \"EBITDA\", [EBITDA],\n \"EBITDA Margin\", [EBITDA Margin],\n \"D&A\", [D&A],\n \"EBIT\", [EBIT],\n \"EBIT Margin\", [EBIT Margin],\n \"Finance Costs\", [Finance Costs],\n \"Finance Income\", [Finance Income],\n \"Net Finance\", [Net Finance],\n \"Result Before Tax\", [Result Before Tax],\n \"Net Result\", [Net Result],\n \"Net Margin\", [Net Margin],\n \"Cash\", [Cash],\n \"Accounts Receivable\", [Accounts Receivable],\n \"Accounts Payable\", [Accounts Payable],\n \"Inventory / WIP\", [Inventory / WIP],\n \"Current Assets\", [Current Assets],\n \"Current Liabilities\", [Current Liabilities],\n \"Working Capital\", [Working Capital],\n \"Debt\", [Debt],\n \"Net Debt\", [Net Debt],\n \"Equity\", [Equity],\n \"Current Ratio\", [Current Ratio],\n \"Quick Ratio\", [Quick Ratio],\n \"Immediate Liquidity\", [Immediate Liquidity],\n \"DSO\", [DSO],\n \"DPO\", [DPO],\n \"GDV\", [GDV],\n \"Initial Investment\", [Initial Investment],\n \"Current Investment\", [Current Investment],\n \"Investment Variance\", [Investment Variance],\n \"Project Profit\", [Project Profit],\n \"Development Margin\", [Development Margin],\n \"Profit on Cost\", [Profit on Cost],\n \"ROI\", [ROI],\n \"IRR\", [IRR],\n \"NPV\", [NPV],\n \"Financing\", [Financing],\n \"Project Equity\", [Project Equity],\n \"LTC\", [LTC],\n \"LTV\", [LTV],\n \"Funding Coverage\", [Funding Coverage],\n \"Funding Gap\", [Funding Gap],\n \"Peak Funding Gap\", [Peak Funding Gap],\n \"Physical Progress\", [Physical Progress],\n \"Financial Progress\", [Financial Progress],\n \"Actual Cost\", [Actual Cost],\n \"Committed Cost\", [Committed Cost],\n \"Cost to Complete\", [Cost to Complete],\n \"CPI\", [CPI],\n \"SPI\", [SPI],\n \"Forecast Completion\", [Forecast Completion],\n \"Contracted Sales\", [Contracted Sales],\n \"Collections\", [Collections],\n \"Commercial Receivables\", [Commercial Receivables],\n \"Remaining GDV\", [Remaining GDV],\n \"Overdue Receivables\", [Overdue Receivables],\n \"Collection Rate\", [Collection Rate],\n \"% Sold\", [% Sold],\n \"Units Sold\", [Units Sold],\n \"Units Reserved\", [Units Reserved],\n \"Units Available\", [Units Available],\n \"Average Selling Price\", [Average Selling Price],\n \"Average Price m2\", [Average Price m2],\n \"Sales Velocity\", [Sales Velocity],\n \"Expected Collections\", [Expected Collections],\n \"DSCR\", [DSCR],\n \"Earned Value\", [Earned Value],\n \"Planned Value\", [Planned Value],\n \"Cash Available for Debt Service\", [Cash Available for Debt Service], \"Debt Service\", [Debt Service], \"Income Tax\", [Income Tax], BLANK())",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Entity Value": {
+    "expr": "VAR v_Entity = [Selected Entity]\nVAR v_Kind = SELECTEDVALUE('SIM_KPI'[Kind])\nVAR v_Project = SELECTEDVALUE('Dim_Project'[Project ID])\nVAR v_ProjectCurrency = SELECTEDVALUE('Dim_Project'[Currency])\nRETURN IF(v_Entity = \"CON\", [KPI Consolidated Value], IF(v_Entity IN {\"JSCV\", \"KYENU\"} && (NOT (v_Kind IN {\"Project\", \"Commercial\"}) || (NOT ISBLANK(v_Project) && NOT ISBLANK(v_ProjectCurrency))), CALCULATE([KPI Base], TREATAS({v_Entity}, 'Dim_Company'[Company ID]))))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Consolidation explicitly BLANK pending reconciled eliminations; never blind sum.",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Actual": {
+    "expr": "IF(NOT [KPI Coverage Missing], VAR v_StartDate = [Context Start]\nVAR v_EndDate = [Context End]\nRETURN IF(NOT ISBLANK(v_StartDate) && NOT ISBLANK(v_EndDate), CALCULATE([KPI Entity Value], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date],v_StartDate,v_EndDate))))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Plan Value": {
+    "expr": "VAR v_Entity = [Selected Entity]\nVAR v_RefDate = [Context End]\nVAR v_Period = [Selected Periodicity]\nVAR v_Id = SELECTEDVALUE('SIM_KPI'[KPI ID])\nVAR v_Mode = SELECTEDVALUE('SIM_Comparison'[Comparison], \"Homologous Period\")\nVAR v_Version = SELECTEDVALUE('SIM_Version'[Version])\nVAR v_Project = SELECTEDVALUE('Dim_Project'[Project ID], \"\")\nVAR v_Kind = SWITCH(v_Mode, \"Budget\", \"BUDGET\", \"Target\", \"TARGET\", \"Forecast\", \"FORECAST\")\nVAR v_Unit = [KPI Unit]\nVAR v_Plan = FILTER('Fact_KPIPlans', 'Fact_KPIPlans'[Entity Key] = v_Entity && 'Fact_KPIPlans'[Project ID] = v_Project && 'Fact_KPIPlans'[Period Date] = v_RefDate && 'Fact_KPIPlans'[Periodicity] = v_Period && 'Fact_KPIPlans'[KPI ID] = v_Id && 'Fact_KPIPlans'[Kind] = v_Kind && 'Fact_KPIPlans'[Version] = v_Version && 'Fact_KPIPlans'[Approved] = TRUE() && 'Fact_KPIPlans'[Unit] = v_Unit)\nRETURN IF(NOT ISBLANK(v_Version) && COUNTROWS(v_Plan) = 1, SUMX(v_Plan,'Fact_KPIPlans'[Value]))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Comparative": {
+    "expr": "VAR v_Mode = SELECTEDVALUE('SIM_Comparison'[Comparison], \"Homologous Period\")\nVAR v_StartDate = [Comparison Start]\nVAR v_EndDate = [Comparison End]\nRETURN IF(v_Mode IN {\"Budget\",\"Target\",\"Forecast\"}, [KPI Plan Value], IF(NOT ISBLANK(v_StartDate) && NOT ISBLANK(v_EndDate), CALCULATE([KPI Entity Value], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date],v_StartDate,v_EndDate))))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Variance": {
+    "expr": "IF(NOT ISBLANK([KPI Actual]) && NOT ISBLANK([KPI Comparative]), [KPI Actual] - [KPI Comparative])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Variance %": {
+    "expr": "DIVIDE([KPI Variance], [KPI Comparative])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Target": {
+    "expr": "VAR v_Entity = [Selected Entity]\nVAR v_RefDate = [Context End]\nVAR v_Period = [Selected Periodicity]\nVAR v_Id = SELECTEDVALUE('SIM_KPI'[KPI ID])\nVAR v_Version = SELECTEDVALUE('SIM_Version'[Version])\nVAR v_Project = SELECTEDVALUE('Dim_Project'[Project ID], \"\")\nVAR v_Unit = [KPI Unit]\nVAR v_Plan = FILTER('Fact_KPIPlans', 'Fact_KPIPlans'[Entity Key] = v_Entity && 'Fact_KPIPlans'[Project ID] = v_Project && 'Fact_KPIPlans'[Period Date] = v_RefDate && 'Fact_KPIPlans'[Periodicity] = v_Period && 'Fact_KPIPlans'[KPI ID] = v_Id && 'Fact_KPIPlans'[Kind] = \"TARGET\" && 'Fact_KPIPlans'[Version] = v_Version && 'Fact_KPIPlans'[Approved] = TRUE() && 'Fact_KPIPlans'[Unit] = v_Unit)\nRETURN IF(NOT ISBLANK(v_Version) && COUNTROWS(v_Plan) = 1, SUMX(v_Plan,'Fact_KPIPlans'[Value]))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Limit": {
+    "expr": "VAR v_Entity = [Selected Entity]\nVAR v_RefDate = [Context End]\nVAR v_Period = [Selected Periodicity]\nVAR v_Id = SELECTEDVALUE('SIM_KPI'[KPI ID])\nVAR v_Version = SELECTEDVALUE('SIM_Version'[Version])\nVAR v_Project = SELECTEDVALUE('Dim_Project'[Project ID], \"\")\nVAR v_Unit = [KPI Unit]\nVAR v_Plan = FILTER('Fact_KPIPlans', 'Fact_KPIPlans'[Entity Key] = v_Entity && 'Fact_KPIPlans'[Project ID] = v_Project && 'Fact_KPIPlans'[Period Date] = v_RefDate && 'Fact_KPIPlans'[Periodicity] = v_Period && 'Fact_KPIPlans'[KPI ID] = v_Id && 'Fact_KPIPlans'[Kind] = \"TARGET\" && 'Fact_KPIPlans'[Version] = v_Version && 'Fact_KPIPlans'[Approved] = TRUE() && 'Fact_KPIPlans'[Unit] = v_Unit)\nRETURN IF(NOT ISBLANK(v_Version) && COUNTROWS(v_Plan) = 1, SUMX(v_Plan,'Fact_KPIPlans'[Limit]))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Excellent": {
+    "expr": "VAR v_Entity = [Selected Entity]\nVAR v_RefDate = [Context End]\nVAR v_Period = [Selected Periodicity]\nVAR v_Id = SELECTEDVALUE('SIM_KPI'[KPI ID])\nVAR v_Version = SELECTEDVALUE('SIM_Version'[Version])\nVAR v_Project = SELECTEDVALUE('Dim_Project'[Project ID], \"\")\nVAR v_Unit = [KPI Unit]\nVAR v_Plan = FILTER('Fact_KPIPlans', 'Fact_KPIPlans'[Entity Key] = v_Entity && 'Fact_KPIPlans'[Project ID] = v_Project && 'Fact_KPIPlans'[Period Date] = v_RefDate && 'Fact_KPIPlans'[Periodicity] = v_Period && 'Fact_KPIPlans'[KPI ID] = v_Id && 'Fact_KPIPlans'[Kind] = \"TARGET\" && 'Fact_KPIPlans'[Version] = v_Version && 'Fact_KPIPlans'[Approved] = TRUE() && 'Fact_KPIPlans'[Unit] = v_Unit)\nRETURN IF(NOT ISBLANK(v_Version) && COUNTROWS(v_Plan) = 1, SUMX(v_Plan,'Fact_KPIPlans'[Excellent]))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Status": {
+    "expr": "VAR v_Entity = [Selected Entity]\nVAR v_Id = SELECTEDVALUE('SIM_KPI'[KPI ID])\nVAR v_Kind = SELECTEDVALUE('SIM_KPI'[Kind])\nVAR v_Value = [KPI Actual]\nVAR v_Target = [KPI Target]\nVAR v_Limit = [KPI Limit]\nVAR v_Excellent = [KPI Excellent]\nVAR v_Direction = SELECTEDVALUE('SIM_KPI'[Desired Direction], \"Higher\")\nVAR v_Denominator = SWITCH(v_Id,\n \"Gross Margin\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Revenue\"),\n \"EBITDA Margin\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Revenue\"),\n \"EBIT Margin\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Revenue\"),\n \"Net Margin\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Revenue\"),\n \"DSO\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Revenue\"),\n \"DPO\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Direct Costs\"),\n \"Current Ratio\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Current Liabilities\"),\n \"Quick Ratio\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Current Liabilities\"),\n \"Immediate Liquidity\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Current Liabilities\"),\n \"DSCR\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Debt Service\"),\n \"Development Margin\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"GDV\"),\n \"Profit on Cost\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Current Investment\"),\n \"ROI\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Current Investment\"),\n \"LTC\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Current Investment\"),\n \"LTV\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"GDV\"),\n \"Collection Rate\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Contracted Sales\"),\n \"% Sold\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"GDV\"),\n \"Average Selling Price\", CALCULATE([KPI Actual], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Units Sold\"),\n BLANK())\nVAR v_MapPending = CALCULATE([Balance Mapping Pending], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date],[Context Start],[Context End]), TREATAS({v_Entity},'Dim_Company'[Company ID]))\nRETURN SWITCH(TRUE(),\n v_Entity = \"CON\" && ISBLANK(v_Value), \"PENDING RECONCILIATION\",\n ISBLANK(v_Entity), \"SELECT ONE COMPANY\",\n v_Kind IN {\"Project\",\"Commercial\"} && COUNTROWS(ALL('Dim_Project')) = 0, \"SOURCE REQUIRED\",\n v_Kind IN {\"Project\",\"Commercial\"} && NOT HASONEVALUE('Dim_Project'[Project ID]), \"SELECT ONE PROJECT\",\n v_Id = \"DSCR\" && ISBLANK(v_Denominator), \"SOURCE REQUIRED\",\n ISBLANK(v_Value) && NOT ISBLANK(v_Denominator) && v_Denominator = 0, \"UNDEFINED — ZERO DENOMINATOR\",\n ISBLANK(v_Value) && v_MapPending > 0 && v_Id IN {\"Current Assets\",\"Current Liabilities\",\"Working Capital\",\"Current Ratio\",\"Quick Ratio\",\"Immediate Liquidity\"}, \"PENDING MAPPING\",\n ISBLANK(v_Value) && v_Id IN {\"Net Result\",\"Net Margin\"}, \"TAX SOURCE REQUIRED\",\n [KPI Coverage Missing], \"INCOMPLETE PERIOD\",\n v_Id IN {\"Collections\",\"Commercial Receivables\",\"Overdue Receivables\",\"Expected Collections\",\"Collection Rate\"} && ISBLANK(v_Value), \"COLLECTION COVERAGE REQUIRED\",\n ISBLANK(v_Value), \"NO DATA\",\n ISBLANK(v_Target), \"NO TARGET\",\n NOT (v_Direction IN {\"Higher\",\"Lower\"}), \"TARGET DIRECTION REQUIRED\",\n NOT ISBLANK(v_Limit) && IF(v_Direction = \"Lower\", v_Limit < v_Target, v_Limit > v_Target), \"TARGET CONFIGURATION ERROR\",\n NOT ISBLANK(v_Excellent) && IF(v_Direction = \"Lower\", v_Excellent > v_Target, v_Excellent < v_Target), \"TARGET CONFIGURATION ERROR\",\n NOT ISBLANK(v_Excellent) && IF(v_Direction = \"Lower\", v_Value <= v_Excellent, v_Value >= v_Excellent), \"EXCELLENT\",\n IF(v_Direction = \"Lower\", v_Value <= v_Target, v_Value >= v_Target), \"ON TARGET\",\n NOT ISBLANK(v_Limit) && IF(v_Direction = \"Lower\", v_Value > v_Limit, v_Value < v_Limit), \"CRITICAL\",\n \"ATTENTION\")",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Comparison Status": {
+    "expr": "VAR v_Mode = SELECTEDVALUE('SIM_Comparison'[Comparison], \"Homologous Period\")\nRETURN IF(ISBLANK([KPI Comparative]), SWITCH(v_Mode, \"Budget\", \"NO BUDGET\", \"Target\", \"NO TARGET\", \"Forecast\", \"NO FORECAST\", \"Custom\", \"SELECT VALID CUSTOM DATES / NO DATA\", \"Same Period of Selected Year\", \"SELECT COMPARISON YEAR / NO DATA\", \"Previous Period\", IF([Selected Periodicity]=\"YTD\", \"PREVIOUS PERIOD NOT DEFINED FOR YTD\", \"NO COMPARATIVE DATA\"), \"NO COMPARATIVE DATA\"), \"COMPARATIVE AVAILABLE\")",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Management Reading": {
+    "expr": "VAR v_Status = [KPI Status]\nVAR v_Id = SELECTEDVALUE('SIM_KPI'[KPI ID])\nVAR v_Delta = [KPI Variance]\nRETURN SWITCH(TRUE(), v_Status = \"PENDING RECONCILIATION\", \"Eliminações intercompany e cobertura ainda não reconciliadas.\", v_Status = \"PENDING MAPPING\", \"Classificar contas 24–28 e maturidade da dívida; não interpretar subtotal como total.\", v_Status = \"TAX SOURCE REQUIRED\", \"Resultado antes de imposto disponível; imposto aprovado necessário para resultado líquido.\", v_Status = \"SOURCE REQUIRED\", \"Fonte operacional necessária; valores do handover não foram importados como fatos.\", ISBLANK([KPI Actual]), \"Ausência de dados ou componente obrigatório; não é zero.\", v_Id IN {\"DSO\",\"DPO\"}, \"Indicador aproximado; não substitui aging por fatura.\", v_Id IN {\"Funding Gap\",\"Peak Funding Gap\"} && [KPI Actual] > 0, \"Necessidade de financiamento com base nas fontes disponíveis.\", ISBLANK(v_Delta), [Comparison Status] & \" | \" & v_Status, \"Variação \" & FORMAT([KPI Variance %],\"0.0%;(0.0%)\") & \" | \" & v_Status)",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Format": {
+    "expr": "SWITCH(SELECTEDVALUE('SIM_KPI'[Unit]), \"%\", \"0.0%;(0.0%);0.0%\", \"x\", \"0.00x\", \"units\", \"0\", \"days\", \"0.0\", \"date\", \"yyyy-MM-dd\", \"contracts/month\", \"0.0\", \"#,0.0;(#,0.0);0.0\")",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Display": {
+    "expr": "IF(ISBLANK([KPI Actual]), [KPI Status], FORMAT([KPI Actual], [KPI Format]))",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Comparative Display": {
+    "expr": "IF(ISBLANK([KPI Comparative]), [Comparison Status], FORMAT([KPI Comparative], [KPI Format]))",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Variance Display": {
+    "expr": "IF(ISBLANK([KPI Variance]), \"—\", FORMAT([KPI Variance], [KPI Format]))",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Target Display": {
+    "expr": "IF(ISBLANK([KPI Target]), \"—\", FORMAT([KPI Target], [KPI Format]))",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Unit": {
+    "expr": "VAR v_Unit = SELECTEDVALUE('SIM_KPI'[Unit])\nRETURN IF(v_Unit = \"currency\", SELECTEDVALUE('Dim_Project'[Currency], \"CURRENCY REQUIRED\"), v_Unit)",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Dynamic Context": {
+    "expr": "VAR v_RefDate = [Reference Date]\nVAR v_Entity = [Selected Entity]\nVAR v_Name = IF(v_Entity = \"CON\", \"JSCV & KYENU — CONSOLIDATED | CHECK KPI RECONCILIATION STATUS\", v_Entity)\nRETURN v_Name & \" | \" & [Selected Periodicity] & \" \" & IF(ISBLANK(v_RefDate),\"NO DATA\",FORMAT(v_RefDate,\"yyyy-MM\")) & \" | \" & SELECTEDVALUE('SIM_Comparison'[Comparison],\"Homologous Period\") & \" | Refresh UTC \" & FORMAT(MAX('SIM_Refresh'[Last Refresh UTC]),\"yyyy-MM-dd HH:mm\")",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Project Context": {
+    "expr": "VAR v_Name = SELECTEDVALUE('Dim_Project'[Project Name], \"SOURCE REQUIRED / SELECT PROJECT\")\nRETURN v_Name & \" | Owner: \" & SELECTEDVALUE('Dim_Project'[Owner],\"NO DATA\") & \" | Developer: \" & SELECTEDVALUE('Dim_Project'[Developer],\"NO DATA\") & \" | Contractor: \" & SELECTEDVALUE('Dim_Project'[Contractor],\"NO DATA\") & \" | \" & SELECTEDVALUE('Dim_Project'[Status],\"NO DATA\") & \" | \" & SELECTEDVALUE('Dim_Project'[Currency],\"NO DATA\")",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Unit Relevant": {
+    "expr": "VAR v_Projects = VALUES('Dim_Project'[Project ID])\nRETURN IF(SELECTEDVALUE('Dim_Unit'[Project ID]) IN v_Projects, 1, 0)",
+    "fmt": "0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Revenue Executive": {
+    "expr": "IF(HASONEVALUE('Dim_Company'[Company ID]), [Revenue])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "EBITDA Executive": {
+    "expr": "IF(HASONEVALUE('Dim_Company'[Company ID]), [EBITDA])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "EBITDA Margin Executive": {
+    "expr": "IF(HASONEVALUE('Dim_Company'[Company ID]), [EBITDA Margin])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "EBIT Executive": {
+    "expr": "IF(HASONEVALUE('Dim_Company'[Company ID]), [EBIT])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Revenue Prior Year": {
+    "expr": "VAR v_Dates = DATEADD('Dim_Date'[Date],-1,YEAR)\nRETURN CALCULATE([Revenue],REMOVEFILTERS('Dim_Date'),v_Dates)",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Revenue Variance": {
+    "expr": "IF(NOT ISBLANK([Revenue Executive]) && NOT ISBLANK([Revenue Prior Year]), [Revenue Executive] - [Revenue Prior Year])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Revenue Variance %": {
+    "expr": "DIVIDE([Revenue Variance],[Revenue Prior Year])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "EBITDA Prior Year": {
+    "expr": "VAR v_Dates = DATEADD('Dim_Date'[Date],-1,YEAR)\nRETURN CALCULATE([EBITDA],REMOVEFILTERS('Dim_Date'),v_Dates)",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "EBITDA Variance": {
+    "expr": "IF(NOT ISBLANK([EBITDA Executive]) && NOT ISBLANK([EBITDA Prior Year]), [EBITDA Executive] - [EBITDA Prior Year])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "EBITDA Variance %": {
+    "expr": "DIVIDE([EBITDA Variance],[EBITDA Prior Year])",
+    "fmt": "0.0%",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Management Status": {
+    "expr": "[Dynamic Context]",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Phase Initial": {
+    "expr": "CALCULATE([KPI Actual],REMOVEFILTERS('SIM_Phase'),'SIM_Phase'[Phase] = \"INITIAL\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Phase Baseline": {
+    "expr": "CALCULATE([KPI Actual],REMOVEFILTERS('SIM_Phase'),'SIM_Phase'[Phase] = \"BASELINE\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Phase Current": {
+    "expr": "CALCULATE([KPI Actual],REMOVEFILTERS('SIM_Phase'),'SIM_Phase'[Phase] = \"CURRENT\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Phase Forecast": {
+    "expr": "CALCULATE([KPI Actual],REMOVEFILTERS('SIM_Phase'),'SIM_Phase'[Phase] = \"FORECAST\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Phase Variance": {
+    "expr": "IF(NOT ISBLANK([Phase Current]) && NOT ISBLANK([Phase Baseline]), [Phase Current] - [Phase Baseline])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Phase Initial Display": {
+    "expr": "IF(ISBLANK([Phase Initial]), \"NO DATA\", FORMAT([Phase Initial], [KPI Format]))",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Phase Baseline Display": {
+    "expr": "IF(ISBLANK([Phase Baseline]), \"NO DATA\", FORMAT([Phase Baseline], [KPI Format]))",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Phase Current Display": {
+    "expr": "IF(ISBLANK([Phase Current]), \"NO DATA\", FORMAT([Phase Current], [KPI Format]))",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Phase Forecast Display": {
+    "expr": "IF(ISBLANK([Phase Forecast]), \"NO DATA\", FORMAT([Phase Forecast], [KPI Format]))",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Collection Feed Complete": {
+    "expr": "VAR v_Company = SELECTEDVALUE('Dim_Company'[Company ID])\nVAR v_Project = SELECTEDVALUE('Dim_Project'[Project ID])\nVAR v_RefDate = MAX('Dim_Date'[Date])\nVAR v_RowsAtDate = FILTER('SIM_SourceCoverage', 'SIM_SourceCoverage'[Company ID] = v_Company && 'SIM_SourceCoverage'[Project ID] = v_Project && 'SIM_SourceCoverage'[Feed] = \"Collections\" && 'SIM_SourceCoverage'[Reference Date] = EOMONTH(v_RefDate,0) && 'SIM_SourceCoverage'[Complete] = TRUE())\nRETURN COUNTROWS(v_RowsAtDate) = 1",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Collections Period": {
+    "expr": "VAR v_StartDate = MIN('Dim_Date'[Date])\nVAR v_EndDate = MAX('Dim_Date'[Date])\nRETURN IF([Collection Feed Complete], CALCULATE(SUM('Fact_Collections'[Amount]), 'Fact_Collections'[Actual Collection Date] >= v_StartDate, 'Fact_Collections'[Actual Collection Date] <= v_EndDate, 'Fact_Collections'[Status] = \"Paid\"))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Card Detail": {
+    "expr": "\"vs \" & [Comparative Display] & \" | Δ \" & IF(ISBLANK([KPI Variance %]), \"—\", FORMAT([KPI Variance %], \"0.0%;(0.0%)\")) & \" | \" & [KPI Status]",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Colour": {
+    "expr": "SWITCH([KPI Status], \"CRITICAL\", \"#C62828\", \"ATTENTION\", \"#9C6A00\", \"#222222\")",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Trend Actual": {
+    "expr": "CALCULATE([KPI Actual], REMOVEFILTERS('SIM_Periodicity'), 'SIM_Periodicity'[Periodicity] = \"Monthly\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Trend Comparative": {
+    "expr": "CALCULATE([KPI Comparative], REMOVEFILTERS('SIM_Periodicity'), 'SIM_Periodicity'[Periodicity] = \"Monthly\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Collections Trend": {
+    "expr": "VAR v_EndDate = [Context End]\nVAR v_StartDate = IF(NOT ISBLANK(v_EndDate), DATE(YEAR(v_EndDate), MONTH(v_EndDate),1))\nVAR v_Entity = [Selected Entity]\nRETURN IF(v_Entity IN {\"JSCV\",\"KYENU\"} && NOT ISBLANK(v_EndDate), CALCULATE([Collections Period], TREATAS({v_Entity},'Dim_Company'[Company ID]), REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date],v_StartDate,v_EndDate)))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Coverage Missing": {
+    "expr": "VAR v_Entity = [Selected Entity]\nVAR v_StartDate = [Context Start]\nVAR v_EndDate = [Context End]\nVAR v_Kind = SELECTEDVALUE('SIM_KPI'[Kind])\nVAR v_Id = SELECTEDVALUE('SIM_KPI'[KPI ID])\nVAR v_Required = IF(NOT ISBLANK(v_StartDate) && NOT ISBLANK(v_EndDate), DATEDIFF(v_StartDate, v_EndDate, MONTH) + 1)\nVAR v_GroupAvailable = SUMX({\"JSCV\",\"KYENU\"}, VAR v_Company = [Value] RETURN CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), REMOVEFILTERS('Dim_Date'), REMOVEFILTERS('Dim_Company'), TREATAS({v_Company},'Dim_Company'[Company ID]), 'Fact_Accounting'[Period Date] >= v_StartDate, 'Fact_Accounting'[Period Date] <= v_EndDate))\nVAR v_Available = CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), REMOVEFILTERS('Dim_Date'), TREATAS({v_Entity},'Dim_Company'[Company ID]), 'Fact_Accounting'[Period Date] >= v_StartDate, 'Fact_Accounting'[Period Date] <= v_EndDate)\nVAR v_RevenueMonths = CALCULATE(DISTINCTCOUNT('Fact_Accounting'[Period ID]), REMOVEFILTERS('Dim_Date'), TREATAS({v_Entity},'Dim_Company'[Company ID]), 'Fact_Accounting'[Period Date] >= v_StartDate, 'Fact_Accounting'[Period Date] <= v_EndDate, 'Dim_Account'[Account Level] = 2, 'Dim_Account'[Management Group] = \"Revenue\")\nRETURN IF(v_Id IN {\"Revenue\",\"Gross Profit\",\"Gross Margin\",\"EBITDA\",\"EBITDA Margin\",\"EBIT\",\"EBIT Margin\",\"Result Before Tax\",\"Net Result\",\"Net Margin\",\"DSO\"} && v_RevenueMonths > 0 && v_RevenueMonths < v_Required, TRUE(), IF(v_Kind = \"Flow\" || v_Id IN {\"Gross Margin\",\"EBITDA Margin\",\"EBIT Margin\",\"Net Margin\",\"DSO\",\"DPO\"}, IF(v_Entity = \"CON\", 2 * v_Required > v_GroupAvailable, v_Required > v_Available), FALSE()))",
+    "fmt": "General",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Cash Available for Debt Service": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Cash Available for Debt Service\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Debt Service": {
+    "expr": "CALCULATE([Project Metric Raw], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Debt Service\")",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Contract Row Visible": {
+    "expr": "VAR v_Company = SELECTEDVALUE('Fact_SalesContracts'[Company ID])\nRETURN IF(v_Company = [Selected Entity] && NOT ISBLANK(SELECTEDVALUE('Fact_SalesContracts'[Contract Date])) && SELECTEDVALUE('Fact_SalesContracts'[Contract Date]) <= [Reference Date], 1, 0)",
+    "fmt": "0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Collection Row Visible": {
+    "expr": "VAR v_Company = SELECTEDVALUE('Fact_Collections'[Company ID])\nRETURN IF(v_Company = [Selected Entity] && NOT ISBLANK(SELECTEDVALUE('Fact_Collections'[Actual Collection Date])) && SELECTEDVALUE('Fact_Collections'[Actual Collection Date]) <= [Reference Date] && SELECTEDVALUE('Fact_Collections'[Status]) = \"Paid\", 1, 0)",
+    "fmt": "0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Payment Plan Row Visible": {
+    "expr": "VAR v_Company = SELECTEDVALUE('Fact_PaymentPlan'[Company ID])\nRETURN IF(v_Company = [Selected Entity], 1, 0)",
+    "fmt": "0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Accounting Row Relevant": {
+    "expr": "VAR v_Company = [Selected Entity]\nVAR v_Start = [Context Start]\nVAR v_End = [Context End]\nVAR v_Rows = CALCULATE(COUNTROWS('Fact_Accounting'), TREATAS({v_Company}, 'Dim_Company'[Company ID]), REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], v_Start, v_End))\nRETURN IF(v_Rows > 0, 1, 0)",
+    "fmt": "0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "Plan Row Visible": {
+    "expr": "IF(SELECTEDVALUE('Fact_KPIPlans'[Entity Key]) = [Selected Entity], 1, 0)",
+    "fmt": "0",
+    "desc": "",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Target Direction": {
+    "expr": "VAR v_Entity = [Selected Entity]\nVAR v_RefDate = [Context End]\nVAR v_Period = [Selected Periodicity]\nVAR v_Id = SELECTEDVALUE('SIM_KPI'[KPI ID])\nVAR v_Version = SELECTEDVALUE('SIM_Version'[Version])\nVAR v_Project = SELECTEDVALUE('Dim_Project'[Project ID], \"\")\nVAR v_Unit = [KPI Unit]\nVAR v_Plan = FILTER('Fact_KPIPlans', 'Fact_KPIPlans'[Entity Key] = v_Entity && 'Fact_KPIPlans'[Project ID] = v_Project && 'Fact_KPIPlans'[Period Date] = v_RefDate && 'Fact_KPIPlans'[Periodicity] = v_Period && 'Fact_KPIPlans'[KPI ID] = v_Id && 'Fact_KPIPlans'[Kind] = \"TARGET\" && 'Fact_KPIPlans'[Version] = v_Version && 'Fact_KPIPlans'[Approved] = TRUE() && 'Fact_KPIPlans'[Unit] = v_Unit)\nRETURN IF(NOT ISBLANK(v_Version) && COUNTROWS(v_Plan) = 1, MAXX(v_Plan,'Fact_KPIPlans'[Desired Direction]))",
+    "fmt": "General",
+    "desc": "Higher or Lower from the approved target source; missing direction cannot classify performance.",
+    "folder": "SIM / KPI Engine"
+  },
+  "KPI Consolidated Atom": {
+    "expr": "VAR v_Id = SELECTEDVALUE('SIM_KPI'[KPI ID])\nVAR v_Kind = SELECTEDVALUE('SIM_KPI'[Kind])\nVAR v_Start = MIN('Dim_Date'[Date])\nVAR v_End = MAX('Dim_Date'[Date])\nVAR v_Required = IF(v_Kind = \"Stock\", 1, COUNTROWS(SUMMARIZE('Dim_Date','Dim_Date'[Period ID])))\nVAR v_JSCV = CALCULATE([KPI Base], REMOVEFILTERS('Dim_Company'), 'Dim_Company'[Company ID] = \"JSCV\")\nVAR v_KYENU = CALCULATE([KPI Base], REMOVEFILTERS('Dim_Company'), 'Dim_Company'[Company ID] = \"KYENU\")\nVAR v_Approvals = FILTER('Fact_Intercompany', 'Fact_Intercompany'[KPI ID] = v_Id && 'Fact_Intercompany'[Reconciliation Status] = \"APPROVED\" && NOT ISBLANK('Fact_Intercompany'[Signed Adjustment]) && IF(v_Kind = \"Stock\", 'Fact_Intercompany'[Period Date] = EOMONTH(v_End,0), 'Fact_Intercompany'[Period Date] >= v_Start && 'Fact_Intercompany'[Period Date] <= v_End))\nRETURN IF(v_Kind IN {\"Flow\",\"Stock\"} && NOT ISBLANK(v_JSCV) && NOT ISBLANK(v_KYENU) && COUNTROWS(v_Approvals) = v_Required, v_JSCV + v_KYENU + SUMX(v_Approvals,'Fact_Intercompany'[Signed Adjustment]))",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "Both companies and approved signed elimination records required for every period. Explicit approved zero adjustment is valid; absent adjustment is not zero.",
+    "folder": "SIM / Consolidation"
+  },
+  "KPI Consolidated Value": {
+    "expr": "VAR v_Revenue = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Revenue\")\nVAR v_DirectCosts = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Direct Costs\")\nVAR v_FSE = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"FSE\")\nVAR v_Payroll = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Payroll\")\nVAR v_OtherOperatingCosts = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Other Operating Costs\")\nVAR v_OtherOperatingIncome = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Other Operating Income\")\nVAR v_DA = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"D&A\")\nVAR v_FinanceIncome = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Finance Income\")\nVAR v_FinanceCosts = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Finance Costs\")\nVAR v_IncomeTax = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Income Tax\")\nVAR v_Cash = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Cash\")\nVAR v_AccountsReceivable = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Accounts Receivable\")\nVAR v_AccountsPayable = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Accounts Payable\")\nVAR v_InventoryWIP = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Inventory / WIP\")\nVAR v_CurrentAssets = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Current Assets\")\nVAR v_CurrentLiabilities = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Current Liabilities\")\nVAR v_Debt = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Debt\")\nVAR v_Equity = CALCULATE([KPI Consolidated Atom], REMOVEFILTERS('SIM_KPI'), 'SIM_KPI'[KPI ID] = \"Equity\")\nVAR v_GrossProfit = IF(NOT ISBLANK(v_Revenue) && NOT ISBLANK(v_DirectCosts), v_Revenue - v_DirectCosts)\nVAR v_EBITDA = IF(NOT ISBLANK(v_Revenue) && NOT ISBLANK(v_OtherOperatingIncome) && NOT ISBLANK(v_DirectCosts) && NOT ISBLANK(v_FSE) && NOT ISBLANK(v_Payroll) && NOT ISBLANK(v_OtherOperatingCosts), v_Revenue + v_OtherOperatingIncome - v_DirectCosts - v_FSE - v_Payroll - v_OtherOperatingCosts)\nVAR v_EBIT = IF(NOT ISBLANK(v_EBITDA) && NOT ISBLANK(v_DA), v_EBITDA - v_DA)\nVAR v_NetFinance = IF(NOT ISBLANK(v_FinanceIncome) && NOT ISBLANK(v_FinanceCosts), v_FinanceIncome - v_FinanceCosts)\nVAR v_BeforeTax = IF(NOT ISBLANK(v_EBIT) && NOT ISBLANK(v_NetFinance), v_EBIT + v_NetFinance)\nVAR v_NetResult = IF(NOT ISBLANK(v_BeforeTax) && NOT ISBLANK(v_IncomeTax), v_BeforeTax - v_IncomeTax)\nRETURN SWITCH(SELECTEDVALUE('SIM_KPI'[KPI ID]),\n \"Gross Profit\", v_GrossProfit,\n \"Gross Margin\", DIVIDE(v_GrossProfit,v_Revenue),\n \"EBITDA\", v_EBITDA,\n \"EBITDA Margin\", DIVIDE(v_EBITDA,v_Revenue),\n \"EBIT\", v_EBIT,\n \"EBIT Margin\", DIVIDE(v_EBIT,v_Revenue),\n \"Net Finance\", v_NetFinance,\n \"Result Before Tax\", v_BeforeTax,\n \"Net Result\", v_NetResult,\n \"Net Margin\", DIVIDE(v_NetResult,v_Revenue),\n \"Working Capital\", IF(NOT ISBLANK(v_CurrentAssets) && NOT ISBLANK(v_CurrentLiabilities),v_CurrentAssets-v_CurrentLiabilities),\n \"Net Debt\", IF(NOT ISBLANK(v_Debt) && NOT ISBLANK(v_Cash),v_Debt-v_Cash),\n \"Current Ratio\", DIVIDE(v_CurrentAssets,v_CurrentLiabilities),\n \"Quick Ratio\", IF(NOT ISBLANK(v_CurrentAssets) && NOT ISBLANK(v_InventoryWIP),DIVIDE(v_CurrentAssets-v_InventoryWIP,v_CurrentLiabilities)),\n \"Immediate Liquidity\", DIVIDE(v_Cash,v_CurrentLiabilities),\n \"DSO\", DIVIDE(v_AccountsReceivable,v_Revenue) * COUNTROWS(VALUES('Dim_Date'[Date])),\n \"DPO\", DIVIDE(v_AccountsPayable,v_DirectCosts) * COUNTROWS(VALUES('Dim_Date'[Date])),\n [KPI Consolidated Atom])",
+    "fmt": "#,0.00;(#,0.00);0.00",
+    "desc": "",
+    "folder": "SIM / Consolidation"
+  },
+  "KPI Card Value": {
+    "expr": "VAR v_Amount = [KPI Actual]\nVAR v_Unit = [KPI Unit]\nRETURN IF(ISBLANK(v_Amount), [KPI Status], IF(v_Unit IN {\"CVE\",\"EUR\"}, IF(ABS(v_Amount) >= 1000000, FORMAT(v_Amount / 1000000,\"0.0\") & \" M \" & v_Unit, IF(ABS(v_Amount) >= 1000, FORMAT(v_Amount / 1000,\"0.0\") & \" K \" & v_Unit, FORMAT(v_Amount,\"#,0.0\") & \" \" & v_Unit)), FORMAT(v_Amount,[KPI Format])))",
+    "fmt": "General",
+    "desc": "Short management number format for cards; detailed matrices retain unscaled values.",
+    "folder": "SIM / Presentation"
+  }
+}

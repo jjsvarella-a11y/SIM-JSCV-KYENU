@@ -1,0 +1,38 @@
+table 'Fact_Intercompany'
+	lineageTag: 3e8cb89c-d59e-5413-a32c-2551ddb802cb
+
+	column 'Period Date'
+		dataType: dateTime
+		lineageTag: 4e342eaf-3d7b-57ee-87d2-d094a7ccb220
+		summarizeBy: none
+		sourceColumn: Period Date
+		formatString: yyyy-MM-dd
+
+	column 'KPI ID'
+		dataType: string
+		lineageTag: 29afb9b0-50c5-5d63-9b43-7872c17674d0
+		summarizeBy: none
+		sourceColumn: KPI ID
+
+	column 'Signed Adjustment'
+		dataType: double
+		lineageTag: 03fbcdc6-338b-5830-9d69-c3274f7af95d
+		summarizeBy: none
+		sourceColumn: Signed Adjustment
+
+	column 'Reconciliation Status'
+		dataType: string
+		lineageTag: 2f4c1621-a272-5717-85dd-0cf52bff344f
+		summarizeBy: none
+		sourceColumn: Reconciliation Status
+
+	column 'Source'
+		dataType: string
+		lineageTag: a2f65c72-b3db-5c13-bc6c-ecbbacbbcd91
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition 'Fact_Intercompany' = m
+		mode: import
+		source =
+				SIM_LoadCSV("Intercompany.csv", {{"Period Date", type date}, {"KPI ID", type text}, {"Signed Adjustment", type number}, {"Reconciliation Status", type text}, {"Source", type text}}, {"Period Date", "KPI ID"})

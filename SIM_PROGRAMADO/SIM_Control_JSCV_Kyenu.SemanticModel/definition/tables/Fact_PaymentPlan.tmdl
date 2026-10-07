@@ -1,0 +1,75 @@
+table 'Fact_PaymentPlan'
+	lineageTag: 998eeee5-925b-5bd9-a214-2ebca10fccc3
+
+	column 'Plan ID'
+		dataType: string
+		lineageTag: c8e94289-b08c-5839-ac67-9bcb04eedfae
+		summarizeBy: none
+		sourceColumn: Plan ID
+		isKey
+
+	column 'Contract ID'
+		dataType: string
+		lineageTag: 3a88ff6f-2fb1-5ca5-ac35-aca169433359
+		summarizeBy: none
+		sourceColumn: Contract ID
+
+	column 'Due Date'
+		dataType: dateTime
+		lineageTag: 1e4eda9a-a362-5b39-b12f-35a63afa5071
+		summarizeBy: none
+		sourceColumn: Due Date
+		formatString: yyyy-MM-dd
+
+	column 'Expected Amount'
+		dataType: double
+		lineageTag: c7873408-8211-59f7-861c-246cf3c63ff9
+		summarizeBy: none
+		sourceColumn: Expected Amount
+
+	column 'Forecast Collection Date'
+		dataType: dateTime
+		lineageTag: fa58820e-253f-5b0e-842f-4dfaa64f1cfb
+		summarizeBy: none
+		sourceColumn: Forecast Collection Date
+		formatString: yyyy-MM-dd
+
+	column 'Status'
+		dataType: string
+		lineageTag: 32667ba3-2147-5555-8ecf-bf260c99be49
+		summarizeBy: none
+		sourceColumn: Status
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 550b6960-a326-5fa6-867c-693b47cce6b4
+		summarizeBy: none
+		sourceColumn: Company ID
+
+	column 'Project ID'
+		dataType: string
+		lineageTag: c8ad7c0e-ca26-575a-9da7-a01e21b66fd4
+		summarizeBy: none
+		sourceColumn: Project ID
+
+	column 'Client ID'
+		dataType: string
+		lineageTag: 0e1451e2-8157-5649-a884-2d19d4ce988e
+		summarizeBy: none
+		sourceColumn: Client ID
+
+	column 'Unit ID'
+		dataType: string
+		lineageTag: 7ede2fc4-c3d3-5acb-be7b-ccbcb960285a
+		summarizeBy: none
+		sourceColumn: Unit ID
+
+	partition 'Fact_PaymentPlan' = m
+		mode: import
+		source =
+				let
+				    Raw = SIM_LoadCSV("PaymentPlan.csv", {{"Plan ID", type text}, {"Contract ID", type text}, {"Due Date", type date}, {"Expected Amount", type number}, {"Forecast Collection Date", type date}, {"Status", type text}}, {"Plan ID"}),
+				    Joined = Table.NestedJoin(Raw, {"Contract ID"}, Fact_SalesContracts, {"Contract ID"}, "Contract", JoinKind.LeftOuter),
+				    Expanded = Table.ExpandTableColumn(Joined,"Contract",{"Company ID","Project ID","Client ID","Unit ID"}),
+				    Valid = if Table.RowCount(Table.SelectRows(Expanded, each [Company ID] = null or [Project ID] = null)) > 0 then error Error.Record("ContractNotFound", "Contract metadata required", null) else Expanded
+				in Valid

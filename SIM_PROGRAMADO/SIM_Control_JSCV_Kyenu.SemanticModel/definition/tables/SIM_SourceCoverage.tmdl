@@ -1,0 +1,44 @@
+table 'SIM_SourceCoverage'
+	lineageTag: e8167d5c-ca9a-53e4-beec-94d875ef7cd8
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 90f01e07-6ba7-55ee-8e3f-0ce3dc0f7295
+		summarizeBy: none
+		sourceColumn: Company ID
+
+	column 'Project ID'
+		dataType: string
+		lineageTag: b7c5bd1e-75b2-5fbd-98d8-ca0562107979
+		summarizeBy: none
+		sourceColumn: Project ID
+
+	column 'Feed'
+		dataType: string
+		lineageTag: f61deea4-d55a-55c9-b253-f6cbb7c16ac2
+		summarizeBy: none
+		sourceColumn: Feed
+
+	column 'Reference Date'
+		dataType: dateTime
+		lineageTag: ecbd2ed9-7b37-5553-9f25-0c7f71aaa41a
+		summarizeBy: none
+		sourceColumn: Reference Date
+		formatString: yyyy-MM-dd
+
+	column 'Complete'
+		dataType: boolean
+		lineageTag: 6f6dc645-0860-5722-af77-b316ab18a37e
+		summarizeBy: none
+		sourceColumn: Complete
+
+	column 'Source'
+		dataType: string
+		lineageTag: 4a46e3f0-30d2-5ecb-9282-23df3090642d
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition 'SIM_SourceCoverage' = m
+		mode: import
+		source =
+				SIM_LoadCSV("SourceCoverage.csv", {{"Company ID", type text}, {"Project ID", type text}, {"Feed", type text}, {"Reference Date", type date}, {"Complete", type logical}, {"Source", type text}}, {"Company ID", "Project ID", "Feed", "Reference Date"})

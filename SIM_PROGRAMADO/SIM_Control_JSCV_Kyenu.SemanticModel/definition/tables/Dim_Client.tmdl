@@ -1,0 +1,20 @@
+table 'Dim_Client'
+	lineageTag: 07a5b487-5e1e-523f-a99a-5757b4d29314
+
+	column 'Client ID'
+		dataType: string
+		lineageTag: abc568a3-0120-50fa-aaab-00b2ca6400e9
+		summarizeBy: none
+		sourceColumn: Client ID
+		isKey
+
+	column 'Client Name'
+		dataType: string
+		lineageTag: 0161f326-fecd-547f-962f-6437e5b75895
+		summarizeBy: none
+		sourceColumn: Client Name
+
+	partition 'Dim_Client' = m
+		mode: import
+		source =
+				SIM_LoadCSV("ClientMaster.csv", {{"Client ID", type text}, {"Client Name", type text}}, {"Client ID"})

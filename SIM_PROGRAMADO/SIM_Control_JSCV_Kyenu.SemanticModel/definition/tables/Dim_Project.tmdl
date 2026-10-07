@@ -1,0 +1,50 @@
+table 'Dim_Project'
+	lineageTag: 82c50197-8540-5d4c-bcad-e5cd6fa5c640
+
+	column 'Project ID'
+		dataType: string
+		lineageTag: fd6dc4e7-3882-501f-afd6-60b8eb1599b1
+		summarizeBy: none
+		sourceColumn: Project ID
+		isKey
+
+	column 'Project Name'
+		dataType: string
+		lineageTag: 435f7aa4-6456-58a6-8791-0aa60ef74da2
+		summarizeBy: none
+		sourceColumn: Project Name
+
+	column 'Owner'
+		dataType: string
+		lineageTag: a129285f-1ece-58bf-8a9d-8ee8c29c8d60
+		summarizeBy: none
+		sourceColumn: Owner
+
+	column 'Developer'
+		dataType: string
+		lineageTag: b6d79422-ab8d-5c24-bd22-a1e429113d62
+		summarizeBy: none
+		sourceColumn: Developer
+
+	column 'Contractor'
+		dataType: string
+		lineageTag: 93c9a316-2cbe-5958-bece-4098ca92db16
+		summarizeBy: none
+		sourceColumn: Contractor
+
+	column 'Status'
+		dataType: string
+		lineageTag: e5d11da4-4ee7-5574-9676-d006fb004ab9
+		summarizeBy: none
+		sourceColumn: Status
+
+	column 'Currency'
+		dataType: string
+		lineageTag: 574ef5d4-78e3-5d37-8177-dd139f6412ed
+		summarizeBy: none
+		sourceColumn: Currency
+
+	partition 'Dim_Project' = m
+		mode: import
+		source =
+				SIM_LoadCSV("ProjectMaster.csv", {{"Project ID", type text}, {"Project Name", type text}, {"Owner", type text}, {"Developer", type text}, {"Contractor", type text}, {"Status", type text}, {"Currency", type text}}, {"Project ID"})

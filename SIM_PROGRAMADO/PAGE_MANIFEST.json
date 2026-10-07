@@ -1,0 +1,32 @@
+[
+  {
+    "page": "01 — EXECUTIVE OVERVIEW",
+    "visuals": 35,
+    "slicers": 9
+  },
+  {
+    "page": "02 — FINANCIAL PERFORMANCE",
+    "visuals": 34,
+    "slicers": 9
+  },
+  {
+    "page": "03 — BALANCE & LIQUIDITY",
+    "visuals": 39,
+    "slicers": 9
+  },
+  {
+    "page": "04 — PROJECT PERFORMANCE",
+    "visuals": 37,
+    "slicers": 11
+  },
+  {
+    "page": "05 — COMMERCIAL & COLLECTIONS",
+    "visuals": 49,
+    "slicers": 12
+  },
+  {
+    "page": "06 — KPI INFORMATION",
+    "visuals": 20,
+    "slicers": 10
+  }
+]

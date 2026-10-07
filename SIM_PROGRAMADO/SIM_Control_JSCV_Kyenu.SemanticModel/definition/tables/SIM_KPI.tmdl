@@ -1,0 +1,146 @@
+table 'SIM_KPI'
+	lineageTag: fbc97ab8-63a1-50bd-83c0-9d2412f480b6
+
+	column 'KPI ID'
+		dataType: string
+		lineageTag: a130cf32-1c33-5329-b6ad-783fa261cecc
+		summarizeBy: none
+		sourceColumn: KPI ID
+
+	column 'KPI'
+		dataType: string
+		lineageTag: c4bce190-d936-51c3-a856-69ef2d1c69fb
+		summarizeBy: none
+		sourceColumn: KPI
+		sortByColumn: Sort
+
+	column 'Kind'
+		dataType: string
+		lineageTag: c535074a-3d12-5bb4-9820-c7f59e3d64d1
+		summarizeBy: none
+		sourceColumn: Kind
+
+	column 'Group'
+		dataType: string
+		lineageTag: 65f624d4-e988-594e-86ed-7443e6bc22a0
+		summarizeBy: none
+		sourceColumn: Group
+
+	column 'Unit'
+		dataType: string
+		lineageTag: a3b7e65b-21cf-53f1-b4dc-7d8d42ba79c4
+		summarizeBy: none
+		sourceColumn: Unit
+
+	column 'Definition'
+		dataType: string
+		lineageTag: 93129921-a805-5ca2-bd3d-47ca56fc749a
+		summarizeBy: none
+		sourceColumn: Definition
+
+	column 'Formula'
+		dataType: string
+		lineageTag: a498a324-2150-5872-a588-328296f01bab
+		summarizeBy: none
+		sourceColumn: Formula
+
+	column 'Desired Direction'
+		dataType: string
+		lineageTag: 8b16fbce-1f79-5fa2-b825-ff8795111adf
+		summarizeBy: none
+		sourceColumn: Desired Direction
+
+	column 'Source'
+		dataType: string
+		lineageTag: 91bfed01-17c2-531e-90d7-ba4ca897e74f
+		summarizeBy: none
+		sourceColumn: Source
+
+	column 'Sort'
+		dataType: int64
+		lineageTag: e534b011-4e16-5abd-8869-e9d2547f0b9a
+		summarizeBy: none
+		sourceColumn: Sort
+
+	partition 'SIM_KPI' = m
+		mode: import
+		source =
+				#table(type table [#"KPI ID"=text,KPI=text,Kind=text,Group=text,Unit=text,Definition=text,Formula=text,#"Desired Direction"=text,Source=text,Sort=Int64.Type], {{"Revenue", "Revenue", "Flow", "Income Statement", "CVE", "Receita contabilística validada; nível 2", "SUM Balance Period, group Revenue", "Higher", "Accounting BG", 1},
+				{"Direct Costs", "Direct Costs", "Flow", "Income Statement", "CVE", "Custos diretos com sinal normal de débito; estornos preservados", "SUM Debit Period - SUM Credit Period, account 61", "Higher", "Accounting BG", 2},
+				{"Gross Profit", "Gross Profit", "Flow", "Income Statement", "CVE", "Receita menos custos diretos", "Revenue - Direct Costs", "Higher", "Accounting BG", 3},
+				{"Gross Margin", "Gross Margin", "Ratio", "Income Statement", "%", "Margem bruta sobre receita", "Gross Profit / Revenue", "Higher", "Accounting BG", 4},
+				{"FSE", "FSE", "Flow", "Income Statement", "CVE", "Fornecimentos e serviços externos", "Debit Period - Credit Period, account 62", "Higher", "Accounting BG", 5},
+				{"Payroll", "Payroll", "Flow", "Income Statement", "CVE", "Custos de pessoal", "Debit Period - Credit Period, account 63", "Higher", "Accounting BG", 6},
+				{"Other Operating Costs", "Other Operating Costs", "Flow", "Income Statement", "CVE", "Outros custos operacionais", "Debit Period - Credit Period, account 68", "Higher", "Accounting BG", 7},
+				{"Other Operating Income", "Other Operating Income", "Flow", "Income Statement", "CVE", "Outros rendimentos operacionais", "Credit Period - Debit Period, account 78", "Higher", "Accounting BG", 8},
+				{"EBITDA", "EBITDA", "Flow", "Income Statement", "CVE", "Resultado antes de depreciação, financiamento e impostos", "Revenue + Other Operating Income - Direct Costs - FSE - Payroll - Other Operating Costs", "Higher", "Accounting BG", 9},
+				{"EBITDA Margin", "EBITDA Margin", "Ratio", "Income Statement", "%", "Margem EBITDA", "EBITDA / Revenue", "Higher", "Accounting BG", 10},
+				{"D&A", "D&A", "Flow", "Income Statement", "CVE", "Depreciação e amortização", "Debit Period - Credit Period, account 64", "Higher", "Accounting BG", 11},
+				{"EBIT", "EBIT", "Flow", "Income Statement", "CVE", "Resultado operacional", "EBITDA - D&A", "Higher", "Accounting BG", 12},
+				{"EBIT Margin", "EBIT Margin", "Ratio", "Income Statement", "%", "Margem EBIT", "EBIT / Revenue", "Higher", "Accounting BG", 13},
+				{"Finance Costs", "Finance Costs", "Flow", "Income Statement", "CVE", "Custos financeiros", "Debit Period - Credit Period, account 69", "Higher", "Accounting BG", 14},
+				{"Finance Income", "Finance Income", "Flow", "Income Statement", "CVE", "Rendimentos financeiros", "Credit Period - Debit Period, account 79", "Higher", "Accounting BG", 15},
+				{"Net Finance", "Net Finance", "Flow", "Income Statement", "CVE", "Resultado financeiro", "Finance Income - Finance Costs", "Higher", "Accounting BG", 16},
+				{"Result Before Tax", "Result Before Tax", "Flow", "Income Statement", "CVE", "Resultado anterior a imposto; não é resultado líquido", "EBIT + Net Finance", "Higher", "Accounting BG", 17},
+				{"Net Result", "Net Result", "Flow", "Income Statement", "CVE", "Resultado líquido apenas com imposto aprovado em todos os meses", "Result Before Tax - Income Tax", "Higher", "Accounting BG", 18},
+				{"Net Margin", "Net Margin", "Ratio", "Income Statement", "%", "Margem líquida", "Net Result / Revenue", "Higher", "Accounting BG", 19},
+				{"Cash", "Cash", "Stock", "Balance", "CVE", "Caixa e equivalentes na data de referência", "Debit YTD - Credit YTD, accounts 11/12/13", "Higher", "Accounting BG", 20},
+				{"Accounts Receivable", "Receivables", "Stock", "Balance", "CVE", "Saldo de clientes", "Debit YTD - Credit YTD, account 21", "Higher", "Accounting BG", 21},
+				{"Accounts Payable", "Payables", "Stock", "Balance", "CVE", "Saldo de fornecedores", "Credit YTD - Debit YTD, account 22", "Higher", "Accounting BG", 22},
+				{"Inventory / WIP", "Inventory / WIP", "Stock", "Balance", "CVE", "Inventário e trabalhos em curso", "Debit YTD - Credit YTD, accounts 35/36", "Higher", "Accounting BG", 23},
+				{"Current Assets", "Current Assets", "Stock", "Balance", "CVE", "Ativo corrente; bloqueado enquanto classificação estiver incompleta", "Mapped Current Assets + approved current-asset classifications", "Higher", "Accounting BG", 24},
+				{"Current Liabilities", "Current Liabilities", "Stock", "Balance", "CVE", "Passivo corrente; exige classificação de maturidades", "Payables + approved current-liability classifications", "Higher", "Accounting BG", 25},
+				{"Working Capital", "Working Capital", "Stock", "Balance", "CVE", "Fundo de maneio", "Current Assets - Current Liabilities", "Higher", "Accounting BG", 26},
+				{"Debt", "Debt", "Stock", "Balance", "CVE", "Financiamento contabilístico total", "Credit YTD - Debit YTD, account 23", "Higher", "Accounting BG", 27},
+				{"Net Debt", "Net Debt", "Stock", "Balance", "CVE", "Dívida menos caixa", "Debt - Cash", "Higher", "Accounting BG", 28},
+				{"Equity", "Equity", "Stock", "Balance", "CVE", "Capital próprio contabilístico", "Credit YTD - Debit YTD, accounts 51/56/58/59", "Higher", "Accounting BG", 29},
+				{"Current Ratio", "Current Ratio", "Ratio", "Liquidity", "x", "Liquidez geral", "Current Assets / Current Liabilities", "Higher", "Accounting BG", 30},
+				{"Quick Ratio", "Quick Ratio", "Ratio", "Liquidity", "x", "Liquidez reduzida", "(Current Assets - Inventory) / Current Liabilities", "Higher", "Accounting BG", 31},
+				{"Immediate Liquidity", "Immediate Liquidity", "Ratio", "Liquidity", "x", "Liquidez imediata", "Cash / Current Liabilities", "Higher", "Accounting BG", 32},
+				{"DSO", "DSO / Receivables Days", "Ratio", "Working Capital", "days", "Prazo de recebimento aproximado; sem IVA/prazos por fatura", "Receivables / Revenue * selected days", "Higher", "Accounting BG", 33},
+				{"DPO", "DPO / Payables Days", "Ratio", "Working Capital", "days", "Prazo de pagamento aproximado; custos diretos como proxy de compras", "Payables / Direct Costs * selected days", "Higher", "Accounting BG", 34},
+				{"GDV", "GDV", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "sum project GDV", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 35},
+				{"Initial Investment", "Initial Investment", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "source Initial Investment", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 36},
+				{"Current Investment", "Current Investment / EAC", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "source Current Investment", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 37},
+				{"Investment Variance", "Investment Variance", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "Current Investment - Initial Investment", "Lower", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 38},
+				{"Project Profit", "Project Profit", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "GDV - Current Investment", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 39},
+				{"Development Margin", "Development Margin", "Project", "Project", "%", "Fonte de projeto necessária; não usar referências do handover como dados", "Project Profit / GDV", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 40},
+				{"Profit on Cost", "Profit on Cost", "Project", "Project", "%", "Fonte de projeto necessária; não usar referências do handover como dados", "Project Profit / Current Investment", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 41},
+				{"ROI", "ROI / Profit on Cost", "Project", "Project", "%", "Fonte de projeto necessária; não usar referências do handover como dados", "Project Profit / Current Investment", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 42},
+				{"IRR", "IRR", "Project", "Project", "%", "Fonte de projeto necessária; não usar referências do handover como dados", "XIRR dated equity cash flows", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 43},
+				{"NPV", "NPV", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "dated cash flows discounted at sourced rate", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 44},
+				{"Financing", "Financing", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "source Financing", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 45},
+				{"Project Equity", "Equity Invested", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "source Project Equity", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 46},
+				{"LTC", "LTC", "Project", "Project", "%", "Fonte de projeto necessária; não usar referências do handover como dados", "Financing / Current Investment", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 47},
+				{"LTV", "LTV", "Project", "Project", "%", "Fonte de projeto necessária; não usar referências do handover como dados", "Financing / GDV", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 48},
+				{"Funding Coverage", "Funding Coverage", "Project", "Project", "%", "Fonte de projeto necessária; não usar referências do handover como dados", "available cash + expected receipts + finance + equity / requirements", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 49},
+				{"Funding Gap", "Funding Gap", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "max(0, requirements - available resources), latest period", "Lower", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 50},
+				{"Peak Funding Gap", "Peak Unfunded Gap", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "MAX Funding Gap over sourced projection dates", "Lower", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 51},
+				{"Physical Progress", "Physical Progress", "Project", "Project", "%", "Fonte de projeto necessária; não usar referências do handover como dados", "source Physical Progress", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 52},
+				{"Financial Progress", "Financial Progress", "Project", "Project", "%", "Fonte de projeto necessária; não usar referências do handover como dados", "Actual Cost / Current Investment", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 53},
+				{"Actual Cost", "Actual Cost", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "source Actual Cost", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 54},
+				{"Committed Cost", "Committed Cost", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "source Committed Cost", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 55},
+				{"Cost to Complete", "Cost to Complete", "Project", "Project", "currency", "Fonte de projeto necessária; não usar referências do handover como dados", "Current Investment - Actual Cost", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 56},
+				{"CPI", "CPI", "Project", "Project", "x", "Fonte de projeto necessária; não usar referências do handover como dados", "Earned Value / Actual Cost", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 57},
+				{"SPI", "SPI", "Project", "Project", "x", "Fonte de projeto necessária; não usar referências do handover como dados", "Earned Value / Planned Value", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 58},
+				{"Forecast Completion", "Forecast Completion", "Project", "Project", "date", "Fonte de projeto necessária; não usar referências do handover como dados", "source Forecast Completion date", "Higher", "ProjectMetrics / ProjectCashFlow / ProjectAssumptions", 59},
+				{"Contracted Sales", "Contracted Sales", "Commercial", "Commercial", "currency", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "approved/non-cancelled contracts through reference date", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 60},
+				{"Collections", "Collections", "Commercial", "Commercial", "currency", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "actual dated receipts only", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 61},
+				{"Commercial Receivables", "Receivables — Contracts", "Commercial", "Commercial", "currency", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "Contracted Sales - Collections", "Lower", "Contracts / PaymentPlan / Collections / UnitMaster", 62},
+				{"Remaining GDV", "Remaining GDV", "Commercial", "Commercial", "currency", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "GDV - Contracted Sales", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 63},
+				{"Overdue Receivables", "Overdue Collections", "Commercial", "Commercial", "currency", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "past-due payment plans minus actual plan receipts", "Lower", "Contracts / PaymentPlan / Collections / UnitMaster", 64},
+				{"Collection Rate", "Collection Rate", "Commercial", "Commercial", "%", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "Collections / Contracted Sales", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 65},
+				{"% Sold", "% Sold", "Commercial", "Commercial", "%", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "Contracted Sales / GDV", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 66},
+				{"Units Sold", "Units Sold", "Commercial", "Commercial", "units", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "distinct units in active contracts", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 67},
+				{"Units Reserved", "Units Reserved", "Commercial", "Commercial", "units", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "unit master status Reserved", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 68},
+				{"Units Available", "Units Available", "Commercial", "Commercial", "units", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "unit master status Available", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 69},
+				{"Average Selling Price", "Average Selling Price", "Commercial", "Commercial", "currency", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "Contracted Sales / Units Sold", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 70},
+				{"Average Price m2", "Average Price/m²", "Commercial", "Commercial", "currency", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "Contracted Sales / area of distinct sold units", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 71},
+				{"Sales Velocity", "Sales Velocity", "Commercial", "Commercial", "contracts/month", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "distinct contracts in selected period / selected months", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 72},
+				{"Expected Collections", "Expected Collections", "Commercial", "Commercial", "currency", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "future forecast-dated plan residuals; not actual cash", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 73},
+				{"DSCR", "DSCR", "Commercial", "Commercial", "x", "Fontes de contratos/recebimentos necessárias; datas reais separadas de previsões", "cash available for debt service / debt service; source required", "Higher", "Contracts / PaymentPlan / Collections / UnitMaster", 74},
+				{"Earned Value", "Earned Value", "Project", "Project", "currency", "Valor adquirido/planeado de fonte de projeto", "source Earned Value", "Higher", "ProjectMetrics", 75},
+				{"Planned Value", "Planned Value", "Project", "Project", "currency", "Valor adquirido/planeado de fonte de projeto", "source Planned Value", "Higher", "ProjectMetrics", 76},
+				{"Cash Available for Debt Service", "Cash Available for Debt Service", "Project", "Project", "currency", "Fonte de fluxo de caixa / serviço de dívida necessária", "source Cash Available for Debt Service", "Higher", "ProjectMetrics", 77},
+				{"Debt Service", "Debt Service", "Project", "Project", "currency", "Fonte de fluxo de caixa / serviço de dívida necessária", "source Debt Service", "Higher", "ProjectMetrics", 78},
+				{"Income Tax", "Income Tax", "Flow", "Income Statement", "CVE", "Imposto aprovado em fonte; não presumir zero", "approved tax source monthly", "Lower", "IncomeTax", 79}})

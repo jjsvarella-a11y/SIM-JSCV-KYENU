@@ -1,0 +1,31 @@
+table 'SIM_ReferencePeriod'
+	lineageTag: 91fb8506-d0c1-5c6e-b30b-efa3f0a64ed5
+
+	column 'Reference Date'
+		dataType: dateTime
+		lineageTag: 5c40da4a-fba0-5c6a-af1b-b37173bb5d29
+		summarizeBy: none
+		sourceColumn: Reference Date
+		formatString: yyyy-MM-dd
+
+	column 'Year'
+		dataType: int64
+		lineageTag: b40677b1-c3b0-532a-bc62-a577b0cedafb
+		summarizeBy: none
+		sourceColumn: Year
+
+	column 'Period'
+		dataType: string
+		lineageTag: eafecb95-70a2-5db9-b4fc-f85a75ee2ef1
+		summarizeBy: none
+		sourceColumn: Period
+
+	partition 'SIM_ReferencePeriod' = m
+		mode: import
+		source =
+				let
+				    Periods = Table.Distinct(Table.SelectColumns(Dim_Date, {"Period Date"})),
+				    Rename = Table.RenameColumns(Periods, {{"Period Date", "Reference Date"}}),
+				    Year = Table.AddColumn(Rename, "Year", each Date.Year([Reference Date]), Int64.Type),
+				    Period = Table.AddColumn(Year, "Period", each Date.ToText([Reference Date], "yyyy-MM"), type text)
+				in Period
