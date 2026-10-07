@@ -1,0 +1,59 @@
+measure 'Direct Costs' =
+CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+measure 'FSE' =
+CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+measure 'Payroll' =
+CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+measure 'Other Operating Costs' =
+CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+measure 'Other Income' =
+CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+measure 'D&A' =
+CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+measure 'EBITDA' =
+CVE; receitas e outros rendimentos menos custos 61/62/63/68. Provisório: validar convenção de sinais com contabilidade. BLANK se faltar qualquer componente; maior é melhor.
+
+measure 'EBITDA Margin' =
+EBITDA / Revenue; sem dados ou receita zero resulta BLANK; maior é melhor.
+
+measure 'EBIT' =
+CVE; EBITDA menos depreciação/amortização; provisório, confirmar sinais; ausências preservadas.
+
+measure 'Revenue Executive' =
+Revenue validado, exibido apenas com uma empresa; não apresenta soma como consolidado.
+
+measure 'EBITDA Executive' =
+Uma empresa por vez. Resultado provisório até validação contabilística de sinais e mapeamentos.
+
+measure 'EBITDA Margin Executive' =
+Uma empresa por vez. Resultado provisório até validação contabilística de sinais e mapeamentos.
+
+measure 'EBIT Executive' =
+Uma empresa por vez. Resultado provisório até validação contabilística de sinais e mapeamentos.
+
+measure 'Revenue Prior Year' =
+CVE; período homólogo do ano anterior usando Dim_Date; não representa budget nem forecast.
+
+measure 'Revenue Variance' =
+Atual menos homólogo; BLANK quando uma das bases está ausente.
+
+measure 'Revenue Variance %' =
+Variação / homólogo; base zero ou ausente resulta BLANK.
+
+measure 'EBITDA Prior Year' =
+CVE; período homólogo do ano anterior usando Dim_Date; não representa budget nem forecast.
+
+measure 'EBITDA Variance' =
+Atual menos homólogo; BLANK quando uma das bases está ausente.
+
+measure 'EBITDA Variance %' =
+Variação / homólogo; base zero ou ausente resulta BLANK.
+
+measure 'Management Status' =
+Explicita ausência de dados e requisitos de reconciliação; não classifica desempenho sem metas.
