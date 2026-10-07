@@ -1,0 +1,264 @@
+table Fact_Accounting_JSCV
+	lineageTag: dc5d31ed-5177-4033-b6aa-80567d03e771
+
+	column 'Source File'
+		dataType: string
+		lineageTag: 531c6c73-31de-42e8-ac7b-075e655a7e4a
+		summarizeBy: none
+		sourceColumn: Source File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: eadd6b63-f653-4ed0-a8e6-2b6586b005ea
+		summarizeBy: none
+		sourceColumn: Company ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source Type'
+		dataType: string
+		lineageTag: dbb8dbd0-269d-41f2-810c-59a224f7ddfd
+		summarizeBy: none
+		sourceColumn: Source Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: ef5b6971-c5d9-4b69-a330-5039ef68da5d
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b47beca-dab6-4f74-89ec-ac8f9983da2e
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 167b0c5a-83c1-40b0-a033-89e1a0f9846d
+		summarizeBy: count
+		sourceColumn: Period ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1dc88508-d3f4-4559-b5e7-af1dae6ad486
+		summarizeBy: none
+		sourceColumn: Period Date
+
+		variation Variação
+			isDefault
+			relationship: 95863868-417e-40e4-a589-f30d4d027709
+			defaultHierarchy: LocalDateTable_e1d77243-888c-47b3-bcaa-a2f277e5656a.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Account ID'
+		dataType: string
+		lineageTag: c57674d6-3acf-49e2-83ba-30558f1739db
+		summarizeBy: none
+		sourceColumn: Account ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Name'
+		dataType: string
+		lineageTag: f2880572-45f8-4c4b-bd45-33502720c0a5
+		summarizeBy: none
+		sourceColumn: Account Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Debit Period'
+		dataType: double
+		lineageTag: ce62166e-6dee-4ab4-8b17-d32d9444caeb
+		summarizeBy: sum
+		sourceColumn: Debit Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Credit Period'
+		dataType: double
+		lineageTag: ed5100cd-3009-4c4c-a9b0-dd6964a0e053
+		summarizeBy: sum
+		sourceColumn: Credit Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Balance Period'
+		dataType: double
+		lineageTag: 1b17f9da-c07f-4e7d-8502-097c88bf93ff
+		summarizeBy: sum
+		sourceColumn: Balance Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Debit YTD'
+		dataType: double
+		lineageTag: 2a429bcb-0538-4964-88b7-03f773f34e40
+		summarizeBy: sum
+		sourceColumn: Debit YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Credit YTD'
+		dataType: double
+		lineageTag: c2161532-753e-47ba-93ac-f99d0948024a
+		summarizeBy: sum
+		sourceColumn: Credit YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Balance YTD'
+		dataType: double
+		lineageTag: e9d6e95e-1c04-4eae-bf88-45766b0a0dab
+		summarizeBy: sum
+		sourceColumn: Balance YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fact_Accounting_JSCV = m
+		mode: import
+		source =
+				let
+				    Fonte = RAW_JSCV_BG,
+				
+				    // Função para transformar UM BG
+				    TransformarBG = (Binario as binary) as table =>
+				        let
+				            ExcelFonte = Excel.Workbook(Binario, null, true),
+				
+				            Folhas = Table.SelectRows(
+				                ExcelFonte,
+				                each [Kind] = "Sheet"
+				            ),
+				
+				            Dados =
+				                if Table.RowCount(Folhas) > 0
+				                then Folhas{0}[Data]
+				                else #table({}, {}),
+				
+				            Cabecalhos = Table.PromoteHeaders(
+				                Dados,
+				                [PromoteAllScalars = true]
+				            )
+				        in
+				            Cabecalhos,
+				
+				    // Aplicar a função a CADA um dos 33 ficheiros
+				    AdicionarDados = Table.AddColumn(
+				        Fonte,
+				        "Accounting Data",
+				        each TransformarBG([Content]),
+				        type table
+				    ),
+				
+				    // Manter os metadados de cada ficheiro
+				    ManterColunas = Table.SelectColumns(
+				        AdicionarDados,
+				        {
+				            "Source File",
+				            "Company ID",
+				            "Source Type",
+				            "Year",
+				            "Month",
+				            "Period ID",
+				            "Period Date",
+				            "Accounting Data"
+				        }
+				    ),
+				
+				    // Expandir cada BG mantendo Ano/Mês/Source File
+				    ExpandirDados = Table.ExpandTableColumn(
+				        ManterColunas,
+				        "Accounting Data",
+				        {
+				            "Conta",
+				            "Descrição",
+				            "Débito (Per.)",
+				            "Crédito (Per.)",
+				            "Saldo (Per.)",
+				            "Débito (Acum.)",
+				            "Crédito (Acum.)",
+				            "Saldo (Acum.)"
+				        },
+				        {
+				            "Account ID",
+				            "Account Name",
+				            "Debit Period",
+				            "Credit Period",
+				            "Balance Period",
+				            "Debit YTD",
+				            "Credit YTD",
+				            "Balance YTD"
+				        }
+				    ),
+				
+				    // Eliminar apenas linhas contabilísticas completamente vazias
+				    RemoverVazios = Table.SelectRows(
+				        ExpandirDados,
+				        each [Account ID] <> null or [Account Name] <> null
+				    ),
+				
+				    // Tipos
+				    Tipos = Table.TransformColumnTypes(
+				        RemoverVazios,
+				        {
+				            {"Source File", type text},
+				            {"Company ID", type text},
+				            {"Source Type", type text},
+				            {"Year", Int64.Type},
+				            {"Month", Int64.Type},
+				            {"Period ID", Int64.Type},
+				            {"Period Date", type date},
+				            {"Account ID", type text},
+				            {"Account Name", type text},
+				            {"Debit Period", type number},
+				            {"Credit Period", type number},
+				            {"Balance Period", type number},
+				            {"Debit YTD", type number},
+				            {"Credit YTD", type number},
+				            {"Balance YTD", type number}
+				        }
+				    ),
+				
+				    Ordenar = Table.Sort(
+				        Tipos,
+				        {
+				            {"Period ID", Order.Ascending},
+				            {"Account ID", Order.Ascending}
+				        }
+				    )
+				
+				in
+				    Ordenar
+
+	annotation PBI_ResultType = Table
+

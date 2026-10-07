@@ -1,0 +1,395 @@
+table Dim_Account
+	lineageTag: 0efd2936-abf9-496f-b44d-12e12fc15cfd
+
+	column 'Account ID'
+		dataType: string
+		lineageTag: c8e92515-d254-4650-a79f-d15000a428e7
+		summarizeBy: none
+		sourceColumn: Account ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Name'
+		dataType: string
+		lineageTag: a69e2bc0-1831-44c6-89b4-1a8e30d093f6
+		summarizeBy: none
+		sourceColumn: Account Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Level'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1839ab88-51e5-46d7-a8ad-27a52f9bbfbc
+		summarizeBy: sum
+		sourceColumn: Account Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prefix 1'
+		dataType: string
+		lineageTag: a807dcc7-1805-4abc-ac38-77ca452e387f
+		summarizeBy: none
+		sourceColumn: Prefix 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prefix 2'
+		dataType: string
+		lineageTag: 08c2a191-c9cc-4e88-a7f0-1ed975bb4d64
+		summarizeBy: none
+		sourceColumn: Prefix 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prefix 3'
+		dataType: string
+		lineageTag: f57f8187-c91d-4a2f-ae15-cba458347680
+		summarizeBy: none
+		sourceColumn: Prefix 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Statement
+		dataType: string
+		lineageTag: d7333e5b-29b9-49ce-96c8-8c7a050c1a51
+		summarizeBy: none
+		sourceColumn: Statement
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Management Group'
+		dataType: string
+		lineageTag: 6a44d014-8f7c-42fe-9d20-9d89ca33a870
+		summarizeBy: none
+		sourceColumn: Management Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI Group'
+		dataType: string
+		lineageTag: f1d350b4-f60a-4dd0-b5a7-6b0b1ab6a4e7
+		summarizeBy: none
+		sourceColumn: KPI Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EBITDA Class'
+		dataType: string
+		lineageTag: fc22d0a6-6612-45c3-9c03-4c2b9d7d8cc5
+		summarizeBy: none
+		sourceColumn: EBITDA Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Balance Class'
+		dataType: string
+		lineageTag: d02196af-cd0b-4a11-9fdd-85eab3bdd47a
+		summarizeBy: none
+		sourceColumn: Balance Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sign
+		dataType: int64
+		formatString: 0
+		lineageTag: a9665d3a-c413-47b8-b163-c78f190239ac
+		summarizeBy: sum
+		sourceColumn: Sign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Include KPI'
+		dataType: string
+		lineageTag: 09494d95-4ee4-4d56-9da8-893bd1be2ce8
+		summarizeBy: none
+		sourceColumn: Include KPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mapping Status'
+		dataType: string
+		lineageTag: f90f0a1b-e60e-44e0-804d-0203de8001c3
+		summarizeBy: none
+		sourceColumn: Mapping Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Account = m
+		mode: import
+		source =
+				let
+				    Fonte = Fact_Accounting,
+				
+				    Selecionar = Table.SelectColumns(
+				        Fonte,
+				        {
+				            "Account ID",
+				            "Account Name"
+				        }
+				    ),
+				
+				    RemoverVazios = Table.SelectRows(
+				        Selecionar,
+				        each [Account ID] <> null
+				            and Text.Trim(Text.From([Account ID])) <> ""
+				    ),
+				
+				    Tipos = Table.TransformColumnTypes(
+				        RemoverVazios,
+				        {
+				            {"Account ID", type text},
+				            {"Account Name", type text}
+				        }
+				    ),
+				
+				    LimparID = Table.TransformColumns(
+				        Tipos,
+				        {
+				            {"Account ID", each Text.Trim(_), type text}
+				        }
+				    ),
+				
+				    Distintos = Table.Distinct(
+				        LimparID,
+				        {"Account ID"}
+				    ),
+				
+				    AccountLevel = Table.AddColumn(
+				        Distintos,
+				        "Account Level",
+				        each Text.Length([Account ID]),
+				        Int64.Type
+				    ),
+				
+				    Prefix1 = Table.AddColumn(
+				        AccountLevel,
+				        "Prefix 1",
+				        each Text.Start([Account ID], 1),
+				        type text
+				    ),
+				
+				    Prefix2 = Table.AddColumn(
+				        Prefix1,
+				        "Prefix 2",
+				        each
+				            if Text.Length([Account ID]) >= 2
+				            then Text.Start([Account ID], 2)
+				            else [Account ID],
+				        type text
+				    ),
+				
+				    Prefix3 = Table.AddColumn(
+				        Prefix2,
+				        "Prefix 3",
+				        each
+				            if Text.Length([Account ID]) >= 3
+				            then Text.Start([Account ID], 3)
+				            else [Account ID],
+				        type text
+				    ),
+				
+				    Statement = Table.AddColumn(
+				        Prefix3,
+				        "Statement",
+				        each
+				            if [Prefix 1] = "6"
+				                or [Prefix 1] = "7"
+				            then "P&L"
+				            else "Balance Sheet",
+				        type text
+				    ),
+				
+				    ManagementGroup = Table.AddColumn(
+				        Statement,
+				        "Management Group",
+				        each
+				
+				            // P&L
+				            if [Prefix 2] = "61" then "Direct / Production Costs"
+				            else if [Prefix 2] = "62" then "FSE"
+				            else if [Prefix 2] = "63" then "Payroll"
+				            else if [Prefix 2] = "64" then "D&A"
+				            else if [Prefix 2] = "68" then "Other Operating Costs"
+				            else if [Prefix 2] = "69" then "Finance Costs"
+				            else if [Prefix 2] = "72" then "Revenue"
+				            else if [Prefix 2] = "78" then "Other Income"
+				            else if [Prefix 2] = "79" then "Finance Income"
+				
+				            // BALANCE SHEET
+				            else if List.Contains(
+				                {"11","12","13"},
+				                [Prefix 2]
+				            ) then "Cash & Cash Equivalents"
+				
+				            else if [Prefix 2] = "21" then "Accounts Receivable"
+				            else if [Prefix 2] = "22" then "Accounts Payable"
+				            else if [Prefix 2] = "23" then "Financing / Debt"
+				            else if [Prefix 2] = "24" then "Public Sector / Tax"
+				            else if [Prefix 2] = "25" then "Shareholders"
+				            else if [Prefix 2] = "26" then "Other Receivables / Payables"
+				            else if [Prefix 2] = "27" then "Personnel BS"
+				            else if [Prefix 2] = "28" then "Deferrals"
+				
+				            else if List.Contains(
+				                {"35","36"},
+				                [Prefix 2]
+				            ) then "Inventory / WIP"
+				
+				            else if [Prefix 2] = "41" then "Financial Investments"
+				            else if [Prefix 2] = "42" then "Investment Property"
+				            else if [Prefix 2] = "43" then "Tangible Fixed Assets"
+				            else if [Prefix 2] = "44" then "Intangible Assets"
+				            else if [Prefix 2] = "45" then "Assets Under Construction"
+				
+				            else if List.Contains(
+				                {"51","56","58","59"},
+				                [Prefix 2]
+				            ) then "Equity"
+				
+				            else "To Map",
+				        type text
+				    ),
+				
+				    KPIGroup = Table.AddColumn(
+				        ManagementGroup,
+				        "KPI Group",
+				        each
+				            if [Management Group] = "Direct / Production Costs"
+				                then "Direct Costs"
+				            else if [Management Group] = "FSE"
+				                then "Operating Expenses"
+				            else if [Management Group] = "Payroll"
+				                then "Personnel Costs"
+				            else if [Management Group] = "D&A"
+				                then "Depreciation & Amortization"
+				            else if [Management Group] = "Other Operating Costs"
+				                then "Other Operating Expenses"
+				            else if List.Contains(
+				                {"Finance Costs","Finance Income"},
+				                [Management Group]
+				            ) then "Net Finance"
+				            else if [Management Group] = "Other Income"
+				                then "Other Operating Income"
+				            else [Management Group],
+				        type text
+				    ),
+				
+				    EBITDAClass = Table.AddColumn(
+				        KPIGroup,
+				        "EBITDA Class",
+				        each
+				            if [Management Group] = "Revenue"
+				                then "Revenue"
+				            else if [Management Group] = "Other Income"
+				                then "Operating Income"
+				            else if List.Contains(
+				                {
+				                    "Direct / Production Costs",
+				                    "FSE",
+				                    "Payroll",
+				                    "Other Operating Costs"
+				                },
+				                [Management Group]
+				            ) then "EBITDA Cost"
+				            else if [Management Group] = "D&A"
+				                then "Below EBITDA"
+				            else if List.Contains(
+				                {"Finance Costs","Finance Income"},
+				                [Management Group]
+				            ) then "Financial"
+				            else null,
+				        type text
+				    ),
+				
+				    BalanceClass = Table.AddColumn(
+				        EBITDAClass,
+				        "Balance Class",
+				        each
+				            if [Management Group] = "Cash & Cash Equivalents"
+				                then "Current Asset"
+				
+				            else if [Management Group] = "Accounts Receivable"
+				                then "Current Asset"
+				
+				            else if [Management Group] = "Inventory / WIP"
+				                then "Current Asset"
+				
+				            else if List.Contains(
+				                {
+				                    "Financial Investments",
+				                    "Investment Property",
+				                    "Tangible Fixed Assets",
+				                    "Intangible Assets",
+				                    "Assets Under Construction"
+				                },
+				                [Management Group]
+				            ) then "Non-Current Asset"
+				
+				            else if [Management Group] = "Accounts Payable"
+				                then "Current Liability"
+				
+				            else if [Management Group] = "Financing / Debt"
+				                then "Debt"
+				
+				            else if [Management Group] = "Equity"
+				                then "Equity"
+				
+				            else if List.Contains(
+				                {
+				                    "Public Sector / Tax",
+				                    "Shareholders",
+				                    "Other Receivables / Payables",
+				                    "Personnel BS",
+				                    "Deferrals"
+				                },
+				                [Management Group]
+				            ) then "Requires Detail"
+				
+				            else null,
+				        type text
+				    ),
+				
+				    Sign = Table.AddColumn(
+				        BalanceClass,
+				        "Sign",
+				        each
+				            if [Prefix 1] = "6"
+				            then -1
+				            else 1,
+				        Int64.Type
+				    ),
+				
+				    IncludeKPI = Table.AddColumn(
+				        Sign,
+				        "Include KPI",
+				        each
+				            if [Management Group] = "To Map"
+				            then "REVIEW"
+				            else "YES",
+				        type text
+				    ),
+				
+				    MappingStatus = Table.AddColumn(
+				        IncludeKPI,
+				        "Mapping Status",
+				        each
+				            if [Management Group] = "To Map"
+				                then "PENDING"
+				            else if [Balance Class] = "Requires Detail"
+				                then "REVIEW DETAIL"
+				            else "MAPPED",
+				        type text
+				    ),
+				
+				    Ordenar = Table.Sort(
+				        MappingStatus,
+				        {
+				            {"Account ID", Order.Ascending}
+				        }
+				    )
+				in
+				    Ordenar
+
+	annotation PBI_ResultType = Table
+

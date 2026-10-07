@@ -1,0 +1,187 @@
+table Fact_Accounting
+	lineageTag: c43e2c8e-b468-4992-914a-023536b7d612
+
+	column 'Source File'
+		dataType: string
+		lineageTag: 0e909b9e-20e3-4ec1-8ae0-2f46caf8dbfb
+		summarizeBy: none
+		sourceColumn: Source File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 98ad0ef1-79c8-478b-bbc9-f7dff5986044
+		summarizeBy: none
+		sourceColumn: Company ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source Type'
+		dataType: string
+		lineageTag: 92ae1476-ee6e-4593-8088-777fbea811cd
+		summarizeBy: none
+		sourceColumn: Source Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: c9f95b6f-6a2b-4520-a8b3-6732b21529b5
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c34dfc0-bb15-45c6-aa59-ba5ad29887ab
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: f75b606e-7873-4637-a5d6-be47854833ce
+		summarizeBy: count
+		sourceColumn: Period ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 513a36db-bab6-4a93-8a7b-4e7add2d512a
+		summarizeBy: none
+		sourceColumn: Period Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Account ID'
+		dataType: string
+		lineageTag: ba794329-2959-4537-a4c0-c213fe0550bb
+		summarizeBy: none
+		sourceColumn: Account ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Name'
+		dataType: string
+		lineageTag: b22477b5-f865-4789-90a1-34f321d4b7aa
+		summarizeBy: none
+		sourceColumn: Account Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Debit Period'
+		dataType: double
+		lineageTag: 8ae2ad50-15ae-451a-8ea6-c0420dca0e63
+		summarizeBy: sum
+		sourceColumn: Debit Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Credit Period'
+		dataType: double
+		lineageTag: ed640642-2cec-4281-8095-d0b26d281bb9
+		summarizeBy: sum
+		sourceColumn: Credit Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Balance Period'
+		dataType: double
+		lineageTag: b38152fd-cae2-4807-83a8-0be3989fa74d
+		summarizeBy: sum
+		sourceColumn: Balance Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Debit YTD'
+		dataType: double
+		lineageTag: 3b1c2863-1c1b-4a1e-b977-73d388e36bd6
+		summarizeBy: sum
+		sourceColumn: Debit YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Credit YTD'
+		dataType: double
+		lineageTag: 105d03ff-9f50-4377-859c-7e30696545d8
+		summarizeBy: sum
+		sourceColumn: Credit YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Balance YTD'
+		dataType: double
+		lineageTag: fa761a78-fce0-4f8b-bf45-803b3aeb5027
+		summarizeBy: sum
+		sourceColumn: Balance YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fact_Accounting = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.Combine(
+				        {
+				            Fact_Accounting_JSCV,
+				            Fact_Accounting_KYENU
+				        }
+				    ),
+				
+				    Tipos = Table.TransformColumnTypes(
+				        Fonte,
+				        {
+				            {"Source File", type text},
+				            {"Company ID", type text},
+				            {"Source Type", type text},
+				            {"Year", Int64.Type},
+				            {"Month", Int64.Type},
+				            {"Period ID", Int64.Type},
+				            {"Period Date", type date},
+				            {"Account ID", type text},
+				            {"Account Name", type text},
+				            {"Debit Period", type number},
+				            {"Credit Period", type number},
+				            {"Balance Period", type number},
+				            {"Debit YTD", type number},
+				            {"Credit YTD", type number},
+				            {"Balance YTD", type number}
+				        }
+				    ),
+				
+				    Ordenar = Table.Sort(
+				        Tipos,
+				        {
+				            {"Company ID", Order.Ascending},
+				            {"Period ID", Order.Ascending},
+				            {"Account ID", Order.Ascending}
+				        }
+				    )
+				
+				in
+				    Ordenar
+
+	annotation PBI_ResultType = Table
+

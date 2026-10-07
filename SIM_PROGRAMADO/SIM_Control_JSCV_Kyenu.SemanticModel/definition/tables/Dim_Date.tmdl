@@ -1,0 +1,180 @@
+table Dim_Date
+	lineageTag: 91aeb581-17a0-43a3-b61a-fec74e3857de
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 691ee58a-dbc1-4dda-a533-7151a5836244
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variação
+			isDefault
+			relationship: 919e272c-c629-4284-b8d7-25fba444f56a
+			defaultHierarchy: LocalDateTable_12790ef9-29d1-4e21-9018-a9bdc9b95ff3.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 80967ae3-f62d-4b0c-9a34-b383222eb104
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter No'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4de92c78-5266-4c4a-9abb-df89e23f224a
+		summarizeBy: sum
+		sourceColumn: Quarter No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		lineageTag: cabadaa6-99c1-472e-9fe9-f1bae96ec582
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: e90410c8-c29e-479b-b25d-33eec5c3dac5
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: d083411a-dd5a-455e-9160-0a93c769659d
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Month'
+		dataType: string
+		lineageTag: 8c8b4607-37a5-498b-9fec-e575d1028171
+		summarizeBy: none
+		sourceColumn: Year Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: b0cf5a72-d14c-43d4-99ed-39101a1159cf
+		summarizeBy: count
+		sourceColumn: Period ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dd501f20-b51a-44ba-ba16-77a3685be7bb
+		summarizeBy: none
+		sourceColumn: Period Date
+
+		variation Variação
+			isDefault
+			relationship: a9f15c42-caab-4536-a985-8ace69da2884
+			defaultHierarchy: LocalDateTable_109bbbe0-43c4-41fb-a30d-c2067d205141.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Dim_Date = m
+		mode: import
+		source =
+				let
+				    DataInicial = #date(2024, 1, 1),
+				    DataFinal = #date(2030, 12, 31),
+				
+				    ListaDatas = List.Dates(
+				        DataInicial,
+				        Duration.Days(DataFinal - DataInicial) + 1,
+				        #duration(1, 0, 0, 0)
+				    ),
+				
+				    Calendario = Table.FromList(
+				        ListaDatas,
+				        Splitter.SplitByNothing(),
+				        {"Date"}
+				    ),
+				
+				    TipoData = Table.TransformColumnTypes(
+				        Calendario,
+				        {{"Date", type date}}
+				    ),
+				
+				    Year = Table.AddColumn(
+				        TipoData,
+				        "Year",
+				        each Date.Year([Date]),
+				        Int64.Type
+				    ),
+				
+				    QuarterNo = Table.AddColumn(
+				        Year,
+				        "Quarter No",
+				        each Date.QuarterOfYear([Date]),
+				        Int64.Type
+				    ),
+				
+				    Quarter = Table.AddColumn(
+				        QuarterNo,
+				        "Quarter",
+				        each "Q" & Text.From([Quarter No]),
+				        type text
+				    ),
+				
+				    Month = Table.AddColumn(
+				        Quarter,
+				        "Month",
+				        each Date.Month([Date]),
+				        Int64.Type
+				    ),
+				
+				    MonthName = Table.AddColumn(
+				        Month,
+				        "Month Name",
+				        each Date.MonthName([Date], "pt-PT"),
+				        type text
+				    ),
+				
+				    YearMonth = Table.AddColumn(
+				        MonthName,
+				        "Year Month",
+				        each Date.ToText([Date], "yyyy-MM"),
+				        type text
+				    ),
+				
+				    PeriodID = Table.AddColumn(
+				        YearMonth,
+				        "Period ID",
+				        each [Year] * 100 + [Month],
+				        Int64.Type
+				    ),
+				
+				    PeriodDate = Table.AddColumn(
+				        PeriodID,
+				        "Period Date",
+				        each Date.EndOfMonth([Date]),
+				        type date
+				    )
+				
+				in
+				    PeriodDate
+
+	annotation PBI_ResultType = Table
+

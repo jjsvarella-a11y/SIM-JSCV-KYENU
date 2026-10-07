@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../SIM_Control_JSCV_Kyenu.SemanticModel"
+    }
+  }
+}

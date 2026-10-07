@@ -1,0 +1,1 @@
+PASS: Revenue preserved; all other model definitions and relationships unchanged; 23 unique measure declarations; JSON parsing, measure references and new visual bounds checked. No DAX/TMDL compilation, schema validation, Desktop rendering or refresh executed.

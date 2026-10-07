@@ -1,0 +1,333 @@
+table Fact_CostCenter_JSCV
+	lineageTag: 729fa252-8178-476e-948b-1a3a300179e7
+
+	column 'Source File'
+		dataType: string
+		lineageTag: 18f3d0d7-325c-4330-b5b5-6fe8a21408a4
+		summarizeBy: none
+		sourceColumn: Source File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: c391b6d1-2707-4bd6-816f-2869bd4131d6
+		summarizeBy: none
+		sourceColumn: Company ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source Type'
+		dataType: string
+		lineageTag: 5c6e4b00-e649-4f37-9c7a-2419739230ec
+		summarizeBy: none
+		sourceColumn: Source Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c232863-35b9-42b4-a9a4-bf24a65c86e2
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 1196c30e-aed2-414f-9a94-a5a1297ba987
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f08e677-615c-487e-9072-79cd7c4307fa
+		summarizeBy: count
+		sourceColumn: Period ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b1ee7754-b6ac-4e11-8b7e-bdbe32ab2c81
+		summarizeBy: none
+		sourceColumn: Period Date
+
+		variation Variação
+			isDefault
+			relationship: f6354888-341b-4a76-97e1-fafefd9fefdf
+			defaultHierarchy: LocalDateTable_ee26ccae-be95-4322-8b75-b270ac1d8045.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Record Type'
+		dataType: string
+		lineageTag: d6935571-3e58-475f-a92a-77989f5dbfb6
+		summarizeBy: none
+		sourceColumn: Record Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cost Center Account ID'
+		dataType: string
+		lineageTag: ba359906-e1b0-4441-86fc-cdc3f7d583c6
+		summarizeBy: none
+		sourceColumn: Cost Center Account ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 20605e4a-b3d9-453e-8037-d177edfa3bcd
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Debit Period'
+		dataType: double
+		lineageTag: b9076182-6dea-4644-b48b-32377ed69ecf
+		summarizeBy: sum
+		sourceColumn: Debit Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Credit Period'
+		dataType: double
+		lineageTag: 20d98005-d826-4ac7-a52c-b404239e0470
+		summarizeBy: sum
+		sourceColumn: Credit Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Balance Period'
+		dataType: double
+		lineageTag: 3501dcab-d979-4c91-b6ec-fa2c2c74249c
+		summarizeBy: sum
+		sourceColumn: Balance Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Debit YTD'
+		dataType: double
+		lineageTag: 2b8b3218-d83e-4d79-a83a-a6cc3d63cc27
+		summarizeBy: sum
+		sourceColumn: Debit YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Credit YTD'
+		dataType: double
+		lineageTag: 21bf75eb-87b1-48fa-b821-0151c3ad5112
+		summarizeBy: sum
+		sourceColumn: Credit YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Balance YTD'
+		dataType: double
+		lineageTag: 8cec1b41-d9d5-4e04-a331-8db79f9f1407
+		summarizeBy: sum
+		sourceColumn: Balance YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fact_CostCenter_JSCV = m
+		mode: import
+		source =
+				let
+				    Fonte = RAW_JSCV_BCC,
+				
+				    // =========================================================
+				    // FUNÇÃO PARA LER UM BCC
+				    // Procura a tabela que contém "Centro/Conta"
+				    // =========================================================
+				    TransformarBCC = (Binario as binary) as table =>
+				        let
+				            WB = Excel.Workbook(Binario, null, true),
+				
+				            // Examinar cada objeto existente no workbook
+				            ComCabecalhos = Table.AddColumn(
+				                WB,
+				                "_DadosPreparados",
+				                each
+				                    try
+				                        Table.PromoteHeaders(
+				                            [Data],
+				                            [PromoteAllScalars = true]
+				                        )
+				                    otherwise
+				                        null
+				            ),
+				
+				            // Identificar o objeto que realmente contém o BCC
+				            ComBCC = Table.AddColumn(
+				                ComCabecalhos,
+				                "_EhBCC",
+				                each
+				                    try
+				                        List.Contains(
+				                            Table.ColumnNames([_DadosPreparados]),
+				                            "Centro/Conta"
+				                        )
+				                    otherwise
+				                        false,
+				                type logical
+				            ),
+				
+				            ApenasBCC = Table.SelectRows(
+				                ComBCC,
+				                each [_EhBCC] = true
+				            ),
+				
+				            Resultado =
+				                if Table.RowCount(ApenasBCC) > 0
+				                then ApenasBCC{0}[_DadosPreparados]
+				                else #table(
+				                    {
+				                        "Tipo",
+				                        "Centro/Conta",
+				                        "Descrição",
+				                        "Débito Per.",
+				                        "Crédito Per.",
+				                        "Saldo Per.",
+				                        "Débito Acum.",
+				                        "Crédito Acum.",
+				                        "Saldo Acum."
+				                    },
+				                    {}
+				                )
+				        in
+				            Resultado,
+				
+				    // =========================================================
+				    // APLICAR AOS 33 FICHEIROS
+				    // =========================================================
+				    AdicionarDados = Table.AddColumn(
+				        Fonte,
+				        "Cost Center Data",
+				        each TransformarBCC([Content]),
+				        type table
+				    ),
+				
+				    // =========================================================
+				    // MANTER METADADOS
+				    // =========================================================
+				    ManterColunas = Table.SelectColumns(
+				        AdicionarDados,
+				        {
+				            "Source File",
+				            "Company ID",
+				            "Source Type",
+				            "Year",
+				            "Month",
+				            "Period ID",
+				            "Period Date",
+				            "Cost Center Data"
+				        }
+				    ),
+				
+				    // =========================================================
+				    // EXPANDIR BCC
+				    // =========================================================
+				    ExpandirDados = Table.ExpandTableColumn(
+				        ManterColunas,
+				        "Cost Center Data",
+				        {
+				            "Tipo",
+				            "Centro/Conta",
+				            "Descrição",
+				            "Débito Per.",
+				            "Crédito Per.",
+				            "Saldo Per.",
+				            "Débito Acum.",
+				            "Crédito Acum.",
+				            "Saldo Acum."
+				        },
+				        {
+				            "Record Type",
+				            "Cost Center Account ID",
+				            "Description",
+				            "Debit Period",
+				            "Credit Period",
+				            "Balance Period",
+				            "Debit YTD",
+				            "Credit YTD",
+				            "Balance YTD"
+				        }
+				    ),
+				
+				    // =========================================================
+				    // REMOVER LINHAS VAZIAS
+				    // =========================================================
+				    RemoverVazios = Table.SelectRows(
+				        ExpandirDados,
+				        each
+				            [Cost Center Account ID] <> null
+				            or [Description] <> null
+				    ),
+				
+				    // =========================================================
+				    // TIPOS
+				    // =========================================================
+				    Tipos = Table.TransformColumnTypes(
+				        RemoverVazios,
+				        {
+				            {"Source File", type text},
+				            {"Company ID", type text},
+				            {"Source Type", type text},
+				            {"Year", Int64.Type},
+				            {"Month", Int64.Type},
+				            {"Period ID", Int64.Type},
+				            {"Period Date", type date},
+				
+				            {"Record Type", type text},
+				            {"Cost Center Account ID", type text},
+				            {"Description", type text},
+				
+				            {"Debit Period", type number},
+				            {"Credit Period", type number},
+				            {"Balance Period", type number},
+				
+				            {"Debit YTD", type number},
+				            {"Credit YTD", type number},
+				            {"Balance YTD", type number}
+				        }
+				    ),
+				
+				    // =========================================================
+				    // ORDENAÇÃO
+				    // =========================================================
+				    Ordenar = Table.Sort(
+				        Tipos,
+				        {
+				            {"Period ID", Order.Ascending},
+				            {"Cost Center Account ID", Order.Ascending}
+				        }
+				    )
+				
+				in
+				    Ordenar
+
+	annotation PBI_ResultType = Table
+

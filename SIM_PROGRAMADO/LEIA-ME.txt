@@ -1,0 +1,13 @@
+SIM — PROJETO PROGRAMADO (PBIP)
+
+Abra SIM_Control_JSCV_Kyenu.pbip no Power BI Desktop atualizado. Use este PBIP, não o PBIX antigo. O modelo está preservado, com as medidas coladas separadas. Executive Overview contém filtros, quatro cartões, estado de dados, tendências e comparação homóloga. A página técnica passou a 00 - MODEL TEST.
+
+Escolha UMA empresa e um ano/período. A seleção conjunta não apresenta soma como consolidado. Receita existente foi preservada. EBITDA/EBIT são provisórios: receitas + outros rendimentos menos custos 61/62/63/68; EBIT deduz 64. Valores de custo usam o saldo original positivo observado na amostra; confirme sinais para todos os períodos antes de uso em decisões. Ausência de qualquer componente deixa EBITDA em branco, sem substituição por zero.
+
+A pasta contabilística continua usando o caminho Windows original de Folder.Files. Se necessário, altere apenas esse caminho em RAW_ACCOUNTING_FILES no Power Query para sua pasta 01_ACCOUNTING. Não inclua cópias/backup de Excel dentro da pasta de ingestão.
+
+No Desktop: abrir, conferir erros DAX, Atualizar, selecionar JSCV e março/2026 e verificar Revenue = 2.412.322 CVE; conferir KYENU março/2026 sem receita. Verificar renderização dos cartões/gráficos, períodos homólogos e sinais. Não foi executado Desktop neste Linux: verificações aqui são estáticas e sobre dados armazenados. Caches locais foram excluídos do pacote, portanto poderá ser necessário atualizar antes de visualizar valores.
+
+Não implementado: resultado líquido sem validação fiscal, KPIs de balanço sem confirmação de saldos/sinais, consolidação intercompany, budget, forecast, metas e periodicidade avançada/customizada. Não há dados fabricados para esses itens. Não representa dashboard completo de todos os HUBs.
+
+Alterações: seis medidas de grupo separadas; medidas operacionais provisórias e homólogas adicionadas; Executive Overview com 14 visuais; página técnica renomeada. Nenhuma relação, fonte, ID existente ou mapeamento contabilístico alterado. Revenue original intacto.

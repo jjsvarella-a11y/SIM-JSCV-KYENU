@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SIM_Control_JSCV_Kyenu"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "eb1dda84-28e6-4c69-9c26-0fe8af00cc12"
+  }
+}

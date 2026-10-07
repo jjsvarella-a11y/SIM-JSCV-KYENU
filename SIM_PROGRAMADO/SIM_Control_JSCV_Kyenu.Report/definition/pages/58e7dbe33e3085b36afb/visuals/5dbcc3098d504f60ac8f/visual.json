@@ -1,0 +1,158 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "5dbcc3098d504f60ac8f",
+  "position": {
+    "x": 30,
+    "y": 835,
+    "z": 12000,
+    "width": 1850,
+    "height": 150,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Revenue Executive"
+                }
+              },
+              "queryRef": "_Measures.Revenue Executive",
+              "nativeQueryRef": "Revenue Executive"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Revenue Prior Year"
+                }
+              },
+              "queryRef": "_Measures.Revenue Prior Year",
+              "nativeQueryRef": "Revenue Prior Year"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Revenue Variance"
+                }
+              },
+              "queryRef": "_Measures.Revenue Variance",
+              "nativeQueryRef": "Revenue Variance"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Revenue Variance %"
+                }
+              },
+              "queryRef": "_Measures.Revenue Variance %",
+              "nativeQueryRef": "Revenue Variance %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "EBITDA Executive"
+                }
+              },
+              "queryRef": "_Measures.EBITDA Executive",
+              "nativeQueryRef": "EBITDA Executive"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "EBITDA Prior Year"
+                }
+              },
+              "queryRef": "_Measures.EBITDA Prior Year",
+              "nativeQueryRef": "EBITDA Prior Year"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "EBITDA Variance"
+                }
+              },
+              "queryRef": "_Measures.EBITDA Variance",
+              "nativeQueryRef": "EBITDA Variance"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "EBITDA Variance %"
+                }
+              },
+              "queryRef": "_Measures.EBITDA Variance %",
+              "nativeQueryRef": "EBITDA Variance %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Comparação homóloga — variação absoluta e percentual'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,291 @@
+table Fact_Accounting_KYENU
+	lineageTag: ae932269-3d5d-4eda-9827-5e4b57b3b7ab
+
+	column 'Source File'
+		dataType: string
+		lineageTag: 729d1e8e-98e7-493e-bf17-177ea8979b57
+		summarizeBy: none
+		sourceColumn: Source File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 591a96cd-08b2-4be1-af12-59f9d454137e
+		summarizeBy: none
+		sourceColumn: Company ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source Type'
+		dataType: string
+		lineageTag: 96e3ed3f-f116-4967-8eaa-5fe4050cca48
+		summarizeBy: none
+		sourceColumn: Source Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: d0059bd0-41e3-4384-8d71-ef0e6d9b35c8
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b5ab801-1b15-4723-aacd-f55e6e9f82e3
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7eb362c6-6c80-4b97-a8e5-c1dea7a078d8
+		summarizeBy: count
+		sourceColumn: Period ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ffffd1b7-faa2-48e2-9064-83cc5c93b959
+		summarizeBy: none
+		sourceColumn: Period Date
+
+		variation Variação
+			isDefault
+			relationship: 96ec34f7-2049-40f4-8327-986421207d43
+			defaultHierarchy: LocalDateTable_15bcdc17-f549-474c-8605-c1cf3377304b.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Account ID'
+		dataType: string
+		lineageTag: eeca7543-494e-4039-a0cc-6cc191b2dc32
+		summarizeBy: none
+		sourceColumn: Account ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Name'
+		dataType: string
+		lineageTag: 0696a000-2ee8-4569-9b54-ff3a3eaa7ffd
+		summarizeBy: none
+		sourceColumn: Account Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Debit Period'
+		dataType: double
+		lineageTag: f5d5eb00-4511-4352-ac2f-9f7f8b753e0c
+		summarizeBy: sum
+		sourceColumn: Debit Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Credit Period'
+		dataType: double
+		lineageTag: e6e1606e-20d8-446a-8fb4-227cf3a087a2
+		summarizeBy: sum
+		sourceColumn: Credit Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Balance Period'
+		dataType: double
+		lineageTag: 819fcf85-32b8-456e-a069-6568454db8f5
+		summarizeBy: sum
+		sourceColumn: Balance Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Debit YTD'
+		dataType: double
+		lineageTag: 268a1bd6-9bf1-4ac2-90a9-a0c42797e9bd
+		summarizeBy: sum
+		sourceColumn: Debit YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Credit YTD'
+		dataType: double
+		lineageTag: 930872d1-ce10-4a3c-8a18-8fc44f9a86b8
+		summarizeBy: sum
+		sourceColumn: Credit YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Balance YTD'
+		dataType: double
+		lineageTag: 62ecdc30-e5b1-40fb-9b5e-ac0fe3fdc19a
+		summarizeBy: sum
+		sourceColumn: Balance YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fact_Accounting_KYENU = m
+		mode: import
+		source =
+				let
+				    Fonte = RAW_KYENU_BG,
+				
+				    TransformarBG = (Binario as binary) as table =>
+				        let
+				            WB = Excel.Workbook(Binario, null, true),
+				
+				            ComCabecalhos = Table.AddColumn(
+				                WB,
+				                "_DadosPreparados",
+				                each
+				                    try
+				                        Table.PromoteHeaders(
+				                            [Data],
+				                            [PromoteAllScalars = true]
+				                        )
+				                    otherwise null
+				            ),
+				
+				            ComBG = Table.AddColumn(
+				                ComCabecalhos,
+				                "_EhBG",
+				                each
+				                    try
+				                        List.Contains(
+				                            Table.ColumnNames([_DadosPreparados]),
+				                            "Conta"
+				                        )
+				                    otherwise false,
+				                type logical
+				            ),
+				
+				            ApenasBG = Table.SelectRows(
+				                ComBG,
+				                each [_EhBG] = true
+				            ),
+				
+				            Resultado =
+				                if Table.RowCount(ApenasBG) > 0
+				                then ApenasBG{0}[_DadosPreparados]
+				                else #table(
+				                    {
+				                        "Conta",
+				                        "Descrição",
+				                        "Débito (Per.)",
+				                        "Crédito (Per.)",
+				                        "Saldo (Per.)",
+				                        "Débito (Acum.)",
+				                        "Crédito (Acum.)",
+				                        "Saldo (Acum.)"
+				                    },
+				                    {}
+				                )
+				        in
+				            Resultado,
+				
+				    AdicionarDados = Table.AddColumn(
+				        Fonte,
+				        "Accounting Data",
+				        each TransformarBG([Content]),
+				        type table
+				    ),
+				
+				    ManterColunas = Table.SelectColumns(
+				        AdicionarDados,
+				        {
+				            "Source File",
+				            "Company ID",
+				            "Source Type",
+				            "Year",
+				            "Month",
+				            "Period ID",
+				            "Period Date",
+				            "Accounting Data"
+				        }
+				    ),
+				
+				    ExpandirDados = Table.ExpandTableColumn(
+				        ManterColunas,
+				        "Accounting Data",
+				        {
+				            "Conta",
+				            "Descrição",
+				            "Débito (Per.)",
+				            "Crédito (Per.)",
+				            "Saldo (Per.)",
+				            "Débito (Acum.)",
+				            "Crédito (Acum.)",
+				            "Saldo (Acum.)"
+				        },
+				        {
+				            "Account ID",
+				            "Account Name",
+				            "Debit Period",
+				            "Credit Period",
+				            "Balance Period",
+				            "Debit YTD",
+				            "Credit YTD",
+				            "Balance YTD"
+				        }
+				    ),
+				
+				    RemoverVazios = Table.SelectRows(
+				        ExpandirDados,
+				        each [Account ID] <> null
+				            or [Account Name] <> null
+				    ),
+				
+				    Tipos = Table.TransformColumnTypes(
+				        RemoverVazios,
+				        {
+				            {"Source File", type text},
+				            {"Company ID", type text},
+				            {"Source Type", type text},
+				            {"Year", Int64.Type},
+				            {"Month", Int64.Type},
+				            {"Period ID", Int64.Type},
+				            {"Period Date", type date},
+				            {"Account ID", type text},
+				            {"Account Name", type text},
+				            {"Debit Period", type number},
+				            {"Credit Period", type number},
+				            {"Balance Period", type number},
+				            {"Debit YTD", type number},
+				            {"Credit YTD", type number},
+				            {"Balance YTD", type number}
+				        }
+				    ),
+				
+				    Ordenar = Table.Sort(
+				        Tipos,
+				        {
+				            {"Period ID", Order.Ascending},
+				            {"Account ID", Order.Ascending}
+				        }
+				    )
+				
+				in
+				    Ordenar
+
+	annotation PBI_ResultType = Table
+

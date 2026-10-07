@@ -1,0 +1,257 @@
+table RAW_JSCV_BCC
+	lineageTag: d23cbcce-bda3-4dae-8b76-0c21d8826f5c
+
+	column Name
+		dataType: string
+		lineageTag: e32daf9f-e208-4246-abe3-982a7e9ec266
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Extension
+		dataType: string
+		lineageTag: 01f039be-61e2-441d-9bd8-c4e9536fc7ed
+		summarizeBy: none
+		sourceColumn: Extension
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date accessed'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3399667f-31c1-4d79-9600-7a51bd4cb282
+		summarizeBy: none
+		sourceColumn: Date accessed
+
+		variation Variação
+			isDefault
+			relationship: 772a21bd-fbe2-49f7-8bc9-547966bed354
+			defaultHierarchy: LocalDateTable_438312f8-aa36-465f-a0e6-374ef2a7b5dc.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date modified'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ae7a1433-e8d9-4799-af58-41b41987373b
+		summarizeBy: none
+		sourceColumn: Date modified
+
+		variation Variação
+			isDefault
+			relationship: b6c3a5a9-5cd8-4630-a189-36e05e81f301
+			defaultHierarchy: LocalDateTable_1ad40f81-d993-44a2-a1c2-e4d285a2a4ac.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date created'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 03c7278a-9bcc-4843-9ee5-94f550b09121
+		summarizeBy: none
+		sourceColumn: Date created
+
+		variation Variação
+			isDefault
+			relationship: 1d2261f1-147d-4f2a-b4ee-4c05fecac522
+			defaultHierarchy: LocalDateTable_55cb8d25-6210-48df-9158-5d6c6f862346.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Folder Path'
+		dataType: string
+		lineageTag: c021b3f6-f6a1-4cdb-a44d-da71da5f1735
+		summarizeBy: none
+		sourceColumn: Folder Path
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source File'
+		dataType: string
+		lineageTag: 79970a12-0642-466d-af10-46b9df9a14ad
+		summarizeBy: none
+		sourceColumn: Source File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 261e194f-146f-43e5-8554-8157c9cacc56
+		summarizeBy: none
+		sourceColumn: Company ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source Type'
+		dataType: string
+		lineageTag: f0dd34e8-fa6d-4cd9-8d0b-7e4bee1dc547
+		summarizeBy: none
+		sourceColumn: Source Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 2682983e-a4ee-43be-a0a7-ad9831dde583
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 8db3395d-2a2f-4225-a74c-bc5c5734a287
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 25b94c30-3868-419e-9345-227da776f21d
+		summarizeBy: count
+		sourceColumn: Period ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6211848a-743a-4a8a-94f7-cbf33246933a
+		summarizeBy: none
+		sourceColumn: Period Date
+
+		variation Variação
+			isDefault
+			relationship: e74f297c-d9d6-4ae6-969a-f8e449d4e393
+			defaultHierarchy: LocalDateTable_36052a64-1ee8-406c-8a4f-4479159f7a99.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition RAW_JSCV_BCC = m
+		mode: import
+		source =
+				let
+				    Fonte = RAW_ACCOUNTING_FILES,
+				
+				    // Selecionar ficheiros JSCV BCC
+				    JSCV_BCC = Table.SelectRows(
+				        Fonte,
+				        each [Name] <> null
+				            and Text.Contains(
+				                Text.Upper(Text.From([Name])),
+				                "JSCV_BCC"
+				            )
+				    ),
+				
+				    // Nome original do ficheiro
+				    SourceFile = Table.AddColumn(
+				        JSCV_BCC,
+				        "Source File",
+				        each [Name],
+				        type text
+				    ),
+				
+				    // Empresa
+				    CompanyID = Table.AddColumn(
+				        SourceFile,
+				        "Company ID",
+				        each "JSCV",
+				        type text
+				    ),
+				
+				    // Tipo de fonte
+				    SourceType = Table.AddColumn(
+				        CompanyID,
+				        "Source Type",
+				        each "BCC",
+				        type text
+				    ),
+				
+				    // Retirar extensão
+				    FileBase = Table.AddColumn(
+				        SourceType,
+				        "_FileBase",
+				        each Text.BeforeDelimiter(
+				            Text.From([Name]),
+				            ".xlsx"
+				        ),
+				        type text
+				    ),
+				
+				    // Separar JSCV_BCC_ANO_MES
+				    FileParts = Table.AddColumn(
+				        FileBase,
+				        "_Parts",
+				        each Text.Split([_FileBase], "_")
+				    ),
+				
+				    // Extrair Ano
+				    Year = Table.AddColumn(
+				        FileParts,
+				        "Year",
+				        each try Number.FromText([_Parts]{2}) otherwise null,
+				        Int64.Type
+				    ),
+				
+				    // Extrair Mês
+				    Month = Table.AddColumn(
+				        Year,
+				        "Month",
+				        each try Number.FromText([_Parts]{3}) otherwise null,
+				        Int64.Type
+				    ),
+				
+				    // Apenas meses contabilísticos 1-12
+				    MesesValidos = Table.SelectRows(
+				        Month,
+				        each [Year] <> null
+				            and [Month] <> null
+				            and [Month] >= 1
+				            and [Month] <= 12
+				    ),
+				
+				    // YYYYMM
+				    PeriodID = Table.AddColumn(
+				        MesesValidos,
+				        "Period ID",
+				        each [Year] * 100 + [Month],
+				        Int64.Type
+				    ),
+				
+				    // Último dia do período
+				    PeriodDate = Table.AddColumn(
+				        PeriodID,
+				        "Period Date",
+				        each Date.EndOfMonth(
+				            #date([Year], [Month], 1)
+				        ),
+				        type date
+				    ),
+				
+				    // Remover colunas auxiliares
+				    LimparAuxiliares = Table.RemoveColumns(
+				        PeriodDate,
+				        {"_FileBase", "_Parts"}
+				    ),
+				
+				    // Ordenar cronologicamente
+				    Ordenar = Table.Sort(
+				        LimparAuxiliares,
+				        {
+				            {"Year", Order.Ascending},
+				            {"Month", Order.Ascending}
+				        }
+				    )
+				
+				in
+				    Ordenar
+
+	annotation PBI_ResultType = Table
+

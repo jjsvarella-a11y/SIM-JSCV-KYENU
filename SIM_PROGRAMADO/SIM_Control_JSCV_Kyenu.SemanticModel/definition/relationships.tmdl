@@ -1,0 +1,132 @@
+relationship db7bb526-4867-4bb9-bd9c-4a5c9f0caaec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_ACCOUNTING_FILES.'Date accessed'
+	toColumn: LocalDateTable_1202a2f3-6b3c-4855-9f62-143aa7d55de0.Date
+
+relationship 90258b9b-167d-42fa-bb85-ab64b0ce4133
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_ACCOUNTING_FILES.'Date modified'
+	toColumn: LocalDateTable_9c00fb2c-d8a5-465c-8f88-445ef8be3cd6.Date
+
+relationship ae18ee19-0c95-4931-b9e6-998af16fc40d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_ACCOUNTING_FILES.'Date created'
+	toColumn: LocalDateTable_d8d4e28d-a710-487a-99c9-0f79f110ea38.Date
+
+relationship 9731eab8-19d5-43dc-b8b0-ae96a4069402
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_JSCV_BG.'Date accessed'
+	toColumn: LocalDateTable_751852e4-70e9-46eb-980e-b26ce9a35221.Date
+
+relationship 0ff87403-3750-4453-b1f2-be3b8791c509
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_JSCV_BG.'Date modified'
+	toColumn: LocalDateTable_8d6b6224-97c7-4bd1-8642-b5235ce1704d.Date
+
+relationship d43ceb06-66ea-4a4e-b3fb-93d88c735656
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_JSCV_BG.'Date created'
+	toColumn: LocalDateTable_6762ceca-3afb-4eb0-ac13-f5c1751884c8.Date
+
+relationship c5590f41-a629-42c6-a1f9-d9415a87bc7e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_JSCV_BG.'Period Date'
+	toColumn: LocalDateTable_a73d7884-8f32-4444-866f-804d3a5d7991.Date
+
+relationship 95863868-417e-40e4-a589-f30d4d027709
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_Accounting_JSCV.'Period Date'
+	toColumn: LocalDateTable_e1d77243-888c-47b3-bcaa-a2f277e5656a.Date
+
+relationship 772a21bd-fbe2-49f7-8bc9-547966bed354
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_JSCV_BCC.'Date accessed'
+	toColumn: LocalDateTable_438312f8-aa36-465f-a0e6-374ef2a7b5dc.Date
+
+relationship b6c3a5a9-5cd8-4630-a189-36e05e81f301
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_JSCV_BCC.'Date modified'
+	toColumn: LocalDateTable_1ad40f81-d993-44a2-a1c2-e4d285a2a4ac.Date
+
+relationship 1d2261f1-147d-4f2a-b4ee-4c05fecac522
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_JSCV_BCC.'Date created'
+	toColumn: LocalDateTable_55cb8d25-6210-48df-9158-5d6c6f862346.Date
+
+relationship e74f297c-d9d6-4ae6-969a-f8e449d4e393
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_JSCV_BCC.'Period Date'
+	toColumn: LocalDateTable_36052a64-1ee8-406c-8a4f-4479159f7a99.Date
+
+relationship f6354888-341b-4a76-97e1-fafefd9fefdf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_CostCenter_JSCV.'Period Date'
+	toColumn: LocalDateTable_ee26ccae-be95-4322-8b75-b270ac1d8045.Date
+
+relationship ecee0081-d947-40df-821f-4a7aa1d0d778
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_KYENU_BG.'Date accessed'
+	toColumn: LocalDateTable_c74db925-3bb9-4ea4-bdca-248d3309e8f0.Date
+
+relationship 47a56d19-d284-4b00-9f01-e34092bf6b57
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_KYENU_BG.'Date modified'
+	toColumn: LocalDateTable_8712a892-7bbf-432f-bede-832adbb3f8e0.Date
+
+relationship 43c115e0-28f9-4dc8-a28d-481806ccb1b8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_KYENU_BG.'Date created'
+	toColumn: LocalDateTable_a1fb75b3-5cec-4ce5-9d28-fd848f0e175d.Date
+
+relationship 0452e749-fc12-4654-a6c1-c7001972f92e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RAW_KYENU_BG.'Period Date'
+	toColumn: LocalDateTable_9bb71a02-a0c7-4f4e-9dd6-37947cb64249.Date
+
+relationship 96ec34f7-2049-40f4-8327-986421207d43
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_Accounting_KYENU.'Period Date'
+	toColumn: LocalDateTable_15bcdc17-f549-474c-8605-c1cf3377304b.Date
+
+relationship 919e272c-c629-4284-b8d7-25fba444f56a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Date.Date
+	toColumn: LocalDateTable_12790ef9-29d1-4e21-9018-a9bdc9b95ff3.Date
+
+relationship a9f15c42-caab-4536-a985-8ace69da2884
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Date.'Period Date'
+	toColumn: LocalDateTable_109bbbe0-43c4-41fb-a30d-c2067d205141.Date
+
+relationship AutoDetected_8696331f-c133-4f49-88bf-f3346ab2ef82
+	fromColumn: Fact_Accounting_JSCV.'Company ID'
+	toColumn: Dim_Company.'Company ID'
+
+relationship AutoDetected_21e594be-bb6f-43be-a1d5-1f37cd1c42bd
+	fromColumn: Fact_CostCenter_JSCV.'Company ID'
+	toColumn: Dim_Company.'Company ID'
+
+relationship AutoDetected_292515cc-a7e4-4552-b56d-5574dfa69d2c
+	fromColumn: Fact_Accounting_KYENU.'Company ID'
+	toColumn: Dim_Company.'Company ID'
+
+relationship AutoDetected_6dcc5109-df90-45a0-a8f0-04326cc7c73a
+	fromColumn: Fact_Accounting.'Company ID'
+	toColumn: Dim_Company.'Company ID'
+
+relationship AutoDetected_8d962d76-becd-4085-9670-9dc0a1a62759
+	fromColumn: Fact_Accounting_JSCV.'Account ID'
+	toColumn: Dim_Account.'Account ID'
+
+relationship AutoDetected_dcfb5e85-1751-4578-891a-cf7cd2328703
+	fromColumn: Fact_Accounting_KYENU.'Account ID'
+	toColumn: Dim_Account.'Account ID'
+
+relationship AutoDetected_3499656d-4b08-43a0-b1b1-9460644636a6
+	fromColumn: Fact_Accounting.'Account ID'
+	toColumn: Dim_Account.'Account ID'
+
+relationship 65103bc5-2614-eb08-d621-4a2541e8b6af
+	fromColumn: Fact_Accounting.'Period Date'
+	toColumn: Dim_Date.Date
+

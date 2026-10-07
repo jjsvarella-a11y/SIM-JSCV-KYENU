@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "5a77033d7ea6d267931d",
+  "position": {
+    "x": 51.948051948051948,
+    "y": 22.857142857142858,
+    "z": 3000,
+    "height": 1057.6623376623377,
+    "width": 207.79220779220779,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Accounting"
+                    }
+                  },
+                  "Property": "Account ID"
+                }
+              },
+              "queryRef": "Fact_Accounting.Account ID",
+              "nativeQueryRef": "Account ID"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

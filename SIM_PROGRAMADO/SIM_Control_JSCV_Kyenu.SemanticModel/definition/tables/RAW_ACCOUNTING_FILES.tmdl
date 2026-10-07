@@ -1,0 +1,79 @@
+table RAW_ACCOUNTING_FILES
+	lineageTag: a2aedc3f-e394-4ef2-bfc5-348c9d07aea4
+
+	column Name
+		dataType: string
+		lineageTag: 4a77fb47-0ab4-4aa3-b1f7-4bd7f2e7420c
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Extension
+		dataType: string
+		lineageTag: 527192dc-380e-49d5-8111-88e5aa3ffbcd
+		summarizeBy: none
+		sourceColumn: Extension
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date accessed'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 85fbca73-80cd-4602-993d-a7abdc9905d8
+		summarizeBy: none
+		sourceColumn: Date accessed
+
+		variation Variação
+			isDefault
+			relationship: db7bb526-4867-4bb9-bd9c-4a5c9f0caaec
+			defaultHierarchy: LocalDateTable_1202a2f3-6b3c-4855-9f62-143aa7d55de0.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date modified'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4e73a559-d1b1-4dc1-b4b1-5e567f9c6e58
+		summarizeBy: none
+		sourceColumn: Date modified
+
+		variation Variação
+			isDefault
+			relationship: 90258b9b-167d-42fa-bb85-ab64b0ce4133
+			defaultHierarchy: LocalDateTable_9c00fb2c-d8a5-465c-8f88-445ef8be3cd6.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date created'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0e4b8f77-cd10-47a4-9853-2d934acd17ed
+		summarizeBy: none
+		sourceColumn: Date created
+
+		variation Variação
+			isDefault
+			relationship: ae18ee19-0c95-4931-b9e6-998af16fc40d
+			defaultHierarchy: LocalDateTable_d8d4e28d-a710-487a-99c9-0f79f110ea38.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Folder Path'
+		dataType: string
+		lineageTag: ce663387-314b-4e5c-9e5a-eda415f79288
+		summarizeBy: none
+		sourceColumn: Folder Path
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RAW_ACCOUNTING_FILES = m
+		mode: import
+		source =
+				let
+				  Origem = Folder.Files("C:\Users\jjsva\OneDrive\Documentos\S.I.M Control_ JSCV&Kyenu\01_ACCOUNTING")
+				in
+				  Origem
+
+	annotation PBI_ResultType = Table
+

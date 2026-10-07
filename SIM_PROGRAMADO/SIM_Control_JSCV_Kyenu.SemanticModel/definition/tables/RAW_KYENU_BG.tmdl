@@ -1,0 +1,244 @@
+table RAW_KYENU_BG
+	lineageTag: 40e2efec-5dde-4442-b03f-545b6fa7b00c
+
+	column Name
+		dataType: string
+		lineageTag: 62a1a2d9-e80b-44c9-9097-a1fdb690db45
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Extension
+		dataType: string
+		lineageTag: aff3e33d-4263-4b7a-9469-8a5a8ecd2711
+		summarizeBy: none
+		sourceColumn: Extension
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date accessed'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 80bd95fc-8dac-4749-b191-e9455475e73c
+		summarizeBy: none
+		sourceColumn: Date accessed
+
+		variation Variação
+			isDefault
+			relationship: ecee0081-d947-40df-821f-4a7aa1d0d778
+			defaultHierarchy: LocalDateTable_c74db925-3bb9-4ea4-bdca-248d3309e8f0.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date modified'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b5fb77d3-a549-4fdb-b77a-0465f39b1c81
+		summarizeBy: none
+		sourceColumn: Date modified
+
+		variation Variação
+			isDefault
+			relationship: 47a56d19-d284-4b00-9f01-e34092bf6b57
+			defaultHierarchy: LocalDateTable_8712a892-7bbf-432f-bede-832adbb3f8e0.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date created'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 46f0d519-8d26-4028-8dd9-d56e6b416234
+		summarizeBy: none
+		sourceColumn: Date created
+
+		variation Variação
+			isDefault
+			relationship: 43c115e0-28f9-4dc8-a28d-481806ccb1b8
+			defaultHierarchy: LocalDateTable_a1fb75b3-5cec-4ce5-9d28-fd848f0e175d.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Folder Path'
+		dataType: string
+		lineageTag: fea6a0f5-e6da-48e7-bf68-ce01e442e32e
+		summarizeBy: none
+		sourceColumn: Folder Path
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source File'
+		dataType: string
+		lineageTag: a2d2e111-b8b6-4c0c-b876-a1806ca2d2f6
+		summarizeBy: none
+		sourceColumn: Source File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: 58f9567b-10c9-4c8c-8b6d-51eb7b9347f5
+		summarizeBy: none
+		sourceColumn: Company ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source Type'
+		dataType: string
+		lineageTag: c39376ae-2b3b-482e-831d-9c8b90f7e393
+		summarizeBy: none
+		sourceColumn: Source Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 18d0499e-31eb-430c-b90d-3288fdc43bc0
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: afffd3aa-f2ad-414b-a476-20a966ea24e0
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: c0efd266-a221-4ea3-845c-8a0a154a43b3
+		summarizeBy: count
+		sourceColumn: Period ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 30122351-8859-443e-b45c-6db8c8888013
+		summarizeBy: none
+		sourceColumn: Period Date
+
+		variation Variação
+			isDefault
+			relationship: 0452e749-fc12-4654-a6c1-c7001972f92e
+			defaultHierarchy: LocalDateTable_9bb71a02-a0c7-4f4e-9dd6-37947cb64249.'Hierarquia de Datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition RAW_KYENU_BG = m
+		mode: import
+		source =
+				let
+				    Fonte = RAW_ACCOUNTING_FILES,
+				
+				    KYENU_BG = Table.SelectRows(
+				        Fonte,
+				        each [Name] <> null
+				            and Text.Contains(
+				                Text.Upper(Text.From([Name])),
+				                "KYENU_BG"
+				            )
+				    ),
+				
+				    SourceFile = Table.AddColumn(
+				        KYENU_BG,
+				        "Source File",
+				        each [Name],
+				        type text
+				    ),
+				
+				    CompanyID = Table.AddColumn(
+				        SourceFile,
+				        "Company ID",
+				        each "KYENU",
+				        type text
+				    ),
+				
+				    SourceType = Table.AddColumn(
+				        CompanyID,
+				        "Source Type",
+				        each "BG",
+				        type text
+				    ),
+				
+				    FileBase = Table.AddColumn(
+				        SourceType,
+				        "_FileBase",
+				        each Text.BeforeDelimiter(
+				            Text.From([Name]),
+				            ".xlsx"
+				        ),
+				        type text
+				    ),
+				
+				    FileParts = Table.AddColumn(
+				        FileBase,
+				        "_Parts",
+				        each Text.Split([_FileBase], "_")
+				    ),
+				
+				    Year = Table.AddColumn(
+				        FileParts,
+				        "Year",
+				        each try Number.FromText([_Parts]{2}) otherwise null,
+				        Int64.Type
+				    ),
+				
+				    Month = Table.AddColumn(
+				        Year,
+				        "Month",
+				        each try Number.FromText([_Parts]{3}) otherwise null,
+				        Int64.Type
+				    ),
+				
+				    MesesValidos = Table.SelectRows(
+				        Month,
+				        each [Year] <> null
+				            and [Month] <> null
+				            and [Month] >= 1
+				            and [Month] <= 12
+				    ),
+				
+				    PeriodID = Table.AddColumn(
+				        MesesValidos,
+				        "Period ID",
+				        each [Year] * 100 + [Month],
+				        Int64.Type
+				    ),
+				
+				    PeriodDate = Table.AddColumn(
+				        PeriodID,
+				        "Period Date",
+				        each Date.EndOfMonth(
+				            #date([Year], [Month], 1)
+				        ),
+				        type date
+				    ),
+				
+				    LimparAuxiliares = Table.RemoveColumns(
+				        PeriodDate,
+				        {"_FileBase", "_Parts"}
+				    ),
+				
+				    Ordenar = Table.Sort(
+				        LimparAuxiliares,
+				        {
+				            {"Year", Order.Ascending},
+				            {"Month", Order.Ascending}
+				        }
+				    )
+				
+				in
+				    Ordenar
+
+	annotation PBI_ResultType = Table
+

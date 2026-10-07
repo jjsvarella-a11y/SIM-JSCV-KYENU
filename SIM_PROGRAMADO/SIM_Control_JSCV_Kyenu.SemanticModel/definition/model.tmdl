@@ -1,0 +1,51 @@
+model Model
+	culture: pt-PT
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-PT
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["RAW_ACCOUNTING_FILES","RAW_JSCV_BG","Fact_Accounting_JSCV","RAW_JSCV_BCC","Fact_CostCenter_JSCV","RAW_KYENU_BG","Fact_Accounting_KYENU","Fact_Accounting","Dim_Date","Dim_Company","Dim_Account","_Measures"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table RAW_ACCOUNTING_FILES
+ref table DateTableTemplate_ab3f32cb-1676-4901-a0b7-df7bc1c1a6c3
+ref table LocalDateTable_1202a2f3-6b3c-4855-9f62-143aa7d55de0
+ref table LocalDateTable_9c00fb2c-d8a5-465c-8f88-445ef8be3cd6
+ref table LocalDateTable_d8d4e28d-a710-487a-99c9-0f79f110ea38
+ref table RAW_JSCV_BG
+ref table LocalDateTable_751852e4-70e9-46eb-980e-b26ce9a35221
+ref table LocalDateTable_8d6b6224-97c7-4bd1-8642-b5235ce1704d
+ref table LocalDateTable_6762ceca-3afb-4eb0-ac13-f5c1751884c8
+ref table LocalDateTable_a73d7884-8f32-4444-866f-804d3a5d7991
+ref table Fact_Accounting_JSCV
+ref table LocalDateTable_e1d77243-888c-47b3-bcaa-a2f277e5656a
+ref table RAW_JSCV_BCC
+ref table LocalDateTable_438312f8-aa36-465f-a0e6-374ef2a7b5dc
+ref table LocalDateTable_1ad40f81-d993-44a2-a1c2-e4d285a2a4ac
+ref table LocalDateTable_55cb8d25-6210-48df-9158-5d6c6f862346
+ref table LocalDateTable_36052a64-1ee8-406c-8a4f-4479159f7a99
+ref table Fact_CostCenter_JSCV
+ref table LocalDateTable_ee26ccae-be95-4322-8b75-b270ac1d8045
+ref table RAW_KYENU_BG
+ref table LocalDateTable_c74db925-3bb9-4ea4-bdca-248d3309e8f0
+ref table LocalDateTable_8712a892-7bbf-432f-bede-832adbb3f8e0
+ref table LocalDateTable_a1fb75b3-5cec-4ce5-9d28-fd848f0e175d
+ref table LocalDateTable_9bb71a02-a0c7-4f4e-9dd6-37947cb64249
+ref table Fact_Accounting_KYENU
+ref table LocalDateTable_15bcdc17-f549-474c-8605-c1cf3377304b
+ref table Fact_Accounting
+ref table Dim_Date
+ref table LocalDateTable_12790ef9-29d1-4e21-9018-a9bdc9b95ff3
+ref table LocalDateTable_109bbbe0-43c4-41fb-a30d-c2067d205141
+ref table Dim_Company
+ref table Dim_Account
+ref table _Measures
+
+ref cultureInfo pt-PT
+

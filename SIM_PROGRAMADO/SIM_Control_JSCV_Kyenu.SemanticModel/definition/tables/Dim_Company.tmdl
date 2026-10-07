@@ -1,0 +1,56 @@
+table Dim_Company
+	lineageTag: 89dd0f11-a2df-411a-bc87-f91b79894603
+
+	column 'Company ID'
+		dataType: string
+		lineageTag: d88636a7-44c7-4d28-9069-c3fdc932c21c
+		summarizeBy: none
+		sourceColumn: Company ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Name'
+		dataType: string
+		lineageTag: cc315edc-99c6-4c82-a062-7d0b7a5d9dd0
+		summarizeBy: none
+		sourceColumn: Company Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Role'
+		dataType: string
+		lineageTag: f5a75df4-3a70-406b-8017-17a5bdd23648
+		summarizeBy: none
+		sourceColumn: Company Role
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		lineageTag: a67abd33-8237-40d8-95a5-018cc68662de
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Company = m
+		mode: import
+		source =
+				let
+				    Fonte = #table(
+				        type table [
+				            #"Company ID" = text,
+				            #"Company Name" = text,
+				            #"Company Role" = text,
+				            #"Currency" = text
+				        ],
+				        {
+				            {"JSCV", "JS-CV Construções e Investimentos, Lda", "Construction / Contractor", "CVE"},
+				            {"KYENU", "Kyenu Kyetu Real Estate", "Developer / Real Estate", "CVE"}
+				        }
+				    )
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+

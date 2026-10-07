@@ -1,0 +1,140 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "93d48e870d12de59b0cf",
+  "position": {
+    "x": 270.12987012987014,
+    "y": 0,
+    "z": 2000,
+    "height": 1082.5974025974026,
+    "width": 1149.090909090909,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Accounting"
+                    }
+                  },
+                  "Property": "Account Name"
+                }
+              },
+              "queryRef": "Fact_Accounting.Account Name",
+              "nativeQueryRef": "Account Name"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact_Accounting"
+                        }
+                      },
+                      "Property": "Debit Period"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Fact_Accounting.Debit Period)",
+              "nativeQueryRef": "Soma de Debit Period"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact_Accounting"
+                        }
+                      },
+                      "Property": "Credit Period"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Fact_Accounting.Credit Period)",
+              "nativeQueryRef": "Soma de Credit Period"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact_Accounting"
+                        }
+                      },
+                      "Property": "Balance Period"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Fact_Accounting.Balance Period)",
+              "nativeQueryRef": "Soma de Balance Period"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Accounting"
+                    }
+                  },
+                  "Property": "Account ID"
+                }
+              },
+              "queryRef": "Fact_Accounting.Account ID",
+              "nativeQueryRef": "Account ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Company"
+                    }
+                  },
+                  "Property": "Company ID"
+                }
+              },
+              "queryRef": "Dim_Company.Company ID",
+              "nativeQueryRef": "Company ID"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Accounting"
+                  }
+                },
+                "Property": "Account ID"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

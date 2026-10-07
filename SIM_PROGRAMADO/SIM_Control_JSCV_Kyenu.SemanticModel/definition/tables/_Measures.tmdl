@@ -1,0 +1,209 @@
+table _Measures
+	lineageTag: cf1453c3-65bf-45ed-83c6-4047e6f8431b
+
+	measure Revenue =
+			
+			CALCULATE(
+			    SUM('Fact_Accounting'[Balance Period]),
+			    'Dim_Account'[Management Group] = "Revenue",
+			    'Dim_Account'[Account Level] = 2
+			)
+		lineageTag: 7febfa24-962b-4971-b1fc-1a32b006d985
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Teste Linhas Fact' =
+			
+			COUNTROWS('Fact_Accounting')
+		formatString: 0
+		lineageTag: 546365b1-776f-4eb8-9a87-98e330b1c318
+
+	measure 'Teste Empresas Fact' =
+			
+			CONCATENATEX(
+			    VALUES('Fact_Accounting'[Company ID]),
+			    'Fact_Accounting'[Company ID],
+			    " | "
+			)
+		lineageTag: 0aff7948-15bd-44e9-ad0d-97d2740be2d8
+
+	measure 'Direct Costs' =
+			CALCULATE(
+			    SUM('Fact_Accounting'[Balance Period]),
+			    'Dim_Account'[Management Group] = "Direct / Production Costs",
+			    'Dim_Account'[Account Level] = 2
+			)
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: 68dcfea7-be18-4e45-a9c1-86f258c2f6e7
+		description: CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+	measure 'FSE' =
+			CALCULATE(
+			    SUM('Fact_Accounting'[Balance Period]),
+			    'Dim_Account'[Management Group] = "FSE",
+			    'Dim_Account'[Account Level] = 2
+			)
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: e746e550-61e7-4614-88fb-4a1f4febd9da
+		description: CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+	measure 'Payroll' =
+			CALCULATE(
+			    SUM('Fact_Accounting'[Balance Period]),
+			    'Dim_Account'[Management Group] = "Payroll",
+			    'Dim_Account'[Account Level] = 2
+			)
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: bc342889-8fc2-4778-b846-5347b1b2190f
+		description: CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+	measure 'Other Operating Costs' =
+			CALCULATE(
+			    SUM('Fact_Accounting'[Balance Period]),
+			    'Dim_Account'[Management Group] = "Other Operating Costs",
+			    'Dim_Account'[Account Level] = 2
+			)
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: cdab9740-1a16-456a-b279-523a86be944f
+		description: CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+	measure 'Other Income' =
+			CALCULATE(
+			    SUM('Fact_Accounting'[Balance Period]),
+			    'Dim_Account'[Management Group] = "Other Income",
+			    'Dim_Account'[Account Level] = 2
+			)
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: b165391a-9234-453a-bd61-cec23afdd736
+		description: CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+	measure 'D&A' =
+			CALCULATE(
+			    SUM('Fact_Accounting'[Balance Period]),
+			    'Dim_Account'[Management Group] = "D&A",
+			    'Dim_Account'[Account Level] = 2
+			)
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: c43c0c3e-d56a-4b20-8dd0-00ee0d16bb61
+		description: CVE; saldo do período, contas de nível 2; ausência de registros permanece BLANK.
+
+	measure 'EBITDA' =
+			VAR CompleteData =
+			    NOT ISBLANK([Revenue]) && NOT ISBLANK([Other Income]) &&
+			    NOT ISBLANK([Direct Costs]) && NOT ISBLANK([FSE]) &&
+			    NOT ISBLANK([Payroll]) && NOT ISBLANK([Other Operating Costs])
+			RETURN IF(CompleteData,
+			    [Revenue] + [Other Income] - [Direct Costs] - [FSE] - [Payroll] - [Other Operating Costs]
+			)
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: b59e4be0-7195-4d21-bd46-3c2dd8b838ca
+		description: CVE; receitas e outros rendimentos menos custos 61/62/63/68. Provisório: validar convenção de sinais com contabilidade. BLANK se faltar qualquer componente; maior é melhor.
+
+	measure 'EBITDA Margin' =
+			DIVIDE([EBITDA], [Revenue])
+		formatString: 0.0%;(0.0%);0.0%
+		lineageTag: 648a2be6-839e-4422-a778-1f91f3376940
+		description: EBITDA / Revenue; sem dados ou receita zero resulta BLANK; maior é melhor.
+
+	measure 'EBIT' =
+			IF(NOT ISBLANK([EBITDA]) && NOT ISBLANK([D&A]), [EBITDA] - [D&A])
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: f7a6cb85-b336-4195-a045-562309811135
+		description: CVE; EBITDA menos depreciação/amortização; provisório, confirmar sinais; ausências preservadas.
+
+	measure 'Revenue Executive' =
+			IF(HASONEVALUE('Dim_Company'[Company ID]), [Revenue])
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: 3d28ef07-5c64-4711-91e8-21f18c209743
+		description: Revenue validado, exibido apenas com uma empresa; não apresenta soma como consolidado.
+
+	measure 'EBITDA Executive' =
+			IF(HASONEVALUE('Dim_Company'[Company ID]), [EBITDA])
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: 9d6967c6-c2af-4e74-a222-a024bac25485
+		description: Uma empresa por vez. Resultado provisório até validação contabilística de sinais e mapeamentos.
+
+	measure 'EBITDA Margin Executive' =
+			IF(HASONEVALUE('Dim_Company'[Company ID]), [EBITDA Margin])
+		formatString: 0.0%;(0.0%);0.0%
+		lineageTag: 2931019d-7c9e-4c6f-894b-e633ce430b69
+		description: Uma empresa por vez. Resultado provisório até validação contabilística de sinais e mapeamentos.
+
+	measure 'EBIT Executive' =
+			IF(HASONEVALUE('Dim_Company'[Company ID]), [EBIT])
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: 46cafcd3-e9eb-42f4-8ea1-ce3acca7ca4c
+		description: Uma empresa por vez. Resultado provisório até validação contabilística de sinais e mapeamentos.
+
+	measure 'Revenue Prior Year' =
+			VAR PriorDates = DATEADD('Dim_Date'[Date], -1, YEAR)
+			RETURN IF(HASONEVALUE('Dim_Company'[Company ID]),
+			    CALCULATE([Revenue], REMOVEFILTERS('Dim_Date'), PriorDates)
+			)
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: f8f4105b-24bd-4062-a28c-841d5ea5bb5f
+		description: CVE; período homólogo do ano anterior usando Dim_Date; não representa budget nem forecast.
+
+	measure 'Revenue Variance' =
+			IF(NOT ISBLANK([Revenue Executive]) && NOT ISBLANK([Revenue Prior Year]), [Revenue Executive] - [Revenue Prior Year])
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: 542c1fe1-52ff-4e55-9870-386f2e92a2ba
+		description: Atual menos homólogo; BLANK quando uma das bases está ausente.
+
+	measure 'Revenue Variance %' =
+			DIVIDE([Revenue Variance], [Revenue Prior Year])
+		formatString: 0.0%;(0.0%);0.0%
+		lineageTag: 88854479-ae00-4581-9009-33aa86b4035f
+		description: Variação / homólogo; base zero ou ausente resulta BLANK.
+
+	measure 'EBITDA Prior Year' =
+			VAR PriorDates = DATEADD('Dim_Date'[Date], -1, YEAR)
+			RETURN IF(HASONEVALUE('Dim_Company'[Company ID]),
+			    CALCULATE([EBITDA], REMOVEFILTERS('Dim_Date'), PriorDates)
+			)
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: 0fad9c1b-d434-425d-ba27-ad86006b222e
+		description: CVE; período homólogo do ano anterior usando Dim_Date; não representa budget nem forecast.
+
+	measure 'EBITDA Variance' =
+			IF(NOT ISBLANK([EBITDA Executive]) && NOT ISBLANK([EBITDA Prior Year]), [EBITDA Executive] - [EBITDA Prior Year])
+		formatString: #,0.00;(#,0.00);0.00
+		lineageTag: 5b27f106-9127-43d7-a6a3-a4089a98c2b4
+		description: Atual menos homólogo; BLANK quando uma das bases está ausente.
+
+	measure 'EBITDA Variance %' =
+			DIVIDE([EBITDA Variance], [EBITDA Prior Year])
+		formatString: 0.0%;(0.0%);0.0%
+		lineageTag: 0a5a4da7-c202-41df-8a60-5a75055aed1a
+		description: Variação / homólogo; base zero ou ausente resulta BLANK.
+
+	measure 'Management Status' =
+			IF(NOT HASONEVALUE('Dim_Company'[Company ID]),
+			    "SELECIONE UMA EMPRESA | CONSOLIDADO PENDENTE DE RECONCILIAÇÃO",
+			    IF(ISBLANK([Revenue]), "SEM DADOS DE RECEITA | SEM META / BUDGET / FORECAST",
+			       "VALORES EM CVE | EBITDA/EBIT PROVISÓRIOS | SEM META / BUDGET / FORECAST")
+			)
+		formatString: General
+		lineageTag: c097854b-5274-4319-9c8e-1af6415f1da0
+		description: Explicita ausência de dados e requisitos de reconciliação; não classifica desempenho sem metas.
+
+	column Coluna1
+		dataType: int64
+		formatString: 0
+		lineageTag: 2ed48607-7d12-41f8-b911-91e8f4b962c2
+		summarizeBy: sum
+		sourceColumn: Coluna1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlSKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Coluna1 = _t]),
+				  #"Tipo de coluna alterada" = Table.TransformColumnTypes(Origem, {{"Coluna1", Int64.Type}})
+				in
+				  #"Tipo de coluna alterada"
+
+	annotation PBI_ResultType = Table
+
