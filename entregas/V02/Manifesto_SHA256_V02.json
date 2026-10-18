@@ -1,0 +1,242 @@
+{
+  "README.md": {
+    "bytes": 2568,
+    "sha256": "12c189ad722401f78404128344a0151df548c41eadb7cdd52e8b78785671358d"
+  },
+  "requirements.txt": {
+    "bytes": 93,
+    "sha256": "f43fab1e3eed5d8916aedc9dc3498f909c923dd92f5b37839270879bb7309e82"
+  },
+  "entrega/Resultados_Testes.txt": {
+    "bytes": 2788,
+    "sha256": "0f9d7ba10ed3dafb9be2b988f46178cb73706985ff4ca8e3f311d32d88fb64f0"
+  },
+  "entrega/KK01_Decisoes_Pendentes_V02.pdf": {
+    "bytes": 3227,
+    "sha256": "380074b2ff5e61fe810e2bcbc51b163fd40169c52c4d4c140476f8ac87378e19"
+  },
+  "entrega/KK01_Documentacao_Tecnica_V02.md": {
+    "bytes": 4108,
+    "sha256": "2700c9166225464e6e1a73073a0c57a277150fc1a7ad07e52938859ad7c06e72"
+  },
+  "entrega/KK01_Auditoria_V02.md": {
+    "bytes": 3307,
+    "sha256": "869dc79044fa58a0162bca4a857fabd3e01e038942b759603b8ceb745590aecb"
+  },
+  "entrega/KK01_Negociacao_Operador_V02.pdf": {
+    "bytes": 3719,
+    "sha256": "95d727c44712b942c8de06e1185d08b70302f782facfc8e17fed36d65d0a6c6c"
+  },
+  "entrega/Verificacao_Apresentacao_V02.json": {
+    "bytes": 525,
+    "sha256": "9a9e0a08fdea2a09c04dc00dfb586be7bf8ae4998904c73a259fe955ea0d4ee1"
+  },
+  "entrega/KK01_Comparativo_15M_20M_V02.md": {
+    "bytes": 6681,
+    "sha256": "bd5038a1c1bc56b9d7c393140011b4b3567b346e3dec58a4d39eedf02bc56bbc"
+  },
+  "entrega/KK01_Modelo_Integrado_V02.xlsx": {
+    "bytes": 7580442,
+    "sha256": "96ad5739fb274f16a13d53505ba4e66ddc0fce6add978d12e9366e17207404e5"
+  },
+  "entrega/Resultados_Regressao_V01.txt": {
+    "bytes": 1969,
+    "sha256": "a99193b205058dc7edea844f79d525451e7f608823663fedc1860118d72705c2"
+  },
+  "entrega/Resultados_Testes.json": {
+    "bytes": 151,
+    "sha256": "54afcf7b890b016cc8a401c0228de44cbeca5f3664ad24f7bd55c217170c71b1"
+  },
+  "entrega/Comparativo_15_20_Dados.json": {
+    "bytes": 1481,
+    "sha256": "5adb2632d3ac29693fd93b718fdbd1200464abb8a183e09fe0452bd890c4e18c"
+  },
+  "entrega/KK01_Painel_Executivo_V02.pdf": {
+    "bytes": 53109,
+    "sha256": "657a92ff4e3b23169ed2d9b2261e31b685640f548a33bf349151262300531afe"
+  },
+  "entrega/KK01_Auditoria_V02.pdf": {
+    "bytes": 4030,
+    "sha256": "f16260610edf1fee1f392576933179f9b18cdce965921fe3fa56e5ef84e4b217"
+  },
+  "entrega/KK01_Comparativo_15M_20M_V02.pdf": {
+    "bytes": 8531,
+    "sha256": "575195fd7c899cac5766b3d7ff2541eb13d67631e9288b56aaba7460f6ff7acd"
+  },
+  "entrega/KK01_Decisoes_Pendentes_V02.md": {
+    "bytes": 1540,
+    "sha256": "3e6cc71ba6727766e1b4c7d9836c9d2eb0516b3f3424f752d77667ff61d3eae0"
+  },
+  "entrega/KK01_Negociacao_Operador_V02.md": {
+    "bytes": 2521,
+    "sha256": "93e6b0243ee7ab91e48715683b38462b48f3a726cd6210d9f346f50c17fbd173"
+  },
+  "entrega/Testes_Seletores.json": {
+    "bytes": 3329,
+    "sha256": "f4c20aa769f3e600dca42fc6365edefe2384feaa2cd4286741ab83f6d361483d"
+  },
+  "entrega/Testes_Seletores_Primeira_Passagem.json": {
+    "bytes": 5589,
+    "sha256": "ff627f02e1bad74ebb63316639b2b2ce90d145153734668f83082fdf2da94d40"
+  },
+  "entrega/KK01_Documentacao_Tecnica_V02.pdf": {
+    "bytes": 5466,
+    "sha256": "cfb55d6b7f5fe65a03a5bcb467ac46a20cf35e4fdae91fa3e63d486856672b16"
+  },
+  "src/package_v02.py": {
+    "bytes": 1960,
+    "sha256": "854ac002acf967b7e801177bcf889d42ca2610813c8e580f408bce2acc66c15e"
+  },
+  "src/source.json": {
+    "bytes": 157235,
+    "sha256": "24c39887509611e9758cdc93a0070da47bf7b12bca6a938ac46e445f80a5ed1e"
+  },
+  "src/fix_workbook_metadata.py": {
+    "bytes": 1805,
+    "sha256": "10e97d6958b5d917068e99a3c78c19bf43b96afb9b1997c459cb74ec3e9dc800"
+  },
+  "src/reports_v02.py": {
+    "bytes": 22074,
+    "sha256": "93fbdaa614b46edb6d6afd4a232d21cccb838abfe9c3fda0202f99fc5913d195"
+  },
+  "src/summary.json": {
+    "bytes": 3533,
+    "sha256": "ce9353806de0a1590f892f87cb4df1261a41ad72c028c65b61a6224b8b83eedd"
+  },
+  "src/v02_metadata.json": {
+    "bytes": 12118,
+    "sha256": "e06147a9ca410624aef840596057557d562558ef51a3b0f43e225974f747e549"
+  },
+  "src/finalize_v02.py": {
+    "bytes": 4447,
+    "sha256": "46653af63624003c99b534587fc099e9484f9522dc5da7eb622ff8cc102f043f"
+  },
+  "src/baseline.json": {
+    "bytes": 462883,
+    "sha256": "4fe7f9d2bb02da4878d0b96a6f9a10df4a5354f2f9dd1c8c00b1abb650719ba8"
+  },
+  "src/test_selectors.py": {
+    "bytes": 6830,
+    "sha256": "50b7822c705425abf6e7d152495a93f138a79016fdb323dfe3e3a457cc34f355"
+  },
+  "src/test_model.py": {
+    "bytes": 13997,
+    "sha256": "a46caecc14513f56b359fd1115c78c2d8e78dc9045bc1d0e3eb5a3da0c1949b1"
+  },
+  "src/upgrade_builder.py": {
+    "bytes": 9312,
+    "sha256": "18dbe649fa087f86df4b3a3cdf9a26f7bf4d6b5861bb09ce92f70f32ae4c4bc1"
+  },
+  "src/recheck_errors.py": {
+    "bytes": 2672,
+    "sha256": "536ac1aec4e4ba59e1f449e3653c6add29786c6db059442502c1057517dfa333"
+  },
+  "src/engine.py": {
+    "bytes": 25651,
+    "sha256": "817a15b8b41ef23a901e83700475be5731cbcbea6c90926b08508ed733e3ec1d"
+  },
+  "src/build_model.py": {
+    "bytes": 82533,
+    "sha256": "c6d7f3c325a04b673fe6ce623556442d43efce218facf5d28d67a8ace6733538"
+  },
+  "src/reports.py": {
+    "bytes": 32883,
+    "sha256": "7eb3362b068fb944bd04f2be915251e1db8f68f3d4b2070e156798828a08c916"
+  },
+  "src/upgrade_engine.py": {
+    "bytes": 4690,
+    "sha256": "9481a266bf918d48ae14f52c724e8823dc730be482a037c7af1a3bce7c63e1c3"
+  },
+  "src/audit_source.py": {
+    "bytes": 4282,
+    "sha256": "e1b271fab914df25f6e6d7162c5e2e432ef42cd4efb704f1928e0f48ede82a3d"
+  },
+  "src/v02_panels.py": {
+    "bytes": 31763,
+    "sha256": "6960b21e582e2d9b6007e8e4b12f57dceb644308a7830fdd7633031d918dfc0c"
+  },
+  "src/build_metadata.json": {
+    "bytes": 10623,
+    "sha256": "cb5f01ee592c1b5003addf4e0f82fb3bb5089058017bf9b9bb5f6e00eaccfa5f"
+  },
+  "src/icons/G.png": {
+    "bytes": 627,
+    "sha256": "1cbeaeae3f1b00567888f6cc8aa8276344b6fa27c7fb9c57e6fae48990676037"
+  },
+  "src/icons/D.png": {
+    "bytes": 439,
+    "sha256": "b3f7435adb1c928e1c72279ac63b15d47ed592a506800893eb60352ed79c3179"
+  },
+  "src/icons/A.png": {
+    "bytes": 530,
+    "sha256": "4640b8359454df99dac39799bc60e80ffda67068e8e5ed76dcee05e6f15e49ec"
+  },
+  "src/icons/F.png": {
+    "bytes": 407,
+    "sha256": "545524e88c58b8f0912ea4c91b31650dea89809d41d533474cde4ff9e2ace3a5"
+  },
+  "src/icons/H.png": {
+    "bytes": 691,
+    "sha256": "c45c4e4c6051668ba4d8f6363566e15efe5f99f9b958093e56bdacf11386b65c"
+  },
+  "src/icons/C.png": {
+    "bytes": 530,
+    "sha256": "4640b8359454df99dac39799bc60e80ffda67068e8e5ed76dcee05e6f15e49ec"
+  },
+  "src/icons/B.png": {
+    "bytes": 568,
+    "sha256": "ec1ee8d749961e149fa7d3c76dea3aebe982a34dff5ff59c4cebe633d619ec13"
+  },
+  "src/icons/E.png": {
+    "bytes": 653,
+    "sha256": "1d4fddfcf5519841a8c212ba2b7e88eafe4e2c86aeaa71189abf6e99fb62c7fe"
+  },
+  "original/V01_baseline.json": {
+    "bytes": 464634,
+    "sha256": "67f3ba5523f916f41b161241749b233e4592f550634a740639e9b0b676516b0b"
+  },
+  "original/V45_original.xlsx": {
+    "bytes": 479968,
+    "sha256": "3422b0c2d83e7961097e03b33bbbd23d9c78694d1e90e243e5c94ecb0a9a3d05"
+  },
+  "original/KK01_V01_preservado.xlsx": {
+    "bytes": 4578112,
+    "sha256": "7c9ca0782394eeecf431929e820be7a45f872d255ad397a6aa34f81a5e05cd48"
+  },
+  "original/Manifesto_V01.json": {
+    "bytes": 997,
+    "sha256": "1dc6d57c4cf2120021cfc7bf361ff6cc7c75df1a5208a3d1198e16750b69ca28"
+  },
+  "original/V01_src/fix_workbook_metadata.py": {
+    "bytes": 1805,
+    "sha256": "10e97d6958b5d917068e99a3c78c19bf43b96afb9b1997c459cb74ec3e9dc800"
+  },
+  "original/V01_src/test_selectors.py": {
+    "bytes": 4920,
+    "sha256": "43509e52f610aaed603a2a29744ccd753cc022c93f394ba6f2eeb4c88f0c196f"
+  },
+  "original/V01_src/test_model.py": {
+    "bytes": 8587,
+    "sha256": "843d1fd7cd68e2a90ea93bb869f3d867a8a90dc3c2da01a62aa9a44304677df3"
+  },
+  "original/V01_src/recheck_errors.py": {
+    "bytes": 2672,
+    "sha256": "536ac1aec4e4ba59e1f449e3653c6add29786c6db059442502c1057517dfa333"
+  },
+  "original/V01_src/engine.py": {
+    "bytes": 21000,
+    "sha256": "dcfb79cef889ce78634fef812e717cdcafabcbe533c6200f113e42c21a28e79d"
+  },
+  "original/V01_src/build_model.py": {
+    "bytes": 78398,
+    "sha256": "a397e75b9cc9c5c224288e0321786e6439496c818dfadd6956802733d030a267"
+  },
+  "original/V01_src/reports.py": {
+    "bytes": 32883,
+    "sha256": "7eb3362b068fb944bd04f2be915251e1db8f68f3d4b2070e156798828a08c916"
+  },
+  "original/V01_src/audit_source.py": {
+    "bytes": 4282,
+    "sha256": "e1b271fab914df25f6e6d7162c5e2e432ef42cd4efb704f1928e0f48ede82a3d"
+  }
+}
