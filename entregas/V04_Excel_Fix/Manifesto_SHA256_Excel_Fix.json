@@ -1,0 +1,18 @@
+{
+  "KK01_Modelo_Integrado_V04_Excel_Fix.xlsx": {
+    "bytes": 25421085,
+    "sha256": "be8288ced2494ef31c2dbe1d31d77b8277a0753a1209a8df0a83c3a5d86dcdc0"
+  },
+  "KK01_Relatorio_Tecnico_V04_Excel_Fix.pdf": {
+    "bytes": 14041,
+    "sha256": "4eb63f2293dff5faf72e20cd1ff09d4ce738743147bde88c4fd751a232857463"
+  },
+  "KK01_Relatorio_Tecnico_V04_Excel_Fix.md": {
+    "bytes": 13344,
+    "sha256": "ee9653e7395114eddb9f5f02e972fe0e8e6f3796baeb6f46c6747d89c32a782b"
+  },
+  "KK01_V04_Excel_Fix_Pacote_Completo.zip": {
+    "bytes": 38863192,
+    "sha256": "bd94be856499ee794a568997997f5cb073a5f811845bfdbc42b099326c61f4d0"
+  }
+}
