@@ -1,0 +1,42 @@
+{
+  "KK01_Modelo_Integrado_V03.xlsx": {
+    "bytes": 9806996,
+    "sha256": "68ee612cb93ba1c84e1ccc4b95cbea4320887c5a31416382fb237d08839af136"
+  },
+  "KK01_Comparativo_Capital_V03.pdf": {
+    "bytes": 7949,
+    "sha256": "df67d291171ee60ee13525b4f8c795306583e7e759222f4812d34d2b3eb7b1e5"
+  },
+  "KK01_Matriz_Societaria_V03.pdf": {
+    "bytes": 3660,
+    "sha256": "06ea6ae5628565ab8358232fc7a8d19144e6a0b17419807cf81c332b37ad891f"
+  },
+  "KK01_Rentabilidade_Categorias_V03.pdf": {
+    "bytes": 5392,
+    "sha256": "dba3b3899b49614d0798b5574ce1079bdf969fa79f5294228ea9ee882a9525ae"
+  },
+  "KK01_Financiamento_Risco_V03.pdf": {
+    "bytes": 4861,
+    "sha256": "05a642afb462891d661a2d266e235e335ede1152ae69298a9fc224ec639cd3e5"
+  },
+  "KK01_Decisoes_Pendentes_V03.pdf": {
+    "bytes": 3070,
+    "sha256": "df6f4dd6af3deda47ad384d2e774b8f4e321006f328d26d8800634439cf618c5"
+  },
+  "KK01_Documentacao_Tecnica_V03.pdf": {
+    "bytes": 5642,
+    "sha256": "e7fd66ca884ed2b2fac5cf0741866e40a112e246e9f0687f51c9778aca6bd46a"
+  },
+  "KK01_Auditoria_V03.pdf": {
+    "bytes": 6123,
+    "sha256": "e9189afe11a410285024e0106a105d9edcaa12fa304b1b864d51ac91d19d473f"
+  },
+  "KK01_Painel_Executivo_V03.pdf": {
+    "bytes": 65631,
+    "sha256": "2cbd4523c4f07842108003c827870330560600646972687dbd3d9a827d2b1b67"
+  },
+  "KK01_V03_Entrega_Completa.zip": {
+    "bytes": 13690072,
+    "sha256": "0dfb1b20dcfd7093c22fe1b20f575bb96fdf0f18aa12031743feaed8f876169e"
+  }
+}
