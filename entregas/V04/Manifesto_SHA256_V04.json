@@ -1,0 +1,62 @@
+{
+  "KK01_Modelo_Integrado_V04.xlsx": {
+    "bytes": 25341151,
+    "sha256": "b812f5b34be8f81575b227295738fe1a8005c8cc21c347d1d678870ed62fc0e2"
+  },
+  "KK01_Executive_Control_Center_V04.pdf": {
+    "bytes": 16129,
+    "sha256": "ed50125eebf782cad06ca2973819fc5022d12a06aeaecbfa34f574b3603ed37e"
+  },
+  "KK01_Strategic_Master_Workflow_V04.pdf": {
+    "bytes": 8088,
+    "sha256": "a38211f3b341968ef74bb9f7505cd17c790133d0734330c6a3cff8b7b9936cd7"
+  },
+  "KK01_Estrutura_Acionista_Waterfall_V04.pdf": {
+    "bytes": 8511,
+    "sha256": "fdcc74d4d8faf8df6620d00016e00345193c02688e521e38350dc68ee227ba4a"
+  },
+  "KK01_Equity_Investor_Pipeline_V04.pdf": {
+    "bytes": 3875,
+    "sha256": "1284f7fcf421a1e43903382833c844725da36d13943c27dd1a764fa01ef203ac"
+  },
+  "KK01_Financiamento_Bancabilidade_V04.pdf": {
+    "bytes": 6217,
+    "sha256": "5a2a9af9b5057c34847636db47eacca514f8f71cda543d0d9cb3ab7c6e1802a3"
+  },
+  "KK01_Comercializacao_94_Apartamentos_V04.pdf": {
+    "bytes": 3628,
+    "sha256": "2f02108c7001ddb974828567838c6a33d733a33051aca8196d4b51853a1d2a4d"
+  },
+  "KK01_Construcao_EAC_V04.pdf": {
+    "bytes": 3567,
+    "sha256": "2fb28c30a6f9e2a713d8b38ffa73a5b5c509dd68fdffdd409b551d51c8e46ac0"
+  },
+  "KK01_Hotel_Residential_Operator_V04.pdf": {
+    "bytes": 4316,
+    "sha256": "21c3b56267d524d4532dc03629e7acd9c143dd8c21391d272c7200d424678372"
+  },
+  "KK01_Cenarios_Riscos_V04.pdf": {
+    "bytes": 4964,
+    "sha256": "ca423bb7fd78b95e28d58b15ca34edfccc24ae3f203df5cf883ff50fdbde9a7c"
+  },
+  "KK01_Dicionario_KPI_V04.pdf": {
+    "bytes": 20225,
+    "sha256": "11d3e060b8847ee7d75c060129c6fe8049db3f0fbbf9817e8ffb117a289c0226"
+  },
+  "KK01_Auditoria_V04.pdf": {
+    "bytes": 5557,
+    "sha256": "6330ea5273929572f46700beb59f33d5f0d91ac32fe580adcd4ccb766e004eb5"
+  },
+  "KK01_Decisoes_Pendentes_V04.pdf": {
+    "bytes": 4424,
+    "sha256": "fa3260e54a273ea64869d60837281c7b17ebbd70e10ec130090df1ec8c19c1b9"
+  },
+  "KK01_Documentacao_Tecnica_V04.pdf": {
+    "bytes": 18534,
+    "sha256": "c623da2e4799c9244702c3d52ecdeaa9d5393d71b3fd5ea1eb405635ffcfa5e4"
+  },
+  "KK01_V04_Entrega_Completa.zip": {
+    "bytes": 23680956,
+    "sha256": "9bd668bcef7495c8b715fb301fbb090001107c720dc621a900bbb4f6a23c019a"
+  }
+}
