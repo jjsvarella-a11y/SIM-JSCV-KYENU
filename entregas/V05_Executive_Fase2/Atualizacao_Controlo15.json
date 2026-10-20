@@ -1,0 +1,22 @@
+{
+  "scope": "AUDITORIA only",
+  "changes": {
+    "A53": [
+      "str",
+      "V05:15 blocos"
+    ],
+    "B53": [
+      "formula",
+      "IF(SUM('Matriz Societaria V03'!B9:D9)=15,0,1)"
+    ],
+    "C53": [
+      "formula",
+      "IF(SUM('Matriz Societaria V03'!B9:D9)=15,\"Conforme\",\"Alerta\")"
+    ],
+    "A58": [
+      "str",
+      "V05:política formalizada externamente"
+    ]
+  },
+  "financial_engine_unchanged": true
+}

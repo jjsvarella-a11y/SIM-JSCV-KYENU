@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "checks": 16,
+  "failures": [],
+  "results": [
+    {
+      "test": "ZIP íntegro",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "313folhas originais e estados preservados",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "6folhas financeiras novas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "347nomes definidos preservados",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Desenho e referências dos gráficos preservados",
+      "ok": true,
+      "detail": 68
+    },
+    {
+      "test": "imagens preservados byte a byte",
+      "ok": true,
+      "detail": 7
+    },
+    {
+      "test": "notas preservados byte a byte",
+      "ok": true,
+      "detail": 31
+    },
+    {
+      "test": "estilos preservados byte a byte",
+      "ok": true,
+      "detail": 1
+    },
+    {
+      "test": "Sem células duplicadas",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "test": "Fórmulas dentro do limite Excel",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "test": "Fórmulas dinâmicas preservadas e ampliadas",
+      "ok": true,
+      "detail": 1657732
+    },
+    {
+      "test": "Sem erros armazenados no ficheiro final",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "test": "Sem ligações externas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Sem VBA",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Recálculo automático integral",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Iteração desativada",
+      "ok": true,
+      "detail": null
+    }
+  ]
+}

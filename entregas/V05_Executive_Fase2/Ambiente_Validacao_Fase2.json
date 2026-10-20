@@ -1,0 +1,12 @@
+{
+  "python": "3.12.14",
+  "openpyxl": "3.1.5",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "reportlab": "4.4.9",
+  "pypdf": "6.10.0",
+  "libreoffice": "LibreOfficeDev26.8.0.0.alpha0",
+  "calc_validation": "isolated profiles; threaded formula group calculation and OpenCL disabled",
+  "excel_desktop_available": false,
+  "excel_desktop_certified": false
+}

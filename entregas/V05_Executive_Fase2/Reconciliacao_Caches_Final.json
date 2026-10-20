@@ -1,0 +1,640 @@
+{
+  "ok": true,
+  "source_recalculated": "/workspace/kk01/v05/validacao/Teste_Base/out/Base.xlsx",
+  "formula_caches": 1657732,
+  "formulas_unchanged": true,
+  "formula_sha256": "9b3ca58ab157b778d9f20e9a91b90bb669907eed05596cf85b5f9aea20c700c4",
+  "chart_caches": [
+    {
+      "chart": "xl/charts/chart10.xml",
+      "reference": "\"DSCR Hotel\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart10.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart10.xml",
+      "reference": "Anual!$Z$5:$Z$19",
+      "points": 15,
+      "numeric_points": 2
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "\"25% inicial\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$180",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$C$151:$C$180",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "\"55% semestral\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$180",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$D$151:$D$180",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "\"20% escritura\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$180",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$E$151:$E$180",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart13.xml",
+      "reference": "\"15 M€ / 40%\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart13.xml",
+      "reference": "'Comparativo 15 20'!$A$61:$A$240",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart13.xml",
+      "reference": "'Comparativo 15 20'!$B$61:$B$240",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart13.xml",
+      "reference": "\"20 M€ / 40%\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart13.xml",
+      "reference": "'Comparativo 15 20'!$A$61:$A$240",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart13.xml",
+      "reference": "'Comparativo 15 20'!$C$61:$C$240",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "\"Construção\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$A$5:$A$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$B$5:$B$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "\"Fiscalização\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$A$5:$A$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$C$5:$C$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "\"Contingência paga\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$A$5:$A$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$D$5:$D$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "\"Receitas\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$H$5:$H$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "\"EBITDA\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$I$5:$I$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "\"CFADS\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$J$5:$J$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart5.xml",
+      "reference": "\"Acumulado líquido\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart5.xml",
+      "reference": "Imobiliario!$A$5:$A$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart5.xml",
+      "reference": "Imobiliario!$K$5:$K$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart11.xml",
+      "reference": "\"Dividendos totais\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart11.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart11.xml",
+      "reference": "Anual!$V$5:$V$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "\"Capital KK\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$A$5:$A$8",
+      "points": 4,
+      "numeric_points": 4
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$C$5:$C$8",
+      "points": 4,
+      "numeric_points": 4
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "\"Pico dívida\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$A$5:$A$8",
+      "points": 4,
+      "numeric_points": 4
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$E$5:$E$8",
+      "points": 4,
+      "numeric_points": 4
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "\"Usado linha\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$A$5:$A$8",
+      "points": 4,
+      "numeric_points": 4
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$F$5:$F$8",
+      "points": 4,
+      "numeric_points": 4
+    },
+    {
+      "chart": "xl/charts/chart1.xml",
+      "reference": "\"Meta\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart1.xml",
+      "reference": "'V04 Retornos'!$A$5:$A$7",
+      "points": 3,
+      "numeric_points": 3
+    },
+    {
+      "chart": "xl/charts/chart1.xml",
+      "reference": "'V04 Retornos'!$C$5:$C$7",
+      "points": 3,
+      "numeric_points": 0
+    },
+    {
+      "chart": "xl/charts/chart1.xml",
+      "reference": "\"Selecionado\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart1.xml",
+      "reference": "'V04 Retornos'!$A$5:$A$7",
+      "points": 3,
+      "numeric_points": 3
+    },
+    {
+      "chart": "xl/charts/chart1.xml",
+      "reference": "'V04 Retornos'!$D$5:$D$7",
+      "points": 3,
+      "numeric_points": 3
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "\"Dívida\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$A$5:$A$184",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$AB$5:$AB$184",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "\"Caixa\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$A$5:$A$184",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$AE$5:$AE$184",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "\"Reserva\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$A$5:$A$184",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$Q$5:$Q$184",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart16.xml",
+      "reference": "\"CFADS 15A\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart16.xml",
+      "reference": "'DASH Operador'!$A$23:$A$26",
+      "points": 4,
+      "numeric_points": 4
+    },
+    {
+      "chart": "xl/charts/chart16.xml",
+      "reference": "'DASH Operador'!$F$23:$F$26",
+      "points": 4,
+      "numeric_points": 4
+    },
+    {
+      "chart": "xl/charts/chart8.xml",
+      "reference": "\"Vendas\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart8.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$160",
+      "points": 10,
+      "numeric_points": 10
+    },
+    {
+      "chart": "xl/charts/chart8.xml",
+      "reference": "'DASH Comercial'!$I$151:$I$160",
+      "points": 10,
+      "numeric_points": 10
+    },
+    {
+      "chart": "xl/charts/chart8.xml",
+      "reference": "\"Recebimentos\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart8.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$160",
+      "points": 10,
+      "numeric_points": 10
+    },
+    {
+      "chart": "xl/charts/chart8.xml",
+      "reference": "'DASH Comercial'!$J$151:$J$160",
+      "points": 10,
+      "numeric_points": 10
+    },
+    {
+      "chart": "xl/charts/chart12.xml",
+      "reference": "\"Equity value 10A\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart12.xml",
+      "reference": "Sensibilidade!$A$18:$A$20",
+      "points": 3,
+      "numeric_points": 3
+    },
+    {
+      "chart": "xl/charts/chart12.xml",
+      "reference": "Sensibilidade!$C$18:$C$20",
+      "points": 3,
+      "numeric_points": 3
+    },
+    {
+      "chart": "xl/charts/chart12.xml",
+      "reference": "\"Equity value 15A\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart12.xml",
+      "reference": "Sensibilidade!$A$18:$A$20",
+      "points": 3,
+      "numeric_points": 3
+    },
+    {
+      "chart": "xl/charts/chart12.xml",
+      "reference": "Sensibilidade!$E$18:$E$20",
+      "points": 3,
+      "numeric_points": 3
+    },
+    {
+      "chart": "xl/charts/chart15.xml",
+      "reference": "\"Alvo\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart15.xml",
+      "reference": "Residencial!$A$5:$A$184",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart15.xml",
+      "reference": "Residencial!$L$5:$L$184",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart15.xml",
+      "reference": "\"Suportável\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart15.xml",
+      "reference": "Residencial!$A$5:$A$184",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart15.xml",
+      "reference": "Residencial!$M$5:$M$184",
+      "points": 180,
+      "numeric_points": 180
+    },
+    {
+      "chart": "xl/charts/chart4.xml",
+      "reference": "\"Recebimentos\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart4.xml",
+      "reference": "Imobiliario!$A$5:$A$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart4.xml",
+      "reference": "Imobiliario!$F$5:$F$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart4.xml",
+      "reference": "\"CAPEX total projeto\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart4.xml",
+      "reference": "Imobiliario!$A$5:$A$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart4.xml",
+      "reference": "CAPEX!$E$5:$E$34",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart7.xml",
+      "reference": "\"Acumulado\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart7.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$180",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart7.xml",
+      "reference": "'DASH Comercial'!$G$151:$G$180",
+      "points": 30,
+      "numeric_points": 30
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "\"Juros\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$S$5:$S$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "\"Capital obrigatório\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$T$5:$T$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "\"Antecipações\"",
+      "points": 1,
+      "numeric_points": 1
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15,
+      "numeric_points": 15
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$U$5:$U$19",
+      "points": 15,
+      "numeric_points": 15
+    }
+  ],
+  "note": "Only caches updated. LibreOffice worksheet/styles/chart layouts were not used as final presentation."
+}

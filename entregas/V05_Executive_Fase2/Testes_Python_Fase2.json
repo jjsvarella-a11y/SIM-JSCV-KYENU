@@ -1,0 +1,1572 @@
+{
+  "ok": true,
+  "tests": 313,
+  "failures": [],
+  "results": [
+    {
+      "test": "Paridade V04: cash",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Paridade V04: dividend",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Paridade V04: debt",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Paridade V04: interest",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Paridade V04: cumulative",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Paridade V04: project_cf",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Paridade V04: equity",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M1",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M2",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M3",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M4",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M5",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M6",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M7",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M8",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M9",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M13",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M14",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M15",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M16",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M17",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M18",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M19",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M20",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M21",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M22",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M23",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M24",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M25",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M26",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M27",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M28",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M29",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M30",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M31",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M32",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M33",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M34",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M35",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M36",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M37",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M38",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M39",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M40",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M41",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M42",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M43",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M44",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M45",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M46",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M47",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M48",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M49",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M50",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M51",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M52",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M53",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M54",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M55",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M56",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M57",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M58",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M59",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M60",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M61",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M62",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M63",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M64",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M65",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M66",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M67",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M68",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M69",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M70",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M71",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M72",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M73",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M74",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M75",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M76",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M77",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M78",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M79",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M80",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M81",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M82",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M83",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M84",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M85",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M86",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M87",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M88",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M89",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M90",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M91",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M92",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M93",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M94",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M95",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M96",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M97",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M98",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M99",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M100",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M101",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M102",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M103",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M104",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M105",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M106",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M107",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M108",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M109",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M110",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M111",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M112",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M113",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M114",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M115",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M116",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M117",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M118",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M119",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M120",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M121",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M122",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M123",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M124",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M125",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M126",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M127",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M128",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M129",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M130",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M131",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M132",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M133",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M134",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M135",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M136",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M137",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M138",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M139",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M140",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M141",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M142",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M143",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M144",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M145",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M146",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M147",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M148",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M149",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M150",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M151",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M152",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M153",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M154",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M155",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M156",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M157",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M158",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M159",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M160",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M161",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M162",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M163",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M164",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M165",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M166",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M167",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M168",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M169",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M170",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M171",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M172",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M173",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M174",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M175",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M176",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M177",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M178",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M179",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Calendário de capital M180",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "15blocos e quotas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "8blocos novos e25M",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "G02 cinco parcelas somam5M",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Mínimo/intermédio/máximo por fórmula",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Base: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Base: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Base: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Base: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Base: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Base: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Maximo: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Maximo: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Maximo: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Maximo: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Maximo: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Minimo: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Minimo: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Minimo: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Minimo: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Minimo: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Intermedio: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Intermedio: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Intermedio: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Intermedio: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Intermedio: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Operador_4_3_10: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Operador_4_3_10: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Operador_4_3_10: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Operador_4_3_10: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Operador_4_3_10: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Operador_4_3_10: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Prudente: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Prudente: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Prudente: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Prudente: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Prudente: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Prudente: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Favoravel: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Favoravel: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Favoravel: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Favoravel: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Favoravel: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Favoravel: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Continuidade: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Continuidade: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Continuidade: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Continuidade: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Continuidade: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Continuidade: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Sem_Parcial: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Sem_Parcial: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Sem_Parcial: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Sem_Parcial: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Sem_Parcial: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Sem_Parcial: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Suspenso: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Suspenso: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Suspenso: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Suspenso: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Suspenso: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Suspenso: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentado_Sem_Teto: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentado_Sem_Teto: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentado_Sem_Teto: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentado_Sem_Teto: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentado_Sem_Teto: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentado_Sem_Teto: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Reserva_Extra_M54: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Reserva_Extra_M54: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Reserva_Extra_M54: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Reserva_Extra_M54: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Reserva_Extra_M54: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Reserva_Extra_M54: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Hotel_Conservador: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Hotel_Conservador: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Hotel_Conservador: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Hotel_Conservador: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Hotel_Conservador: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Hotel_Conservador: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_Vendas_Atraso: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_Vendas_Atraso: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_Vendas_Atraso: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_Vendas_Atraso: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_Vendas_Atraso: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_Vendas_Atraso: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentos_M54: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentos_M54: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentos_M54: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentos_M54: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentos_M54: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Documentos_M54: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_75pct: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_75pct: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_75pct: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_75pct: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_75pct: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Capital_75pct: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Max_Fallback: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Max_Fallback: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Max_Fallback: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Max_Fallback: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Acumulados_Max_Fallback: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Reserva_Futura: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Reserva_Futura: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Reserva_Futura: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Reserva_Futura: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Reserva_Futura: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Exit_Reserva_Futura: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Atraso_Obra_Abertura: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Atraso_Obra_Abertura: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Atraso_Obra_Abertura: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Atraso_Obra_Abertura: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Atraso_Obra_Abertura: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Atraso_Obra_Abertura: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Beneficios_NaoZero: calendário",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Beneficios_NaoZero: caixa/reconciliação",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Beneficios_NaoZero: dividendos protegem reservas",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Beneficios_NaoZero: limite de lucros e caixa",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Beneficios_NaoZero: cobertura1,20x",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Beneficios_NaoZero: saída proporcional",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "M54 parcial",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "M54 acumulados máximo",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "M54 mínimo faltante não vira dívida",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Sem pagamento efetivo inventado",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Benefícios3P2G10S",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "test": "Simulado/aprovado/pago separados",
+      "ok": true,
+      "detail": null
+    }
+  ]
+}

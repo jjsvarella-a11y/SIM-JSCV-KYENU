@@ -1,0 +1,6 @@
+stage;basis;cash30;cash42;cash54;div54;cash_end;dividends;ev;exit_equity;new_irr;new_moic;new_npv
+0 — V04 Fixed;"Referência original; políticaV04 e9x";8.717.152,56;7.760.803,63;7.758.489,22;0,00;7.768.521,88;49.615.724,55;69.847.282,08;75.218.858,32;0,07845138;2,48476049;-8.358.003,30
+1 — Alterar composição dos blocos;"Contrafactual: piscinas de classeV04 fixas apenas para medir composição; nunca usados naV05";8.717.152,56;7.760.803,63;7.758.489,22;0,00;7.768.521,88;49.615.724,55;69.847.282,08;75.218.858,32;0,08625731;2,63631877;-6.820.948,24
+2 — Dividendos progressivos M54;"Nova política/calendário;9x; alocação antiga de saída mantida só como contrafactual de atribuição";8.717.152,56;11.008.104,64;11.534.262,02;2.630.786,91;22.768.915,99;34.615.330,44;69.847.282,08;90.219.252,43;0,06918593;2,40193688;-10.740.119,52
+3 — Saída proporcional;"50% saída novos; sem preferências; múltiplo9x apenas para isolar efeito de repartição";8.717.152,56;11.008.104,64;11.534.262,02;2.630.786,91;22.768.915,99;34.615.330,44;69.847.282,08;90.219.252,43;0,07059437;2,44760455;-10.531.536,69
+4 — Saída Base12x (V05);Configuração financeiraV05 de referência;8.717.152,56;11.008.104,64;11.534.262,02;2.630.786,91;22.768.915,99;34.615.330,44;93.129.709,44;113.036.031,25;0,08333708;2,90394013;-8.447.266,60

@@ -1,0 +1,137 @@
+{
+  "source_original_fixed_sha256": "be8288ced2494ef31c2dbe1d31d77b8277a0753a1209a8df0a83c3a5d86dcdc0",
+  "phase": "2 — financial only",
+  "excel_desktop_certified": false,
+  "files": [
+    {
+      "name": "Ambiente_Validacao_Fase2.json",
+      "bytes": 354,
+      "sha256": "c7a78ab5444099423d05050dca30b592ef720bb569028d86ccf8805f2fe984a5"
+    },
+    {
+      "name": "Atualizacao_Controlo15.json",
+      "bytes": 425,
+      "sha256": "3625ba4c219aa585a3a489e9d3bdaeadf2a29b3dc8d65c4f41314a398b309022"
+    },
+    {
+      "name": "Cenarios_Python_Fase2.json",
+      "bytes": 20816,
+      "sha256": "abdbae3a80f08871a94f687804b1ed20d357b3440519c4484af219258ad05ad3"
+    },
+    {
+      "name": "KK01_Guia_Financeiro_Fase2.md",
+      "bytes": 5916,
+      "sha256": "d13ae8449bdab1ee6cb27f3b3548e4e4cc875dbff5e648f3c87807b4c51d6d1c"
+    },
+    {
+      "name": "KK01_Guia_Financeiro_Fase2.pdf",
+      "bytes": 50128,
+      "sha256": "e990d54bb2264081d6448d05d8dfadff6a09cb613b134efcac621ad22478900a"
+    },
+    {
+      "name": "KK01_Modelo_Integrado_V05_Executive.xlsx",
+      "bytes": 28329513,
+      "sha256": "0b94d41fee710fe1991d24ed3215add80685941812cb404427b9dbb283567421"
+    },
+    {
+      "name": "KK01_Relatorio_Fase2_Reconciliacao.md",
+      "bytes": 14325,
+      "sha256": "c0d2918c67549408fab470a8d9a0e895d87ad95dea7e989a0b76b901b3e6c64b"
+    },
+    {
+      "name": "KK01_Relatorio_Fase2_Reconciliacao.pdf",
+      "bytes": 59111,
+      "sha256": "9dbd94ee143e4488643faf27bc61ce1a709c6d2137d14042dfc258e5e70a16a0"
+    },
+    {
+      "name": "KK01_Relatorio_Testes_Fase2.md",
+      "bytes": 6368,
+      "sha256": "dd6c99412d5c923d2b1f90fb67ab5d7e84f5c35c1f10f7dc2254edc4a5f9e911"
+    },
+    {
+      "name": "KK01_Relatorio_Testes_Fase2.pdf",
+      "bytes": 52285,
+      "sha256": "4546a21b3a1d2d8c3a569ac02388a8d3f0bb797c886aa86932505e38bfd36c0f"
+    },
+    {
+      "name": "KK01_V05_Executive_Fase2_Pacote_Completo.zip",
+      "bytes": 20829961,
+      "sha256": "4126995b71a44ad44883775118d5cd2d168ad0b7e666e8ff43a919154972510e"
+    },
+    {
+      "name": "KK01_V05_Fase2_Fontes_e_Testes.zip",
+      "bytes": 1926665,
+      "sha256": "437933ab8a3791885b3b72fe280397a8c0b159da1cfb1f3011b3d370f144f10c"
+    },
+    {
+      "name": "Original_Preservado.json",
+      "bytes": 188,
+      "sha256": "88b5ad29a9a72fe6f70bb123b2056dbd7b86d440072714794f2b1a98d2384ab0"
+    },
+    {
+      "name": "Ponte_Impactos_V04_V05.csv",
+      "bytes": 1338,
+      "sha256": "b96d7e5277ba7ba76a3b0e4ed2c38449671edbbba846aeac07f5bb75f2d21876"
+    },
+    {
+      "name": "Ponte_Impactos_V04_V05.json",
+      "bytes": 3923,
+      "sha256": "e9312c29abdb4d5fffd2a27e7eae9e7fdcb1ead2d7dba4d0a5935e380cf622c4"
+    },
+    {
+      "name": "Prova_Formulas_Financeiras_Controlo15.json",
+      "bytes": 199,
+      "sha256": "dcf5d0602b05ab9b1cdc5557e7207e07de1a7514c80fb8b7ba947e4e472e331d"
+    },
+    {
+      "name": "README.md",
+      "bytes": 3568,
+      "sha256": "58c587447a15bac95ce5b23400a4f34b6ada8a5bf939cbad0ad7ecabd56faaa4"
+    },
+    {
+      "name": "Reconciliacao_Caches_Final.json",
+      "bytes": 15361,
+      "sha256": "670f103413bba1abbff6d61d7a6b72e3c75901abcdc505b8f8e53e5c92c66515"
+    },
+    {
+      "name": "Reconciliacao_Mensal_V04_V05.csv",
+      "bytes": 18480,
+      "sha256": "a62db82d565f9ca9665e20c5be36d940d32feadd69f1fd3f3a8a76fbe2ead962"
+    },
+    {
+      "name": "Registo_Alteracoes_Fase2.json",
+      "bytes": 33468921,
+      "sha256": "0a2b11682afa4299c9278c40a633f782f047133f1c932e74aeb02d333e3fef46"
+    },
+    {
+      "name": "Resultado_Conferencia.json",
+      "bytes": 1074,
+      "sha256": "145d02d1832c2b818915c7f9b50aa8e6affe02dc37f942d6eb3d6335af067673"
+    },
+    {
+      "name": "Testes_Estruturais_Fase2.json",
+      "bytes": 1643,
+      "sha256": "4ff6be4efcffb8d7645177c20dab6edf18f203cde256fd626ffa205042d9fefa"
+    },
+    {
+      "name": "Testes_Precisao_Fase2.json",
+      "bytes": 29478,
+      "sha256": "62acb84422e283dec5c2511f23853f002cc08f384bb96a54e8ed7781530d7c10"
+    },
+    {
+      "name": "Testes_Python_Fase2.json",
+      "bytes": 31454,
+      "sha256": "f8d1e04b7eb514d9599b1ca747fd3cd6257e057f7c1319d3aa6987f601605404"
+    },
+    {
+      "name": "Testes_Riscos_Auxiliares_Fase2.json",
+      "bytes": 3045,
+      "sha256": "44948a1f5a753ccf07211ebc86f3310af44ae5853afebcd82caeac670ae82753"
+    },
+    {
+      "name": "Testes_Sensibilidade_Fase2.json",
+      "bytes": 30893,
+      "sha256": "1ea37dad48dee5fe2055cd28a24b58ee0af2b8c8a31737e65f68d02240287487"
+    }
+  ]
+}
