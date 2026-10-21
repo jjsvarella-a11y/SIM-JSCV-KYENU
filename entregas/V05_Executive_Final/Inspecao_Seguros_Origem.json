@@ -1,0 +1,7 @@
+{
+  "original_sha256": "be8288ced2494ef31c2dbe1d31d77b8277a0753a1209a8df0a83c3a5d86dcdc0",
+  "explicit_insurance_text_matches": [],
+  "limitation": "Ausência de rubrica explícita não exclui inclusão em custos agregados ou contratos não disponibilizados. Referência mantém provisão adicional editável; confirmar empreitada/forecast.",
+  "all_xml_literal_insurance_matches": [],
+  "scope": "Shared strings, inline strings, cell/formula text and comments in all XML parts of original workbook"
+}

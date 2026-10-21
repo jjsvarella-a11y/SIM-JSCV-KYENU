@@ -1,0 +1,284 @@
+# KK-01 V05 EXECUTIVE — AUTORIZAÇÃO DE EXECUÇÃO INTEGRAL
+
+## INICIAR DESENVOLVIMENTO DO MODELO V05
+
+Após análise e aprovação do diagnóstico da Fase 1, do Mandato Consolidado, da Matriz de Impactos, do Plano de Implementação e dos protótipos, **autorizo o início da implementação do KK-01 V05 Executive**.
+
+Pretendo que avances diretamente com o desenvolvimento integral do modelo, sem novas interrupções para aprovação entre etapas, mantendo rigoroso controlo financeiro, rastreabilidade e testes de integridade.
+
+A autorização abrange:
+
+- **Fase 2:** atualização completa do motor financeiro, incluindo as etapas 2.1 a 2.5.
+- **Fase 3:** implementação dos nove dashboards executivos.
+- **Fase 4:** sistema bilingue PT/EN e Dicionário de KPIs.
+- **Fase 5:** auditoria, testes e preparação da entrega final.
+
+## 1. MODO DE EXECUÇÃO
+
+Utiliza o Prompt Mestre Consolidado e os documentos de planeamento já produzidos como especificação principal.
+
+Trabalha sobre uma cópia do:
+
+`KK01_Modelo_Integrado_V04_Excel_Fix.xlsx`
+
+Preserva integralmente o original.
+
+Não reconstruas o modelo do zero.
+
+Preserva o motor de 180 meses, os módulos financeiros existentes, as funcionalidades válidas, os cenários auxiliares e os mecanismos de auditoria.
+
+Executa as etapas sequencialmente, mas **não interrompas o desenvolvimento para solicitar aprovação após cada uma**.
+
+Documenta o resultado de cada etapa e prossegue automaticamente quando os respetivos testes estiverem conformes.
+
+Se encontrares uma questão sem dados documentais suficientes, utiliza uma hipótese de estudo explícita e editável quando isso for tecnicamente possível, sem a apresentar como facto aprovado.
+
+Se a questão puder comprometer a estrutura financeira, jurídica ou fiscal do empreendimento e não existir hipótese neutra ou reversível, regista-a como pendência e continua os módulos que não dependam dessa decisão.
+
+## 2. PRIORIDADES DA FASE 2
+
+### Etapa 2.1 — Capital, acionistas e investimento
+
+Implementar:
+
+- Estrutura acionista de 15 blocos.
+- JSCV 40%, JALS 10% e novos investidores 50%.
+- Captação-alvo de 25 M€.
+- Calendários individualizados dos oito blocos dos novos investidores.
+- Separação entre venda secundária de ações e entrada efetiva de capital na KK.
+- Investimento histórico de 4,5 M€.
+- Orçamento por capítulos.
+- Reconciliação do CAPEX de 63,168 M€.
+
+### Etapa 2.2 — Construção e desembolsos trimestrais
+
+Implementar:
+
+- Área bruta de 47.000 m².
+- Custo de referência de 1.200 €/m².
+- Orçamento sintético de construção.
+- Fiscalização de 2%.
+- Contingências de 10%.
+- EAC e ETC.
+- Dez trimestres de desembolso.
+- Curva S.
+- Custos contratados, realizados e remanescentes.
+- Separação entre preços sem IVA e desembolsos brutos.
+
+### Etapa 2.3 — Fiscalidade, escrituras, seguros e incentivos
+
+Implementar:
+
+**IVA**
+- 15% sobre Construção e Fiscalização.
+- Recuperação integral como cenário de referência, sujeita a validação fiscal.
+- Recuperação parcial e diferida como cenários de sensibilidade.
+- IVA suportado, compensado, recuperado e por recuperar.
+- Impacto mensal na tesouraria.
+
+**Impostos**
+- IRPC anual sobre lucro tributável.
+- ITI sobre transmissões.
+- IPI anual sobre propriedades.
+- Imposto de selo e demais encargos aplicáveis.
+- Bases legais e taxas parametrizadas e documentadas.
+
+**Escrituras**
+- 94 apartamentos.
+- Hotel, MICE e restaurante exterior, como atos potenciais autónomos.
+- Taxa-base de 24.000 CVE por escritura, convertida para EUR.
+- Certidão matricial de 1.500 CVE por apartamento.
+- Certidão predial de 1.500 CVE por apartamento.
+- Provisão de 20.000 € para propriedade horizontal.
+- Calendários individualizados.
+- Separação entre encargos dos compradores e da KK.
+
+**Seguros**
+- Provisão de construção de 197.400 € para 30 meses.
+- Provisão anual de exploração calculada dinamicamente a partir das bases e taxas definidas, sem introduzir um total manual.
+- Seguros patrimoniais, responsabilidade civil, interrupção de atividade e demais coberturas previstas.
+- Verificação de inclusão na empreitada ou nos custos da operadora.
+
+**Convenção de Estabelecimento**
+- Cenário sem convenção.
+- Cenário de incentivos pretendidos.
+- Cenário de benefícios efetivamente aprovados.
+- Isenção potencial de IRPC por três ou cinco anos.
+- Reduções posteriores.
+- Benefícios aduaneiros e imobiliários.
+- Isenção potencial de imposto de selo.
+- Cálculo de poupança fiscal.
+
+Não ativar benefícios convencionais como se já tivessem sido concedidos.
+
+### Etapa 2.4 — Financiamento e tesouraria
+
+Integrar todos os novos encargos no motor mensal.
+
+Recalcular:
+
+- Necessidades de financiamento.
+- Utilização bancária.
+- Juros.
+- Serviço da dívida.
+- Caixa mensal.
+- Reservas.
+- Liquidez M30, M42 e M54.
+- Défices de financiamento.
+- CFADS.
+- Resultados e impostos.
+
+Não esconder insuficiências financeiras através de entradas fictícias de capital ou dívida.
+
+### Etapa 2.5 — Dividendos, Exit e retornos
+
+Implementar:
+
+- Dividendos progressivos Platinum 7%–10%.
+- Gold 5%–6,5%.
+- Silver 4%–5%.
+- Primeira distribuição elegível M54.
+- Distribuições anuais até M174.
+- Controlos de liquidez e cobertura de 1,20×.
+- Lucros distribuíveis e restrições legais.
+- Cenários de distribuição parcial ou suspensa.
+- Exit M180.
+- Múltiplos 10×, 12× e 15× EBITDA do Ano 15.
+- Equity Value.
+- Waterfall.
+- TIR e MOIC efetivos por bloco e acionista.
+
+## 3. ASPETOS CRÍTICOS A CONTROLAR
+
+Durante toda a execução, prestar especial atenção a:
+
+1. Não duplicar IVA recuperável no CAPEX.
+2. Não duplicar seguros incluídos na empreitada ou no forecast hoteleiro.
+3. Não repetir o FF&E inicial.
+4. Não transformar custos históricos em novas saídas de caixa.
+5. Não atribuir à KK impostos e emolumentos suportados pelos compradores.
+6. Não reconhecer benefícios fiscais ainda não concedidos como direitos adquiridos.
+7. Não confundir venda secundária de ações com capital disponível na sociedade.
+8. Não distribuir dividendos sem cobertura de caixa e lucros legalmente distribuíveis.
+9. Não utilizar a valorização terminal para financiar dividendos anteriores à saída.
+10. Não duplicar receitas imobiliárias no Enterprise Value do Hotel.
+11. Não criar modelos auxiliares com lógica financeira divergente do motor principal.
+12. Não substituir fórmulas por valores fixos para forçar reconciliações.
+
+## 4. TESTES AUTOMÁTICOS ENTRE ETAPAS
+
+Após cada módulo:
+
+- Executar testes de integridade.
+- Reconciliar fluxos mensais.
+- Comparar com a V04 Fixed.
+- Identificar e explicar alterações dos KPIs.
+- Verificar ausência de erros de fórmula e dupla contagem.
+- Atualizar o changelog.
+- Registar pressupostos e pendências.
+
+Executar testes de sensibilidade para:
+
+- Operadora 3/3/6 versus 4/3/10.
+- IVA integral, parcial e diferido.
+- IRPC geral, isenção de três anos e cinco anos.
+- Seguros base, +25% e +50%.
+- Dividendos mínimo, intermédio, máximo e suspenso.
+- Exit 10×, 12× e 15×.
+- Financiamento, carência e juros.
+- Atrasos de vendas e captação.
+- Sobrecustos de construção.
+
+Incluir pelo menos um cenário de stress combinado.
+
+Se um módulo apresentar falhas críticas, corrigir antes de avançar com os cálculos dependentes.
+
+Não interromper o trabalho por questões menores de apresentação ou pressupostos reversíveis.
+
+## 5. DESENVOLVIMENTO DOS NOVE DASHBOARDS
+
+Após validar o motor financeiro, implementar:
+
+1. Executive Overview.
+2. Investment & Construction Cost Breakdown.
+3. Tax, Incentives & Insurance.
+4. Project Consolidated.
+5. Real Estate Development.
+6. Residential Sell & Leaseback.
+7. Hotel & MICE.
+8. Shareholder Structure & Investment Blocks.
+9. Equity Returns & Waterfall.
+
+Manter o dashboard fiscal exclusivamente identificado e acessível como **DASH 02 — Tax, Incentives & Insurance**.
+
+Os dashboards deverão ser:
+
+- Dinâmicos.
+- Ligados ao mesmo motor financeiro.
+- Bilingues PT/EN.
+- Dotados de filtros e simuladores.
+- Organizados com sidebar e ícones de navegação.
+- Formatados como relatórios executivos institucionais.
+- Acompanhados de explicações dos KPIs.
+
+Os protótipos iniciais são apenas uma referência de identidade visual. Desenvolver versões mais completas, com gráficos, tabelas e análises efetivamente funcionais.
+
+## 6. REGRAS DE AUTONOMIA
+
+Está autorizado a tomar decisões técnicas de implementação que não alterem os princípios económicos, societários e jurídicos definidos.
+
+Pode criar folhas auxiliares, intervalos nomeados, estruturas de cálculo, cenários editáveis e controlos de integridade.
+
+Não está autorizado a inventar compromissos de investimento, considerar convenções fiscais aprovadas, alterar direitos acionistas ou eliminar obrigações financeiras sem documentação.
+
+Quando a documentação estiver incompleta:
+
+- Identificar a limitação.
+- Utilizar uma hipótese de estudo reversível, se apropriado.
+- Manter um cenário prudente.
+- Registar a decisão pendente.
+- Continuar o desenvolvimento tecnicamente independente.
+
+## 7. ENTREGÁVEIS FINAIS
+
+Entregar:
+
+**A. Modelo Excel V05**
+
+`KK01_Modelo_Integrado_V05_Executive.xlsx`
+
+**B. Relatório de Alterações**
+
+Todas as folhas, fórmulas, estruturas e módulos relevantes modificados.
+
+**C. Relatório de Auditoria**
+
+Reconciliação com V04, testes e sensibilidades.
+
+**D. Guia de Utilização**
+
+Navegação, filtros, PT/EN, simulações e explicações dos KPIs.
+
+**E. Registo de Pressupostos**
+
+Hipóteses aprovadas, hipóteses de estudo e dados pendentes de validação.
+
+**F. Relatório Executivo V05**
+
+Resultados principais, riscos de liquidez, financiamento, dividendos, incentivos fiscais e rentabilidade.
+
+## 8. INSTRUÇÃO FINAL
+
+**AUTORIZO O INÍCIO IMEDIATO DA FASE 2 E A CONTINUIDADE PARA AS FASES 3, 4 E 5, CONFORME OS CRITÉRIOS DE TESTE DEFINIDOS.**
+
+Não é necessário solicitar aprovação após cada etapa.
+
+A autonomia concedida destina-se à implementação técnica do modelo e não à aprovação automática de hipóteses jurídicas, fiscais ou financeiras não documentadas.
+
+Preservar sempre o V04 Fixed.
+
+Dar prioridade à correção financeira, integração dos módulos e testes, antes dos acabamentos visuais.
+
+Entregar a versão V05 final com os respetivos documentos de auditoria.
+
+**Objetivo: um modelo financeiro integrado, institucional, auditável, bilingue e inteiramente dinâmico para o Projeto KK-01.**

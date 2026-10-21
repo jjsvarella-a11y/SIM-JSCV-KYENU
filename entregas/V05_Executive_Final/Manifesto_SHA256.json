@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-21",
+  "original_v04_sha256": "be8288ced2494ef31c2dbe1d31d77b8277a0753a1209a8df0a83c3a5d86dcdc0",
+  "files": {
+    "Alteracoes_por_Folha.csv": {
+      "bytes": 3023,
+      "sha256": "b8b3d4269e287dafa7380f7b4c32350196721a6a6d86a962af48b85acc79e407"
+    },
+    "Ambiente_Validacao.json": {
+      "bytes": 496,
+      "sha256": "823fb08c6e00c8b97e671043c250478728370a215aa599afd2b4fb247d2b024a"
+    },
+    "Audit_Live.log": {
+      "bytes": 1537,
+      "sha256": "8f8c5cb9ed9f88b3cc78312cb58955d0a6cb02432b99578a816af7a65b9b3990"
+    },
+    "Audit_Structure.log": {
+      "bytes": 3345,
+      "sha256": "8faa6a2bd94243bae505501a6e81bd1050baad0dcd1d41e84b2d042c7bb04aa2"
+    },
+    "Audit_UI.log": {
+      "bytes": 138,
+      "sha256": "8e296c3e7766a1c00414c131676a5a087384288275b96045787ebc721a5659e3"
+    },
+    "Autorizacao_Execucao_Integral.txt": {
+      "bytes": 10823,
+      "sha256": "79b0dc6d2e93dcc31fe93c8bbab7c38e632412ed26ad3be5e89a6c9ba2afa240"
+    },
+    "Final_Presentation.log": {
+      "bytes": 87,
+      "sha256": "ab431247bbcf67020362328d7a85e8c890fde53b62c08c0500936476c63ca081"
+    },
+    "Fluxos_180M_Base.csv": {
+      "bytes": 99301,
+      "sha256": "fb20f07803e416783bae101755647381b7cf4c00c88e711c3abbb90277a41eeb"
+    },
+    "Graficos/Tesouraria_180M.png": {
+      "bytes": 110170,
+      "sha256": "90a613a7267e36128ed97052937c9420f46b260b88583c4b20697198ee710bbb"
+    },
+    "Inspecao_Seguros_Origem.json": {
+      "bytes": 501,
+      "sha256": "50f501a8dfe84ae041ae9dcd88fcb7a97f42bfe9a6992e7977225ed6f989ea36"
+    },
+    "KK01_Modelo_Integrado_V05_Executive.xlsx": {
+      "bytes": 38824364,
+      "sha256": "432fdb6040316056c0f0e1125125f356660df5003719172de368123026452ed5"
+    },
+    "KK01_V05_Documentacao_Tecnica.md": {
+      "bytes": 4973,
+      "sha256": "3ca775980cbd14922149a098cb490fd2c928f1fef13e8d05456992a2c9e0c967"
+    },
+    "KK01_V05_Documentacao_Tecnica.pdf": {
+      "bytes": 46980,
+      "sha256": "d6a0db01c2fecd9b2ed6a7a67f38caffc34c8f05fcffebae051ca65481d85a0f"
+    },
+    "KK01_V05_Fontes_e_Testes.zip": {
+      "bytes": 136416,
+      "sha256": "b28c9e197d9c6660ffec56e18dbe82624320f249562aac5fae9e67b98284eb10"
+    },
+    "KK01_V05_Guia_Utilizacao.md": {
+      "bytes": 6962,
+      "sha256": "9e632ca30946c9e2fd794c02b66993faf3680834ddd83aeb9120a3a026d9a49e"
+    },
+    "KK01_V05_Guia_Utilizacao.pdf": {
+      "bytes": 48606,
+      "sha256": "9dadba5c162ae41ec6d555718e551f11b78c6913792b6baae6a72c7b5ddcd03c"
+    },
+    "KK01_V05_Registo_Pressupostos.md": {
+      "bytes": 7751,
+      "sha256": "bfdc36df2dc54da05d10f4218fc9062a5edeee4d696100dc48aa7a84203af366"
+    },
+    "KK01_V05_Registo_Pressupostos.pdf": {
+      "bytes": 53117,
+      "sha256": "64ef570a1b3baf55d0c15ab8a40dfc1a3c81ac4c964347d4b7c8cac97807ef50"
+    },
+    "KK01_V05_Relatorio_Alteracoes.md": {
+      "bytes": 2009,
+      "sha256": "415a4895bed9fe8b840aae4a87bb9b8c2a8fd0401d464f919a500077c1171f13"
+    },
+    "KK01_V05_Relatorio_Alteracoes.pdf": {
+      "bytes": 43803,
+      "sha256": "a69e5f5cee9cefcf851399f48ceee26e2ab1548e1862f1798d097107002ad396"
+    },
+    "KK01_V05_Relatorio_Auditoria.md": {
+      "bytes": 8462,
+      "sha256": "f3e348c7a6e605ddc8eb56bbdb01d8299699ac78a13aaeff86e6b801cc80ac03"
+    },
+    "KK01_V05_Relatorio_Auditoria.pdf": {
+      "bytes": 50984,
+      "sha256": "0b12bb3011abe739c8edbce16569bea7551e97496391e284a6fbf6d1000c815b"
+    },
+    "KK01_V05_Relatorio_Executivo.md": {
+      "bytes": 7068,
+      "sha256": "e1b06b27576b355a37df696cbed8094ba60743e445aac63201eda0399a294dc9"
+    },
+    "KK01_V05_Relatorio_Executivo.pdf": {
+      "bytes": 175108,
+      "sha256": "b00cc269de82da67d298f96ffa846b4b528b587f7353bd879558fb6f9aab6ca7"
+    },
+    "Merge_Caches.log": {
+      "bytes": 46,
+      "sha256": "e447fdc4a2a47a2831938a56c73d760930b7d252d00ae52eafc950c375769033"
+    },
+    "Ponte_Impactos_Modulos.csv": {
+      "bytes": 2566,
+      "sha256": "a6c6908887de31173349359abd8ed55905e7a5022c6c513d13e5df03677f48c2"
+    },
+    "Ponte_Impactos_Modulos.json": {
+      "bytes": 10071,
+      "sha256": "d995451b11306ac283cdb1dd4b9c5202575f2743e2e33da1d6aa68496f489e0d"
+    },
+    "Prova_Formatacao_Sem_Alteracao_Financeira.json": {
+      "bytes": 3445,
+      "sha256": "af0f8630d6b5efb3feae2f3fad757c681500657d535a21f823aae719e6d0c311"
+    },
+    "Prova_Traducao_Sem_Alteracao_Motor.json": {
+      "bytes": 502,
+      "sha256": "247a0052f5aeaf4a0d49d816e70dc44e96a065ecb8f2532c55b5f8f7357f5290"
+    },
+    "README.md": {
+      "bytes": 2408,
+      "sha256": "37ac55de6e2e15605224c5019ccaaf48d553a28aae0a69e341e39e7df66f546b"
+    },
+    "Reconciliacao_Caches_Final.json": {
+      "bytes": 17053,
+      "sha256": "04157ce9721e4f45fcbc93b0ba256b02519aaa47f5ba4759d5ed2419e7b462b6"
+    },
+    "Reconciliacao_Mensal_V04_Final.csv": {
+      "bytes": 22172,
+      "sha256": "6c9dffa2bfc9798042f38bd0a3cf4fe1b3ec393c9f73a73a4dfc74149b511a45"
+    },
+    "Registo_Alteracoes_Formulas.json.gz": {
+      "bytes": 12858082,
+      "sha256": "9c55bdcc0145996ea11418b29d817c38d7d9a1d01361452cfa3e19b19d06f21b"
+    },
+    "Registo_Fase2_Anterior.json.gz": {
+      "bytes": 1794942,
+      "sha256": "e6a0af3206d3ff310e4f1bfc07ff2b912cff0d90e73a7963e014c3e15b0006d3"
+    },
+    "Resumo_Testes_Nativos.json": {
+      "bytes": 539,
+      "sha256": "f2730a7226fd6b6968b6627c12425b316fc401f1733a632802496a7be170f891"
+    },
+    "Sensibilidades_Python.json": {
+      "bytes": 43804,
+      "sha256": "b16be431073c6921085f79d0afbea04a973a2afd1dc756d67182b3604e535b9b"
+    },
+    "Sensibilidades_Resumo.csv": {
+      "bytes": 8040,
+      "sha256": "f2ea4f35a2bf476bc03f7f38bba1469fd29539a1bcd5f5fa177ab2e5b8863de2"
+    },
+    "Teste_Final_Entregue.json": {
+      "bytes": 1357,
+      "sha256": "1f070320fcb088c36f7a4cf0c086580f564a45d9a7f8dc53127378b0a94f65bd"
+    },
+    "Teste_Inputs_Interface.json": {
+      "bytes": 277,
+      "sha256": "e3e8b7ae4f265f4ec187ea13cae6e9ce2ec69bc3a61460e0c183dd2146df507f"
+    },
+    "Testes_Base.json": {
+      "bytes": 6715,
+      "sha256": "c48168eae740568f0039435134ea040ee9882f755de1f2b8ed516eeb33646eb1"
+    },
+    "Testes_Estruturais.json": {
+      "bytes": 3344,
+      "sha256": "af8700619ff701c59340f7ef88c2b0532b4e47071c765b8f270272bee739b42f"
+    },
+    "Testes_IVA_Parcial_IVA_Diferido_Base.json": {
+      "bytes": 4197,
+      "sha256": "34cc30443f487b6cced8bc235794ff62231043a4c832b5cc7b6a3cc9f40ef915"
+    },
+    "Testes_Nativos_Completos.json": {
+      "bytes": 80073,
+      "sha256": "9eed8fe0badc61266e411549994c3401083e9228958b2bba77cf0aeaef102db1"
+    },
+    "Testes_Nativos_Final_UI.json": {
+      "bytes": 6344,
+      "sha256": "6258964a370f5939063aebbf79a55f6414ef41c6cf25fcb0ef8782daebeb611d"
+    },
+    "Testes_PT_EN_Base_Ponte_Sem_Modulos.json": {
+      "bytes": 4163,
+      "sha256": "ec8eec9d3177aba1c59a5372b8822500b58fba2bf364975203fa8076e300a8fc"
+    },
+    "Testes_Python.log": {
+      "bytes": 1075,
+      "sha256": "dfae7d68f8126b6a7148d276b5e8438f0cf91c76d29f1e9b73801f1ff9530ae0"
+    },
+    "Verificacao_Originais.json": {
+      "bytes": 419,
+      "sha256": "ff655eaa7d867dc3697fdd6080cd07e210e04d8066a7975924a91ad8509ff349"
+    }
+  }
+}

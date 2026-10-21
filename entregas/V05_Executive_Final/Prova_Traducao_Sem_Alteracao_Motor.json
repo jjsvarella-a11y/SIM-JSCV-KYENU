@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "financial_and_auxiliary_formulas_unchanged": true,
+  "engine_formula_hash": "adf9737eacade6ee24eb002730be08fe78b9baa3835ff6bf8a74c693a6d8e359",
+  "changed_only": [
+    "DIC_TRANSLATIONS",
+    "V05 KPI text metadata G/H/I and textual month unit",
+    "CONFIG_LANGUAGE display labels and translated scenario names; financial inputs untouched"
+  ],
+  "entries_added": 88,
+  "note": "Recalcular e testarPT/EN antes da entrega; sem alterar definições originais do V04 Dicionario KPI."
+}

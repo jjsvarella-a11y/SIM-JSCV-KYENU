@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "checks": {
+    "CONFIG_LANGUAGE!B5": {
+      "locked": false,
+      "protected": true
+    },
+    "V05 Parametros!B5": {
+      "locked": false,
+      "protected": true
+    },
+    "DASH 04A V05!D52": {
+      "locked": false,
+      "protected": true
+    }
+  }
+}

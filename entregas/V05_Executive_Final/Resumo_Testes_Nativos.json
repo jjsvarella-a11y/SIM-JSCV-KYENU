@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "cases": 35,
+  "reopening_full_auxiliary_check": true,
+  "comparisons": 2993251,
+  "failures": 0,
+  "unexpected_errors": 0,
+  "canonical_input_sha256": "08b6c71dd65cae8fe1b850f42fd78a1631bf015e0f72b145c260cd1c56649e5e",
+  "note": "Conformidade de cálculo não equivale a viabilidade financeira nem certificação fiscal ou de Excel Desktop.",
+  "final_ui_verifications": 3,
+  "final_ui_input_sha256": "c119c822dfce43766088f2a44ac83b4e8b7e93b5ddd68882c8ea6e5f823ab456",
+  "final_ui_reopening_full_auxiliary_check": true
+}

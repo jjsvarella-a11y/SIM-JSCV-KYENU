@@ -1,0 +1,169 @@
+{
+  "ok": true,
+  "before": {
+    "formulas": "16c2d72b133fe9532b9d0151a898630b1ddba14b50118c1cf364d6b35861b565",
+    "numeric_values": "b7343e38f60fa0a1ad7f2d5fb1afc9f350ca747f5b9babad347fbbab54bef0c7",
+    "count": 2126466
+  },
+  "after": {
+    "formulas": "16c2d72b133fe9532b9d0151a898630b1ddba14b50118c1cf364d6b35861b565",
+    "numeric_values": "b7343e38f60fa0a1ad7f2d5fb1afc9f350ca747f5b9babad347fbbab54bef0c7",
+    "count": 2126466
+  },
+  "cell_formulas_and_numeric_values_unchanged": true,
+  "navigation_icons": 9,
+  "conditional_formatting": [
+    [
+      "EXEC V05",
+      "P8",
+      "AND(ISNUMBER(P8),P8>=INDIRECT(\"Pressupostos!B29\"))",
+      "green"
+    ],
+    [
+      "EXEC V05",
+      "P8",
+      "AND(ISNUMBER(P8),P8<INDIRECT(\"Pressupostos!B29\"))",
+      "red"
+    ],
+    [
+      "DASH 06 V05",
+      "L8",
+      "AND(ISNUMBER(L8),L8>=INDIRECT(\"Pressupostos!B29\"))",
+      "green"
+    ],
+    [
+      "DASH 06 V05",
+      "L8",
+      "AND(ISNUMBER(L8),L8<INDIRECT(\"Pressupostos!B29\"))",
+      "red"
+    ],
+    [
+      "DASH 07 V05",
+      "D8",
+      "AND(ISNUMBER(D8),D8>=INDIRECT(\"Pressupostos!B29\"))",
+      "green"
+    ],
+    [
+      "DASH 07 V05",
+      "D8",
+      "AND(ISNUMBER(D8),D8<INDIRECT(\"Pressupostos!B29\"))",
+      "red"
+    ],
+    [
+      "DASH 03 V05",
+      "P8",
+      "AND(ISNUMBER(P8),P8<=0.01)",
+      "green"
+    ],
+    [
+      "DASH 03 V05",
+      "D13",
+      "AND(ISNUMBER(D13),ABS(D13)<=0.01)",
+      "amber"
+    ],
+    [
+      "DASH 03 V05",
+      "D13",
+      "AND(ISNUMBER(D13),D13>0.01)",
+      "green"
+    ],
+    [
+      "DASH 03 V05",
+      "D13",
+      "AND(ISNUMBER(D13),D13< -0.01)",
+      "red"
+    ],
+    [
+      "DASH 03 V05",
+      "H13",
+      "AND(ISNUMBER(H13),H13>=0)",
+      "green"
+    ],
+    [
+      "DASH 03 V05",
+      "H13",
+      "AND(ISNUMBER(H13),H13<0)",
+      "red"
+    ],
+    [
+      "DASH 03 V05",
+      "L13",
+      "AND(ISNUMBER(L13),L13>=INDIRECT(\"Pressupostos!B28\"))",
+      "green"
+    ],
+    [
+      "DASH 06 V05",
+      "D13",
+      "AND(ISNUMBER(D13),D13<0)",
+      "red"
+    ],
+    [
+      "DASH 06 V05",
+      "D13",
+      "AND(ISNUMBER(D13),D13>=0)",
+      "green"
+    ],
+    [
+      "DASH 07 V05",
+      "L8",
+      "AND(ISNUMBER(L8),L8<0)",
+      "red"
+    ],
+    [
+      "DASH 07 V05",
+      "L8",
+      "AND(ISNUMBER(L8),L8>=0)",
+      "green"
+    ],
+    [
+      "DASH 05 V05",
+      "H51",
+      "AND(ISNUMBER(H51),H51>0,H51<0.35)",
+      "green"
+    ],
+    [
+      "DASH 05 V05",
+      "H52",
+      "AND(ISNUMBER(H52),H52>0,H52<0.25)",
+      "green"
+    ],
+    [
+      "DASH 05 V05",
+      "H53",
+      "AND(ISNUMBER(H53),H53>0,H53<0.5)",
+      "green"
+    ]
+  ],
+  "protected_sheets": [
+    "V05 Blocos",
+    "V05 Parametros",
+    "V05 IVA Comp",
+    "V05 Captacao",
+    "V05 Escrituras",
+    "V05 Historico",
+    "V05 Capitulos",
+    "V05 Trimestres",
+    "V05 Anual",
+    "V05 Fontes Fiscais",
+    "V05 Seguros",
+    "V05 Proprietarios",
+    "CONFIG_LANGUAGE",
+    "DIC_TRANSLATIONS",
+    "V05 KPI",
+    "V05 Dados",
+    "V05 Sensibilidades",
+    "V05 RE A",
+    "V05 RE B",
+    "EXEC V05",
+    "DASH 01 V05",
+    "DASH 02",
+    "DASH 03 V05",
+    "DASH 04A V05",
+    "V05 Listas",
+    "DASH 04B V05",
+    "DASH 05 V05",
+    "DASH 06 V05",
+    "DASH 07 V05"
+  ],
+  "note": "Só formatos, ícones, filtros de detalhe, proteção sem password e notas de modo legado; sem alteração financeira. Inputs azuis mantêm desbloqueio explícito."
+}

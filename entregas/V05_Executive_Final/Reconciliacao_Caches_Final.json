@@ -1,0 +1,705 @@
+{
+  "ok": true,
+  "formula_caches": 2126466,
+  "formulas_unchanged": true,
+  "formula_sha256": "b4b9d23370caf3ed7c1420f931b0af13004b7ce21afcf0c68c0cee3e3e5d901e",
+  "source": "/workspace/kk01/v05_final/validacao/Base/out/Base.xlsx",
+  "chart_caches": [
+    {
+      "chart": "xl/charts/chart10.xml",
+      "reference": "Anual!$Z$5:$Z$19",
+      "points": 2
+    },
+    {
+      "chart": "xl/charts/chart10.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$C$151:$C$180",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$D$151:$D$180",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$E$151:$E$180",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$180",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$180",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart6.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$180",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart13.xml",
+      "reference": "'Comparativo 15 20'!$B$61:$B$240",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart13.xml",
+      "reference": "'Comparativo 15 20'!$C$61:$C$240",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart13.xml",
+      "reference": "'Comparativo 15 20'!$A$61:$A$240",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart13.xml",
+      "reference": "'Comparativo 15 20'!$A$61:$A$240",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$B$5:$B$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$C$5:$C$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$D$5:$D$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$A$5:$A$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$A$5:$A$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart14.xml",
+      "reference": "CAPEX!$A$5:$A$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$H$5:$H$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$I$5:$I$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$J$5:$J$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart9.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart5.xml",
+      "reference": "Imobiliario!$K$5:$K$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart5.xml",
+      "reference": "Imobiliario!$A$5:$A$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart11.xml",
+      "reference": "Anual!$V$5:$V$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart11.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$C$5:$C$8",
+      "points": 4
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$E$5:$E$8",
+      "points": 4
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$F$5:$F$8",
+      "points": 4
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$A$5:$A$8",
+      "points": 4
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$A$5:$A$8",
+      "points": 4
+    },
+    {
+      "chart": "xl/charts/chart17.xml",
+      "reference": "'Comparativo Capital V03'!$A$5:$A$8",
+      "points": 4
+    },
+    {
+      "chart": "xl/charts/chart1.xml",
+      "reference": "'V04 Retornos'!$C$5:$C$7",
+      "points": 0
+    },
+    {
+      "chart": "xl/charts/chart1.xml",
+      "reference": "'V04 Retornos'!$D$5:$D$7",
+      "points": 3
+    },
+    {
+      "chart": "xl/charts/chart1.xml",
+      "reference": "'V04 Retornos'!$A$5:$A$7",
+      "points": 3
+    },
+    {
+      "chart": "xl/charts/chart1.xml",
+      "reference": "'V04 Retornos'!$A$5:$A$7",
+      "points": 3
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$AB$5:$AB$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$AE$5:$AE$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$Q$5:$Q$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart2.xml",
+      "reference": "'Fluxo 180M'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart16.xml",
+      "reference": "'DASH Operador'!$F$23:$F$26",
+      "points": 4
+    },
+    {
+      "chart": "xl/charts/chart16.xml",
+      "reference": "'DASH Operador'!$A$23:$A$26",
+      "points": 4
+    },
+    {
+      "chart": "xl/charts/chart8.xml",
+      "reference": "'DASH Comercial'!$I$151:$I$160",
+      "points": 10
+    },
+    {
+      "chart": "xl/charts/chart8.xml",
+      "reference": "'DASH Comercial'!$J$151:$J$160",
+      "points": 10
+    },
+    {
+      "chart": "xl/charts/chart8.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$160",
+      "points": 10
+    },
+    {
+      "chart": "xl/charts/chart8.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$160",
+      "points": 10
+    },
+    {
+      "chart": "xl/charts/chart12.xml",
+      "reference": "Sensibilidade!$C$18:$C$20",
+      "points": 3
+    },
+    {
+      "chart": "xl/charts/chart12.xml",
+      "reference": "Sensibilidade!$E$18:$E$20",
+      "points": 3
+    },
+    {
+      "chart": "xl/charts/chart12.xml",
+      "reference": "Sensibilidade!$A$18:$A$20",
+      "points": 3
+    },
+    {
+      "chart": "xl/charts/chart12.xml",
+      "reference": "Sensibilidade!$A$18:$A$20",
+      "points": 3
+    },
+    {
+      "chart": "xl/charts/chart15.xml",
+      "reference": "Residencial!$L$5:$L$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart15.xml",
+      "reference": "Residencial!$M$5:$M$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart15.xml",
+      "reference": "Residencial!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart15.xml",
+      "reference": "Residencial!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/chart4.xml",
+      "reference": "Imobiliario!$F$5:$F$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart4.xml",
+      "reference": "CAPEX!$E$5:$E$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart4.xml",
+      "reference": "Imobiliario!$A$5:$A$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart4.xml",
+      "reference": "Imobiliario!$A$5:$A$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart7.xml",
+      "reference": "'DASH Comercial'!$G$151:$G$180",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart7.xml",
+      "reference": "'DASH Comercial'!$A$151:$A$180",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$S$5:$S$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$T$5:$T$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$U$5:$U$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/chart3.xml",
+      "reference": "Anual!$A$5:$A$19",
+      "points": 15
+    },
+    {
+      "chart": "xl/charts/v05_chart1.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart1.xml",
+      "reference": "'V05 Dados'!$B$5:$B$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart1.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart1.xml",
+      "reference": "'V05 Dados'!$C$5:$C$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart1.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart1.xml",
+      "reference": "'V05 Dados'!$D$5:$D$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart1.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$64",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart1.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$65",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart1.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$66",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart1.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$67",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart2.xml",
+      "reference": "'V05 Trimestres'!$A$5:$A$14",
+      "points": 10
+    },
+    {
+      "chart": "xl/charts/v05_chart2.xml",
+      "reference": "'V05 Trimestres'!$E$5:$E$14",
+      "points": 10
+    },
+    {
+      "chart": "xl/charts/v05_chart2.xml",
+      "reference": "'V05 Trimestres'!$A$5:$A$14",
+      "points": 10
+    },
+    {
+      "chart": "xl/charts/v05_chart2.xml",
+      "reference": "'V05 Trimestres'!$L$5:$L$14",
+      "points": 10
+    },
+    {
+      "chart": "xl/charts/v05_chart2.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$74",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart2.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$75",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart2.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$76",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart3.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart3.xml",
+      "reference": "'V05 Dados'!$I$5:$I$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart3.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart3.xml",
+      "reference": "'V05 Dados'!$J$5:$J$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart3.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$78",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart3.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$79",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart3.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$80",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart4.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart4.xml",
+      "reference": "'V05 Dados'!$B$5:$B$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart4.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart4.xml",
+      "reference": "'V05 Dados'!$C$5:$C$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart4.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart4.xml",
+      "reference": "'V05 Dados'!$D$5:$D$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart4.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$83",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart4.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$84",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart4.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$85",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart4.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$86",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart5.xml",
+      "reference": "'V05 RE A'!$A$5:$A$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/v05_chart5.xml",
+      "reference": "'V05 RE A'!$F$5:$F$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/v05_chart5.xml",
+      "reference": "'V05 RE A'!$A$5:$A$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/v05_chart5.xml",
+      "reference": "'V05 RE A'!$G$5:$G$34",
+      "points": 30
+    },
+    {
+      "chart": "xl/charts/v05_chart5.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$88",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart5.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$89",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart5.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$90",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart6.xml",
+      "reference": "'V05 RE B'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart6.xml",
+      "reference": "'V05 RE B'!$J$5:$J$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart6.xml",
+      "reference": "'V05 RE B'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart6.xml",
+      "reference": "'V05 RE B'!$K$5:$K$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart6.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$109",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart6.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$110",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart6.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$111",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart7.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart7.xml",
+      "reference": "'V05 Dados'!$M$5:$M$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart7.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart7.xml",
+      "reference": "'V05 Dados'!$N$5:$N$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart7.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$113",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart7.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$114",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart7.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$115",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart8.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart8.xml",
+      "reference": "'V05 Dados'!$E$5:$E$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart8.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart8.xml",
+      "reference": "'V05 Dados'!$B$5:$B$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart8.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$127",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart8.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$128",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart8.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$129",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart9.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart9.xml",
+      "reference": "'V05 Dados'!$E$5:$E$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart9.xml",
+      "reference": "'V05 Dados'!$A$5:$A$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart9.xml",
+      "reference": "'V05 Dados'!$B$5:$B$184",
+      "points": 180
+    },
+    {
+      "chart": "xl/charts/v05_chart9.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$143",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart9.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$144",
+      "points": 1
+    },
+    {
+      "chart": "xl/charts/v05_chart9.xml",
+      "reference": "'DIC_TRANSLATIONS'!$D$145",
+      "points": 1
+    }
+  ],
+  "note": "Valores recalculados transferidos; fórmulas, folhas e apresentação preservadas. Não certifica Excel Desktop."
+}

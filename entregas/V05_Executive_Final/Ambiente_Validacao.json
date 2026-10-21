@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "openpyxl": "3.1.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0",
+    "matplotlib": "3.10.8"
+  },
+  "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "Excel_Desktop": "Indisponível; compatibilidade não certificada",
+  "UNO_client_jar": "org.libreoffice:libreoffice:26.2.2",
+  "jar_sha256": "37b94f944cb35fdbdb586d08df65419b42f1bd2363e143958dbae63ca15c23b3"
+}

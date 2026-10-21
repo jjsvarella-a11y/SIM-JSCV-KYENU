@@ -1,0 +1,11 @@
+{
+  "V04_Fixed": {
+    "file": "/workspace/kk01/v05/original/KK01_Modelo_Integrado_V04_Excel_Fix.xlsx",
+    "sha256": "be8288ced2494ef31c2dbe1d31d77b8277a0753a1209a8df0a83c3a5d86dcdc0"
+  },
+  "Fase2_anterior": {
+    "file": "/workspace/kk01/v05/entrega/KK01_Modelo_Integrado_V05_Executive.xlsx",
+    "sha256": "0b94d41fee710fe1991d24ed3215add80685941812cb404427b9dbb283567421"
+  },
+  "sem_escrita_nos_originais": true
+}

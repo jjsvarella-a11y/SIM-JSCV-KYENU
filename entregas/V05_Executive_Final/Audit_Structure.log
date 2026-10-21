@@ -1,0 +1,169 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "check": "Original V04 Fixed preservado",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "ZIP íntegro",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Todas as folhas anteriores preservadas",
+      "ok": true,
+      "detail": {
+        "anteriores": 319,
+        "atuais": 347
+      }
+    },
+    {
+      "check": "Nove ecrãs existentes",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Gráficos anteriores e nove novos",
+      "ok": true,
+      "detail": 60
+    },
+    {
+      "check": "Desenho e referências dos gráficos anteriores preservados",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Imagens e comentários anteriores preservados",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Sem VBA nem workbook externo novo",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Nomes definidos anteriores preservados",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "PT/EN ligado: EXEC V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Navegação: EXEC V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "PT/EN ligado: DASH 01 V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Navegação: DASH 01 V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "PT/EN ligado: DASH 02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Navegação: DASH 02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "PT/EN ligado: DASH 03 V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Navegação: DASH 03 V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "PT/EN ligado: DASH 04A V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Navegação: DASH 04A V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "PT/EN ligado: DASH 04B V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Navegação: DASH 04B V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "PT/EN ligado: DASH 05 V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Navegação: DASH 05 V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "PT/EN ligado: DASH 06 V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Navegação: DASH 06 V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "PT/EN ligado: DASH 07 V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Navegação: DASH 07 V05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "Sem #REF! nas fórmulas",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "Sem erros armazenados",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "Validações lista compatíveis com limite Excel",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "Fórmulas dinâmicas preservadas e ampliadas",
+      "ok": true,
+      "detail": 2126466
+    },
+    {
+      "check": "Relações OOXML resolvidas",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "file": "/workspace/kk01/v05_final/entrega/KK01_Modelo_Integrado_V05_Executive.xlsx"
+}
