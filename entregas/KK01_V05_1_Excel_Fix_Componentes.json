@@ -1,0 +1,823 @@
+{
+  "styles_reordered": [
+    {
+      "group": "cellXfs",
+      "index": 76,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 77,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 78,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 79,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 80,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 82,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 87,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 104,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 109,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 112,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 116,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 122,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 124,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 125,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    },
+    {
+      "group": "cellXfs",
+      "index": 127,
+      "before": [
+        "protection",
+        "alignment"
+      ],
+      "after": [
+        "alignment",
+        "protection"
+      ]
+    }
+  ],
+  "chart_lines_reordered": [
+    {
+      "part": "xl/charts/v05_chart1.xml",
+      "line": 0,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart1.xml",
+      "line": 2,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart1.xml",
+      "line": 4,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart2.xml",
+      "line": 0,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart2.xml",
+      "line": 2,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart3.xml",
+      "line": 0,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart3.xml",
+      "line": 2,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart4.xml",
+      "line": 0,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart4.xml",
+      "line": 2,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart4.xml",
+      "line": 4,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart5.xml",
+      "line": 0,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart5.xml",
+      "line": 2,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart6.xml",
+      "line": 0,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart6.xml",
+      "line": 2,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart7.xml",
+      "line": 0,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart7.xml",
+      "line": 2,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart8.xml",
+      "line": 0,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart8.xml",
+      "line": 2,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart9.xml",
+      "line": 0,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    },
+    {
+      "part": "xl/charts/v05_chart9.xml",
+      "line": 2,
+      "before": [
+        "prstDash",
+        "solidFill"
+      ],
+      "after": [
+        "solidFill",
+        "prstDash"
+      ]
+    }
+  ],
+  "views_repaired": [
+    {
+      "sheet": "EXEC V05",
+      "before": [
+        {
+          "pane": "topRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight",
+          "activeCell": "A1",
+          "sqref": "A1"
+        }
+      ],
+      "after": [
+        [
+          "topRight",
+          "D1"
+        ],
+        [
+          "bottomLeft",
+          "A6"
+        ],
+        [
+          "bottomRight",
+          "D6"
+        ]
+      ]
+    },
+    {
+      "sheet": "DASH 01 V05",
+      "before": [
+        {
+          "pane": "topRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight",
+          "activeCell": "A1",
+          "sqref": "A1"
+        }
+      ],
+      "after": [
+        [
+          "topRight",
+          "D1"
+        ],
+        [
+          "bottomLeft",
+          "A6"
+        ],
+        [
+          "bottomRight",
+          "D6"
+        ]
+      ]
+    },
+    {
+      "sheet": "DASH 02",
+      "before": [
+        {
+          "pane": "topRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight",
+          "activeCell": "A1",
+          "sqref": "A1"
+        }
+      ],
+      "after": [
+        [
+          "topRight",
+          "D1"
+        ],
+        [
+          "bottomLeft",
+          "A6"
+        ],
+        [
+          "bottomRight",
+          "D6"
+        ]
+      ]
+    },
+    {
+      "sheet": "DASH 03 V05",
+      "before": [
+        {
+          "pane": "topRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight",
+          "activeCell": "A1",
+          "sqref": "A1"
+        }
+      ],
+      "after": [
+        [
+          "topRight",
+          "D1"
+        ],
+        [
+          "bottomLeft",
+          "A6"
+        ],
+        [
+          "bottomRight",
+          "D6"
+        ]
+      ]
+    },
+    {
+      "sheet": "DASH 04A V05",
+      "before": [
+        {
+          "pane": "topRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight",
+          "activeCell": "A1",
+          "sqref": "A1"
+        }
+      ],
+      "after": [
+        [
+          "topRight",
+          "D1"
+        ],
+        [
+          "bottomLeft",
+          "A6"
+        ],
+        [
+          "bottomRight",
+          "D6"
+        ]
+      ]
+    },
+    {
+      "sheet": "DASH 04B V05",
+      "before": [
+        {
+          "pane": "topRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight",
+          "activeCell": "A1",
+          "sqref": "A1"
+        }
+      ],
+      "after": [
+        [
+          "topRight",
+          "D1"
+        ],
+        [
+          "bottomLeft",
+          "A6"
+        ],
+        [
+          "bottomRight",
+          "D6"
+        ]
+      ]
+    },
+    {
+      "sheet": "DASH 05 V05",
+      "before": [
+        {
+          "pane": "topRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight",
+          "activeCell": "A1",
+          "sqref": "A1"
+        }
+      ],
+      "after": [
+        [
+          "topRight",
+          "D1"
+        ],
+        [
+          "bottomLeft",
+          "A6"
+        ],
+        [
+          "bottomRight",
+          "D6"
+        ]
+      ]
+    },
+    {
+      "sheet": "DASH 06 V05",
+      "before": [
+        {
+          "pane": "topRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight",
+          "activeCell": "A1",
+          "sqref": "A1"
+        }
+      ],
+      "after": [
+        [
+          "topRight",
+          "D1"
+        ],
+        [
+          "bottomLeft",
+          "A6"
+        ],
+        [
+          "bottomRight",
+          "D6"
+        ]
+      ]
+    },
+    {
+      "sheet": "DASH 07 V05",
+      "before": [
+        {
+          "pane": "topRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight"
+        },
+        {
+          "pane": "bottomLeft"
+        },
+        {
+          "pane": "bottomRight",
+          "activeCell": "A1",
+          "sqref": "A1"
+        }
+      ],
+      "after": [
+        [
+          "topRight",
+          "D1"
+        ],
+        [
+          "bottomLeft",
+          "A6"
+        ],
+        [
+          "bottomRight",
+          "D6"
+        ]
+      ]
+    }
+  ],
+  "opaque_rgb": 162,
+  "solid_backgrounds_explicit": 94,
+  "irr_rules_font_only": [
+    {
+      "sheet": "EXEC V05",
+      "cell": "P8",
+      "old_dxf": "19",
+      "new_dxf": "22",
+      "formula": "AND(ISNUMBER(P8),P8>=INDIRECT(\"Pressupostos!B29\"))"
+    },
+    {
+      "sheet": "EXEC V05",
+      "cell": "P8",
+      "old_dxf": "21",
+      "new_dxf": "23",
+      "formula": "AND(ISNUMBER(P8),P8<INDIRECT(\"Pressupostos!B29\"))"
+    },
+    {
+      "sheet": "DASH 06 V05",
+      "cell": "L8",
+      "old_dxf": "19",
+      "new_dxf": "22",
+      "formula": "AND(ISNUMBER(L8),L8>=INDIRECT(\"Pressupostos!B29\"))"
+    },
+    {
+      "sheet": "DASH 06 V05",
+      "cell": "L8",
+      "old_dxf": "21",
+      "new_dxf": "23",
+      "formula": "AND(ISNUMBER(L8),L8<INDIRECT(\"Pressupostos!B29\"))"
+    },
+    {
+      "sheet": "DASH 07 V05",
+      "cell": "D8",
+      "old_dxf": "19",
+      "new_dxf": "22",
+      "formula": "AND(ISNUMBER(D8),D8>=INDIRECT(\"Pressupostos!B29\"))"
+    },
+    {
+      "sheet": "DASH 07 V05",
+      "cell": "D8",
+      "old_dxf": "21",
+      "new_dxf": "23",
+      "formula": "AND(ISNUMBER(D8),D8<INDIRECT(\"Pressupostos!B29\"))"
+    }
+  ],
+  "source_sha256": "63acf31c9673c7f70a20947fa066a6f864cb4e1cd6c0d25a26258d93798d490e",
+  "output_sha256": "2b534f0602277e532f1e9672604c7cde26a3e0b544e76785ecf5ffc097a5999a",
+  "changed_parts": [
+    "xl/worksheets/v05_sheet19.xml",
+    "xl/worksheets/v05_sheet20.xml",
+    "xl/worksheets/v05_sheet21.xml",
+    "xl/worksheets/v05_sheet22.xml",
+    "xl/worksheets/v05_sheet23.xml",
+    "xl/worksheets/v05_sheet25.xml",
+    "xl/worksheets/v05_sheet26.xml",
+    "xl/worksheets/v05_sheet27.xml",
+    "xl/worksheets/v05_sheet28.xml",
+    "xl/charts/v05_chart1.xml",
+    "xl/charts/v05_chart2.xml",
+    "xl/charts/v05_chart3.xml",
+    "xl/charts/v05_chart4.xml",
+    "xl/charts/v05_chart5.xml",
+    "xl/charts/v05_chart6.xml",
+    "xl/charts/v05_chart7.xml",
+    "xl/charts/v05_chart8.xml",
+    "xl/charts/v05_chart9.xml",
+    "xl/styles.xml"
+  ],
+  "cell_formulas_or_cached_values_changed": false,
+  "repair_log_supplied": false
+}

@@ -1,0 +1,14 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "lxml": "6.1.1",
+    "openpyxl": "3.1.5",
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "native_engine": "LibreOfficeDev 26.8.0.0.alpha0",
+  "Excel_Desktop": "Indisponível; aceitação de abertura sem recuperação pendente",
+  "Java_UNO_client": "org.libreoffice:libreoffice:26.2.2; SHA256 verificado no runner"
+}

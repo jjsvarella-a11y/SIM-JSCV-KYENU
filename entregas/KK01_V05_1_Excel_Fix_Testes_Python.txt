@@ -1,0 +1,15 @@
+test_approval_gate (__main__.FinancialRegression.test_approval_gate) ... ok
+test_capital_and_secondary (__main__.FinancialRegression.test_capital_and_secondary) ... ok
+test_disabled_parity (__main__.FinancialRegression.test_disabled_parity) ... ok
+test_expected_tax_base (__main__.FinancialRegression.test_expected_tax_base) ... ok
+test_fiscal_conservation_and_dividends (__main__.FinancialRegression.test_fiscal_conservation_and_dividends) ... ok
+test_historic_is_not_future_cash (__main__.FinancialRegression.test_historic_is_not_future_cash) ... ok
+test_insurance_inclusion (__main__.FinancialRegression.test_insurance_inclusion) ... ok
+test_no_undocumented_distribution (__main__.FinancialRegression.test_no_undocumented_distribution) ... ok
+test_terminal_bridge_cash_once (__main__.FinancialRegression.test_terminal_bridge_cash_once) ... ok
+test_vat_offset_requires_same_entity_capacity (__main__.FinancialRegression.test_vat_offset_requires_same_entity_capacity) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.478s
+
+OK

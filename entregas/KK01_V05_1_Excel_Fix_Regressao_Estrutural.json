@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "tests": [
+    {
+      "test": "Reject protection before alignment",
+      "ok": true
+    },
+    {
+      "test": "Reject fill after dash in chart line",
+      "ok": true
+    },
+    {
+      "test": "Reject five pane selections",
+      "ok": true
+    },
+    {
+      "test": "IRR card explicit opaque white foreground/background",
+      "ok": true
+    }
+  ]
+}

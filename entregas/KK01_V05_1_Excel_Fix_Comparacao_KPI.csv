@@ -1,0 +1,41 @@
+ID,KPI,Antes,Depois,Delta,FormulaAntes,FormulaDepois
+vgv,Gross sales value,50656336.37,50656336.37,0,SUM(Unidades!H5:H98),SUM(Unidades!H5:H98)
+area,Residential area,13290,13290,0,SUM(Unidades!D5:D98),SUM(Unidades!D5:D98)
+capex,Base future CAPEX,63168000,63168000,0,SUM('Fluxo 180M'!H5:J184),SUM('Fluxo 180M'!H5:J184)
+historic,Historical investment,4500000,4500000,0,'V05 Historico'!B9,'V05 Historico'!B9
+vat,Input VAT,8629200,8629200,0,SUM('Fluxo 180M'!BT5:BT184),SUM('Fluxo 180M'!BT5:BT184)
+vat_peak,Peak VAT financing exposure,3077345.304,3077345.304,0,MAX('Fluxo 180M'!BW5:BW184),MAX('Fluxo 180M'!BW5:BW184)
+irpc,Accrued corporate tax,18106198.681265,18106198.681265,0,SUM('Fluxo 180M'!CO5:CO184),SUM('Fluxo 180M'!CO5:CO184)
+irpc_paid,Forecast corporate tax paid,16810836.2466961,16810836.2466961,0,SUM('Fluxo 180M'!CP5:CP184),SUM('Fluxo 180M'!CP5:CP184)
+insurance,Incremental insurance,3010584.89854559,3010584.89854559,0,SUM('Fluxo 180M'!BZ5:BZ184)+SUM('Fluxo 180M'!DB5:DB184),SUM('Fluxo 180M'!BZ5:BZ184)+SUM('Fluxo 180M'!DB5:DB184)
+tax_saving,Potential tax savings,0,0,0,"SUM('Fluxo 180M'!DE16,'Fluxo 180M'!DE28,'Fluxo 180M'!DE40,'Fluxo 180M'!DE52,'Fluxo 180M'!DE64,'Fluxo 180M'!DE76,'Fluxo 180M'!DE88,'Fluxo 180M'!DE100,'Fluxo 180M'!DE112,'Fluxo 180M'!DE124,'Fluxo 180M'!DE136,'Fluxo 180M'!DE148,'Fluxo 180M'!DE160,'Fluxo 180M'!DE172,'Fluxo 180M'!DE184)","SUM('Fluxo 180M'!DE16,'Fluxo 180M'!DE28,'Fluxo 180M'!DE40,'Fluxo 180M'!DE52,'Fluxo 180M'!DE64,'Fluxo 180M'!DE76,'Fluxo 180M'!DE88,'Fluxo 180M'!DE100,'Fluxo 180M'!DE112,'Fluxo 180M'!DE124,'Fluxo 180M'!DE136,'Fluxo 180M'!DE148,'Fluxo 180M'!DE160,'Fluxo 180M'!DE172,'Fluxo 180M'!DE184)"
+cash30,Cash M30,9860218.98093433,9860218.98093433,0,'Fluxo 180M'!AE34,'Fluxo 180M'!AE34
+cash42,Cash M42,5493562.95611548,5493562.95611548,0,'Fluxo 180M'!AE46,'Fluxo 180M'!AE46
+cash54,Cash M54,5995124.81642485,5995124.81642485,0,'Fluxo 180M'!AE58,'Fluxo 180M'!AE58
+div54,Simulated M54 distribution,2507809.30154683,2507809.30154683,0,'Fluxo 180M'!AD58,'Fluxo 180M'!AD58
+reserve54,Reserve M54,3301240.27321976,3301240.27321976,0,'Fluxo 180M'!Q58,'Fluxo 180M'!Q58
+peak,Peak debt,18245949.667891,18245949.667891,0,MAX('Fluxo 180M'!BD5:BD184),MAX('Fluxo 180M'!BD5:BD184)
+used,Cumulative facility use,22413853.7865427,22413853.7865427,0,'Fluxo 180M'!AC184,'Fluxo 180M'!AC184
+gap,Maximum reserve shortfall,0,0,0,MAX('Fluxo 180M'!AG5:AG184),MAX('Fluxo 180M'!AG5:AG184)
+fundgap,Funding shortfall,0,0,0,MAX('Fluxo 180M'!AF5:AF184),MAX('Fluxo 180M'!AF5:AF184)
+ebitda15,Year15 EBITDA,7479290.83524176,7479290.83524176,0,SUM(Hotel!T173:T184),SUM(Hotel!T173:T184)
+ev,Enterprise Value,89751490.0229011,89751490.0229011,0,'V05 Retornos'!B18,'V05 Retornos'!B18
+equity,Net Equity Value,102644161.834915,102644161.834915,0,'V04 Politica'!B11,'V04 Politica'!B11
+irr,New investor IRR,0.0765255168411332,0.0765255168411332,0,'V04 Retornos'!B27,'V04 Retornos'!B27
+moic,New investor MOIC,2.66597516372425,2.66597516372425,0,'V04 Retornos'!B28,'V04 Retornos'!B28
+npv,New investor NPV,-9671683.47733884,-9671683.47733884,0,'V04 Retornos'!B29,'V04 Retornos'!B29
+dividends,Total distributions,32922781.8049618,32922781.8049618,0,SUM('Fluxo 180M'!AD5:AD184),SUM('Fluxo 180M'!AD5:AD184)
+capital,Planned KK capital,25000000,25000000,0,SUM('Fluxo 180M'!C5:C184),SUM('Fluxo 180M'!C5:C184)
+price_m2,Average price per sqm,3811.61296990218,3811.61296990218,0,SUM(Unidades!H5:H98)/SUM(Unidades!D5:D98),SUM(Unidades!H5:H98)/SUM(Unidades!D5:D98)
+owners,Owner distributions,35294489.2175542,35294489.2175542,0,SUM(Residencial!M5:M184),SUM(Residencial!M5:M184)
+owner_short,Residential target yield shortfall,164946.241445833,164946.241445833,0,SUM(Residencial!N5:N184),SUM(Residencial!N5:N184)
+re_net,Net real estate receipts,49389927.96075,49389927.96075,0,SUM('Fluxo 180M'!D5:D184)-SUM('Fluxo 180M'!E5:G184),SUM('Fluxo 180M'!D5:D184)-SUM('Fluxo 180M'!E5:G184)
+re_margin,Study development margin,0.62129147538172,0.62129147538172,0,(SUM(Unidades!H5:H98)-SUM('Fluxo 180M'!E5:G184)-SUM('Fluxo 180M'!DA5:DA184)*Pressupostos!$B$85)/SUM(Unidades!H5:H98),(SUM(Unidades!H5:H98)-SUM('Fluxo 180M'!E5:G184)-SUM('Fluxo 180M'!DA5:DA184)*Pressupostos!$B$85)/SUM(Unidades!H5:H98)
+dscr,Minimum annual DSCR,41.6176253697117,41.6176253697117,0,"IF(COUNT('V05 Anual'!Z5:Z19)>0,MIN('V05 Anual'!Z5:Z19),"""")","IF(COUNT('V05 Anual'!Z5:Z19)>0,MIN('V05 Anual'!Z5:Z19),"""")"
+ltv,LTV M180,0,0,0,"IF('V05 Retornos'!B18>0,'Fluxo 180M'!AB184/'V05 Retornos'!B18,"""")","IF('V05 Retornos'!B18>0,'Fluxo 180M'!AB184/'V05 Retornos'!B18,"""")"
+net_debt,Free-cash net debt/EBITDA,-1.69637762348913,-1.69637762348913,0,"IF(SUM(Hotel!T173:T184)>0,('Fluxo 180M'!AB184-MAX(0,'Fluxo 180M'!AE184-MAX('Fluxo 180M'!Q184,Pressupostos!$B$18+'Fluxo 180M'!AP184+'Fluxo 180M'!AQ184+'Fluxo 180M'!CQ184)-'V05 Controlo'!B184))/SUM(Hotel!T173:T184),"""")","IF(SUM(Hotel!T173:T184)>0,('Fluxo 180M'!AB184-MAX(0,'Fluxo 180M'!AE184-MAX('Fluxo 180M'!Q184,Pressupostos!$B$18+'Fluxo 180M'!AP184+'Fluxo 180M'!AQ184+'Fluxo 180M'!CQ184)-'V05 Controlo'!B184))/SUM(Hotel!T173:T184),"""")"
+headroom,Minimum liquidity headroom,0,0,0,MIN('V05 Dados'!H5:H184),MIN('V05 Dados'!H5:H184)
+interest,Bank interest,860053.885790329,860053.885790329,0,SUM('Fluxo 180M'!Y5:Y184),SUM('Fluxo 180M'!Y5:Y184)
+project_irr,Future project IRR with exit,0.191819464100386,0.191819464100386,0,KPI!B29,KPI!B29
+project_npv,Future project NPV with exit,22265284.5386064,22265284.5386064,0,KPI!B27,KPI!B27
+payback,Future project payback without exit,106,106,0,KPI!B37,KPI!B37

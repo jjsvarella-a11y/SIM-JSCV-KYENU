@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-21",
+  "status": "Candidata corrigida; aceitação em Excel Desktop pendente",
+  "files": {
+    "KK01_Modelo_Integrado_V05_1_Executive_Excel_Fix.xlsx": {
+      "bytes": 38891959,
+      "sha256": "2b534f0602277e532f1e9672604c7cde26a3e0b544e76785ecf5ffc097a5999a"
+    },
+    "KK01_V05_1_Excel_Fix_Ambiente.json": {
+      "bytes": 414,
+      "sha256": "c89799b922fdec61735691d51955945f1fb2f8ba902bcad9468902bba51c4d40"
+    },
+    "KK01_V05_1_Excel_Fix_Comparacao_KPI.csv": {
+      "bytes": 5536,
+      "sha256": "9f78628326399496775004a6c5dc765c5d73115967162997ac86eaff5083ee31"
+    },
+    "KK01_V05_1_Excel_Fix_Componentes.json": {
+      "bytes": 14454,
+      "sha256": "e83e2a65b231320a980526c861a777d633420ca716d3e9dc4955adbc62223ba4"
+    },
+    "KK01_V05_1_Excel_Fix_Documentacao_e_Testes.zip": {
+      "bytes": 806452,
+      "sha256": "69925e61337c91884168786e8bb27fa15434c0acc8f110f5b46a2731a732c19a"
+    },
+    "KK01_V05_1_Excel_Fix_Esquemas_Fontes.json": {
+      "bytes": 2578,
+      "sha256": "ec540efdbd76b54c59360104d0735fd6789b783bfb38bc12422e132dca163768"
+    },
+    "KK01_V05_1_Excel_Fix_Funcionalidades.json": {
+      "bytes": 335,
+      "sha256": "8b7819f1057a1a4608dc7ad6ded4e748d5a84503c19707c6484240cd7a52afdd"
+    },
+    "KK01_V05_1_Excel_Fix_Integridade.json": {
+      "bytes": 3644,
+      "sha256": "5bda6a61476b0e658d6b7260fe903cb5ab2696a727b41171c257a0b70575ca46"
+    },
+    "KK01_V05_1_Excel_Fix_Pacote.json": {
+      "bytes": 196,
+      "sha256": "35e31731c53bb0e5881f2a665b48dfec064c2fa3d54413bf05bcacecef1da5b5"
+    },
+    "KK01_V05_1_Excel_Fix_Preview.png": {
+      "bytes": 201323,
+      "sha256": "26c7aa454db6eb804829e74fdc349b9f9e6b50092e1f446f575fe6d03e4718a0"
+    },
+    "KK01_V05_1_Excel_Fix_Preview_Dashboards.pdf": {
+      "bytes": 542948,
+      "sha256": "451ceea0e1ef75c86c53b761391656d9b8582752b34f31675183a1207c9a63d9"
+    },
+    "KK01_V05_1_Excel_Fix_Regressao_Estrutural.json": {
+      "bytes": 374,
+      "sha256": "f1295d582adbd08f835ae82e682e48104d7fb913800c835e395561efc788e5f9"
+    },
+    "KK01_V05_1_Excel_Fix_Relatorio_Tecnico.md": {
+      "bytes": 7057,
+      "sha256": "2fb80c302b72e4bbcd564256a4959da7661a98d500eb073c50a513b0488b0938"
+    },
+    "KK01_V05_1_Excel_Fix_Relatorio_Tecnico.pdf": {
+      "bytes": 49794,
+      "sha256": "b651405d12f5f1ea28625b16eefdf03ddb5fbdcd4a573c0003493ea6250b1da2"
+    },
+    "KK01_V05_1_Excel_Fix_Relatorio_Testes.md": {
+      "bytes": 2062,
+      "sha256": "39eb888fda71f8ea71e7bcb1c6f9063c891a0a4f1667e359c6c6c8a653f382da"
+    },
+    "KK01_V05_1_Excel_Fix_Relatorio_Testes.pdf": {
+      "bytes": 43528,
+      "sha256": "230b499b3a34c61651a531aa49e2396c2b54cc49225f04af4b9f5f6dd59f30dd"
+    },
+    "KK01_V05_1_Excel_Fix_Schema.json": {
+      "bytes": 478,
+      "sha256": "e91544ecac0daa3eb033259a0b6a923f652c8be4d3d1dd36e3376540dffc25d8"
+    },
+    "KK01_V05_1_Excel_Fix_Schema_Antes.json": {
+      "bytes": 20376,
+      "sha256": "d8371bdc0fcc8d3f3b0c8490f0cbfa11eba9c0574b0a390197b058fa24a0d39e"
+    },
+    "KK01_V05_1_Excel_Fix_Schema_Comparativo_V05.json": {
+      "bytes": 4295,
+      "sha256": "87768d5294a44dc81e84e7affe540dbc7ecb431a4003bb1dd3c134cf7f85837f"
+    },
+    "KK01_V05_1_Excel_Fix_Testes_Nativos.json": {
+      "bytes": 10503,
+      "sha256": "f5d79c49515c1d7aca77709dcf76049ee9fdf82e49ba22901d84c7da6729d188"
+    },
+    "KK01_V05_1_Excel_Fix_Testes_Nativos.txt": {
+      "bytes": 181,
+      "sha256": "bf2c5a4851e09add2d28ea0ec9dc1187385009a56334bd8e9493a6798275f943"
+    },
+    "KK01_V05_1_Excel_Fix_Testes_Python.txt": {
+      "bytes": 1075,
+      "sha256": "f0072376759547c0aaedc17b9d2636c71d83a3772eb57eea6a6ab7655dba7011"
+    }
+  }
+}

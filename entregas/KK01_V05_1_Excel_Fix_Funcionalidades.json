@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "preserved_parts": 168,
+  "metadata_drawings_comments_and_images_identical": true,
+  "all_data_validations_and_hyperlinks_identical": true,
+  "kpis_compared": 40,
+  "kpi_differences": 0,
+  "IRR_card_white_fill": true,
+  "IRR_alert_font_only": true,
+  "formula": "'V05 KPI'!D27",
+  "cached_IRR": "0.0765255168411332"
+}

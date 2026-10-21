@@ -1,0 +1,7 @@
+Base True 1127557 0 0
+IVA_Diferido True 19426 0 0
+Div_Maximo_Acumulados True 19416 0 0
+Juro8 True 19417 0 0
+PT_EN True 19416 0 0
+Filtro_ID201 True 19416 0 0
+All native tests passed

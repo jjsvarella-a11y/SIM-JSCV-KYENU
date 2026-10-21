@@ -1,0 +1,91 @@
+{
+  "file": "/workspace/SIM-JSCV-KYENU/entregas/KK01_Modelo_Integrado_V05_Executive.xlsx",
+  "parts_checked": 469,
+  "invalid_parts": [
+    {
+      "part": "xl/worksheets/v05_sheet19.xml",
+      "errors": [
+        {
+          "line": 1,
+          "message": "Element '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}selection': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/spreadsheetml/2006/main}pivotSelection, {http://schemas.openxmlformats.org/spreadsheetml/2006/main}extLst )."
+        }
+      ]
+    },
+    {
+      "part": "xl/worksheets/v05_sheet20.xml",
+      "errors": [
+        {
+          "line": 1,
+          "message": "Element '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}selection': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/spreadsheetml/2006/main}pivotSelection, {http://schemas.openxmlformats.org/spreadsheetml/2006/main}extLst )."
+        }
+      ]
+    },
+    {
+      "part": "xl/worksheets/v05_sheet21.xml",
+      "errors": [
+        {
+          "line": 1,
+          "message": "Element '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}selection': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/spreadsheetml/2006/main}pivotSelection, {http://schemas.openxmlformats.org/spreadsheetml/2006/main}extLst )."
+        }
+      ]
+    },
+    {
+      "part": "xl/worksheets/v05_sheet22.xml",
+      "errors": [
+        {
+          "line": 1,
+          "message": "Element '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}selection': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/spreadsheetml/2006/main}pivotSelection, {http://schemas.openxmlformats.org/spreadsheetml/2006/main}extLst )."
+        }
+      ]
+    },
+    {
+      "part": "xl/worksheets/v05_sheet23.xml",
+      "errors": [
+        {
+          "line": 1,
+          "message": "Element '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}selection': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/spreadsheetml/2006/main}pivotSelection, {http://schemas.openxmlformats.org/spreadsheetml/2006/main}extLst )."
+        }
+      ]
+    },
+    {
+      "part": "xl/worksheets/v05_sheet25.xml",
+      "errors": [
+        {
+          "line": 1,
+          "message": "Element '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}selection': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/spreadsheetml/2006/main}pivotSelection, {http://schemas.openxmlformats.org/spreadsheetml/2006/main}extLst )."
+        }
+      ]
+    },
+    {
+      "part": "xl/worksheets/v05_sheet26.xml",
+      "errors": [
+        {
+          "line": 1,
+          "message": "Element '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}selection': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/spreadsheetml/2006/main}pivotSelection, {http://schemas.openxmlformats.org/spreadsheetml/2006/main}extLst )."
+        }
+      ]
+    },
+    {
+      "part": "xl/worksheets/v05_sheet27.xml",
+      "errors": [
+        {
+          "line": 1,
+          "message": "Element '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}selection': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/spreadsheetml/2006/main}pivotSelection, {http://schemas.openxmlformats.org/spreadsheetml/2006/main}extLst )."
+        }
+      ]
+    },
+    {
+      "part": "xl/worksheets/v05_sheet28.xml",
+      "errors": [
+        {
+          "line": 1,
+          "message": "Element '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}selection': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/spreadsheetml/2006/main}pivotSelection, {http://schemas.openxmlformats.org/spreadsheetml/2006/main}extLst )."
+        }
+      ]
+    }
+  ],
+  "unexpected_parse_errors": [],
+  "xml_space_profile": "xml:space on SpreadsheetML text is supported by Microsoft Open XML Text.Space; omitted only from the validation copy because the ECMA mirror types t as a simple string. The workbook is never changed by validation.",
+  "xml_space_attributes_profiled": 11355,
+  "ok": false
+}
