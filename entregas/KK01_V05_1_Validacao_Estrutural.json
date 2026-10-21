@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "zip_integrity": true,
+  "worksheets": 348,
+  "navigation_click_areas": 90,
+  "package_relationships_resolved": true,
+  "source_v05_preserved": true,
+  "model_bytes": 38891786,
+  "note": "OOXML inspection and native Calc checks do not certify Excel Desktop."
+}

@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-21",
+  "original_v05_sha256": "432fdb6040316056c0f0e1125125f356660df5003719172de368123026452ed5",
+  "files": {
+    "KK01_Modelo_Integrado_V05_1_Executive.xlsx": {
+      "bytes": 38891786,
+      "sha256": "63acf31c9673c7f70a20947fa066a6f864cb4e1cd6c0d25a26258d93798d490e"
+    },
+    "KK01_V05_1_Documentacao_e_Testes.zip": {
+      "bytes": 703090,
+      "sha256": "6160780c9ace85ac67e2d6e5f02abd2165a39de74122fe30e534d93da02f37c2"
+    },
+    "KK01_V05_1_Executive_Preview.png": {
+      "bytes": 200680,
+      "sha256": "87789150a01f3bffe30216ede984f44909ae439205b5fa793b8b45827b5e6d06"
+    },
+    "KK01_V05_1_Nota_Alteracoes.md": {
+      "bytes": 4768,
+      "sha256": "21ce86e54aec0f70f99775ca61a463a2a058b80af23e08e80c9a0a4ba81e9c2c"
+    },
+    "KK01_V05_1_Nota_Alteracoes.pdf": {
+      "bytes": 46213,
+      "sha256": "c3852b68d28fceb0f7496c4968904e9af0c7fd25e8f072ed93548c940803d181"
+    },
+    "KK01_V05_1_Preview_Dashboards.pdf": {
+      "bytes": 542901,
+      "sha256": "beff722638d3e3e366ff733d5087f2dacd57f0908f6081e31edc4b4244f33835"
+    },
+    "KK01_V05_1_Testes_Nativos.json": {
+      "bytes": 7014,
+      "sha256": "bd9e9d54ac4f6202b0461988b5c2eae8c9189f4ebb769e2d2badc396f66d8251"
+    },
+    "KK01_V05_1_Validacao_Estrutural.json": {
+      "bytes": 278,
+      "sha256": "2738f38b13ba22cadc6b4a06e9ea2f8671f348567f33aa153e3441b831925b51"
+    },
+    "Prova_Integridade_Motor_V05_1.json": {
+      "bytes": 4312,
+      "sha256": "8ee07d980235c52331d9ab62307ac079a7046a115ba95fb14860d0747e0c6ad2"
+    },
+    "Registo_Refinamento_Visual_V05_1.json": {
+      "bytes": 2686,
+      "sha256": "96532543e1b3b103c9df1147664d99b4f1b247c797641f99ce316fc57f8d55ba"
+    }
+  }
+}

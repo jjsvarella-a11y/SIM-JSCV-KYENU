@@ -1,0 +1,173 @@
+{
+  "ok": true,
+  "formulas_checked": 2126466,
+  "numeric_cells_checked": 2134124,
+  "failures": [],
+  "dashboards": {
+    "EXEC V05": {
+      "hyperlinks": 20,
+      "freeze": {
+        "xSplit": "3",
+        "ySplit": "5",
+        "topLeftCell": "D6",
+        "activePane": "bottomRight",
+        "state": "frozen"
+      },
+      "print": {
+        "orientation": "landscape",
+        "paperSize": "8",
+        "fitToHeight": "1",
+        "fitToWidth": "1"
+      }
+    },
+    "DASH 01 V05": {
+      "hyperlinks": 19,
+      "freeze": {
+        "xSplit": "3",
+        "ySplit": "5",
+        "topLeftCell": "D6",
+        "activePane": "bottomRight",
+        "state": "frozen"
+      },
+      "print": {
+        "orientation": "landscape",
+        "paperSize": "8",
+        "fitToHeight": "1",
+        "fitToWidth": "1"
+      }
+    },
+    "DASH 02": {
+      "hyperlinks": 19,
+      "freeze": {
+        "xSplit": "3",
+        "ySplit": "5",
+        "topLeftCell": "D6",
+        "activePane": "bottomRight",
+        "state": "frozen"
+      },
+      "print": {
+        "orientation": "landscape",
+        "paperSize": "8",
+        "fitToHeight": "1",
+        "fitToWidth": "1"
+      }
+    },
+    "DASH 03 V05": {
+      "hyperlinks": 16,
+      "freeze": {
+        "xSplit": "3",
+        "ySplit": "5",
+        "topLeftCell": "D6",
+        "activePane": "bottomRight",
+        "state": "frozen"
+      },
+      "print": {
+        "orientation": "landscape",
+        "paperSize": "8",
+        "fitToHeight": "1",
+        "fitToWidth": "1"
+      }
+    },
+    "DASH 04A V05": {
+      "hyperlinks": 15,
+      "freeze": {
+        "xSplit": "3",
+        "ySplit": "5",
+        "topLeftCell": "D6",
+        "activePane": "bottomRight",
+        "state": "frozen"
+      },
+      "print": {
+        "orientation": "landscape",
+        "paperSize": "8",
+        "fitToHeight": "1",
+        "fitToWidth": "1"
+      }
+    },
+    "DASH 04B V05": {
+      "hyperlinks": 15,
+      "freeze": {
+        "xSplit": "3",
+        "ySplit": "5",
+        "topLeftCell": "D6",
+        "activePane": "bottomRight",
+        "state": "frozen"
+      },
+      "print": {
+        "orientation": "landscape",
+        "paperSize": "8",
+        "fitToHeight": "1",
+        "fitToWidth": "1"
+      }
+    },
+    "DASH 05 V05": {
+      "hyperlinks": 16,
+      "freeze": {
+        "xSplit": "3",
+        "ySplit": "5",
+        "topLeftCell": "D6",
+        "activePane": "bottomRight",
+        "state": "frozen"
+      },
+      "print": {
+        "orientation": "landscape",
+        "paperSize": "8",
+        "fitToHeight": "1",
+        "fitToWidth": "1"
+      }
+    },
+    "DASH 06 V05": {
+      "hyperlinks": 18,
+      "freeze": {
+        "xSplit": "3",
+        "ySplit": "5",
+        "topLeftCell": "D6",
+        "activePane": "bottomRight",
+        "state": "frozen"
+      },
+      "print": {
+        "orientation": "landscape",
+        "paperSize": "8",
+        "fitToHeight": "1",
+        "fitToWidth": "1"
+      }
+    },
+    "DASH 07 V05": {
+      "hyperlinks": 18,
+      "freeze": {
+        "xSplit": "3",
+        "ySplit": "5",
+        "topLeftCell": "D6",
+        "activePane": "bottomRight",
+        "state": "frozen"
+      },
+      "print": {
+        "orientation": "landscape",
+        "paperSize": "8",
+        "fitToHeight": "1",
+        "fitToWidth": "1"
+      }
+    }
+  },
+  "formula_sha256": "16c2d72b133fe9532b9d0151a898630b1ddba14b50118c1cf364d6b35861b565",
+  "new_sheets": [
+    "V05.1 KPI Guide"
+  ],
+  "original_sha256": "432fdb6040316056c0f0e1125125f356660df5003719172de368123026452ed5",
+  "final_sha256": "63acf31c9673c7f70a20947fa066a6f864cb4e1cd6c0d25a26258d93798d490e",
+  "bytes": 38891786,
+  "native_test_input_sha256": "833e623e26a86d981101f6cfc0debb3f8c51825c7f05cf8ca6a92266f55f0bc3",
+  "final_presentation_math_matches_native_input": true,
+  "presentation_math_fingerprints": {
+    "tested": {
+      "formulas": "c3121405234fff3c5e65b77c4e658834ef5567a181de8fc3d5173932c5465482",
+      "numeric_values": "2277ad640d372d1770b91fd5e231374844ecc5f90f686bcd1f07b29251e84a36",
+      "count": 2126479
+    },
+    "final": {
+      "formulas": "c3121405234fff3c5e65b77c4e658834ef5567a181de8fc3d5173932c5465482",
+      "numeric_values": "2277ad640d372d1770b91fd5e231374844ecc5f90f686bcd1f07b29251e84a36",
+      "count": 2126479
+    }
+  }
+}
