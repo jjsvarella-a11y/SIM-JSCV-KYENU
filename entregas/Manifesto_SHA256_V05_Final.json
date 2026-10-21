@@ -1,0 +1,38 @@
+{
+  "KK01_Modelo_Integrado_V05_Executive.xlsx": {
+    "bytes": 38824364,
+    "sha256": "432fdb6040316056c0f0e1125125f356660df5003719172de368123026452ed5"
+  },
+  "KK01_V05_Guia_Utilizacao.pdf": {
+    "bytes": 48606,
+    "sha256": "9dadba5c162ae41ec6d555718e551f11b78c6913792b6baae6a72c7b5ddcd03c"
+  },
+  "KK01_V05_Relatorio_Auditoria.pdf": {
+    "bytes": 50984,
+    "sha256": "0b12bb3011abe739c8edbce16569bea7551e97496391e284a6fbf6d1000c815b"
+  },
+  "KK01_V05_Registo_Pressupostos.pdf": {
+    "bytes": 53117,
+    "sha256": "64ef570a1b3baf55d0c15ab8a40dfc1a3c81ac4c964347d4b7c8cac97807ef50"
+  },
+  "KK01_V05_Relatorio_Alteracoes.pdf": {
+    "bytes": 43803,
+    "sha256": "a69e5f5cee9cefcf851399f48ceee26e2ab1548e1862f1798d097107002ad396"
+  },
+  "KK01_V05_Relatorio_Executivo.pdf": {
+    "bytes": 175108,
+    "sha256": "b00cc269de82da67d298f96ffa846b4b528b587f7353bd879558fb6f9aab6ca7"
+  },
+  "KK01_V05_Documentacao_Tecnica.pdf": {
+    "bytes": 46980,
+    "sha256": "d6a0db01c2fecd9b2ed6a7a67f38caffc34c8f05fcffebae051ca65481d85a0f"
+  },
+  "KK01_V05_Fontes_e_Testes.zip": {
+    "bytes": 136416,
+    "sha256": "b28c9e197d9c6660ffec56e18dbe82624320f249562aac5fae9e67b98284eb10"
+  },
+  "KK01_V05_Documentacao_e_Testes.zip": {
+    "bytes": 9152852,
+    "sha256": "7f47d60f7bba1763a663d5a111a030026dca68cdf6312b88f3b6ae52a55bde21"
+  }
+}
