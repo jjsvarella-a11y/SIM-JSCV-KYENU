@@ -1,0 +1,1635 @@
+folha_dependente,folha_origem,referencias_explicitas
+EXEC KK01,Ronda Investidores,2
+EXEC KK01,Pressupostos,1
+EXEC KK01,V04 Capital180,1
+EXEC KK01,KPI,6
+EXEC KK01,DASH Hotel MICE,1
+EXEC KK01,V04 Retornos,6
+EXEC KK01,V04 Completion,1
+EXEC KK01,V04 EAC,1
+EXEC KK01,V04 Opening Readiness,1
+Pressupostos,Capital V03,4
+Pressupostos,Pressupostos,3
+DASH Consolidado,KPI,18
+DASH Consolidado,Ronda Investidores,1
+DASH Real Estate,KPI,8
+DASH Real Estate,Imobiliario,2
+DASH Real Estate,Pressupostos,1
+DASH Comercial,Unidades,2020
+DASH Comercial,Recebimentos,180
+DASH Hotel MICE,Pressupostos,19
+DASH Hotel MICE,Cenarios,4
+DASH Hotel MICE,Hotel,21
+DASH Hotel MICE,KPI,2
+DASH Acionistas,Ronda Investidores,1
+DASH Acionistas,Pressupostos,2
+DASH Acionistas,Retornos,3
+DASH Acionistas,V04 Retornos,7
+DASH Acionistas,V04 Riscos,1
+DASH Acionistas,KPI,1
+AUDITORIA,Unidades,8
+AUDITORIA,Imobiliario,1
+AUDITORIA,Pressupostos,22
+AUDITORIA,Obra,2
+AUDITORIA,Fluxo 180M,361
+AUDITORIA,KPI,4
+AUDITORIA,Residencial,1
+AUDITORIA,DASH Hotel MICE,1
+AUDITORIA,Ronda Investidores,2
+AUDITORIA,Societario,3
+AUDITORIA,Capital V03,5
+AUDITORIA,Retornos,1
+AUDITORIA,Matriz Societaria V03,8
+AUDITORIA,Blocos V03,2
+AUDITORIA,V04 Waterfall180,2
+AUDITORIA,V04 Pipeline,2
+AUDITORIA,V04 Completion,2
+Cenarios,Pressupostos,14
+Unidades,Pressupostos,1880
+Unidades,V04 Pricing,94
+Unidades,Recebimentos,94
+Unidades,Unidades,188
+Recebimentos,Unidades,355414
+Recebimentos,Pressupostos,16920
+Obra,Pressupostos,90
+CAPEX,V04 CAPEX Base,1440
+Imobiliario,Unidades,3780
+Imobiliario,Pressupostos,1260
+Imobiliario,Recebimentos,180
+Hotel,Pressupostos,5040
+Hotel,Cenarios,1260
+Hotel,Condicoes Operador,540
+Residencial,Pressupostos,5800
+Residencial,Unidades,470
+Fluxo 180M,Ronda Investidores,180
+Fluxo 180M,Pressupostos,17640
+Fluxo 180M,V04 Capital180,180
+Fluxo 180M,Imobiliario,1079
+Fluxo 180M,CAPEX,2519
+Fluxo 180M,Hotel,900
+Fluxo 180M,Residencial,360
+Fluxo 180M,Cenarios,1620
+Fluxo 180M,Unidades,720
+Anual,Fluxo 180M,450
+Anual,Pressupostos,15
+Anual,Hotel,15
+Anual,Residencial,15
+Comparacao,Pressupostos,52
+Comparacao,CalcF01,9
+Comparacao,CalcF02,9
+Comparacao,CalcF03,9
+Comparacao,CalcF04,9
+Comparacao,CalcF05,9
+Comparacao,CalcF06,9
+Comparacao,CalcF07,9
+Comparacao,CalcF08,9
+Comparacao,CalcF09,9
+Comparacao,CalcF10,9
+Comparacao,CalcF11,9
+Comparacao,CalcF12,9
+Comparacao,CalcF13,9
+Comparacao,CalcF14,9
+Comparacao,CalcF15,9
+Comparacao,Ronda Investidores,15
+Comparacao,CalcF16,9
+Comparacao,CalcF17,9
+Comparacao,CalcF18,9
+Comparacao,CalcF19,9
+Comparacao,CalcF20,9
+Comparacao,CalcF21,9
+Comparacao,CalcF22,9
+Comparacao,CalcF23,9
+Comparacao,CalcF24,9
+Comparacao,CalcF25,9
+Comparacao,CalcF26,9
+Comparacao,CalcF27,9
+Comparacao,CalcF28,9
+Comparacao,CalcF29,9
+Comparacao,CalcF30,9
+Comparacao,CalcF31,9
+Comparacao,CalcF32,9
+Comparacao,CalcF33,9
+Comparacao,CalcF34,9
+Comparacao,CalcF35,9
+Comparacao,CalcF36,9
+Comparacao,CalcF37,9
+Comparacao,CalcF38,9
+Comparacao,CalcF39,9
+Comparacao,CalcF40,9
+Comparacao,CalcF41,9
+Comparacao,CalcF42,9
+Comparacao,CalcF43,9
+Comparacao,CalcF44,9
+Comparacao,CalcF45,9
+Comparacao,CalcF46,9
+Comparacao,CalcF47,9
+Comparacao,CalcF48,9
+CalcH01,Pressupostos,5040
+CalcH01,Cenarios,2520
+CalcH01,Comparacao,1260
+CalcH01,Condicoes Operador,540
+CalcF01,Comparacao,180
+CalcF01,Pressupostos,17640
+CalcF01,V04 Capital180,180
+CalcF01,Imobiliario,1079
+CalcF01,CAPEX,2519
+CalcF01,CalcH01,900
+CalcF01,Residencial,360
+CalcF01,Cenarios,1620
+CalcF01,Unidades,720
+CalcH02,Pressupostos,5040
+CalcH02,Cenarios,2520
+CalcH02,Comparacao,1260
+CalcH02,Condicoes Operador,540
+CalcF02,Comparacao,180
+CalcF02,Pressupostos,17640
+CalcF02,V04 Capital180,180
+CalcF02,Imobiliario,1079
+CalcF02,CAPEX,2519
+CalcF02,CalcH02,900
+CalcF02,Residencial,360
+CalcF02,Cenarios,1620
+CalcF02,Unidades,720
+CalcH03,Pressupostos,5040
+CalcH03,Cenarios,2520
+CalcH03,Comparacao,1260
+CalcH03,Condicoes Operador,540
+CalcF03,Comparacao,180
+CalcF03,Pressupostos,17640
+CalcF03,V04 Capital180,180
+CalcF03,Imobiliario,1079
+CalcF03,CAPEX,2519
+CalcF03,CalcH03,900
+CalcF03,Residencial,360
+CalcF03,Cenarios,1620
+CalcF03,Unidades,720
+CalcH04,Pressupostos,5040
+CalcH04,Cenarios,2520
+CalcH04,Comparacao,1260
+CalcH04,Condicoes Operador,540
+CalcF04,Comparacao,180
+CalcF04,Pressupostos,17640
+CalcF04,V04 Capital180,180
+CalcF04,Imobiliario,1079
+CalcF04,CAPEX,2519
+CalcF04,CalcH04,900
+CalcF04,Residencial,360
+CalcF04,Cenarios,1620
+CalcF04,Unidades,720
+CalcH05,Pressupostos,5040
+CalcH05,Cenarios,2520
+CalcH05,Comparacao,1260
+CalcH05,Condicoes Operador,540
+CalcF05,Comparacao,180
+CalcF05,Pressupostos,17640
+CalcF05,V04 Capital180,180
+CalcF05,Imobiliario,1079
+CalcF05,CAPEX,2519
+CalcF05,CalcH05,900
+CalcF05,Residencial,360
+CalcF05,Cenarios,1620
+CalcF05,Unidades,720
+CalcH06,Pressupostos,5040
+CalcH06,Cenarios,2520
+CalcH06,Comparacao,1260
+CalcH06,Condicoes Operador,540
+CalcF06,Comparacao,180
+CalcF06,Pressupostos,17640
+CalcF06,V04 Capital180,180
+CalcF06,Imobiliario,1079
+CalcF06,CAPEX,2519
+CalcF06,CalcH06,900
+CalcF06,Residencial,360
+CalcF06,Cenarios,1620
+CalcF06,Unidades,720
+CalcH07,Pressupostos,5040
+CalcH07,Cenarios,2520
+CalcH07,Comparacao,1260
+CalcH07,Condicoes Operador,540
+CalcF07,Comparacao,180
+CalcF07,Pressupostos,17640
+CalcF07,V04 Capital180,180
+CalcF07,Imobiliario,1079
+CalcF07,CAPEX,2519
+CalcF07,CalcH07,900
+CalcF07,Residencial,360
+CalcF07,Cenarios,1620
+CalcF07,Unidades,720
+CalcH08,Pressupostos,5040
+CalcH08,Cenarios,2520
+CalcH08,Comparacao,1260
+CalcH08,Condicoes Operador,540
+CalcF08,Comparacao,180
+CalcF08,Pressupostos,17640
+CalcF08,V04 Capital180,180
+CalcF08,Imobiliario,1079
+CalcF08,CAPEX,2519
+CalcF08,CalcH08,900
+CalcF08,Residencial,360
+CalcF08,Cenarios,1620
+CalcF08,Unidades,720
+CalcH09,Pressupostos,5040
+CalcH09,Cenarios,2520
+CalcH09,Comparacao,1260
+CalcH09,Condicoes Operador,540
+CalcF09,Comparacao,180
+CalcF09,Pressupostos,17640
+CalcF09,V04 Capital180,180
+CalcF09,Imobiliario,1079
+CalcF09,CAPEX,2519
+CalcF09,CalcH09,900
+CalcF09,Residencial,360
+CalcF09,Cenarios,1620
+CalcF09,Unidades,720
+CalcH10,Pressupostos,5040
+CalcH10,Cenarios,2520
+CalcH10,Comparacao,1260
+CalcH10,Condicoes Operador,540
+CalcF10,Comparacao,180
+CalcF10,Pressupostos,17640
+CalcF10,V04 Capital180,180
+CalcF10,Imobiliario,1079
+CalcF10,CAPEX,2519
+CalcF10,CalcH10,900
+CalcF10,Residencial,360
+CalcF10,Cenarios,1620
+CalcF10,Unidades,720
+CalcH11,Pressupostos,5040
+CalcH11,Cenarios,2520
+CalcH11,Comparacao,1260
+CalcH11,Condicoes Operador,540
+CalcF11,Comparacao,180
+CalcF11,Pressupostos,17640
+CalcF11,V04 Capital180,180
+CalcF11,Imobiliario,1079
+CalcF11,CAPEX,2519
+CalcF11,CalcH11,900
+CalcF11,Residencial,360
+CalcF11,Cenarios,1620
+CalcF11,Unidades,720
+CalcH12,Pressupostos,5040
+CalcH12,Cenarios,2520
+CalcH12,Comparacao,1260
+CalcH12,Condicoes Operador,540
+CalcF12,Comparacao,180
+CalcF12,Pressupostos,17640
+CalcF12,V04 Capital180,180
+CalcF12,Imobiliario,1079
+CalcF12,CAPEX,2519
+CalcF12,CalcH12,900
+CalcF12,Residencial,360
+CalcF12,Cenarios,1620
+CalcF12,Unidades,720
+CalcH13,Pressupostos,5040
+CalcH13,Cenarios,2520
+CalcH13,Comparacao,1260
+CalcH13,Condicoes Operador,540
+CalcF13,Comparacao,180
+CalcF13,Pressupostos,17640
+CalcF13,V04 Capital180,180
+CalcF13,Imobiliario,1079
+CalcF13,CAPEX,2519
+CalcF13,CalcH13,900
+CalcF13,Residencial,360
+CalcF13,Cenarios,1620
+CalcF13,Unidades,720
+CalcH14,Pressupostos,5040
+CalcH14,Cenarios,2520
+CalcH14,Comparacao,1260
+CalcH14,Condicoes Operador,540
+CalcF14,Comparacao,180
+CalcF14,Pressupostos,17640
+CalcF14,V04 Capital180,180
+CalcF14,Imobiliario,1079
+CalcF14,CAPEX,2519
+CalcF14,CalcH14,900
+CalcF14,Residencial,360
+CalcF14,Cenarios,1620
+CalcF14,Unidades,720
+CalcH15,Pressupostos,5040
+CalcH15,Cenarios,2520
+CalcH15,Comparacao,1260
+CalcH15,Condicoes Operador,540
+CalcF15,Comparacao,180
+CalcF15,Pressupostos,17640
+CalcF15,V04 Capital180,180
+CalcF15,Imobiliario,1079
+CalcF15,CAPEX,2519
+CalcF15,CalcH15,900
+CalcF15,Residencial,360
+CalcF15,Cenarios,1620
+CalcF15,Unidades,720
+CalcH16,Pressupostos,5040
+CalcH16,Cenarios,2520
+CalcH16,Comparacao,1260
+CalcH16,Condicoes Operador,540
+CalcF16,Comparacao,180
+CalcF16,Pressupostos,17640
+CalcF16,V04 Capital180,180
+CalcF16,Imobiliario,1079
+CalcF16,CAPEX,2519
+CalcF16,CalcH16,900
+CalcF16,Residencial,360
+CalcF16,Cenarios,1620
+CalcF16,Unidades,720
+CalcH17,Pressupostos,5040
+CalcH17,Cenarios,2520
+CalcH17,Comparacao,1260
+CalcH17,Condicoes Operador,540
+CalcF17,Comparacao,180
+CalcF17,Pressupostos,17640
+CalcF17,V04 Capital180,180
+CalcF17,Imobiliario,1079
+CalcF17,CAPEX,2519
+CalcF17,CalcH17,900
+CalcF17,Residencial,360
+CalcF17,Cenarios,1620
+CalcF17,Unidades,720
+CalcH18,Pressupostos,5040
+CalcH18,Cenarios,2520
+CalcH18,Comparacao,1260
+CalcH18,Condicoes Operador,540
+CalcF18,Comparacao,180
+CalcF18,Pressupostos,17640
+CalcF18,V04 Capital180,180
+CalcF18,Imobiliario,1079
+CalcF18,CAPEX,2519
+CalcF18,CalcH18,900
+CalcF18,Residencial,360
+CalcF18,Cenarios,1620
+CalcF18,Unidades,720
+CalcH19,Pressupostos,5040
+CalcH19,Cenarios,2520
+CalcH19,Comparacao,1260
+CalcH19,Condicoes Operador,540
+CalcF19,Comparacao,180
+CalcF19,Pressupostos,18360
+CalcF19,V04 Capital180,180
+CalcF19,Imobiliario,1079
+CalcF19,CAPEX,2519
+CalcF19,CalcH19,900
+CalcF19,Residencial,360
+CalcF19,Unidades,720
+CalcH20,Pressupostos,5040
+CalcH20,Cenarios,2520
+CalcH20,Comparacao,1260
+CalcH20,Condicoes Operador,540
+CalcF20,Comparacao,180
+CalcF20,Pressupostos,18360
+CalcF20,V04 Capital180,180
+CalcF20,Imobiliario,1079
+CalcF20,CAPEX,2519
+CalcF20,CalcH20,900
+CalcF20,Residencial,360
+CalcF20,Unidades,720
+CalcH21,Pressupostos,5040
+CalcH21,Cenarios,2520
+CalcH21,Comparacao,1260
+CalcH21,Condicoes Operador,540
+CalcF21,Comparacao,180
+CalcF21,Pressupostos,18360
+CalcF21,V04 Capital180,180
+CalcF21,Imobiliario,1079
+CalcF21,CAPEX,2519
+CalcF21,CalcH21,900
+CalcF21,Residencial,360
+CalcF21,Unidades,720
+CalcH22,Pressupostos,5040
+CalcH22,Cenarios,2520
+CalcH22,Comparacao,1260
+CalcH22,Condicoes Operador,540
+CalcF22,Comparacao,180
+CalcF22,Pressupostos,18360
+CalcF22,V04 Capital180,180
+CalcF22,Imobiliario,1079
+CalcF22,CAPEX,2519
+CalcF22,CalcH22,900
+CalcF22,Residencial,360
+CalcF22,Unidades,720
+CalcH23,Pressupostos,5040
+CalcH23,Cenarios,2520
+CalcH23,Comparacao,1260
+CalcH23,Condicoes Operador,540
+CalcF23,Comparacao,180
+CalcF23,Pressupostos,18360
+CalcF23,V04 Capital180,180
+CalcF23,Imobiliario,1079
+CalcF23,CAPEX,2519
+CalcF23,CalcH23,900
+CalcF23,Residencial,360
+CalcF23,Unidades,720
+CalcH24,Pressupostos,5040
+CalcH24,Cenarios,2520
+CalcH24,Comparacao,1260
+CalcH24,Condicoes Operador,540
+CalcF24,Comparacao,180
+CalcF24,Pressupostos,18360
+CalcF24,V04 Capital180,180
+CalcF24,Imobiliario,1079
+CalcF24,CAPEX,2519
+CalcF24,CalcH24,900
+CalcF24,Residencial,360
+CalcF24,Unidades,720
+CalcH25,Pressupostos,5040
+CalcH25,Cenarios,2520
+CalcH25,Comparacao,1260
+CalcH25,Condicoes Operador,540
+CalcF25,Comparacao,180
+CalcF25,Pressupostos,18360
+CalcF25,V04 Capital180,180
+CalcF25,Imobiliario,1079
+CalcF25,CAPEX,2519
+CalcF25,CalcH25,900
+CalcF25,Residencial,360
+CalcF25,Unidades,720
+CalcH26,Pressupostos,5040
+CalcH26,Cenarios,2520
+CalcH26,Comparacao,1260
+CalcH26,Condicoes Operador,540
+CalcF26,Comparacao,180
+CalcF26,Pressupostos,18360
+CalcF26,V04 Capital180,180
+CalcF26,Imobiliario,1079
+CalcF26,CAPEX,2519
+CalcF26,CalcH26,900
+CalcF26,Residencial,360
+CalcF26,Unidades,720
+CalcH27,Pressupostos,5040
+CalcH27,Cenarios,2520
+CalcH27,Comparacao,1260
+CalcH27,Condicoes Operador,540
+CalcF27,Comparacao,180
+CalcF27,Pressupostos,17640
+CalcF27,V04 Capital180,180
+CalcF27,Imobiliario,1079
+CalcF27,CAPEX,2519
+CalcF27,CalcH27,900
+CalcF27,Residencial,360
+CalcF27,Cenarios,1620
+CalcF27,Unidades,720
+CalcH28,Pressupostos,5040
+CalcH28,Cenarios,2520
+CalcH28,Comparacao,1260
+CalcH28,Condicoes Operador,540
+CalcF28,Comparacao,180
+CalcF28,Pressupostos,17640
+CalcF28,V04 Capital180,180
+CalcF28,Imobiliario,1079
+CalcF28,CAPEX,2519
+CalcF28,CalcH28,900
+CalcF28,Residencial,360
+CalcF28,Cenarios,1620
+CalcF28,Unidades,720
+CalcH29,Pressupostos,5040
+CalcH29,Cenarios,2520
+CalcH29,Comparacao,1260
+CalcH29,Condicoes Operador,540
+CalcF29,Comparacao,180
+CalcF29,Pressupostos,17460
+CalcF29,V04 Capital180,180
+CalcF29,CalcR29,1259
+CalcF29,CAPEX,2519
+CalcF29,CalcH29,900
+CalcF29,CalcA29,360
+CalcF29,Cenarios,1620
+CalcF29,Unidades,180
+CalcR29,V04 LEG28Unid,4320
+CalcR29,Pressupostos,1440
+CalcR29,V04 LEG28Receb,180
+CalcA29,Pressupostos,5800
+CalcA29,Unidades,470
+CalcH30,Pressupostos,5040
+CalcH30,Cenarios,2520
+CalcH30,Comparacao,1260
+CalcH30,Condicoes Operador,540
+CalcF30,Comparacao,180
+CalcF30,Pressupostos,17640
+CalcF30,V04 Capital180,180
+CalcF30,Imobiliario,1079
+CalcF30,CalcC30,2519
+CalcF30,CalcH30,900
+CalcF30,Residencial,360
+CalcF30,Cenarios,1620
+CalcF30,Unidades,720
+CalcC30,CAPEX,720
+CalcH31,Pressupostos,5040
+CalcH31,Cenarios,2520
+CalcH31,Comparacao,1260
+CalcH31,Condicoes Operador,540
+CalcF31,Comparacao,180
+CalcF31,Pressupostos,17640
+CalcF31,V04 Capital180,180
+CalcF31,Imobiliario,1079
+CalcF31,CAPEX,2519
+CalcF31,CalcH31,900
+CalcF31,Residencial,360
+CalcF31,Cenarios,1620
+CalcF31,Unidades,720
+CalcH32,Pressupostos,5040
+CalcH32,Cenarios,2520
+CalcH32,Comparacao,1260
+CalcH32,Condicoes Operador,540
+CalcF32,Comparacao,180
+CalcF32,Pressupostos,17640
+CalcF32,V04 Capital180,180
+CalcF32,Imobiliario,1079
+CalcF32,CAPEX,2519
+CalcF32,CalcH32,900
+CalcF32,Residencial,360
+CalcF32,Cenarios,1620
+CalcF32,Unidades,720
+CalcH33,Pressupostos,5040
+CalcH33,Cenarios,2520
+CalcH33,Comparacao,1260
+CalcH33,Condicoes Operador,540
+CalcF33,Comparacao,180
+CalcF33,Pressupostos,17460
+CalcF33,V04 Capital180,180
+CalcF33,CalcR33,1259
+CalcF33,CAPEX,2519
+CalcF33,CalcH33,900
+CalcF33,CalcA33,360
+CalcF33,Cenarios,1620
+CalcF33,Unidades,180
+CalcR33,V04 LEG32Unid,4320
+CalcR33,Pressupostos,1440
+CalcR33,V04 LEG32Receb,180
+CalcA33,Pressupostos,5800
+CalcA33,Unidades,470
+CalcH34,Pressupostos,5040
+CalcH34,Cenarios,2520
+CalcH34,Comparacao,1260
+CalcH34,Condicoes Operador,540
+CalcF34,Comparacao,180
+CalcF34,Pressupostos,17640
+CalcF34,V04 Capital180,180
+CalcF34,Imobiliario,1079
+CalcF34,CalcC34,2519
+CalcF34,CalcH34,900
+CalcF34,Residencial,360
+CalcF34,Cenarios,1620
+CalcF34,Unidades,720
+CalcC34,CAPEX,720
+CalcH35,Pressupostos,5040
+CalcH35,Cenarios,2520
+CalcH35,Comparacao,1260
+CalcH35,Condicoes Operador,540
+CalcF35,Comparacao,180
+CalcF35,Pressupostos,17640
+CalcF35,V04 Capital180,180
+CalcF35,Imobiliario,1079
+CalcF35,CAPEX,2519
+CalcF35,CalcH35,900
+CalcF35,Residencial,360
+CalcF35,Cenarios,1620
+CalcF35,Unidades,720
+CalcH36,Pressupostos,5040
+CalcH36,Cenarios,2520
+CalcH36,Comparacao,1260
+CalcH36,Condicoes Operador,540
+CalcF36,Comparacao,180
+CalcF36,Pressupostos,17640
+CalcF36,V04 Capital180,180
+CalcF36,Imobiliario,1079
+CalcF36,CAPEX,2519
+CalcF36,CalcH36,900
+CalcF36,Residencial,360
+CalcF36,Cenarios,1620
+CalcF36,Unidades,720
+CalcH37,Pressupostos,5040
+CalcH37,Cenarios,2520
+CalcH37,Comparacao,1260
+CalcH37,Condicoes Operador,540
+CalcF37,Comparacao,180
+CalcF37,Pressupostos,17640
+CalcF37,V04 Capital180,180
+CalcF37,Imobiliario,1079
+CalcF37,CAPEX,2519
+CalcF37,CalcH37,900
+CalcF37,Residencial,360
+CalcF37,Cenarios,1620
+CalcF37,Unidades,720
+CalcH38,Pressupostos,5040
+CalcH38,Cenarios,2520
+CalcH38,Comparacao,1260
+CalcH38,Condicoes Operador,540
+CalcF38,Comparacao,180
+CalcF38,Pressupostos,17640
+CalcF38,V04 Capital180,180
+CalcF38,Imobiliario,1079
+CalcF38,CAPEX,2519
+CalcF38,CalcH38,900
+CalcF38,Residencial,360
+CalcF38,Cenarios,1620
+CalcF38,Unidades,720
+CalcH39,Pressupostos,5040
+CalcH39,Cenarios,2520
+CalcH39,Comparacao,1260
+CalcH39,Condicoes Operador,1620
+CalcF39,Comparacao,180
+CalcF39,Pressupostos,17640
+CalcF39,V04 Capital180,180
+CalcF39,Imobiliario,1079
+CalcF39,CAPEX,2519
+CalcF39,CalcH39,900
+CalcF39,Residencial,360
+CalcF39,Cenarios,1620
+CalcF39,Unidades,720
+CalcH40,Pressupostos,5040
+CalcH40,Cenarios,2520
+CalcH40,Comparacao,1260
+CalcH40,Condicoes Operador,540
+CalcF40,Comparacao,180
+CalcF40,Pressupostos,17640
+CalcF40,V04 Capital180,180
+CalcF40,Imobiliario,1079
+CalcF40,CAPEX,2519
+CalcF40,CalcH40,900
+CalcF40,Residencial,360
+CalcF40,Cenarios,1620
+CalcF40,Unidades,720
+CalcH41,Pressupostos,5040
+CalcH41,Cenarios,2520
+CalcH41,Comparacao,1260
+CalcH41,Condicoes Operador,540
+CalcF41,Comparacao,180
+CalcF41,Pressupostos,17640
+CalcF41,V04 Capital180,180
+CalcF41,Imobiliario,1079
+CalcF41,CAPEX,2519
+CalcF41,CalcH41,900
+CalcF41,Residencial,360
+CalcF41,Cenarios,1620
+CalcF41,Unidades,720
+CalcH42,Pressupostos,5040
+CalcH42,Cenarios,2520
+CalcH42,Comparacao,1260
+CalcH42,Condicoes Operador,540
+CalcF42,Comparacao,180
+CalcF42,Pressupostos,17640
+CalcF42,V04 Capital180,180
+CalcF42,Imobiliario,1079
+CalcF42,CAPEX,2519
+CalcF42,CalcH42,900
+CalcF42,Residencial,360
+CalcF42,Cenarios,1620
+CalcF42,Unidades,720
+CalcH43,Pressupostos,5040
+CalcH43,Cenarios,2520
+CalcH43,Comparacao,1260
+CalcH43,Condicoes Operador,540
+CalcF43,Comparacao,180
+CalcF43,Pressupostos,17640
+CalcF43,V04 Capital180,180
+CalcF43,Imobiliario,1079
+CalcF43,CAPEX,2519
+CalcF43,CalcH43,900
+CalcF43,Residencial,360
+CalcF43,Cenarios,1620
+CalcF43,Unidades,720
+CalcH44,Pressupostos,5040
+CalcH44,Cenarios,2520
+CalcH44,Comparacao,1260
+CalcH44,Condicoes Operador,540
+CalcF44,Comparacao,180
+CalcF44,Pressupostos,17640
+CalcF44,V04 Capital180,180
+CalcF44,Imobiliario,1079
+CalcF44,CAPEX,2519
+CalcF44,CalcH44,900
+CalcF44,Residencial,360
+CalcF44,Cenarios,1620
+CalcF44,Unidades,720
+CalcH45,Pressupostos,5040
+CalcH45,Cenarios,2520
+CalcH45,Comparacao,1260
+CalcH45,Condicoes Operador,540
+CalcF45,Comparacao,180
+CalcF45,Pressupostos,17460
+CalcF45,V04 Capital180,180
+CalcF45,CalcR45,1259
+CalcF45,CAPEX,2519
+CalcF45,CalcH45,900
+CalcF45,CalcA45,360
+CalcF45,Cenarios,1620
+CalcF45,Unidades,180
+CalcR45,V04 LEG44Unid,4320
+CalcR45,Pressupostos,1440
+CalcR45,V04 LEG44Receb,180
+CalcA45,Pressupostos,5800
+CalcA45,Unidades,470
+CalcH46,Pressupostos,5040
+CalcH46,Cenarios,2520
+CalcH46,Comparacao,1260
+CalcH46,Condicoes Operador,540
+CalcF46,Comparacao,180
+CalcF46,Pressupostos,17640
+CalcF46,V04 Capital180,180
+CalcF46,Imobiliario,1079
+CalcF46,CalcC46,2519
+CalcF46,CalcH46,900
+CalcF46,Residencial,360
+CalcF46,Cenarios,1620
+CalcF46,Unidades,720
+CalcC46,CAPEX,720
+CalcH47,Pressupostos,5040
+CalcH47,Cenarios,2520
+CalcH47,Comparacao,1260
+CalcH47,Condicoes Operador,540
+CalcF47,Comparacao,180
+CalcF47,Pressupostos,17640
+CalcF47,V04 Capital180,180
+CalcF47,Imobiliario,1079
+CalcF47,CAPEX,2519
+CalcF47,CalcH47,900
+CalcF47,Residencial,360
+CalcF47,Cenarios,1620
+CalcF47,Unidades,720
+CalcH48,Pressupostos,5040
+CalcH48,Cenarios,2520
+CalcH48,Comparacao,1260
+CalcH48,Condicoes Operador,540
+CalcF48,Comparacao,180
+CalcF48,Pressupostos,17640
+CalcF48,V04 Capital180,180
+CalcF48,Imobiliario,1079
+CalcF48,CAPEX,2519
+CalcF48,CalcH48,900
+CalcF48,Residencial,360
+CalcF48,Cenarios,1620
+CalcF48,Unidades,720
+Retornos,Hotel,2
+Retornos,Pressupostos,28
+Retornos,Fluxo 180M,18
+Retornos,Ronda Investidores,12
+Retornos,Capital V03,10
+Retornos,Fluxos Retorno,6
+Fluxos Retorno,Pressupostos,4383
+Fluxos Retorno,Ronda Investidores,480
+Fluxos Retorno,Fluxo 180M,1742
+Fluxos Retorno,Retornos,792
+Fluxos Retorno,Capital V03,300
+Investidores,Capital V03,40
+Investidores,Ronda Investidores,20
+Investidores,Pressupostos,20
+Investidores,Retornos,120
+Investidores,Anual,300
+Societario,Capital V03,5
+Societario,Retornos,1
+Societario,Pressupostos,1
+KPI,Unidades,2
+KPI,Imobiliario,1
+KPI,CAPEX,1
+KPI,Pressupostos,22
+KPI,Fluxo 180M,377
+KPI,Fluxos Retorno,4
+KPI,V04 Retornos,5
+KPI,Anual,48
+KPI,V04 Waterfall180,6
+Operador,Hotel,261
+Operador,Pressupostos,280
+Operador,Condicoes Operador,36
+Sensibilidade,Hotel,54
+Sensibilidade,Pressupostos,141
+Sensibilidade,Fluxo 180M,54
+Sensibilidade,Retornos,24
+Ronda Investidores,Blocos V03,19
+Ronda Investidores,Pressupostos,4
+Ronda Investidores,Capital V03,2
+Ronda Investidores,V04 Capital180,2
+Condicoes Operador,Pressupostos,27
+Resultados Cenarios,Comparacao,288
+Resultados Cenarios,Pressupostos,2304
+Resultados Cenarios,CalcF01,99
+Resultados Cenarios,Capital V03,93
+Resultados Cenarios,Vet Cenarios,240
+Resultados Cenarios,CalcH01,3
+Resultados Cenarios,Resultados Cenarios,48
+Resultados Cenarios,CalcF02,99
+Resultados Cenarios,CalcH02,3
+Resultados Cenarios,CalcF03,99
+Resultados Cenarios,CalcH03,3
+Resultados Cenarios,CalcF04,99
+Resultados Cenarios,CalcH04,3
+Resultados Cenarios,CalcF05,99
+Resultados Cenarios,CalcH05,3
+Resultados Cenarios,CalcF06,99
+Resultados Cenarios,CalcH06,3
+Resultados Cenarios,CalcF07,99
+Resultados Cenarios,CalcH07,3
+Resultados Cenarios,CalcF08,99
+Resultados Cenarios,CalcH08,3
+Resultados Cenarios,CalcF09,99
+Resultados Cenarios,CalcH09,3
+Resultados Cenarios,CalcF10,99
+Resultados Cenarios,CalcH10,3
+Resultados Cenarios,CalcF11,99
+Resultados Cenarios,CalcH11,3
+Resultados Cenarios,CalcF12,99
+Resultados Cenarios,CalcH12,3
+Resultados Cenarios,CalcF13,99
+Resultados Cenarios,CalcH13,3
+Resultados Cenarios,CalcF14,99
+Resultados Cenarios,CalcH14,3
+Resultados Cenarios,CalcF15,99
+Resultados Cenarios,CalcH15,3
+Resultados Cenarios,CalcF16,99
+Resultados Cenarios,CalcH16,3
+Resultados Cenarios,CalcF17,99
+Resultados Cenarios,CalcH17,3
+Resultados Cenarios,CalcF18,99
+Resultados Cenarios,CalcH18,3
+Resultados Cenarios,CalcF19,99
+Resultados Cenarios,CalcH19,3
+Resultados Cenarios,CalcF20,99
+Resultados Cenarios,CalcH20,3
+Resultados Cenarios,CalcF21,99
+Resultados Cenarios,CalcH21,3
+Resultados Cenarios,CalcF22,99
+Resultados Cenarios,CalcH22,3
+Resultados Cenarios,CalcF23,99
+Resultados Cenarios,CalcH23,3
+Resultados Cenarios,CalcF24,99
+Resultados Cenarios,CalcH24,3
+Resultados Cenarios,CalcF25,99
+Resultados Cenarios,CalcH25,3
+Resultados Cenarios,CalcF26,99
+Resultados Cenarios,CalcH26,3
+Resultados Cenarios,CalcF27,99
+Resultados Cenarios,CalcH27,3
+Resultados Cenarios,CalcF28,99
+Resultados Cenarios,CalcH28,3
+Resultados Cenarios,CalcF29,99
+Resultados Cenarios,CalcH29,3
+Resultados Cenarios,CalcF30,99
+Resultados Cenarios,CalcH30,3
+Resultados Cenarios,CalcF31,99
+Resultados Cenarios,CalcH31,3
+Resultados Cenarios,CalcF32,99
+Resultados Cenarios,CalcH32,3
+Resultados Cenarios,CalcF33,99
+Resultados Cenarios,CalcH33,3
+Resultados Cenarios,CalcF34,99
+Resultados Cenarios,CalcH34,3
+Resultados Cenarios,CalcF35,99
+Resultados Cenarios,CalcH35,3
+Resultados Cenarios,CalcF36,99
+Resultados Cenarios,CalcH36,3
+Resultados Cenarios,CalcF37,99
+Resultados Cenarios,CalcH37,3
+Resultados Cenarios,CalcF38,99
+Resultados Cenarios,CalcH38,3
+Resultados Cenarios,CalcF39,99
+Resultados Cenarios,CalcH39,3
+Resultados Cenarios,CalcF40,99
+Resultados Cenarios,CalcH40,3
+Resultados Cenarios,CalcF41,99
+Resultados Cenarios,CalcH41,3
+Resultados Cenarios,CalcF42,99
+Resultados Cenarios,CalcH42,3
+Resultados Cenarios,CalcF43,99
+Resultados Cenarios,CalcH43,3
+Resultados Cenarios,CalcF44,99
+Resultados Cenarios,CalcH44,3
+Resultados Cenarios,CalcF45,99
+Resultados Cenarios,CalcH45,3
+Resultados Cenarios,CalcF46,99
+Resultados Cenarios,CalcH46,3
+Resultados Cenarios,CalcF47,99
+Resultados Cenarios,CalcH47,3
+Resultados Cenarios,CalcF48,99
+Resultados Cenarios,CalcH48,3
+Vet Cenarios,Pressupostos,216480
+Vet Cenarios,CalcF01,1222
+Vet Cenarios,Resultados Cenarios,57792
+Vet Cenarios,CalcF02,1222
+Vet Cenarios,CalcF03,1222
+Vet Cenarios,CalcF04,1222
+Vet Cenarios,CalcF05,1222
+Vet Cenarios,CalcF06,1222
+Vet Cenarios,CalcF07,1222
+Vet Cenarios,CalcF08,1222
+Vet Cenarios,CalcF09,1222
+Vet Cenarios,CalcF10,1222
+Vet Cenarios,CalcF11,1222
+Vet Cenarios,CalcF12,1222
+Vet Cenarios,CalcF13,1222
+Vet Cenarios,CalcF14,1222
+Vet Cenarios,CalcF15,1222
+Vet Cenarios,CalcF16,1222
+Vet Cenarios,CalcF17,1222
+Vet Cenarios,CalcF18,1222
+Vet Cenarios,CalcF19,1222
+Vet Cenarios,CalcF20,1222
+Vet Cenarios,CalcF21,1222
+Vet Cenarios,CalcF22,1222
+Vet Cenarios,CalcF23,1222
+Vet Cenarios,CalcF24,1222
+Vet Cenarios,CalcF25,1222
+Vet Cenarios,CalcF26,1222
+Vet Cenarios,CalcF27,1222
+Vet Cenarios,CalcF28,1222
+Vet Cenarios,CalcF29,1222
+Vet Cenarios,CalcF30,1222
+Vet Cenarios,CalcF31,1222
+Vet Cenarios,CalcF32,1222
+Vet Cenarios,CalcF33,1222
+Vet Cenarios,CalcF34,1222
+Vet Cenarios,CalcF35,1222
+Vet Cenarios,CalcF36,1222
+Vet Cenarios,CalcF37,1222
+Vet Cenarios,CalcF38,1222
+Vet Cenarios,CalcF39,1222
+Vet Cenarios,CalcF40,1222
+Vet Cenarios,CalcF41,1222
+Vet Cenarios,CalcF42,1222
+Vet Cenarios,CalcF43,1222
+Vet Cenarios,CalcF44,1222
+Vet Cenarios,CalcF45,1222
+Vet Cenarios,CalcF46,1222
+Vet Cenarios,CalcF47,1222
+Vet Cenarios,CalcF48,1222
+Vet Cenarios,CalcH01,4
+Vet Cenarios,CalcH02,4
+Vet Cenarios,CalcH03,4
+Vet Cenarios,CalcH04,4
+Vet Cenarios,CalcH05,4
+Vet Cenarios,CalcH06,4
+Vet Cenarios,CalcH07,4
+Vet Cenarios,CalcH08,4
+Vet Cenarios,CalcH09,4
+Vet Cenarios,CalcH10,4
+Vet Cenarios,CalcH11,4
+Vet Cenarios,CalcH12,4
+Vet Cenarios,CalcH13,4
+Vet Cenarios,CalcH14,4
+Vet Cenarios,CalcH15,4
+Vet Cenarios,CalcH16,4
+Vet Cenarios,CalcH17,4
+Vet Cenarios,CalcH18,4
+Vet Cenarios,CalcH19,4
+Vet Cenarios,CalcH20,4
+Vet Cenarios,CalcH21,4
+Vet Cenarios,CalcH22,4
+Vet Cenarios,CalcH23,4
+Vet Cenarios,CalcH24,4
+Vet Cenarios,CalcH25,4
+Vet Cenarios,CalcH26,4
+Vet Cenarios,CalcH27,4
+Vet Cenarios,CalcH28,4
+Vet Cenarios,CalcH29,4
+Vet Cenarios,CalcH30,4
+Vet Cenarios,CalcH31,4
+Vet Cenarios,CalcH32,4
+Vet Cenarios,CalcH33,4
+Vet Cenarios,CalcH34,4
+Vet Cenarios,CalcH35,4
+Vet Cenarios,CalcH36,4
+Vet Cenarios,CalcH37,4
+Vet Cenarios,CalcH38,4
+Vet Cenarios,CalcH39,4
+Vet Cenarios,CalcH40,4
+Vet Cenarios,CalcH41,4
+Vet Cenarios,CalcH42,4
+Vet Cenarios,CalcH43,4
+Vet Cenarios,CalcH44,4
+Vet Cenarios,CalcH45,4
+Vet Cenarios,CalcH46,4
+Vet Cenarios,CalcH47,4
+Vet Cenarios,CalcH48,4
+Comparativo 15 20,Resultados Cenarios,54
+Comparativo 15 20,CalcF27,196
+Comparativo 15 20,CalcF28,196
+Execucao,CAPEX,180
+DASH Investimento,Pressupostos,14
+DASH Investimento,CAPEX,2
+DASH Investimento,Execucao,6
+DASH Residencial,Pressupostos,3
+DASH Residencial,Residencial,7
+DASH Residencial,Unidades,1
+DASH Operador,Pressupostos,4
+DASH Operador,Condicoes Operador,22
+DASH Operador,DASH Hotel MICE,4
+DASH Operador,CalcH37,2
+DASH Operador,Resultados Cenarios,16
+DASH Operador,CalcH38,2
+DASH Operador,CalcH39,2
+DASH Operador,CalcH40,2
+DASH Riscos,AUDITORIA,161
+DASH Riscos,KPI,2
+DASH Riscos,Ronda Investidores,1
+DASH Riscos,Residencial,1
+DASH Riscos,Pressupostos,2
+DASH Riscos,Condicoes Operador,1
+Retorno Socios,Societario,2
+Retorno Socios,Retornos,8
+Retorno Socios,Capital V03,8
+Retorno Socios,Fluxo 180M,4
+Capital V03,Pressupostos,13
+Capital V03,Blocos V03,2
+Blocos V03,Pressupostos,6
+Matriz Societaria V03,Capital V03,3
+Matriz Societaria V03,Pressupostos,3
+Matriz Societaria V03,Blocos V03,2
+Beneficios V03,Pressupostos,3
+Comparativo Capital V03,Resultados Cenarios,72
+Retorno Categorias V03,Retornos,12
+Retorno Categorias V03,Pressupostos,561
+Retorno Categorias V03,Vet Categorias V03,12
+Retorno Categorias V03,Fluxo 180M,543
+Retorno Categorias V03,Anual,45
+Vet Categorias V03,Retorno Categorias V03,1806
+Vet Categorias V03,Pressupostos,6300
+Vet Categorias V03,Fluxo 180M,900
+Vet Categorias V03,Retornos,6
+V04 Pipeline,Pressupostos,216
+V04 Pipeline,V04 Calendarios,72
+V04 Pipeline,Ronda Investidores,36
+V04 Capital180,V04 Pipeline,6840
+V04 Capital180,Pressupostos,5220
+V04 Capital180,Ronda Investidores,900
+V04 Capital180,Capital V03,180
+V04 CAPEX Base,Pressupostos,11160
+V04 CAPEX Base,Obra,1620
+V04 Bancabilidade,Pressupostos,4
+V04 Bancabilidade,KPI,1
+V04 Completion,Fluxo 180M,37
+V04 Completion,Pressupostos,50
+V04 Completion,CAPEX,6
+V04 Pricing,Unidades,470
+V04 Pricing,Pressupostos,94
+V04 Politica,Pressupostos,14
+V04 Politica,Fluxo 180M,32
+V04 Politica,Hotel,5
+V04 Waterfall180,Fluxo 180M,540
+V04 Waterfall180,V04 Politica,2520
+V04 Waterfall180,Pressupostos,14937
+V04 Waterfall180,V04 Pipeline,4320
+V04 Waterfall180,Ronda Investidores,360
+V04 Waterfall180,V04 Capital180,540
+V04 Waterfall180,Capital V03,360
+V04 Retornos,Pressupostos,56
+V04 Retornos,V04 Vet Retorno,23
+V04 Retornos,V04 Waterfall180,632
+V04 Retornos,V04 Pipeline,14
+V04 Retornos,V04 Politica,8
+V04 Retornos,V04 Capital180,3
+V04 Retornos,Fluxo 180M,7
+V04 Retornos,Hotel,1
+V04 Vet Retorno,Pressupostos,1
+V04 Vet Retorno,V04 Waterfall180,6120
+V04 Vet Retorno,V04 Pipeline,8640
+V04 LEG28Unid,Unidades,1222
+V04 LEG28Unid,Pressupostos,752
+V04 LEG28Receb,V04 LEG28Unid,355414
+V04 LEG28Receb,Pressupostos,16920
+V04 LEG32Unid,Unidades,1222
+V04 LEG32Unid,Pressupostos,752
+V04 LEG32Receb,V04 LEG32Unid,355414
+V04 LEG32Receb,Pressupostos,16920
+V04 LEG44Unid,Unidades,1222
+V04 LEG44Unid,Pressupostos,752
+V04 LEG44Receb,V04 LEG44Unid,355414
+V04 LEG44Receb,Pressupostos,16920
+V04 Comercial,Unidades,564
+V04 Comercial,Pressupostos,94
+V04 Metas RE,Unidades,108
+V04 Metas RE,Pressupostos,24
+V04 Metas RE,V04 Comercial,24
+V04 EAC,V04 CAPEX Base,180
+V04 EAC,CAPEX,180
+V04 EAC,Pressupostos,12
+V04 Master Workflow,Pressupostos,56
+V04 Operacional,V04 Master Workflow,560
+V04 Opening Readiness,Pressupostos,15
+V04 R01Pipeline,V04 Pipeline,72
+V04 R01Pipeline,Pressupostos,108
+V04 R01Pipeline,Ronda Investidores,36
+V04 R01Capital,Ronda Investidores,360
+V04 R01Capital,Pressupostos,360
+V04 R01Capital,V04 R01Pipeline,360
+V04 R01Unid,Unidades,1222
+V04 R01Unid,Pressupostos,752
+V04 R01Receb,V04 R01Unid,355414
+V04 R01Receb,Pressupostos,16920
+V04 R01RE,V04 R01Unid,4320
+V04 R01RE,Pressupostos,1440
+V04 R01RE,V04 R01Receb,180
+V04 R01Hotel,Pressupostos,5040
+V04 R01Hotel,Cenarios,1260
+V04 R01Hotel,Condicoes Operador,540
+V04 R01Resid,Pressupostos,5800
+V04 R01Resid,Unidades,470
+V04 R01Fluxo,Ronda Investidores,180
+V04 R01Fluxo,Pressupostos,17460
+V04 R01Fluxo,V04 R01Capital,180
+V04 R01Fluxo,V04 R01RE,1259
+V04 R01Fluxo,CAPEX,2519
+V04 R01Fluxo,V04 R01Hotel,900
+V04 R01Fluxo,V04 R01Resid,360
+V04 R01Fluxo,Cenarios,1620
+V04 R01Fluxo,Unidades,180
+V04 R01Politica,Pressupostos,14
+V04 R01Politica,V04 R01Fluxo,32
+V04 R01Politica,V04 R01Hotel,5
+V04 R01WF,V04 R01Fluxo,540
+V04 R01WF,V04 R01Politica,2520
+V04 R01WF,Pressupostos,14937
+V04 R01WF,V04 R01Pipeline,4320
+V04 R01WF,Ronda Investidores,360
+V04 R01WF,V04 R01Capital,540
+V04 R01WF,Capital V03,360
+V04 R02Pipeline,V04 Pipeline,72
+V04 R02Pipeline,Pressupostos,108
+V04 R02Pipeline,Ronda Investidores,36
+V04 R02Capital,Ronda Investidores,360
+V04 R02Capital,Pressupostos,360
+V04 R02Capital,V04 R02Pipeline,360
+V04 R02Unid,Unidades,1222
+V04 R02Unid,Pressupostos,752
+V04 R02Receb,V04 R02Unid,355414
+V04 R02Receb,Pressupostos,16920
+V04 R02RE,V04 R02Unid,4320
+V04 R02RE,Pressupostos,1440
+V04 R02RE,V04 R02Receb,180
+V04 R02Hotel,Pressupostos,5040
+V04 R02Hotel,Cenarios,1260
+V04 R02Hotel,Condicoes Operador,540
+V04 R02Resid,Pressupostos,5800
+V04 R02Resid,Unidades,470
+V04 R02Fluxo,Ronda Investidores,180
+V04 R02Fluxo,Pressupostos,17460
+V04 R02Fluxo,V04 R02Capital,180
+V04 R02Fluxo,V04 R02RE,1259
+V04 R02Fluxo,CAPEX,2519
+V04 R02Fluxo,V04 R02Hotel,900
+V04 R02Fluxo,V04 R02Resid,360
+V04 R02Fluxo,Cenarios,1620
+V04 R02Fluxo,Unidades,180
+V04 R02Politica,Pressupostos,14
+V04 R02Politica,V04 R02Fluxo,32
+V04 R02Politica,V04 R02Hotel,5
+V04 R02WF,V04 R02Fluxo,540
+V04 R02WF,V04 R02Politica,2520
+V04 R02WF,Pressupostos,14937
+V04 R02WF,V04 R02Pipeline,4320
+V04 R02WF,Ronda Investidores,360
+V04 R02WF,V04 R02Capital,540
+V04 R02WF,Capital V03,360
+V04 R03Pipeline,V04 Pipeline,72
+V04 R03Pipeline,Pressupostos,108
+V04 R03Pipeline,Ronda Investidores,36
+V04 R03Capital,Ronda Investidores,360
+V04 R03Capital,Pressupostos,360
+V04 R03Capital,V04 R03Pipeline,360
+V04 R03Unid,Unidades,1222
+V04 R03Unid,Pressupostos,752
+V04 R03Receb,V04 R03Unid,355414
+V04 R03Receb,Pressupostos,16920
+V04 R03RE,V04 R03Unid,4320
+V04 R03RE,Pressupostos,1440
+V04 R03RE,V04 R03Receb,180
+V04 R03Hotel,Pressupostos,5040
+V04 R03Hotel,Cenarios,1260
+V04 R03Hotel,Condicoes Operador,540
+V04 R03Resid,Pressupostos,5800
+V04 R03Resid,Unidades,470
+V04 R03Fluxo,Ronda Investidores,180
+V04 R03Fluxo,Pressupostos,17460
+V04 R03Fluxo,V04 R03Capital,180
+V04 R03Fluxo,V04 R03RE,1259
+V04 R03Fluxo,CAPEX,2519
+V04 R03Fluxo,V04 R03Hotel,900
+V04 R03Fluxo,V04 R03Resid,360
+V04 R03Fluxo,Cenarios,1620
+V04 R03Fluxo,Unidades,180
+V04 R03Politica,Pressupostos,14
+V04 R03Politica,V04 R03Fluxo,32
+V04 R03Politica,V04 R03Hotel,5
+V04 R03WF,V04 R03Fluxo,540
+V04 R03WF,V04 R03Politica,2520
+V04 R03WF,Pressupostos,14937
+V04 R03WF,V04 R03Pipeline,4320
+V04 R03WF,Ronda Investidores,360
+V04 R03WF,V04 R03Capital,540
+V04 R03WF,Capital V03,360
+V04 R04Pipeline,V04 Pipeline,72
+V04 R04Pipeline,Pressupostos,108
+V04 R04Pipeline,Ronda Investidores,36
+V04 R04Capital,Ronda Investidores,360
+V04 R04Capital,Pressupostos,360
+V04 R04Capital,V04 R04Pipeline,360
+V04 R04Unid,Unidades,1222
+V04 R04Unid,Pressupostos,752
+V04 R04Receb,V04 R04Unid,355414
+V04 R04Receb,Pressupostos,16920
+V04 R04RE,V04 R04Unid,4320
+V04 R04RE,Pressupostos,1440
+V04 R04RE,V04 R04Receb,180
+V04 R04Hotel,Pressupostos,5040
+V04 R04Hotel,Cenarios,1260
+V04 R04Hotel,Condicoes Operador,540
+V04 R04Resid,Pressupostos,5800
+V04 R04Resid,Unidades,470
+V04 R04Fluxo,Ronda Investidores,180
+V04 R04Fluxo,Pressupostos,17460
+V04 R04Fluxo,V04 R04Capital,180
+V04 R04Fluxo,V04 R04RE,1259
+V04 R04Fluxo,CAPEX,2519
+V04 R04Fluxo,V04 R04Hotel,900
+V04 R04Fluxo,V04 R04Resid,360
+V04 R04Fluxo,Cenarios,1620
+V04 R04Fluxo,Unidades,180
+V04 R04Politica,Pressupostos,14
+V04 R04Politica,V04 R04Fluxo,32
+V04 R04Politica,V04 R04Hotel,5
+V04 R04WF,V04 R04Fluxo,540
+V04 R04WF,V04 R04Politica,2520
+V04 R04WF,Pressupostos,14937
+V04 R04WF,V04 R04Pipeline,4320
+V04 R04WF,Ronda Investidores,360
+V04 R04WF,V04 R04Capital,540
+V04 R04WF,Capital V03,360
+V04 R05Pipeline,V04 Pipeline,72
+V04 R05Pipeline,Pressupostos,108
+V04 R05Pipeline,Ronda Investidores,36
+V04 R05Capital,Ronda Investidores,360
+V04 R05Capital,Pressupostos,360
+V04 R05Capital,V04 R05Pipeline,360
+V04 R05Unid,Unidades,1222
+V04 R05Unid,Pressupostos,752
+V04 R05Receb,V04 R05Unid,355414
+V04 R05Receb,Pressupostos,16920
+V04 R05RE,V04 R05Unid,4320
+V04 R05RE,Pressupostos,1440
+V04 R05RE,V04 R05Receb,180
+V04 R05Hotel,Pressupostos,5040
+V04 R05Hotel,Cenarios,1260
+V04 R05Hotel,Condicoes Operador,540
+V04 R05Resid,Pressupostos,5800
+V04 R05Resid,Unidades,470
+V04 R05Fluxo,Ronda Investidores,180
+V04 R05Fluxo,Pressupostos,17460
+V04 R05Fluxo,V04 R05Capital,180
+V04 R05Fluxo,V04 R05RE,1259
+V04 R05Fluxo,CAPEX,2519
+V04 R05Fluxo,V04 R05Hotel,900
+V04 R05Fluxo,V04 R05Resid,360
+V04 R05Fluxo,Cenarios,1620
+V04 R05Fluxo,Unidades,180
+V04 R05Politica,Pressupostos,14
+V04 R05Politica,V04 R05Fluxo,32
+V04 R05Politica,V04 R05Hotel,5
+V04 R05WF,V04 R05Fluxo,540
+V04 R05WF,V04 R05Politica,2520
+V04 R05WF,Pressupostos,14937
+V04 R05WF,V04 R05Pipeline,4320
+V04 R05WF,Ronda Investidores,360
+V04 R05WF,V04 R05Capital,540
+V04 R05WF,Capital V03,360
+V04 R06Pipeline,V04 Pipeline,72
+V04 R06Pipeline,Pressupostos,108
+V04 R06Pipeline,Ronda Investidores,36
+V04 R06Capital,Ronda Investidores,360
+V04 R06Capital,Pressupostos,360
+V04 R06Capital,V04 R06Pipeline,360
+V04 R06CB,Pressupostos,10080
+V04 R06CB,Obra,1620
+V04 R06CAPEX,V04 R06CB,3600
+V04 R06CAPEX,Pressupostos,5760
+V04 R06Unid,Unidades,1222
+V04 R06Unid,Pressupostos,752
+V04 R06Receb,V04 R06Unid,355414
+V04 R06Receb,Pressupostos,16920
+V04 R06RE,V04 R06Unid,4320
+V04 R06RE,Pressupostos,1440
+V04 R06RE,V04 R06Receb,180
+V04 R06Hotel,Pressupostos,5580
+V04 R06Hotel,Cenarios,1260
+V04 R06Hotel,Condicoes Operador,540
+V04 R06Resid,Pressupostos,6880
+V04 R06Resid,Unidades,470
+V04 R06Fluxo,Ronda Investidores,180
+V04 R06Fluxo,Pressupostos,18000
+V04 R06Fluxo,V04 R06Capital,180
+V04 R06Fluxo,V04 R06RE,1259
+V04 R06Fluxo,V04 R06CAPEX,2519
+V04 R06Fluxo,V04 R06Hotel,900
+V04 R06Fluxo,V04 R06Resid,360
+V04 R06Fluxo,Cenarios,1620
+V04 R06Fluxo,Unidades,180
+V04 R06Politica,Pressupostos,14
+V04 R06Politica,V04 R06Fluxo,32
+V04 R06Politica,V04 R06Hotel,5
+V04 R06WF,V04 R06Fluxo,540
+V04 R06WF,V04 R06Politica,2520
+V04 R06WF,Pressupostos,14937
+V04 R06WF,V04 R06Pipeline,4320
+V04 R06WF,Ronda Investidores,360
+V04 R06WF,V04 R06Capital,540
+V04 R06WF,Capital V03,360
+V04 R07Pipeline,V04 Pipeline,72
+V04 R07Pipeline,Pressupostos,108
+V04 R07Pipeline,Ronda Investidores,36
+V04 R07Capital,Ronda Investidores,360
+V04 R07Capital,Pressupostos,360
+V04 R07Capital,V04 R07Pipeline,360
+V04 R07Unid,Unidades,1222
+V04 R07Unid,Pressupostos,752
+V04 R07Receb,V04 R07Unid,355414
+V04 R07Receb,Pressupostos,16920
+V04 R07RE,V04 R07Unid,4320
+V04 R07RE,Pressupostos,1440
+V04 R07RE,V04 R07Receb,180
+V04 R07Hotel,Pressupostos,5040
+V04 R07Hotel,Cenarios,2520
+V04 R07Hotel,Condicoes Operador,540
+V04 R07Resid,Pressupostos,5800
+V04 R07Resid,Unidades,470
+V04 R07Fluxo,Ronda Investidores,180
+V04 R07Fluxo,Pressupostos,17460
+V04 R07Fluxo,V04 R07Capital,180
+V04 R07Fluxo,V04 R07RE,1259
+V04 R07Fluxo,CAPEX,2519
+V04 R07Fluxo,V04 R07Hotel,900
+V04 R07Fluxo,V04 R07Resid,360
+V04 R07Fluxo,Cenarios,1620
+V04 R07Fluxo,Unidades,180
+V04 R07Politica,Pressupostos,14
+V04 R07Politica,V04 R07Fluxo,32
+V04 R07Politica,V04 R07Hotel,5
+V04 R07WF,V04 R07Fluxo,540
+V04 R07WF,V04 R07Politica,2520
+V04 R07WF,Pressupostos,14937
+V04 R07WF,V04 R07Pipeline,4320
+V04 R07WF,Ronda Investidores,360
+V04 R07WF,V04 R07Capital,540
+V04 R07WF,Capital V03,360
+V04 R08Pipeline,V04 Pipeline,72
+V04 R08Pipeline,Pressupostos,108
+V04 R08Pipeline,Ronda Investidores,36
+V04 R08Capital,Ronda Investidores,360
+V04 R08Capital,Pressupostos,360
+V04 R08Capital,V04 R08Pipeline,360
+V04 R08Unid,Unidades,1222
+V04 R08Unid,Pressupostos,752
+V04 R08Receb,V04 R08Unid,355414
+V04 R08Receb,Pressupostos,16920
+V04 R08RE,V04 R08Unid,4320
+V04 R08RE,Pressupostos,1440
+V04 R08RE,V04 R08Receb,180
+V04 R08Hotel,Pressupostos,5040
+V04 R08Hotel,Cenarios,1260
+V04 R08Hotel,Condicoes Operador,540
+V04 R08Resid,Pressupostos,5800
+V04 R08Resid,Unidades,470
+V04 R08Fluxo,Ronda Investidores,180
+V04 R08Fluxo,Pressupostos,17460
+V04 R08Fluxo,V04 R08Capital,180
+V04 R08Fluxo,V04 R08RE,1259
+V04 R08Fluxo,CAPEX,2519
+V04 R08Fluxo,V04 R08Hotel,900
+V04 R08Fluxo,V04 R08Resid,360
+V04 R08Fluxo,Cenarios,1620
+V04 R08Fluxo,Unidades,180
+V04 R08Politica,Pressupostos,14
+V04 R08Politica,V04 R08Fluxo,32
+V04 R08Politica,V04 R08Hotel,5
+V04 R08WF,V04 R08Fluxo,540
+V04 R08WF,V04 R08Politica,2520
+V04 R08WF,Pressupostos,14937
+V04 R08WF,V04 R08Pipeline,4320
+V04 R08WF,Ronda Investidores,360
+V04 R08WF,V04 R08Capital,540
+V04 R08WF,Capital V03,360
+V04 R09Pipeline,V04 Pipeline,72
+V04 R09Pipeline,Pressupostos,108
+V04 R09Pipeline,Ronda Investidores,36
+V04 R09Capital,Ronda Investidores,360
+V04 R09Capital,Pressupostos,360
+V04 R09Capital,V04 R09Pipeline,360
+V04 R09Unid,Unidades,1222
+V04 R09Unid,Pressupostos,752
+V04 R09Receb,V04 R09Unid,355414
+V04 R09Receb,Pressupostos,16920
+V04 R09RE,V04 R09Unid,4320
+V04 R09RE,Pressupostos,1440
+V04 R09RE,V04 R09Receb,180
+V04 R09Hotel,Pressupostos,5040
+V04 R09Hotel,Cenarios,1260
+V04 R09Hotel,Condicoes Operador,540
+V04 R09Resid,Pressupostos,5800
+V04 R09Resid,Unidades,470
+V04 R09Fluxo,Ronda Investidores,180
+V04 R09Fluxo,Pressupostos,17460
+V04 R09Fluxo,V04 R09Capital,180
+V04 R09Fluxo,V04 R09RE,1259
+V04 R09Fluxo,CAPEX,2519
+V04 R09Fluxo,V04 R09Hotel,900
+V04 R09Fluxo,V04 R09Resid,360
+V04 R09Fluxo,Cenarios,1620
+V04 R09Fluxo,Unidades,180
+V04 R09Politica,Pressupostos,14
+V04 R09Politica,V04 R09Fluxo,32
+V04 R09Politica,V04 R09Hotel,5
+V04 R09WF,V04 R09Fluxo,540
+V04 R09WF,V04 R09Politica,2520
+V04 R09WF,Pressupostos,14937
+V04 R09WF,V04 R09Pipeline,4320
+V04 R09WF,Ronda Investidores,360
+V04 R09WF,V04 R09Capital,540
+V04 R09WF,Capital V03,360
+V04 R10Pipeline,V04 Pipeline,72
+V04 R10Pipeline,Pressupostos,108
+V04 R10Pipeline,Ronda Investidores,36
+V04 R10Capital,Ronda Investidores,360
+V04 R10Capital,Pressupostos,360
+V04 R10Capital,V04 R10Pipeline,360
+V04 R10Unid,Unidades,1222
+V04 R10Unid,Pressupostos,752
+V04 R10Receb,V04 R10Unid,355414
+V04 R10Receb,Pressupostos,16920
+V04 R10RE,V04 R10Unid,4320
+V04 R10RE,Pressupostos,1440
+V04 R10RE,V04 R10Receb,180
+V04 R10Hotel,Pressupostos,5040
+V04 R10Hotel,Cenarios,1260
+V04 R10Hotel,Condicoes Operador,540
+V04 R10Resid,Pressupostos,5800
+V04 R10Resid,Unidades,470
+V04 R10Fluxo,Ronda Investidores,180
+V04 R10Fluxo,Pressupostos,17460
+V04 R10Fluxo,V04 R10Capital,180
+V04 R10Fluxo,V04 R10RE,1259
+V04 R10Fluxo,CAPEX,2519
+V04 R10Fluxo,V04 R10Hotel,900
+V04 R10Fluxo,V04 R10Resid,360
+V04 R10Fluxo,Cenarios,1620
+V04 R10Fluxo,Unidades,180
+V04 R10Politica,Pressupostos,14
+V04 R10Politica,V04 R10Fluxo,32
+V04 R10Politica,V04 R10Hotel,5
+V04 R10WF,V04 R10Fluxo,540
+V04 R10WF,V04 R10Politica,2520
+V04 R10WF,Pressupostos,14937
+V04 R10WF,V04 R10Pipeline,4320
+V04 R10WF,Ronda Investidores,360
+V04 R10WF,V04 R10Capital,540
+V04 R10WF,Capital V03,360
+V04 R11Pipeline,V04 Pipeline,72
+V04 R11Pipeline,Pressupostos,108
+V04 R11Pipeline,Ronda Investidores,36
+V04 R11Capital,Ronda Investidores,360
+V04 R11Capital,Pressupostos,360
+V04 R11Capital,V04 R11Pipeline,360
+V04 R11Unid,Unidades,1222
+V04 R11Unid,Pressupostos,752
+V04 R11Receb,V04 R11Unid,355414
+V04 R11Receb,Pressupostos,16920
+V04 R11RE,V04 R11Unid,4320
+V04 R11RE,Pressupostos,1440
+V04 R11RE,V04 R11Receb,180
+V04 R11Hotel,Pressupostos,5040
+V04 R11Hotel,Cenarios,1260
+V04 R11Hotel,Condicoes Operador,540
+V04 R11Resid,Pressupostos,5800
+V04 R11Resid,Unidades,470
+V04 R11Fluxo,Ronda Investidores,180
+V04 R11Fluxo,Pressupostos,15300
+V04 R11Fluxo,V04 R11Capital,180
+V04 R11Fluxo,V04 R11RE,1259
+V04 R11Fluxo,CAPEX,2519
+V04 R11Fluxo,V04 R11Hotel,900
+V04 R11Fluxo,V04 R11Resid,360
+V04 R11Fluxo,Cenarios,1620
+V04 R11Fluxo,Unidades,180
+V04 R11Politica,Pressupostos,14
+V04 R11Politica,V04 R11Fluxo,32
+V04 R11Politica,V04 R11Hotel,5
+V04 R11WF,V04 R11Fluxo,540
+V04 R11WF,V04 R11Politica,2520
+V04 R11WF,Pressupostos,14937
+V04 R11WF,V04 R11Pipeline,4320
+V04 R11WF,Ronda Investidores,360
+V04 R11WF,V04 R11Capital,540
+V04 R11WF,Capital V03,360
+V04 R12Pipeline,V04 Pipeline,72
+V04 R12Pipeline,Pressupostos,108
+V04 R12Pipeline,Ronda Investidores,36
+V04 R12Capital,Ronda Investidores,360
+V04 R12Capital,Pressupostos,360
+V04 R12Capital,V04 R12Pipeline,360
+V04 R12Unid,Unidades,1222
+V04 R12Unid,Pressupostos,752
+V04 R12Receb,V04 R12Unid,355414
+V04 R12Receb,Pressupostos,16920
+V04 R12RE,V04 R12Unid,4320
+V04 R12RE,Pressupostos,1440
+V04 R12RE,V04 R12Receb,180
+V04 R12Hotel,Pressupostos,5040
+V04 R12Hotel,Cenarios,1260
+V04 R12Hotel,Condicoes Operador,540
+V04 R12Resid,Pressupostos,5800
+V04 R12Resid,Unidades,470
+V04 R12Fluxo,Ronda Investidores,180
+V04 R12Fluxo,Pressupostos,15300
+V04 R12Fluxo,V04 R12Capital,180
+V04 R12Fluxo,V04 R12RE,1259
+V04 R12Fluxo,CAPEX,2519
+V04 R12Fluxo,V04 R12Hotel,900
+V04 R12Fluxo,V04 R12Resid,360
+V04 R12Fluxo,Cenarios,1620
+V04 R12Fluxo,Unidades,180
+V04 R12Politica,Pressupostos,14
+V04 R12Politica,V04 R12Fluxo,32
+V04 R12Politica,V04 R12Hotel,5
+V04 R12WF,V04 R12Fluxo,540
+V04 R12WF,V04 R12Politica,2520
+V04 R12WF,Pressupostos,14937
+V04 R12WF,V04 R12Pipeline,4320
+V04 R12WF,Ronda Investidores,360
+V04 R12WF,V04 R12Capital,540
+V04 R12WF,Capital V03,360
+V04 R13Pipeline,V04 Pipeline,72
+V04 R13Pipeline,Pressupostos,108
+V04 R13Pipeline,Ronda Investidores,36
+V04 R13Capital,Ronda Investidores,360
+V04 R13Capital,Pressupostos,360
+V04 R13Capital,V04 R13Pipeline,360
+V04 R13Unid,Unidades,1222
+V04 R13Unid,Pressupostos,752
+V04 R13Receb,V04 R13Unid,355414
+V04 R13Receb,Pressupostos,16920
+V04 R13RE,V04 R13Unid,4320
+V04 R13RE,Pressupostos,1440
+V04 R13RE,V04 R13Receb,180
+V04 R13Hotel,Pressupostos,5040
+V04 R13Hotel,Cenarios,1260
+V04 R13Hotel,Condicoes Operador,540
+V04 R13Resid,Pressupostos,5800
+V04 R13Resid,Unidades,470
+V04 R13Fluxo,Ronda Investidores,180
+V04 R13Fluxo,Pressupostos,15300
+V04 R13Fluxo,V04 R13Capital,180
+V04 R13Fluxo,V04 R13RE,1259
+V04 R13Fluxo,CAPEX,2519
+V04 R13Fluxo,V04 R13Hotel,900
+V04 R13Fluxo,V04 R13Resid,360
+V04 R13Fluxo,Cenarios,1620
+V04 R13Fluxo,Unidades,180
+V04 R13Politica,Pressupostos,14
+V04 R13Politica,V04 R13Fluxo,32
+V04 R13Politica,V04 R13Hotel,5
+V04 R13WF,V04 R13Fluxo,540
+V04 R13WF,V04 R13Politica,2520
+V04 R13WF,Pressupostos,14937
+V04 R13WF,V04 R13Pipeline,4320
+V04 R13WF,Ronda Investidores,360
+V04 R13WF,V04 R13Capital,540
+V04 R13WF,Capital V03,360
+V04 Riscos,Fluxo 180M,127
+V04 Riscos,CAPEX,104
+V04 Riscos,Pressupostos,2080
+V04 Riscos,V04 Waterfall180,4
+V04 Riscos,V04 Politica,2
+V04 Riscos,V04 R01Fluxo,127
+V04 Riscos,V04 R01WF,4
+V04 Riscos,V04 R01Politica,2
+V04 Riscos,V04 R02Fluxo,127
+V04 Riscos,V04 R02WF,4
+V04 Riscos,V04 R02Politica,2
+V04 Riscos,V04 R03Fluxo,127
+V04 Riscos,V04 R03WF,4
+V04 Riscos,V04 R03Politica,2
+V04 Riscos,V04 R04Fluxo,127
+V04 Riscos,V04 R04WF,4
+V04 Riscos,V04 R04Politica,2
+V04 Riscos,V04 R05Fluxo,127
+V04 Riscos,V04 R05WF,4
+V04 Riscos,V04 R05Politica,2
+V04 Riscos,V04 R06Fluxo,127
+V04 Riscos,V04 R06CAPEX,8
+V04 Riscos,V04 R06WF,4
+V04 Riscos,V04 R06Politica,2
+V04 Riscos,V04 R07Fluxo,127
+V04 Riscos,V04 R07WF,4
+V04 Riscos,V04 R07Politica,2
+V04 Riscos,V04 R08Fluxo,127
+V04 Riscos,V04 R08WF,4
+V04 Riscos,V04 R08Politica,2
+V04 Riscos,V04 R09Fluxo,127
+V04 Riscos,V04 R09WF,4
+V04 Riscos,V04 R09Politica,2
+V04 Riscos,V04 R10Fluxo,127
+V04 Riscos,V04 R10WF,4
+V04 Riscos,V04 R10Politica,2
+V04 Riscos,V04 R11Fluxo,127
+V04 Riscos,V04 R11WF,4
+V04 Riscos,V04 R11Politica,2
+V04 Riscos,V04 R12Fluxo,127
+V04 Riscos,V04 R12WF,4
+V04 Riscos,V04 R12Politica,2
+V04 Riscos,V04 R13Fluxo,127
+V04 Riscos,V04 R13WF,4
+V04 Riscos,V04 R13Politica,2
+V04 Impactos,V04 Riscos,156

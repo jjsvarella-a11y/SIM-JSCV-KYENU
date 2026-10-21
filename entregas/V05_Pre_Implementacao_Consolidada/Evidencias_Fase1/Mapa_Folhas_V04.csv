@@ -1,0 +1,314 @@
+folha,estado,ficheiro,celulas,formulas,validacoes,hyperlinks,tabelas,graficos_desenhos,matriciais
+EXEC KK01,visible,xl/worksheets/sheet1.xml,587,19,0,19,0,1,0
+LEIA-ME,visible,xl/worksheets/sheet2.xml,279,0,0,209,0,0,0
+Pressupostos,visible,xl/worksheets/sheet3.xml,708,8,161,2,0,0,0
+DASH Consolidado,visible,xl/worksheets/sheet4.xml,70,18,0,4,0,1,0
+DASH Real Estate,visible,xl/worksheets/sheet5.xml,55,11,0,3,0,1,0
+DASH Comercial,visible,xl/worksheets/sheet6.xml,2858,2586,5,2,0,1,0
+DASH Hotel MICE,visible,xl/worksheets/sheet7.xml,70,19,0,2,0,1,0
+DASH Acionistas,visible,xl/worksheets/sheet8.xml,70,14,0,12,0,1,0
+AUDITORIA,visible,xl/worksheets/sheet9.xml,235,106,0,2,0,1,0
+Cenarios,visible,xl/worksheets/sheet10.xml,98,14,0,2,0,0,0
+Unidades,visible,xl/worksheets/sheet11.xml,2517,1612,2,2,0,1,0
+Recebimentos,visible,xl/worksheets/sheet12.xml,17408,17194,0,2,0,1,0
+Obra,visible,xl/worksheets/sheet13.xml,1120,62,0,2,0,1,0
+CAPEX,visible,xl/worksheets/sheet14.xml,937,720,0,2,0,1,0
+Imobiliario,visible,xl/worksheets/sheet15.xml,2204,1980,0,2,0,1,0
+Hotel,visible,xl/worksheets/sheet16.xml,5100,4860,0,2,0,1,0
+Residencial,visible,xl/worksheets/sheet17.xml,4296,4062,0,2,0,1,0
+Fluxo 180M,visible,xl/worksheets/sheet18.xml,10167,9900,0,2,0,1,0
+Anual,visible,xl/worksheets/sheet19.xml,624,540,0,2,0,1,0
+Comparacao,visible,xl/worksheets/sheet20.xml,671,547,0,2,0,0,0
+CalcH01,hidden,xl/worksheets/sheet21.xml,5098,4860,0,0,0,0,0
+CalcF01,hidden,xl/worksheets/sheet22.xml,10165,9900,0,0,0,0,0
+CalcH02,hidden,xl/worksheets/sheet23.xml,5098,4860,0,0,0,0,0
+CalcF02,hidden,xl/worksheets/sheet24.xml,10165,9900,0,0,0,0,0
+CalcH03,hidden,xl/worksheets/sheet25.xml,5098,4860,0,0,0,0,0
+CalcF03,hidden,xl/worksheets/sheet26.xml,10165,9900,0,0,0,0,0
+CalcH04,hidden,xl/worksheets/sheet27.xml,5098,4860,0,0,0,0,0
+CalcF04,hidden,xl/worksheets/sheet28.xml,10165,9900,0,0,0,0,0
+CalcH05,hidden,xl/worksheets/sheet29.xml,5098,4860,0,0,0,0,0
+CalcF05,hidden,xl/worksheets/sheet30.xml,10165,9900,0,0,0,0,0
+CalcH06,hidden,xl/worksheets/sheet31.xml,5098,4860,0,0,0,0,0
+CalcF06,hidden,xl/worksheets/sheet32.xml,10165,9900,0,0,0,0,0
+CalcH07,hidden,xl/worksheets/sheet33.xml,5098,4860,0,0,0,0,0
+CalcF07,hidden,xl/worksheets/sheet34.xml,10165,9900,0,0,0,0,0
+CalcH08,hidden,xl/worksheets/sheet35.xml,5098,4860,0,0,0,0,0
+CalcF08,hidden,xl/worksheets/sheet36.xml,10165,9900,0,0,0,0,0
+CalcH09,hidden,xl/worksheets/sheet37.xml,5098,4860,0,0,0,0,0
+CalcF09,hidden,xl/worksheets/sheet38.xml,10165,9900,0,0,0,0,0
+CalcH10,hidden,xl/worksheets/sheet39.xml,5098,4860,0,0,0,0,0
+CalcF10,hidden,xl/worksheets/sheet40.xml,10165,9900,0,0,0,0,0
+CalcH11,hidden,xl/worksheets/sheet41.xml,5098,4860,0,0,0,0,0
+CalcF11,hidden,xl/worksheets/sheet42.xml,10165,9900,0,0,0,0,0
+CalcH12,hidden,xl/worksheets/sheet43.xml,5098,4860,0,0,0,0,0
+CalcF12,hidden,xl/worksheets/sheet44.xml,10165,9900,0,0,0,0,0
+CalcH13,hidden,xl/worksheets/sheet45.xml,5098,4860,0,0,0,0,0
+CalcF13,hidden,xl/worksheets/sheet46.xml,10165,9900,0,0,0,0,0
+CalcH14,hidden,xl/worksheets/sheet47.xml,5098,4860,0,0,0,0,0
+CalcF14,hidden,xl/worksheets/sheet48.xml,10165,9900,0,0,0,0,0
+CalcH15,hidden,xl/worksheets/sheet49.xml,5098,4860,0,0,0,0,0
+CalcF15,hidden,xl/worksheets/sheet50.xml,10165,9900,0,0,0,0,0
+CalcH16,hidden,xl/worksheets/sheet51.xml,5098,4860,0,0,0,0,0
+CalcF16,hidden,xl/worksheets/sheet52.xml,10165,9900,0,0,0,0,0
+CalcH17,hidden,xl/worksheets/sheet53.xml,5098,4860,0,0,0,0,0
+CalcF17,hidden,xl/worksheets/sheet54.xml,10165,9900,0,0,0,0,0
+CalcH18,hidden,xl/worksheets/sheet55.xml,5098,4860,0,0,0,0,0
+CalcF18,hidden,xl/worksheets/sheet56.xml,10165,9900,0,0,0,0,0
+CalcH19,hidden,xl/worksheets/sheet57.xml,5098,4860,0,0,0,0,0
+CalcF19,hidden,xl/worksheets/sheet58.xml,10165,9900,0,0,0,0,0
+CalcH20,hidden,xl/worksheets/sheet59.xml,5098,4860,0,0,0,0,0
+CalcF20,hidden,xl/worksheets/sheet60.xml,10165,9900,0,0,0,0,0
+CalcH21,hidden,xl/worksheets/sheet61.xml,5098,4860,0,0,0,0,0
+CalcF21,hidden,xl/worksheets/sheet62.xml,10165,9900,0,0,0,0,0
+CalcH22,hidden,xl/worksheets/sheet63.xml,5098,4860,0,0,0,0,0
+CalcF22,hidden,xl/worksheets/sheet64.xml,10165,9900,0,0,0,0,0
+CalcH23,hidden,xl/worksheets/sheet65.xml,5098,4860,0,0,0,0,0
+CalcF23,hidden,xl/worksheets/sheet66.xml,10165,9900,0,0,0,0,0
+CalcH24,hidden,xl/worksheets/sheet67.xml,5098,4860,0,0,0,0,0
+CalcF24,hidden,xl/worksheets/sheet68.xml,10165,9900,0,0,0,0,0
+CalcH25,hidden,xl/worksheets/sheet69.xml,5098,4860,0,0,0,0,0
+CalcF25,hidden,xl/worksheets/sheet70.xml,10165,9900,0,0,0,0,0
+CalcH26,hidden,xl/worksheets/sheet71.xml,5098,4860,0,0,0,0,0
+CalcF26,hidden,xl/worksheets/sheet72.xml,10165,9900,0,0,0,0,0
+CalcH27,hidden,xl/worksheets/sheet73.xml,5098,4860,0,0,0,0,0
+CalcF27,hidden,xl/worksheets/sheet74.xml,10165,9900,0,0,0,0,0
+CalcH28,hidden,xl/worksheets/sheet75.xml,5098,4860,0,0,0,0,0
+CalcF28,hidden,xl/worksheets/sheet76.xml,10165,9900,0,0,0,0,0
+CalcH29,hidden,xl/worksheets/sheet77.xml,5098,4860,0,0,0,0,0
+CalcF29,hidden,xl/worksheets/sheet78.xml,10165,9900,0,0,0,0,0
+CalcR29,hidden,xl/worksheets/sheet79.xml,2382,2160,0,0,0,0,0
+CalcA29,hidden,xl/worksheets/sheet80.xml,4294,4062,0,0,0,0,0
+CalcH30,hidden,xl/worksheets/sheet81.xml,5098,4860,0,0,0,0,0
+CalcF30,hidden,xl/worksheets/sheet82.xml,10165,9900,0,0,0,0,0
+CalcC30,hidden,xl/worksheets/sheet83.xml,935,720,0,0,0,0,0
+CalcH31,hidden,xl/worksheets/sheet84.xml,5098,4860,0,0,0,0,0
+CalcF31,hidden,xl/worksheets/sheet85.xml,10165,9900,0,0,0,0,0
+CalcH32,hidden,xl/worksheets/sheet86.xml,5098,4860,0,0,0,0,0
+CalcF32,hidden,xl/worksheets/sheet87.xml,10165,9900,0,0,0,0,0
+CalcH33,hidden,xl/worksheets/sheet88.xml,5098,4860,0,0,0,0,0
+CalcF33,hidden,xl/worksheets/sheet89.xml,10165,9900,0,0,0,0,0
+CalcR33,hidden,xl/worksheets/sheet90.xml,2382,2160,0,0,0,0,0
+CalcA33,hidden,xl/worksheets/sheet91.xml,4294,4062,0,0,0,0,0
+CalcH34,hidden,xl/worksheets/sheet92.xml,5098,4860,0,0,0,0,0
+CalcF34,hidden,xl/worksheets/sheet93.xml,10165,9900,0,0,0,0,0
+CalcC34,hidden,xl/worksheets/sheet94.xml,935,720,0,0,0,0,0
+CalcH35,hidden,xl/worksheets/sheet95.xml,5098,4860,0,0,0,0,0
+CalcF35,hidden,xl/worksheets/sheet96.xml,10165,9900,0,0,0,0,0
+CalcH36,hidden,xl/worksheets/sheet97.xml,5098,4860,0,0,0,0,0
+CalcF36,hidden,xl/worksheets/sheet98.xml,10165,9900,0,0,0,0,0
+CalcH37,hidden,xl/worksheets/sheet99.xml,5098,4860,0,0,0,0,0
+CalcF37,hidden,xl/worksheets/sheet100.xml,10165,9900,0,0,0,0,0
+CalcH38,hidden,xl/worksheets/sheet101.xml,5098,4860,0,0,0,0,0
+CalcF38,hidden,xl/worksheets/sheet102.xml,10165,9900,0,0,0,0,0
+CalcH39,hidden,xl/worksheets/sheet103.xml,5098,4860,0,0,0,0,0
+CalcF39,hidden,xl/worksheets/sheet104.xml,10165,9900,0,0,0,0,0
+CalcH40,hidden,xl/worksheets/sheet105.xml,5098,4860,0,0,0,0,0
+CalcF40,hidden,xl/worksheets/sheet106.xml,10165,9900,0,0,0,0,0
+CalcH41,hidden,xl/worksheets/sheet107.xml,5098,4860,0,0,0,0,0
+CalcF41,hidden,xl/worksheets/sheet108.xml,10165,9900,0,0,0,0,0
+CalcH42,hidden,xl/worksheets/sheet109.xml,5098,4860,0,0,0,0,0
+CalcF42,hidden,xl/worksheets/sheet110.xml,10165,9900,0,0,0,0,0
+CalcH43,hidden,xl/worksheets/sheet111.xml,5098,4860,0,0,0,0,0
+CalcF43,hidden,xl/worksheets/sheet112.xml,10165,9900,0,0,0,0,0
+CalcH44,hidden,xl/worksheets/sheet113.xml,5098,4860,0,0,0,0,0
+CalcF44,hidden,xl/worksheets/sheet114.xml,10165,9900,0,0,0,0,0
+CalcH45,hidden,xl/worksheets/sheet115.xml,5098,4860,0,0,0,0,0
+CalcF45,hidden,xl/worksheets/sheet116.xml,10165,9900,0,0,0,0,0
+CalcR45,hidden,xl/worksheets/sheet117.xml,2382,2160,0,0,0,0,0
+CalcA45,hidden,xl/worksheets/sheet118.xml,4294,4062,0,0,0,0,0
+CalcH46,hidden,xl/worksheets/sheet119.xml,5098,4860,0,0,0,0,0
+CalcF46,hidden,xl/worksheets/sheet120.xml,10165,9900,0,0,0,0,0
+CalcC46,hidden,xl/worksheets/sheet121.xml,935,720,0,0,0,0,0
+CalcH47,hidden,xl/worksheets/sheet122.xml,5098,4860,0,0,0,0,0
+CalcF47,hidden,xl/worksheets/sheet123.xml,10165,9900,0,0,0,0,0
+CalcH48,hidden,xl/worksheets/sheet124.xml,5098,4860,0,0,0,0,0
+CalcF48,hidden,xl/worksheets/sheet125.xml,10165,9900,0,0,0,0,0
+Retornos,visible,xl/worksheets/sheet126.xml,120,50,0,2,0,0,0
+Fluxos Retorno,visible,xl/worksheets/sheet127.xml,1852,1629,0,2,0,0,0
+Investidores,visible,xl/worksheets/sheet128.xml,683,580,0,2,0,1,0
+Societario,visible,xl/worksheets/sheet129.xml,66,9,0,2,0,0,0
+KPI,visible,xl/worksheets/sheet130.xml,143,36,0,2,0,0,0
+Operador,visible,xl/worksheets/sheet131.xml,208,125,0,2,0,0,0
+Sensibilidade,visible,xl/worksheets/sheet132.xml,122,57,0,2,0,0,0
+Listas,hidden,xl/worksheets/sheet133.xml,389,0,0,1,0,0,0
+Origem e Alteracoes,visible,xl/worksheets/sheet134.xml,83,0,0,2,0,0,0
+Mapa V45,visible,xl/worksheets/sheet135.xml,529,0,0,2,0,1,0
+Ronda Investidores,visible,xl/worksheets/sheet136.xml,155,29,0,2,0,0,0
+Condicoes Operador,visible,xl/worksheets/sheet137.xml,97,18,0,2,0,0,0
+Resultados Cenarios,visible,xl/worksheets/sheet138.xml,1649,1536,0,2,0,1,0
+Vet Cenarios,hidden,xl/worksheets/sheet139.xml,34965,34752,0,1,0,0,0
+Comparativo 15 20,visible,xl/worksheets/sheet140.xml,727,465,0,2,0,1,0
+Execucao,visible,xl/worksheets/sheet141.xml,937,360,0,2,0,1,0
+DASH Investimento,visible,xl/worksheets/sheet142.xml,58,13,0,2,0,1,0
+DASH Residencial,visible,xl/worksheets/sheet143.xml,54,11,0,2,0,1,0
+DASH Operador,visible,xl/worksheets/sheet144.xml,110,48,0,4,0,1,0
+DASH Riscos,visible,xl/worksheets/sheet145.xml,214,168,0,3,0,0,0
+Retorno Socios,visible,xl/worksheets/sheet146.xml,64,18,0,2,0,0,0
+Capital V03,visible,xl/worksheets/sheet147.xml,96,15,0,2,0,0,0
+Blocos V03,visible,xl/worksheets/sheet148.xml,86,30,0,2,0,1,0
+Matriz Societaria V03,visible,xl/worksheets/sheet149.xml,92,30,0,2,0,0,0
+Governacao V03,visible,xl/worksheets/sheet150.xml,68,0,0,2,0,0,0
+Beneficios V03,visible,xl/worksheets/sheet151.xml,78,10,0,2,0,0,0
+Comparativo Capital V03,visible,xl/worksheets/sheet152.xml,127,72,0,2,0,1,0
+Retorno Categorias V03,visible,xl/worksheets/sheet153.xml,696,624,0,2,0,1,0
+Vet Categorias V03,hidden,xl/worksheets/sheet154.xml,1299,1086,0,1,0,0,0
+V04 Calendarios,visible,xl/worksheets/sheet155.xml,84,0,36,2,0,0,0
+V04 Pipeline,visible,xl/worksheets/sheet156.xml,355,96,12,2,0,1,0
+V04 Capital180,hidden,xl/worksheets/sheet157.xml,1298,1080,0,1,0,0,0
+V04 CAPEX Base,hidden,xl/worksheets/sheet158.xml,1117,900,0,1,0,0,0
+V04 Bancabilidade,visible,xl/worksheets/sheet159.xml,104,7,0,2,0,0,0
+V04 Completion,visible,xl/worksheets/sheet160.xml,70,20,0,2,0,0,0
+V04 Pricing,visible,xl/worksheets/sheet161.xml,1552,846,658,2,0,1,0
+V04 Politica,visible,xl/worksheets/sheet162.xml,136,65,0,2,0,0,0
+V04 Waterfall180,visible,xl/worksheets/sheet163.xml,6367,6120,0,2,0,0,0
+V04 Retornos,visible,xl/worksheets/sheet164.xml,940,833,0,2,0,0,0
+V04 Vet Retorno,hidden,xl/worksheets/sheet165.xml,3659,3439,0,1,0,0,0
+V04 LEG28Unid,hidden,xl/worksheets/sheet166.xml,1266,1222,0,1,0,0,0
+V04 LEG28Receb,hidden,xl/worksheets/sheet167.xml,17226,17014,0,1,0,0,0
+V04 LEG32Unid,hidden,xl/worksheets/sheet168.xml,1266,1222,0,1,0,0,0
+V04 LEG32Receb,hidden,xl/worksheets/sheet169.xml,17226,17014,0,1,0,0,0
+V04 LEG44Unid,hidden,xl/worksheets/sheet170.xml,1266,1222,0,1,0,0,0
+V04 LEG44Receb,hidden,xl/worksheets/sheet171.xml,17226,17014,0,1,0,0,0
+V04 Comercial,visible,xl/worksheets/sheet172.xml,1362,658,0,2,0,1,0
+V04 Metas RE,visible,xl/worksheets/sheet173.xml,104,55,0,2,0,0,0
+V04 EAC,visible,xl/worksheets/sheet174.xml,1321,370,0,2,0,1,0
+V04 Master Workflow,visible,xl/worksheets/sheet175.xml,483,28,0,2,0,1,0
+V04 Operacional,visible,xl/worksheets/sheet176.xml,351,280,0,30,0,1,0
+V04 Opening Readiness,visible,xl/worksheets/sheet177.xml,162,28,0,2,0,0,0
+V04 Decisoes Board,visible,xl/worksheets/sheet178.xml,175,0,12,2,0,1,0
+V04 R01Pipeline,hidden,xl/worksheets/sheet179.xml,128,96,0,1,0,0,0
+V04 R01Capital,hidden,xl/worksheets/sheet180.xml,755,540,0,1,0,0,0
+V04 R01Unid,hidden,xl/worksheets/sheet181.xml,1266,1222,0,1,0,0,0
+V04 R01Receb,hidden,xl/worksheets/sheet182.xml,17226,17014,0,1,0,0,0
+V04 R01RE,hidden,xl/worksheets/sheet183.xml,2384,2160,0,1,0,0,0
+V04 R01Hotel,hidden,xl/worksheets/sheet184.xml,5099,4860,0,1,0,0,0
+V04 R01Resid,hidden,xl/worksheets/sheet185.xml,4295,4062,0,1,0,0,0
+V04 R01Fluxo,hidden,xl/worksheets/sheet186.xml,10166,9900,0,1,0,0,0
+V04 R01Politica,hidden,xl/worksheets/sheet187.xml,135,65,0,1,0,0,0
+V04 R01WF,hidden,xl/worksheets/sheet188.xml,6366,6120,0,1,0,0,0
+V04 R02Pipeline,hidden,xl/worksheets/sheet189.xml,128,96,0,1,0,0,0
+V04 R02Capital,hidden,xl/worksheets/sheet190.xml,755,540,0,1,0,0,0
+V04 R02Unid,hidden,xl/worksheets/sheet191.xml,1266,1222,0,1,0,0,0
+V04 R02Receb,hidden,xl/worksheets/sheet192.xml,17226,17014,0,1,0,0,0
+V04 R02RE,hidden,xl/worksheets/sheet193.xml,2384,2160,0,1,0,0,0
+V04 R02Hotel,hidden,xl/worksheets/sheet194.xml,5099,4860,0,1,0,0,0
+V04 R02Resid,hidden,xl/worksheets/sheet195.xml,4295,4062,0,1,0,0,0
+V04 R02Fluxo,hidden,xl/worksheets/sheet196.xml,10166,9900,0,1,0,0,0
+V04 R02Politica,hidden,xl/worksheets/sheet197.xml,135,65,0,1,0,0,0
+V04 R02WF,hidden,xl/worksheets/sheet198.xml,6366,6120,0,1,0,0,0
+V04 R03Pipeline,hidden,xl/worksheets/sheet199.xml,128,96,0,1,0,0,0
+V04 R03Capital,hidden,xl/worksheets/sheet200.xml,755,540,0,1,0,0,0
+V04 R03Unid,hidden,xl/worksheets/sheet201.xml,1266,1222,0,1,0,0,0
+V04 R03Receb,hidden,xl/worksheets/sheet202.xml,17226,17014,0,1,0,0,0
+V04 R03RE,hidden,xl/worksheets/sheet203.xml,2384,2160,0,1,0,0,0
+V04 R03Hotel,hidden,xl/worksheets/sheet204.xml,5099,4860,0,1,0,0,0
+V04 R03Resid,hidden,xl/worksheets/sheet205.xml,4295,4062,0,1,0,0,0
+V04 R03Fluxo,hidden,xl/worksheets/sheet206.xml,10166,9900,0,1,0,0,0
+V04 R03Politica,hidden,xl/worksheets/sheet207.xml,135,65,0,1,0,0,0
+V04 R03WF,hidden,xl/worksheets/sheet208.xml,6366,6120,0,1,0,0,0
+V04 R04Pipeline,hidden,xl/worksheets/sheet209.xml,128,96,0,1,0,0,0
+V04 R04Capital,hidden,xl/worksheets/sheet210.xml,755,540,0,1,0,0,0
+V04 R04Unid,hidden,xl/worksheets/sheet211.xml,1266,1222,0,1,0,0,0
+V04 R04Receb,hidden,xl/worksheets/sheet212.xml,17226,17014,0,1,0,0,0
+V04 R04RE,hidden,xl/worksheets/sheet213.xml,2384,2160,0,1,0,0,0
+V04 R04Hotel,hidden,xl/worksheets/sheet214.xml,5099,4860,0,1,0,0,0
+V04 R04Resid,hidden,xl/worksheets/sheet215.xml,4295,4062,0,1,0,0,0
+V04 R04Fluxo,hidden,xl/worksheets/sheet216.xml,10166,9900,0,1,0,0,0
+V04 R04Politica,hidden,xl/worksheets/sheet217.xml,135,65,0,1,0,0,0
+V04 R04WF,hidden,xl/worksheets/sheet218.xml,6366,6120,0,1,0,0,0
+V04 R05Pipeline,hidden,xl/worksheets/sheet219.xml,128,96,0,1,0,0,0
+V04 R05Capital,hidden,xl/worksheets/sheet220.xml,755,540,0,1,0,0,0
+V04 R05Unid,hidden,xl/worksheets/sheet221.xml,1266,1222,0,1,0,0,0
+V04 R05Receb,hidden,xl/worksheets/sheet222.xml,17226,17014,0,1,0,0,0
+V04 R05RE,hidden,xl/worksheets/sheet223.xml,2384,2160,0,1,0,0,0
+V04 R05Hotel,hidden,xl/worksheets/sheet224.xml,5099,4860,0,1,0,0,0
+V04 R05Resid,hidden,xl/worksheets/sheet225.xml,4295,4062,0,1,0,0,0
+V04 R05Fluxo,hidden,xl/worksheets/sheet226.xml,10166,9900,0,1,0,0,0
+V04 R05Politica,hidden,xl/worksheets/sheet227.xml,135,65,0,1,0,0,0
+V04 R05WF,hidden,xl/worksheets/sheet228.xml,6366,6120,0,1,0,0,0
+V04 R06Pipeline,hidden,xl/worksheets/sheet229.xml,128,96,0,1,0,0,0
+V04 R06Capital,hidden,xl/worksheets/sheet230.xml,755,540,0,1,0,0,0
+V04 R06CB,hidden,xl/worksheets/sheet231.xml,936,720,0,1,0,0,0
+V04 R06CAPEX,hidden,xl/worksheets/sheet232.xml,936,720,0,1,0,0,0
+V04 R06Unid,hidden,xl/worksheets/sheet233.xml,1266,1222,0,1,0,0,0
+V04 R06Receb,hidden,xl/worksheets/sheet234.xml,17226,17014,0,1,0,0,0
+V04 R06RE,hidden,xl/worksheets/sheet235.xml,2384,2160,0,1,0,0,0
+V04 R06Hotel,hidden,xl/worksheets/sheet236.xml,5099,4860,0,1,0,0,0
+V04 R06Resid,hidden,xl/worksheets/sheet237.xml,4295,4062,0,1,0,0,0
+V04 R06Fluxo,hidden,xl/worksheets/sheet238.xml,10166,9900,0,1,0,0,0
+V04 R06Politica,hidden,xl/worksheets/sheet239.xml,135,65,0,1,0,0,0
+V04 R06WF,hidden,xl/worksheets/sheet240.xml,6366,6120,0,1,0,0,0
+V04 R07Pipeline,hidden,xl/worksheets/sheet241.xml,128,96,0,1,0,0,0
+V04 R07Capital,hidden,xl/worksheets/sheet242.xml,755,540,0,1,0,0,0
+V04 R07Unid,hidden,xl/worksheets/sheet243.xml,1266,1222,0,1,0,0,0
+V04 R07Receb,hidden,xl/worksheets/sheet244.xml,17226,17014,0,1,0,0,0
+V04 R07RE,hidden,xl/worksheets/sheet245.xml,2384,2160,0,1,0,0,0
+V04 R07Hotel,hidden,xl/worksheets/sheet246.xml,5099,4860,0,1,0,0,0
+V04 R07Resid,hidden,xl/worksheets/sheet247.xml,4295,4062,0,1,0,0,0
+V04 R07Fluxo,hidden,xl/worksheets/sheet248.xml,10166,9900,0,1,0,0,0
+V04 R07Politica,hidden,xl/worksheets/sheet249.xml,135,65,0,1,0,0,0
+V04 R07WF,hidden,xl/worksheets/sheet250.xml,6366,6120,0,1,0,0,0
+V04 R08Pipeline,hidden,xl/worksheets/sheet251.xml,128,96,0,1,0,0,0
+V04 R08Capital,hidden,xl/worksheets/sheet252.xml,755,540,0,1,0,0,0
+V04 R08Unid,hidden,xl/worksheets/sheet253.xml,1266,1222,0,1,0,0,0
+V04 R08Receb,hidden,xl/worksheets/sheet254.xml,17226,17014,0,1,0,0,0
+V04 R08RE,hidden,xl/worksheets/sheet255.xml,2384,2160,0,1,0,0,0
+V04 R08Hotel,hidden,xl/worksheets/sheet256.xml,5099,4860,0,1,0,0,0
+V04 R08Resid,hidden,xl/worksheets/sheet257.xml,4295,4062,0,1,0,0,0
+V04 R08Fluxo,hidden,xl/worksheets/sheet258.xml,10166,9900,0,1,0,0,0
+V04 R08Politica,hidden,xl/worksheets/sheet259.xml,135,65,0,1,0,0,0
+V04 R08WF,hidden,xl/worksheets/sheet260.xml,6366,6120,0,1,0,0,0
+V04 R09Pipeline,hidden,xl/worksheets/sheet261.xml,128,96,0,1,0,0,0
+V04 R09Capital,hidden,xl/worksheets/sheet262.xml,755,540,0,1,0,0,0
+V04 R09Unid,hidden,xl/worksheets/sheet263.xml,1266,1222,0,1,0,0,0
+V04 R09Receb,hidden,xl/worksheets/sheet264.xml,17226,17014,0,1,0,0,0
+V04 R09RE,hidden,xl/worksheets/sheet265.xml,2384,2160,0,1,0,0,0
+V04 R09Hotel,hidden,xl/worksheets/sheet266.xml,5099,4860,0,1,0,0,0
+V04 R09Resid,hidden,xl/worksheets/sheet267.xml,4295,4062,0,1,0,0,0
+V04 R09Fluxo,hidden,xl/worksheets/sheet268.xml,10166,9900,0,1,0,0,0
+V04 R09Politica,hidden,xl/worksheets/sheet269.xml,135,65,0,1,0,0,0
+V04 R09WF,hidden,xl/worksheets/sheet270.xml,6366,6120,0,1,0,0,0
+V04 R10Pipeline,hidden,xl/worksheets/sheet271.xml,128,96,0,1,0,0,0
+V04 R10Capital,hidden,xl/worksheets/sheet272.xml,755,540,0,1,0,0,0
+V04 R10Unid,hidden,xl/worksheets/sheet273.xml,1266,1222,0,1,0,0,0
+V04 R10Receb,hidden,xl/worksheets/sheet274.xml,17226,17014,0,1,0,0,0
+V04 R10RE,hidden,xl/worksheets/sheet275.xml,2384,2160,0,1,0,0,0
+V04 R10Hotel,hidden,xl/worksheets/sheet276.xml,5099,4860,0,1,0,0,0
+V04 R10Resid,hidden,xl/worksheets/sheet277.xml,4295,4062,0,1,0,0,0
+V04 R10Fluxo,hidden,xl/worksheets/sheet278.xml,10166,9900,0,1,0,0,0
+V04 R10Politica,hidden,xl/worksheets/sheet279.xml,135,65,0,1,0,0,0
+V04 R10WF,hidden,xl/worksheets/sheet280.xml,6366,6120,0,1,0,0,0
+V04 R11Pipeline,hidden,xl/worksheets/sheet281.xml,128,96,0,1,0,0,0
+V04 R11Capital,hidden,xl/worksheets/sheet282.xml,755,540,0,1,0,0,0
+V04 R11Unid,hidden,xl/worksheets/sheet283.xml,1266,1222,0,1,0,0,0
+V04 R11Receb,hidden,xl/worksheets/sheet284.xml,17226,17014,0,1,0,0,0
+V04 R11RE,hidden,xl/worksheets/sheet285.xml,2384,2160,0,1,0,0,0
+V04 R11Hotel,hidden,xl/worksheets/sheet286.xml,5099,4860,0,1,0,0,0
+V04 R11Resid,hidden,xl/worksheets/sheet287.xml,4295,4062,0,1,0,0,0
+V04 R11Fluxo,hidden,xl/worksheets/sheet288.xml,10166,9900,0,1,0,0,0
+V04 R11Politica,hidden,xl/worksheets/sheet289.xml,135,65,0,1,0,0,0
+V04 R11WF,hidden,xl/worksheets/sheet290.xml,6366,6120,0,1,0,0,0
+V04 R12Pipeline,hidden,xl/worksheets/sheet291.xml,128,96,0,1,0,0,0
+V04 R12Capital,hidden,xl/worksheets/sheet292.xml,755,540,0,1,0,0,0
+V04 R12Unid,hidden,xl/worksheets/sheet293.xml,1266,1222,0,1,0,0,0
+V04 R12Receb,hidden,xl/worksheets/sheet294.xml,17226,17014,0,1,0,0,0
+V04 R12RE,hidden,xl/worksheets/sheet295.xml,2384,2160,0,1,0,0,0
+V04 R12Hotel,hidden,xl/worksheets/sheet296.xml,5099,4860,0,1,0,0,0
+V04 R12Resid,hidden,xl/worksheets/sheet297.xml,4295,4062,0,1,0,0,0
+V04 R12Fluxo,hidden,xl/worksheets/sheet298.xml,10166,9900,0,1,0,0,0
+V04 R12Politica,hidden,xl/worksheets/sheet299.xml,135,65,0,1,0,0,0
+V04 R12WF,hidden,xl/worksheets/sheet300.xml,6366,6120,0,1,0,0,0
+V04 R13Pipeline,hidden,xl/worksheets/sheet301.xml,128,96,0,1,0,0,0
+V04 R13Capital,hidden,xl/worksheets/sheet302.xml,755,540,0,1,0,0,0
+V04 R13Unid,hidden,xl/worksheets/sheet303.xml,1266,1222,0,1,0,0,0
+V04 R13Receb,hidden,xl/worksheets/sheet304.xml,17226,17014,0,1,0,0,0
+V04 R13RE,hidden,xl/worksheets/sheet305.xml,2384,2160,0,1,0,0,0
+V04 R13Hotel,hidden,xl/worksheets/sheet306.xml,5099,4860,0,1,0,0,0
+V04 R13Resid,hidden,xl/worksheets/sheet307.xml,4295,4062,0,1,0,0,0
+V04 R13Fluxo,hidden,xl/worksheets/sheet308.xml,10166,9900,0,1,0,0,0
+V04 R13Politica,hidden,xl/worksheets/sheet309.xml,135,65,0,1,0,0,0
+V04 R13WF,hidden,xl/worksheets/sheet310.xml,6366,6120,0,1,0,0,0
+V04 Riscos,visible,xl/worksheets/sheet311.xml,272,196,0,2,0,1,0
+V04 Impactos,visible,xl/worksheets/sheet312.xml,144,78,0,15,0,0,0
+V04 Dicionario KPI,visible,xl/worksheets/sheet313.xml,509,0,0,2,0,1,0

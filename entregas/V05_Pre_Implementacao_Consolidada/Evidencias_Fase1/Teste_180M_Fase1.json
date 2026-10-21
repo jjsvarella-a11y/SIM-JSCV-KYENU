@@ -1,0 +1,7 @@
+{
+  "meses": 180,
+  "comparacoes": 1800,
+  "falhas": [],
+  "ok": true,
+  "nota": "Comparação das caches da cópia preservada com nova execução Python; não é recálculo Excel Desktop."
+}
